@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "bottom": "remote_item_teleporter_bottom",
+        "base": "remote_item_teleporter_base"
+      },
+      "name": "default"
+    }
+  }
+}

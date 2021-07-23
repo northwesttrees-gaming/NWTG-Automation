@@ -1,0 +1,42 @@
+{
+  "group": "nwtg_automation_auto_farming_machine",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+    },
+    "1": {
+      "item": "minecraft:dispenser"
+    },
+    "2": {
+      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+    },
+    "3": {
+      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+    },
+    "4": {
+      "item": "nwtg_automation:machine_block"
+    },
+    "5": {
+      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+    },
+    "6": {
+      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+    },
+    "7": {
+      "item": "minecraft:hopper"
+    },
+    "8": {
+      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+    }
+  },
+  "result": {
+    "item": "nwtg_automation:auto_farming_machine",
+    "count": 1
+  }
+}

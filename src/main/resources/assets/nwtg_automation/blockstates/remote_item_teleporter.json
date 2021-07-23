@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "nwtg_automation:block/remote_item_teleporter"
+    },
+    "facing=east": {
+      "model": "nwtg_automation:block/remote_item_teleporter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "nwtg_automation:block/remote_item_teleporter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "nwtg_automation:block/remote_item_teleporter",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "nwtg_automation:block/remote_item_teleporter",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "nwtg_automation:block/remote_item_teleporter",
+      "x": 90
+    }
+  }
+}

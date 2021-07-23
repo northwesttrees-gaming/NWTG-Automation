@@ -1,0 +1,24 @@
+{
+  "group": "nwtg_automation_remote_item_teleporter",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:redstone_torch"
+    },
+    "1": {
+      "item": "nwtg_automation:machine_block"
+    },
+    "2": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "result": {
+    "item": "nwtg_automation:remote_item_teleporter",
+    "count": 1
+  }
+}

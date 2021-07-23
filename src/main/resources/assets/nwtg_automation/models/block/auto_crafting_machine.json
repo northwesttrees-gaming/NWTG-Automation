@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "nwtg_automation:blocks/machine_block",
+    "up": "nwtg_automation:blocks/auto_machine_device_output",
+    "north": "nwtg_automation:blocks/auto_machine_chest_input",
+    "east": "nwtg_automation:blocks/auto_machine_off",
+    "south": "nwtg_automation:blocks/auto_machine_chest_output",
+    "west": "nwtg_automation:blocks/auto_machine_off",
+    "particle": "nwtg_automation:blocks/machine_block"
+  }
+}

@@ -1,0 +1,1011 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "MachineBlock",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_block",
+      "path": "~/Blocks/MachineBlock"
+    },
+    {
+      "name": "NWTGAutomationTab",
+      "type": "tab",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_tab",
+      "path": "~/Other/Creative Tabs"
+    },
+    {
+      "name": "MachineBlockCrafting",
+      "type": "recipe",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_block_crafting",
+      "path": "~/Blocks/MachineBlock"
+    },
+    {
+      "name": "AutoFarmingMachineInventory",
+      "type": "gui",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_inventory",
+      "path": "~/Blocks/Auto Blocks/Farming"
+    },
+    {
+      "name": "AutoFarmingMachine",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine",
+      "path": "~/Blocks/Auto Blocks/Farming"
+    },
+    {
+      "name": "AutoFarmingMachineUpdateTick",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures"
+    },
+    {
+      "name": "AutoFarmingMachineBlockAdded",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures"
+    },
+    {
+      "name": "AutoFarmingMachineWheatScript",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_wheat_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+    },
+    {
+      "name": "AutoFarmingMachineBeetrootScript",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_beetroot_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+    },
+    {
+      "name": "AutoFarmingMachineCarrotScript",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_carrot_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+    },
+    {
+      "name": "AutoFarmingMachinePotatoScript",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_potato_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+    },
+    {
+      "name": "AutoFarmingMachineSweetBerryScript",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_sweet_berry_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+    },
+    {
+      "name": "AutoFarmingMachineNetherWartsScript",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_nether_warts_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+    },
+    {
+      "name": "RemoteItemTeleporterOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "remote_item_teleporter_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Item Teleporter"
+    },
+    {
+      "name": "RemoteItemTeleporter",
+      "type": "block",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "remote_item_teleporter",
+      "path": "~/Blocks/Item Teleporter"
+    },
+    {
+      "name": "RemoteItemTeleporterUpdateTick",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "remote_item_teleporter_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Item Teleporter"
+    },
+    {
+      "name": "AutoFarmingMachineCrafting",
+      "type": "recipe",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_crafting",
+      "path": "~/Blocks/Auto Blocks/Farming"
+    },
+    {
+      "name": "AutoFarmingMachineRecipeSeeds",
+      "type": "tag",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_recipe_seeds",
+      "path": "~/Blocks/Auto Blocks/Farming"
+    },
+    {
+      "name": "RemoteItemTeleporterCrafting",
+      "type": "recipe",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "remote_item_teleporter_crafting",
+      "path": "~/Blocks/Item Teleporter"
+    },
+    {
+      "name": "AutoCraftingMachine",
+      "type": "block",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine",
+      "path": "~/Blocks/Auto Blocks/Crafting"
+    },
+    {
+      "name": "AutoCraftingMachineOn",
+      "type": "block",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_on",
+      "path": "~/Blocks/Auto Blocks/Crafting"
+    },
+    {
+      "name": "AutoCraftingMachineOnUpdateTick",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_on_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Procedures"
+    },
+    {
+      "name": "AutoCraftingMachineOnOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_on_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Procedures"
+    },
+    {
+      "name": "AutoCraftingMachineOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Procedures"
+    },
+    {
+      "name": "AutoCraftingMachineInventory",
+      "type": "gui",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_inventory",
+      "path": "~/Blocks/Auto Blocks/Crafting"
+    },
+    {
+      "name": "AutoCraftingMachineSortingScript",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_sorting_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Procedures/Script"
+    },
+    {
+      "name": "AutoCraftingMachineBreadRecipe",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_bread_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Recipes/Food"
+    },
+    {
+      "name": "AutoCraftingMachineBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_block_is_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Procedures"
+    },
+    {
+      "name": "AutoFarmingMachineOn",
+      "type": "block",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_on",
+      "path": "~/Blocks/Auto Blocks/Farming"
+    },
+    {
+      "name": "AutoFarmingMachineOnOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_on_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures"
+    },
+    {
+      "name": "AutoFarmingMachineOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures"
+    },
+    {
+      "name": "AutoFarmingMachineSugarcaneScript",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_sugarcane_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+    },
+    {
+      "name": "AutoFarmingMachinePumpkinScript",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_pumpkin_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+    },
+    {
+      "name": "AutoFarmingMachineMelonScript",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_melon_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+    },
+    {
+      "name": "AutoFarmingMachineCocoaBeansScript",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_cocoa_beans_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+    },
+    {
+      "name": "MachineWrench",
+      "type": "item",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_wrench",
+      "path": "~/Items/MachineWrench"
+    },
+    {
+      "name": "MachineWrenchCraftingRecipe",
+      "type": "recipe",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_wrench_crafting_recipe",
+      "path": "~/Items/MachineWrench"
+    },
+    {
+      "name": "BlocksMachineBlockTag",
+      "type": "tag",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blocks_machine_block_tag",
+      "path": "~/Blocks/MachineBlock"
+    },
+    {
+      "name": "ItemsMachineBlockTag",
+      "type": "tag",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "items_machine_block_tag",
+      "path": "~/Blocks/MachineBlock"
+    },
+    {
+      "name": "ItemsMachineWrenchTag",
+      "type": "tag",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "items_machine_wrench_tag",
+      "path": "~/Items/MachineWrench"
+    },
+    {
+      "name": "BlocksRemoteItemTeleporterTag",
+      "type": "tag",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blocks_remote_item_teleporter_tag",
+      "path": "~/Blocks/Item Teleporter"
+    },
+    {
+      "name": "ItemsRemoteItemTeleporterTag",
+      "type": "tag",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "items_remote_item_teleporter_tag",
+      "path": "~/Blocks/Item Teleporter"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "block.nwtg_automation.remote_item_teleporter": "Remote Item Teleporter",
+      "item.nwtg_automation.machine_wrench": "Machine Wrench",
+      "block.nwtg_automation.auto_crafting_machine": "Auto Crafting Machine",
+      "block.nwtg_automation.auto_crafting_machine_on": "Auto Crafting Machine",
+      "block.nwtg_automation.machine_block": "Machine Block",
+      "block.nwtg_automation.auto_farming_machine_on": "Auto Farming Machine",
+      "itemGroup.tabnwtg_automation_tab": "NWTG Automation",
+      "block.nwtg_automation.auto_farming_machine": "Auto Farming Machine"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Other",
+        "children": [
+          {
+            "name": "Creative Tabs",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Blocks",
+        "children": [
+          {
+            "name": "Auto Blocks",
+            "children": [
+              {
+                "name": "Farming",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": [
+                      {
+                        "name": "Script",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Crafting",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": [
+                      {
+                        "name": "Script",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Recipes",
+                    "children": [
+                      {
+                        "name": "Food",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Item Teleporter",
+            "children": []
+          },
+          {
+            "name": "MachineBlock",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Items",
+        "children": [
+          {
+            "name": "MachineWrench",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "nwtg_automation",
+    "modName": "NWTG Automation",
+    "version": "1.0.0",
+    "author": "kiera, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "modElementsPackage": "net.nwtg.nwtgautomation",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100118117
+}

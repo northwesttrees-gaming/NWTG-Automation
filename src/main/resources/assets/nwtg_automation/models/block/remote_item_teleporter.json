@@ -1,0 +1,9 @@
+{
+  "parent": "nwtg_automation:custom/remote_item_teleporter",
+  "textures": {
+    "all": "nwtg_automation:blocks/remote_item_teleporter_base",
+    "particle": "nwtg_automation:blocks/remote_item_teleporter_base",
+    "bottom": "nwtg_automation:blocks/remote_item_teleporter_bottom",
+    "base": "nwtg_automation:blocks/remote_item_teleporter_base"
+  }
+}

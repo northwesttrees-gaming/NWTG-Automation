@@ -1,0 +1,46 @@
+{
+  "_fv": 18,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "nwtg_automation_auto_farming_machine",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "TAG:nwtg_automation:auto_farming_machine_recipe_seeds"
+      },
+      {
+        "value": "Blocks.DISPENSER"
+      },
+      {
+        "value": "TAG:nwtg_automation:auto_farming_machine_recipe_seeds"
+      },
+      {
+        "value": "TAG:nwtg_automation:auto_farming_machine_recipe_seeds"
+      },
+      {
+        "value": "CUSTOM:MachineBlock"
+      },
+      {
+        "value": "TAG:nwtg_automation:auto_farming_machine_recipe_seeds"
+      },
+      {
+        "value": "TAG:nwtg_automation:auto_farming_machine_recipe_seeds"
+      },
+      {
+        "value": "Blocks.HOPPER"
+      },
+      {
+        "value": "TAG:nwtg_automation:auto_farming_machine_recipe_seeds"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:AutoFarmingMachine"
+    },
+    "name": "auto_farming_machine",
+    "namespace": "mod"
+  }
+}
