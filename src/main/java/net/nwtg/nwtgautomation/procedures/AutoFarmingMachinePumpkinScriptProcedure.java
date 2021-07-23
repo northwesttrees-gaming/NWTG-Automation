@@ -10,7 +10,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
@@ -110,8 +109,7 @@ public class AutoFarmingMachinePumpkinScriptProcedure extends NwtgAutomationModE
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Items.PUMPKIN_SEEDS, (int) (1)).getItem())))) {
-			world.destroyBlock(new BlockPos((int) (posX), (int) (posY), (int) (posZ)), false);
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.PUMPKIN, (int) (1)).getItem())))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
@@ -136,6 +134,7 @@ public class AutoFarmingMachinePumpkinScriptProcedure extends NwtgAutomationModE
 					});
 				}
 			}
+			world.destroyBlock(new BlockPos((int) (posX), (int) (posY), (int) (posZ)), false);
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);

@@ -113,7 +113,7 @@ public class AutoFarmingMachineMelonScriptProcedure extends NwtgAutomationModEle
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Items.MELON_SEEDS, (int) (1)).getItem())))) {
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Items.MELON_SLICE, (int) (1)).getItem())))) {
 			world.destroyBlock(new BlockPos((int) (posX), (int) (posY), (int) (posZ)), false);
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
