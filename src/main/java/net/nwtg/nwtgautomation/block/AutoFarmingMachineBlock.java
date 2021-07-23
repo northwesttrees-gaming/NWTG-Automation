@@ -297,6 +297,10 @@ public class AutoFarmingMachineBlock extends NwtgAutomationModElements.ModElemen
 
 		@Override
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
+			if (index == 1)
+				return false;
+			if (index == 2)
+				return false;
 			return true;
 		}
 
@@ -312,6 +316,10 @@ public class AutoFarmingMachineBlock extends NwtgAutomationModElements.ModElemen
 
 		@Override
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
+			if (index == 1)
+				return false;
+			if (index == 2)
+				return false;
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());

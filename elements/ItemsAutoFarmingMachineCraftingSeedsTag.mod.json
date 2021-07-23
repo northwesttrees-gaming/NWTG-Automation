@@ -8,19 +8,19 @@
         "value": "Items.WHEAT_SEEDS"
       },
       {
-        "value": "Items.BEETROOT_SEEDS"
-      },
-      {
         "value": "Items.PUMPKIN_SEEDS"
       },
       {
         "value": "Items.MELON_SEEDS"
+      },
+      {
+        "value": "Items.BEETROOT_SEEDS"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
-    "name": "auto_farming_machine_recipe_seeds",
-    "namespace": "mod"
+    "name": "nwtg_automation/items/auto_farming_machine_crafting_seeds",
+    "namespace": "forge"
   }
 }

@@ -8,31 +8,31 @@
   ],
   "key": {
     "0": {
-      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
     },
     "1": {
       "item": "minecraft:dispenser"
     },
     "2": {
-      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
     },
     "3": {
-      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
     },
     "4": {
       "item": "nwtg_automation:machine_block"
     },
     "5": {
-      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
     },
     "6": {
-      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
     },
     "7": {
-      "item": "minecraft:hopper"
+      "item": "minecraft:iron_hoe"
     },
     "8": {
-      "tag": "nwtg_automation:auto_farming_machine_recipe_seeds"
+      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
     }
   },
   "result": {

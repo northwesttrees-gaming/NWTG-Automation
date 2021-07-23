@@ -65,7 +65,7 @@ public class AutoFarmingMachineInventoryGuiWindow extends ContainerScreen<AutoFa
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Auto Farming Machine", 6, 24, -6684877);
+		this.font.drawString(ms, "Auto Farming Machine", 6, 24, -1);
 	}
 
 	@Override

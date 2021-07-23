@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "nwtg_automation:auto_farming_machine",
+    "nwtg_automation:auto_farming_machine_on"
+  ]
+}

@@ -6,11 +6,17 @@ import net.nwtg.nwtgautomation.NwtgAutomationMod;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.CapabilityItemHandler;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.command.ICommandSource;
+import net.minecraft.command.CommandSource;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
@@ -52,6 +58,9 @@ public class AutoFarmingMachineSugarcaneScriptProcedure extends NwtgAutomationMo
 		double posX = 0;
 		double posY = 0;
 		double posZ = 0;
+		double particlePosY = 0;
+		double particlePosX = 0;
+		double particlePosZ = 0;
 		posX = (double) (new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -76,6 +85,30 @@ public class AutoFarmingMachineSugarcaneScriptProcedure extends NwtgAutomationMo
 				return -1;
 			}
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosZ"));
+		particlePosX = (double) ((new Object() {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosX")) + 0.5);
+		particlePosY = (double) ((new Object() {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosY")) + 0.5);
+		particlePosZ = (double) ((new Object() {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosZ")) + 0.5);
 		if ((((new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
@@ -111,6 +144,29 @@ public class AutoFarmingMachineSugarcaneScriptProcedure extends NwtgAutomationMo
 			}
 		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.SUGAR_CANE, (int) (1)).getItem())))) {
 			world.destroyBlock(new BlockPos((int) (posX), (int) (posY), (int) (posZ)), false);
+			if (world instanceof ServerWorld) {
+				((World) world).getServer().getCommandManager().handleCommand(
+						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+						(((("particle minecraft:composter ") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosX)))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##.##").format((particlePosY)))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##.##").format((particlePosZ))))))
+								+ ""
+								+ (((" ") + "" + ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
+										+ ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
+										+ ((new java.text.DecimalFormat("##.##").format(0.25)))))
+								+ ""
+								+ (((" ") + "" + ((new java.text.DecimalFormat("##").format(1))) + "" + (" ") + ""
+										+ ((new java.text.DecimalFormat("##").format(10)))))
+								+ ""
+								+ (((" force @a[x=") + "" + ((new java.text.DecimalFormat("##.##").format(((particlePosX) - 30)))) + "" + (",y=") + ""
+										+ ((new java.text.DecimalFormat("##.##").format(((particlePosY) - 30)))) + "" + (",z=") + ""
+										+ ((new java.text.DecimalFormat("##.##").format(((particlePosZ) - 30))))))
+								+ ""
+								+ (((",dx=") + "" + ((new java.text.DecimalFormat("##").format(61))) + "" + (",dy=") + ""
+										+ ((new java.text.DecimalFormat("##").format(61))) + "" + (",dz=") + ""
+										+ ((new java.text.DecimalFormat("##").format(61))) + "" + ("]")))));
+			}
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {

@@ -60,6 +60,9 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure extends NwtgAutomationM
 		double posY = 0;
 		double posZ = 0;
 		double direction = 0;
+		double particlePosY = 0;
+		double particlePosX = 0;
+		double particlePosZ = 0;
 		posX = (double) (new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -84,6 +87,30 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure extends NwtgAutomationM
 				return -1;
 			}
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosZ"));
+		particlePosX = (double) ((new Object() {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosX")) + 0.5);
+		particlePosY = (double) ((new Object() {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosY")) + 0.5);
+		particlePosZ = (double) ((new Object() {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosZ")) + 0.5);
 		direction = (double) (new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -161,12 +188,38 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure extends NwtgAutomationM
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Items.COCOA_BEANS, (int) (1))
 						.getItem()))))) {
+			world.destroyBlock(new BlockPos((int) (posX), (int) (posY), (int) (posZ)), false);
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						(("setblock ") + "" + ((posX)) + "" + (" ") + "" + ((posY)) + "" + (" ") + "" + ((posZ)) + "" + (" minecraft:cocoa[age=0,")
-								+ "" + ("direction=") + "" + ((new java.text.DecimalFormat("##").format((direction)))) + "" + ("]")));
+						(((("particle minecraft:composter ") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosX)))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##.##").format((particlePosY)))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##.##").format((particlePosZ))))))
+								+ ""
+								+ (((" ") + "" + ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
+										+ ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
+										+ ((new java.text.DecimalFormat("##.##").format(0.25)))))
+								+ ""
+								+ (((" ") + "" + ((new java.text.DecimalFormat("##").format(1))) + "" + (" ") + ""
+										+ ((new java.text.DecimalFormat("##").format(10)))))
+								+ ""
+								+ (((" force @a[x=") + "" + ((new java.text.DecimalFormat("##.##").format(((particlePosX) - 30)))) + "" + (",y=") + ""
+										+ ((new java.text.DecimalFormat("##.##").format(((particlePosY) - 30)))) + "" + (",z=") + ""
+										+ ((new java.text.DecimalFormat("##.##").format(((particlePosZ) - 30))))))
+								+ ""
+								+ (((",dx=") + "" + ((new java.text.DecimalFormat("##").format(61))) + "" + (",dy=") + ""
+										+ ((new java.text.DecimalFormat("##").format(61))) + "" + (",dz=") + ""
+										+ ((new java.text.DecimalFormat("##").format(61))) + "" + ("]")))));
+			}
+			if (world instanceof ServerWorld) {
+				((World) world).getServer().getCommandManager().handleCommand(
+						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+						(("setblock ") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##").format((posZ)))) + "" + (" minecraft:cocoa[age=0,") + "" + ("direction=") + ""
+								+ ((new java.text.DecimalFormat("##").format((direction)))) + "" + ("]")));
 			}
 			RunScript = (boolean) (true);
 		}

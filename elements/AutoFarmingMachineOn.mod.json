@@ -43,7 +43,7 @@
     },
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:AutoFarmingMachine"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -59,7 +59,7 @@
     "isReplaceable": false,
     "colorOnMap": "IRON",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:AutoFarmingMachine"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
@@ -91,8 +91,14 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": false,
-    "inventoryOutSlotIDs": [],
-    "inventoryInSlotIDs": [],
+    "inventoryOutSlotIDs": [
+      1,
+      2
+    ],
+    "inventoryInSlotIDs": [
+      1,
+      2
+    ],
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,

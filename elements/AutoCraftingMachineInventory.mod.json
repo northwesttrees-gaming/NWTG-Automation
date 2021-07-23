@@ -7,7 +7,7 @@
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
       {
@@ -155,12 +155,22 @@
         "data": {
           "text": "Auto Crafting Machine",
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "name": "Auto Crafting Machine",
           "x": 132,
           "y": 42
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_auto_machine_gui.png",
+          "use1Xscale": false,
+          "name": "auto_auto_machine_gui.png",
+          "x": 125,
+          "y": 37
         }
       }
     ]

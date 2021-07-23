@@ -23,6 +23,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
@@ -124,6 +125,11 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 		}
 
 		@Override
+		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
+			return new ItemStack(AutoFarmingMachineBlock.block, (int) (1));
+		}
+
+		@Override
 		public MaterialColor getMaterialColor() {
 			return MaterialColor.IRON;
 		}
@@ -138,7 +144,7 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(AutoFarmingMachineBlock.block, (int) (1)));
 		}
 
 		@Override
@@ -316,6 +322,10 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 
 		@Override
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
+			if (index == 1)
+				return false;
+			if (index == 2)
+				return false;
 			return true;
 		}
 
@@ -331,6 +341,10 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 
 		@Override
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
+			if (index == 1)
+				return false;
+			if (index == 2)
+				return false;
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
