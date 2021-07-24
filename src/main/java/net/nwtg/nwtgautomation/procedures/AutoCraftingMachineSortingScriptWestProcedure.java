@@ -83,6 +83,8 @@ public class AutoCraftingMachineSortingScriptWestProcedure extends NwtgAutomatio
 				&& (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.CHEST.getDefaultState().getBlock())
 						&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.CHEST.getDefaultState()
 								.getBlock())))) {
+			sendToOutputChest = (boolean) (false);
+			testCraftingTableItems = (boolean) (false);
 			slotChestInput = (double) (new Object() {
 				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
@@ -92,11 +94,9 @@ public class AutoCraftingMachineSortingScriptWestProcedure extends NwtgAutomatio
 				}
 			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CraftingSlot"));
 			slotChestOutput = (double) 0;
-			testSlotCraftingTable = (double) 0;
 			slotCraftingTable = (double) 0;
-			sendToOutputChest = (boolean) (false);
-			testCraftingTableItems = (boolean) (false);
-			if (((new Object() {
+			testSlotCraftingTable = (double) 0;
+			countChestInputSlot = (double) (new Object() {
 				public int getAmount(IWorld world, BlockPos pos, int sltid) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					TileEntity _ent = world.getTileEntity(pos);
@@ -107,20 +107,21 @@ public class AutoCraftingMachineSortingScriptWestProcedure extends NwtgAutomatio
 					}
 					return _retval.get();
 				}
-			}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) ((slotChestInput)))) > 0)) {
-				countChestInputSlot = (double) (new Object() {
-					public int getAmount(IWorld world, BlockPos pos, int sltid) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).getCount());
-							});
-						}
-						return _retval.get();
+			}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) ((slotChestInput))));
+			itemChestInput = (new Object() {
+				public ItemStack getItemStack(BlockPos pos, int sltid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) ((slotChestInput))));
-				itemChestInput = (new Object() {
+					return _retval.get();
+				}
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) (z - 1)), (int) ((slotChestInput))));
+			for (int index0 = 0; index0 < (int) (9); index0++) {
+				if (((itemChestInput).getItem() == (new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -131,57 +132,8 @@ public class AutoCraftingMachineSortingScriptWestProcedure extends NwtgAutomatio
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) (z - 1)), (int) ((slotChestInput))));
-			}
-			for (int index0 = 0; index0 < (int) (9); index0++) {
-				if ((((new Object() {
-					public int getAmount(IWorld world, BlockPos pos, int sltid) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).getCount());
-							});
-						}
-						return _retval.get();
-					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((testSlotCraftingTable)))) == 1)
-						&& ((itemChestInput).getItem() == (new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
-								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((testSlotCraftingTable)))).getItem()))) {
-					itemCraftingTable = (new Object() {
-						public ItemStack getItemStack(BlockPos pos, int sltid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							TileEntity _ent = world.getTileEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
-							return _retval.get();
-						}
-					}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((testSlotCraftingTable))));
-					slotCraftingTable = (double) (testSlotCraftingTable);
-					testCraftingTableItems = (boolean) (false);
-					break;
-				} else {
-					testCraftingTableItems = (boolean) (true);
-				}
-				testSlotCraftingTable = (double) ((testSlotCraftingTable) + 1);
-			}
-			if (((testCraftingTableItems) == (true))) {
-				testSlotCraftingTable = (double) 0;
-				for (int index1 = 0; index1 < (int) (9); index1++) {
-					if ((((new Object() {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((testSlotCraftingTable)))).getItem())) {
+					if (((new Object() {
 						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
@@ -192,28 +144,136 @@ public class AutoCraftingMachineSortingScriptWestProcedure extends NwtgAutomatio
 							}
 							return _retval.get();
 						}
-					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((testSlotCraftingTable)))) > 0)
-							&& (!((itemChestInput).getItem() == (new Object() {
-								public ItemStack getItemStack(BlockPos pos, int sltid) {
-									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-									TileEntity _ent = world.getTileEntity(pos);
-									if (_ent != null) {
-										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-											_retval.set(capability.getStackInSlot(sltid).copy());
-										});
-									}
-									return _retval.get();
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((testSlotCraftingTable)))) == 1)) {
+						itemCraftingTable = (new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
 								}
-							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((testSlotCraftingTable)))).getItem())))) {
-						sendToOutputChest = (boolean) (true);
-					} else {
-						sendToOutputChest = (boolean) (false);
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((testSlotCraftingTable))));
+						slotCraftingTable = (double) (testSlotCraftingTable);
+						testCraftingTableItems = (boolean) (false);
 						break;
 					}
-					testSlotCraftingTable = (double) ((testSlotCraftingTable) + 1);
+				} else {
+					testCraftingTableItems = (boolean) (true);
+				}
+				testSlotCraftingTable = (double) ((testSlotCraftingTable) + 1);
+			}
+			if (((testCraftingTableItems) == (true))) {
+				if (((!((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == (itemChestInput).getItem())) && ((!((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == (itemChestInput).getItem())) && ((!((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == (itemChestInput).getItem())) && ((!((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3))).getItem() == (itemChestInput).getItem())) && ((!((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (4))).getItem() == (itemChestInput).getItem())) && ((!((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (5))).getItem() == (itemChestInput).getItem())) && ((!((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (6))).getItem() == (itemChestInput).getItem())) && ((!((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (7))).getItem() == (itemChestInput).getItem())) && ((!((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (8))).getItem() == (itemChestInput).getItem()))
+						&& (!((itemChestInput).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())))))))))))) {
+					sendToOutputChest = (boolean) (true);
+				} else {
+					sendToOutputChest = (boolean) (false);
 				}
 				if ((((countChestInputSlot) >= 1) && ((sendToOutputChest) == (true)))) {
-					for (int index2 = 0; index2 < (int) (27); index2++) {
+					for (int index1 = 0; index1 < (int) (27); index1++) {
 						itemChestOutput = (new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);

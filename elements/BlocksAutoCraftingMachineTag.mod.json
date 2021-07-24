@@ -14,7 +14,7 @@
     ],
     "functions": [],
     "entities": [],
-    "name": "nwtg_automation/blocks/auto_crafting_machine_tag",
+    "name": "nwtg_automation/blocks/auto_crafting_machine",
     "namespace": "forge"
   }
 }

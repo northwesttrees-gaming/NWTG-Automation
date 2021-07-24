@@ -2,7 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "bottom": "remote_item_teleporter_bottom",
+        "bottom": "auto_machine_device_input_output",
+        "pole": "remote_item_teleporter_pole",
         "base": "remote_item_teleporter_base"
       },
       "name": "default"

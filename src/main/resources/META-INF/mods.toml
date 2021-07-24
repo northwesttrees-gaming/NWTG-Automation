@@ -1,14 +1,18 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="Academic Free License v3.0"
+license="NWTG Public License 1.0"
 
 [[mods]]
 modId="nwtg_automation"
-version="1.0.0"
+version="0.1.0"
 displayName="NWTG Automation"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="kiera, MCreator"
+credits="MCreator, Forge, Mojang"
+displayURL="https://github.com/northwesttrees-gaming/NWTG-Automation"
+logoFile="logo.png"
+authors="NorthWestTrees Gaming"
+description='''
+A mod to make things automated one block at a time!
+'''
 
 [[dependencies.nwtg_automation]]
     modId="minecraft"

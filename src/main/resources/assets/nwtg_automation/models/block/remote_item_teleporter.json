@@ -3,7 +3,8 @@
   "textures": {
     "all": "nwtg_automation:blocks/remote_item_teleporter_base",
     "particle": "nwtg_automation:blocks/remote_item_teleporter_base",
-    "bottom": "nwtg_automation:blocks/remote_item_teleporter_bottom",
+    "bottom": "nwtg_automation:blocks/auto_machine_device_input_output",
+    "pole": "nwtg_automation:blocks/remote_item_teleporter_pole",
     "base": "nwtg_automation:blocks/remote_item_teleporter_base"
   }
 }

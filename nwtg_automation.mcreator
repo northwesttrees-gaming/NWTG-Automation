@@ -898,16 +898,6 @@
       "path": "~/Blocks/Auto Blocks/Crafting"
     },
     {
-      "name": "BlocksAutoCraftingMachineTag",
-      "type": "tag",
-      "sortid": 44,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "blocks_auto_crafting_machine_tag",
-      "path": "~/Blocks/Auto Blocks/Crafting"
-    },
-    {
       "name": "ItemsAutoFarmingMachineTag",
       "type": "tag",
       "sortid": 45,
@@ -1472,6 +1462,16 @@
         ]
       },
       "path": "~/Blocks/Auto Blocks/Crafting/Procedures/Script"
+    },
+    {
+      "name": "BlocksAutoCraftingMachineTag",
+      "type": "tag",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blocks_auto_crafting_machine_tag",
+      "path": "~/Blocks/Auto Blocks/Crafting"
     }
   ],
   "variable_elements": [],
@@ -1585,17 +1585,20 @@
   "workspaceSettings": {
     "modid": "nwtg_automation",
     "modName": "NWTG Automation",
-    "version": "1.0.0",
-    "author": "kiera, MCreator",
-    "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "version": "0.1.0",
+    "description": "A mod to make things automated one block at a time!",
+    "author": "NorthWestTrees Gaming",
+    "websiteURL": "https://github.com/northwesttrees-gaming/NWTG-Automation",
+    "license": "NWTG Public License 1.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "logo",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
+    "credits": "MCreator, Forge, Mojang",
     "modElementsPackage": "net.nwtg.nwtgautomation",
     "lockBaseModFiles": false
   },

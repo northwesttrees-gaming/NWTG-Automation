@@ -7,9 +7,32 @@
     "height": 126,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": -20,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Auto Item Collector Machine",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Auto Item Collector Machine",
+          "x": 132,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_item_collector_machine_gui.png",
+          "use1Xscale": false,
+          "name": "auto_item_collector_machine_gui.png",
+          "x": 125,
+          "y": 57
+        }
+      },
       {
         "type": "inputslot",
         "data": {
@@ -78,19 +101,6 @@
           "name": "Slot #4",
           "x": 240,
           "y": 71
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "Auto Item Collector Machine",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "name": "Auto Item Collector Machine",
-          "x": 132,
-          "y": 61
         }
       },
       {

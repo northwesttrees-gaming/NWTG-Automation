@@ -44,7 +44,7 @@ public class AutoCraftingMachineInventoryGuiWindow extends ContainerScreen<AutoC
 		RenderSystem.color4f(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/auto_auto_machine_gui.png"));
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/auto_crafting_machine_gui.png"));
 		this.blit(ms, this.guiLeft + 0, this.guiTop + 0, 0, 0, 176, 166, 176, 166);
 		RenderSystem.disableBlend();
 	}

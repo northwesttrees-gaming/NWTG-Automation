@@ -31,7 +31,7 @@ public class AutoItemCollectorMachineInventoryGuiWindow extends ContainerScreen<
 		this.xSize = 176;
 		this.ySize = 126;
 	}
-	private static final ResourceLocation texture = new ResourceLocation("nwtg_automation:textures/auto_item_collector_machine_inventory.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -44,10 +44,8 @@ public class AutoItemCollectorMachineInventoryGuiWindow extends ContainerScreen<
 		RenderSystem.color4f(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		Minecraft.getInstance().getTextureManager().bindTexture(texture);
-		int k = (this.width - this.xSize) / 2;
-		int l = (this.height - this.ySize) / 2;
-		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/auto_item_collector_machine_gui.png"));
+		this.blit(ms, this.guiLeft + 0, this.guiTop + 0, 0, 0, 176, 126, 176, 126);
 		RenderSystem.disableBlend();
 	}
 
