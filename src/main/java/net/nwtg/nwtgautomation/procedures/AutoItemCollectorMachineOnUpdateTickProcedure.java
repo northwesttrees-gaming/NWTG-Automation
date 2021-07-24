@@ -26,7 +26,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoItemCollectorMachineOnUpdateTickProcedure(NwtgAutomationModElements instance) {
-		super(instance, 68);
+		super(instance, 53);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -66,31 +66,48 @@ public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomatio
 			}
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CollectItem")) == (false))) {
 			posX = (double) (x - 4);
-			posY = (double) y;
+			posY = (double) (y - 4);
 			posZ = (double) (z - 4);
 			for (int index0 = 0; index0 < (int) (9); index0++) {
 				for (int index1 = 0; index1 < (int) (9); index1++) {
-					if (((new Object() {
-						public ItemStack getItemStack(BlockPos pos, int sltid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							TileEntity _ent = world.getTileEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
+					for (int index2 = 0; index2 < (int) (9); index2++) {
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
 							}
-							return _retval.get();
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Items.EGG, (int) (1))
+								.getItem())) {
+							if (world instanceof ServerWorld) {
+								((World) world).getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+										(("execute ") + "" + ("if ") + "" + ("entity ") + "" + ("@e[") + "" + ("type=minecraft:item,") + ""
+												+ ("name=Egg,") + "" + ("x=") + "" + ((new java.text.DecimalFormat("##.##").format((posX)))) + ""
+												+ (",y=") + "" + ((new java.text.DecimalFormat("##.##").format((posY)))) + "" + (",z=") + ""
+												+ ((new java.text.DecimalFormat("##.##").format((posZ)))) + "" + (",dx=1") + "" + (",dy=1") + ""
+												+ (",dz=1") + "" + ("] ") + "" + ("run ") + "" + ("data ") + "" + ("modify ") + "" + ("block ") + ""
+												+ ("~ ") + "" + ("~ ") + "" + ("~ ") + "" + ("ForgeData.CollectItem ") + "" + ("set ") + ""
+												+ ("value ") + "" + ("1")));
+							}
 						}
-					}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Items.EGG, (int) (1)).getItem())) {
-						if (world instanceof ServerWorld) {
-							((World) world).getServer().getCommandManager().handleCommand(
-									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-									(("execute at @e[type=minecraft:item,name=Egg,") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + ""
-											+ (" ") + "" + ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
-											+ ((new java.text.DecimalFormat("##").format((posZ)))) + ""
-											+ (",dx,dx=1,dy=1,dz=1] run data modify block ForgeData.CollectItem set value 1=1,dy=1,dz=1")));
+						if (((new Object() {
+							public boolean getValue(IWorld world, BlockPos pos, String tag) {
+								TileEntity tileEntity = world.getTileEntity(pos);
+								if (tileEntity != null)
+									return tileEntity.getTileData().getBoolean(tag);
+								return false;
+							}
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CollectItem")) == (true))) {
+							break;
 						}
+						posX = (double) ((posX) + 1);
 					}
 					if (((new Object() {
 						public boolean getValue(IWorld world, BlockPos pos, String tag) {
@@ -102,7 +119,8 @@ public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomatio
 					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CollectItem")) == (true))) {
 						break;
 					}
-					posX = (double) ((posX) + 1);
+					posX = (double) (x - 4);
+					posZ = (double) ((posZ) + 1);
 				}
 				if (((new Object() {
 					public boolean getValue(IWorld world, BlockPos pos, String tag) {
@@ -115,7 +133,8 @@ public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomatio
 					break;
 				}
 				posX = (double) (x - 4);
-				posZ = (double) ((posZ) + 1);
+				posZ = (double) (z - 4);
+				posY = (double) ((posY) + 1);
 			}
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);

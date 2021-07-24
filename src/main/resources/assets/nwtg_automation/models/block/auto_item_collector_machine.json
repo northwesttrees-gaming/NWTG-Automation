@@ -3,9 +3,9 @@
   "textures": {
     "down": "nwtg_automation:blocks/machine_block",
     "up": "nwtg_automation:blocks/auto_machine_device_output",
-    "north": "nwtg_automation:blocks/auto_machine_off",
+    "north": "nwtg_automation:blocks/auto_item_collector_machine_off",
     "east": "nwtg_automation:blocks/machine_block",
-    "south": "nwtg_automation:blocks/auto_machine_off",
+    "south": "nwtg_automation:blocks/auto_item_collector_machine_off",
     "west": "nwtg_automation:blocks/machine_block",
     "particle": "nwtg_automation:blocks/machine_block"
   }

@@ -77,7 +77,7 @@ public class AutoCraftingMachineBlock extends NwtgAutomationModElements.ModEleme
 	@ObjectHolder("nwtg_automation:auto_crafting_machine")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public AutoCraftingMachineBlock(NwtgAutomationModElements instance) {
-		super(instance, 32);
+		super(instance, 5);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

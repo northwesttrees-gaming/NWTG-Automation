@@ -3,6 +3,8 @@ package net.nwtg.nwtgautomation.block;
 
 import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineOnUpdateTickProcedure;
 import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineOnOnBlockRightClickedProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineOnBlockAddedProcedure;
+import net.nwtg.nwtgautomation.gui.AutoItemCollectorMachineInventoryGui;
 import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -36,6 +38,7 @@ import net.minecraft.tileentity.LockableLootTileEntity;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
+import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.loot.LootContext;
@@ -45,7 +48,6 @@ import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
@@ -68,6 +70,8 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
+import io.netty.buffer.Unpooled;
+
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoItemCollectorMachineOnBlock extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:auto_item_collector_machine_on")
@@ -75,7 +79,7 @@ public class AutoItemCollectorMachineOnBlock extends NwtgAutomationModElements.M
 	@ObjectHolder("nwtg_automation:auto_item_collector_machine_on")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public AutoItemCollectorMachineOnBlock(NwtgAutomationModElements instance) {
-		super(instance, 66);
+		super(instance, 51);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -150,6 +154,14 @@ public class AutoItemCollectorMachineOnBlock extends NwtgAutomationModElements.M
 			int y = pos.getY();
 			int z = pos.getZ();
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 5);
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AutoItemCollectorMachineOnBlockAddedProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
@@ -290,7 +302,8 @@ public class AutoItemCollectorMachineOnBlock extends NwtgAutomationModElements.M
 
 		@Override
 		public Container createMenu(int id, PlayerInventory player) {
-			return ChestContainer.createGeneric9X3(id, player, this);
+			return new AutoItemCollectorMachineInventoryGui.GuiContainerMod(id, player,
+					new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
 		}
 
 		@Override

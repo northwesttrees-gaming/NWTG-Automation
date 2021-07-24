@@ -2,37 +2,19 @@
   "group": "nwtg_automation_auto_farming_machine",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345",
-    "678"
+    "0",
+    "1",
+    "2"
   ],
   "key": {
     "0": {
-      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
-    },
-    "1": {
       "item": "minecraft:dispenser"
     },
-    "2": {
-      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
-    },
-    "3": {
-      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
-    },
-    "4": {
+    "1": {
       "item": "nwtg_automation:machine_block"
     },
-    "5": {
-      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
-    },
-    "6": {
-      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
-    },
-    "7": {
+    "2": {
       "item": "minecraft:iron_hoe"
-    },
-    "8": {
-      "tag": "forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
     }
   },
   "result": {

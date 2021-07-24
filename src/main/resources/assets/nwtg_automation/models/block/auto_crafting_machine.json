@@ -3,10 +3,10 @@
   "textures": {
     "down": "nwtg_automation:blocks/machine_block",
     "up": "nwtg_automation:blocks/auto_machine_device_output",
-    "north": "nwtg_automation:blocks/auto_machine_chest_input",
-    "east": "nwtg_automation:blocks/auto_machine_off",
-    "south": "nwtg_automation:blocks/auto_machine_chest_output",
-    "west": "nwtg_automation:blocks/auto_machine_off",
+    "north": "nwtg_automation:blocks/auto_crafting_machine_off",
+    "east": "nwtg_automation:blocks/auto_machine_chest_input",
+    "south": "nwtg_automation:blocks/auto_crafting_machine_off",
+    "west": "nwtg_automation:blocks/auto_machine_chest_output",
     "particle": "nwtg_automation:blocks/machine_block"
   }
 }

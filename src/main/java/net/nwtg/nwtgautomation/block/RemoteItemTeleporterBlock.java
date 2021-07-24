@@ -91,7 +91,7 @@ public class RemoteItemTeleporterBlock extends NwtgAutomationModElements.ModElem
 	@ObjectHolder("nwtg_automation:remote_item_teleporter")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public RemoteItemTeleporterBlock(NwtgAutomationModElements instance) {
-		super(instance, 23);
+		super(instance, 6);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

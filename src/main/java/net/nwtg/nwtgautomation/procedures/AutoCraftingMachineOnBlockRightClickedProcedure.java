@@ -33,7 +33,7 @@ import io.netty.buffer.Unpooled;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoCraftingMachineOnBlockRightClickedProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoCraftingMachineOnBlockRightClickedProcedure(NwtgAutomationModElements instance) {
-		super(instance, 36);
+		super(instance, 25);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -102,7 +102,7 @@ public class AutoCraftingMachineOnBlockRightClickedProcedure extends NwtgAutomat
 				}
 			}
 		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.SOUTH))
-				&& ((direction == Direction.EAST) || (direction == Direction.WEST)))) {
+				&& ((direction == Direction.NORTH) || (direction == Direction.SOUTH)))) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = AutoCraftingMachineOnBlock.block.getDefaultState();
@@ -161,7 +161,7 @@ public class AutoCraftingMachineOnBlockRightClickedProcedure extends NwtgAutomat
 				}
 			}
 		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.WEST))
-				&& ((direction == Direction.NORTH) || (direction == Direction.SOUTH)))) {
+				&& ((direction == Direction.EAST) || (direction == Direction.WEST)))) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = AutoCraftingMachineOnBlock.block.getDefaultState();

@@ -13,7 +13,7 @@
         "value": ""
       },
       {
-        "value": "Blocks.REDSTONE_TORCH"
+        "value": "Items.COMPASS"
       },
       {
         "value": ""
@@ -31,7 +31,7 @@
         "value": ""
       },
       {
-        "value": "Blocks.HOPPER"
+        "value": "Blocks.OBSERVER"
       },
       {
         "value": ""

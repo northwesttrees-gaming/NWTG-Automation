@@ -10,31 +10,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "TAG:forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
+        "value": ""
       },
       {
         "value": "Blocks.DISPENSER"
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
+        "value": ""
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
+        "value": ""
       },
       {
         "value": "CUSTOM:MachineBlock"
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
+        "value": ""
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
+        "value": ""
       },
       {
         "value": "Items.IRON_HOE"
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/auto_farming_machine_crafting_seeds"
+        "value": ""
       }
     ],
     "recipeReturnStack": {

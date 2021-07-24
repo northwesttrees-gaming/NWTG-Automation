@@ -11,7 +11,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoCraftingMachineOnUpdateTickProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoCraftingMachineOnUpdateTickProcedure(NwtgAutomationModElements instance) {
-		super(instance, 34);
+		super(instance, 23);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -54,6 +54,22 @@ public class AutoCraftingMachineOnUpdateTickProcedure extends NwtgAutomationModE
 			$_dependencies.put("y", y);
 			$_dependencies.put("z", z);
 			AutoCraftingMachineBreadRecipeProcedure.executeProcedure($_dependencies);
+		}
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("world", world);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			AutoCraftingMachineSugarRecipeProcedure.executeProcedure($_dependencies);
+		}
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("world", world);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			AutoCraftingMachinePumpkinPieRecipeProcedure.executeProcedure($_dependencies);
 		}
 	}
 }

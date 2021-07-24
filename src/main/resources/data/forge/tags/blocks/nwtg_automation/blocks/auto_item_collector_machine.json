@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "nwtg_automation:auto_item_collector_machine",
+    "nwtg_automation:auto_item_collector_machine_on"
+  ]
+}

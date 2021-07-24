@@ -40,7 +40,7 @@ public class AutoFarmingMachineInventoryGui extends NwtgAutomationModElements.Mo
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public AutoFarmingMachineInventoryGui(NwtgAutomationModElements instance) {
-		super(instance, 6);
+		super(instance, 9);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

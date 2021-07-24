@@ -27,7 +27,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoFarmingMachineMelonScriptProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoFarmingMachineMelonScriptProcedure(NwtgAutomationModElements instance) {
-		super(instance, 46);
+		super(instance, 35);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

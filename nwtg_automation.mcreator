@@ -4,7 +4,7 @@
     {
       "name": "MachineBlock",
       "type": "block",
-      "sortid": 1,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -14,7 +14,7 @@
     {
       "name": "NWTGAutomationTab",
       "type": "tab",
-      "sortid": 2,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -24,7 +24,7 @@
     {
       "name": "MachineBlockCrafting",
       "type": "recipe",
-      "sortid": 3,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -34,7 +34,7 @@
     {
       "name": "AutoFarmingMachineInventory",
       "type": "gui",
-      "sortid": 6,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -44,7 +44,7 @@
     {
       "name": "AutoFarmingMachine",
       "type": "block",
-      "sortid": 14,
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -54,7 +54,7 @@
     {
       "name": "AutoFarmingMachineUpdateTick",
       "type": "procedure",
-      "sortid": 15,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -84,7 +84,7 @@
     {
       "name": "AutoFarmingMachineBlockAdded",
       "type": "procedure",
-      "sortid": 16,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -114,7 +114,7 @@
     {
       "name": "AutoFarmingMachineWheatScript",
       "type": "procedure",
-      "sortid": 17,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -144,7 +144,7 @@
     {
       "name": "AutoFarmingMachineBeetrootScript",
       "type": "procedure",
-      "sortid": 18,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -174,7 +174,7 @@
     {
       "name": "AutoFarmingMachineCarrotScript",
       "type": "procedure",
-      "sortid": 19,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -204,7 +204,7 @@
     {
       "name": "AutoFarmingMachinePotatoScript",
       "type": "procedure",
-      "sortid": 20,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -234,7 +234,7 @@
     {
       "name": "AutoFarmingMachineSweetBerryScript",
       "type": "procedure",
-      "sortid": 21,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -264,7 +264,7 @@
     {
       "name": "AutoFarmingMachineNetherWartsScript",
       "type": "procedure",
-      "sortid": 22,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -294,7 +294,7 @@
     {
       "name": "RemoteItemTeleporterOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 23,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -328,7 +328,7 @@
     {
       "name": "RemoteItemTeleporter",
       "type": "block",
-      "sortid": 23,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -338,7 +338,7 @@
     {
       "name": "RemoteItemTeleporterUpdateTick",
       "type": "procedure",
-      "sortid": 24,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -368,7 +368,7 @@
     {
       "name": "AutoFarmingMachineCrafting",
       "type": "recipe",
-      "sortid": 25,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -378,7 +378,7 @@
     {
       "name": "RemoteItemTeleporterCrafting",
       "type": "recipe",
-      "sortid": 27,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -388,7 +388,7 @@
     {
       "name": "AutoCraftingMachine",
       "type": "block",
-      "sortid": 32,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -398,7 +398,7 @@
     {
       "name": "AutoCraftingMachineOn",
       "type": "block",
-      "sortid": 33,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -408,7 +408,7 @@
     {
       "name": "AutoCraftingMachineOnUpdateTick",
       "type": "procedure",
-      "sortid": 34,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -438,7 +438,7 @@
     {
       "name": "AutoCraftingMachineOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 35,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -476,7 +476,7 @@
     {
       "name": "AutoCraftingMachineOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 36,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -514,7 +514,7 @@
     {
       "name": "AutoCraftingMachineInventory",
       "type": "gui",
-      "sortid": 37,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -524,7 +524,7 @@
     {
       "name": "AutoCraftingMachineSortingScript",
       "type": "procedure",
-      "sortid": 38,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -554,7 +554,7 @@
     {
       "name": "AutoCraftingMachineBreadRecipe",
       "type": "procedure",
-      "sortid": 39,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -584,7 +584,7 @@
     {
       "name": "AutoCraftingMachineBlockIsPlacedBy",
       "type": "procedure",
-      "sortid": 40,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -614,7 +614,7 @@
     {
       "name": "AutoFarmingMachineOn",
       "type": "block",
-      "sortid": 41,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -624,7 +624,7 @@
     {
       "name": "AutoFarmingMachineOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 42,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -662,7 +662,7 @@
     {
       "name": "AutoFarmingMachineOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 43,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -700,7 +700,7 @@
     {
       "name": "AutoFarmingMachineSugarcaneScript",
       "type": "procedure",
-      "sortid": 44,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -730,7 +730,7 @@
     {
       "name": "AutoFarmingMachinePumpkinScript",
       "type": "procedure",
-      "sortid": 45,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -760,7 +760,7 @@
     {
       "name": "AutoFarmingMachineMelonScript",
       "type": "procedure",
-      "sortid": 46,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -790,7 +790,7 @@
     {
       "name": "AutoFarmingMachineCocoaBeansScript",
       "type": "procedure",
-      "sortid": 47,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -820,7 +820,7 @@
     {
       "name": "MachineWrench",
       "type": "item",
-      "sortid": 48,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -830,7 +830,7 @@
     {
       "name": "MachineWrenchCraftingRecipe",
       "type": "recipe",
-      "sortid": 49,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -840,7 +840,7 @@
     {
       "name": "BlocksMachineBlockTag",
       "type": "tag",
-      "sortid": 52,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -850,7 +850,7 @@
     {
       "name": "ItemsMachineBlockTag",
       "type": "tag",
-      "sortid": 53,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -860,7 +860,7 @@
     {
       "name": "ItemsMachineWrenchTag",
       "type": "tag",
-      "sortid": 54,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -870,7 +870,7 @@
     {
       "name": "BlocksRemoteItemTeleporterTag",
       "type": "tag",
-      "sortid": 55,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -880,7 +880,7 @@
     {
       "name": "ItemsRemoteItemTeleporterTag",
       "type": "tag",
-      "sortid": 56,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -890,7 +890,7 @@
     {
       "name": "ItemsAutoCraftingMachineTag",
       "type": "tag",
-      "sortid": 57,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -900,7 +900,7 @@
     {
       "name": "BlocksAutoCraftingMachineTag",
       "type": "tag",
-      "sortid": 58,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -910,7 +910,7 @@
     {
       "name": "ItemsAutoFarmingMachineTag",
       "type": "tag",
-      "sortid": 59,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -920,7 +920,7 @@
     {
       "name": "BlocksAutoFarmingMachineTag",
       "type": "tag",
-      "sortid": 60,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -930,7 +930,7 @@
     {
       "name": "ItemsAutoFarmingMachineCraftingSeedsTag",
       "type": "tag",
-      "sortid": 61,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -940,7 +940,7 @@
     {
       "name": "AutoFarmingMachineBambooScript",
       "type": "procedure",
-      "sortid": 62,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -970,7 +970,7 @@
     {
       "name": "AutoFarmingMachineCactusScript",
       "type": "procedure",
-      "sortid": 63,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1000,7 +1000,7 @@
     {
       "name": "AutoFarmingMachineKelpScript",
       "type": "procedure",
-      "sortid": 64,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1030,7 +1030,7 @@
     {
       "name": "AutoItemCollectorMachine",
       "type": "block",
-      "sortid": 65,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1040,7 +1040,7 @@
     {
       "name": "AutoItemCollectorMachineOn",
       "type": "block",
-      "sortid": 66,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1050,7 +1050,7 @@
     {
       "name": "AutoItemCollectorMachineInventory",
       "type": "gui",
-      "sortid": 67,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1060,7 +1060,7 @@
     {
       "name": "AutoItemCollectorMachineOnUpdateTick",
       "type": "procedure",
-      "sortid": 68,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1090,7 +1090,7 @@
     {
       "name": "AutoItemCollectorMachineEggScript",
       "type": "procedure",
-      "sortid": 69,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1120,7 +1120,7 @@
     {
       "name": "AutoItemCollectorMachineOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 70,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1152,12 +1152,13 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Blocks/Auto Blocks/ItemCollector/Procedures"
     },
     {
       "name": "AutoItemCollectorMachineOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 71,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1189,7 +1190,288 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Blocks/Auto Blocks/ItemCollector/Procedures"
+    },
+    {
+      "name": "AutoItemCollectorMachineBlockAdded",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_item_collector_machine_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/ItemCollector/Procedures"
+    },
+    {
+      "name": "AutoItemCollectorMachineOnBlockAdded",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_item_collector_machine_on_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/ItemCollector/Procedures"
+    },
+    {
+      "name": "AutoCraftingMachineSugarRecipe",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_sugar_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Recipes/Food"
+    },
+    {
+      "name": "AutoCraftingMachinePumpkinPieRecipe",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_pumpkin_pie_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Recipes/Food"
+    },
+    {
+      "name": "AutoItemCollectorMachineCraftingRecipe",
+      "type": "recipe",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_item_collector_machine_crafting_recipe",
+      "path": "~/Blocks/Auto Blocks/ItemCollector"
+    },
+    {
+      "name": "BlocksAutoItemCollectorMachineTag",
+      "type": "tag",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blocks_auto_item_collector_machine_tag",
+      "path": "~/Blocks/Auto Blocks/ItemCollector"
+    },
+    {
+      "name": "ItemsAutoItemCollectorMachineTag",
+      "type": "tag",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "items_auto_item_collector_machine_tag",
+      "path": "~/Blocks/Auto Blocks/ItemCollector"
+    },
+    {
+      "name": "AutoCraftingMachineCraftingRecipe",
+      "type": "recipe",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_crafting_recipe",
+      "path": "~/Blocks/Auto Blocks/Crafting"
+    },
+    {
+      "name": "AutoCraftingMachineSortingScriptNorth",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_sorting_script_north",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Procedures/Script"
+    },
+    {
+      "name": "AutoCraftingMachineSortingScriptEast",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_sorting_script_east",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Procedures/Script"
+    },
+    {
+      "name": "AutoCraftingMachineSortingScriptSouth",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_sorting_script_south",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Procedures/Script"
+    },
+    {
+      "name": "AutoCraftingMachineSortingScriptWest",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_sorting_script_west",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Auto Blocks/Crafting/Procedures/Script"
     }
   ],
   "variable_elements": [],

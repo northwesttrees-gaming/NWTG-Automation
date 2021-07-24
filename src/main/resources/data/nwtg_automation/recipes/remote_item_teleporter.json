@@ -8,13 +8,13 @@
   ],
   "key": {
     "0": {
-      "item": "minecraft:redstone_torch"
+      "item": "minecraft:compass"
     },
     "1": {
       "item": "nwtg_automation:machine_block"
     },
     "2": {
-      "item": "minecraft:hopper"
+      "item": "minecraft:observer"
     }
   },
   "result": {

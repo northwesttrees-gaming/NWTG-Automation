@@ -5,9 +5,9 @@
     "texture": "machine_block",
     "textureTop": "auto_machine_device_output",
     "textureLeft": "machine_block",
-    "textureFront": "auto_machine_off",
+    "textureFront": "auto_item_collector_machine_off",
     "textureRight": "machine_block",
-    "textureBack": "auto_machine_off",
+    "textureBack": "auto_item_collector_machine_off",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 1,
@@ -85,7 +85,7 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "hasInventory": true,
-    "guiBoundTo": "<NONE>",
+    "guiBoundTo": "AutoItemCollectorMachineInventory",
     "openGUIOnRightClick": false,
     "inventorySize": 6,
     "inventoryStackSize": 64,
@@ -103,6 +103,9 @@
     "fluidRestrictions": [],
     "onRightClicked": {
       "name": "AutoItemCollectorMachineOnBlockRightClicked"
+    },
+    "onBlockAdded": {
+      "name": "AutoItemCollectorMachineBlockAdded"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
