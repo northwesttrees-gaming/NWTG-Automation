@@ -1,12 +1,14 @@
 {
-  "block.nwtg_automation.remote_item_teleporter": "Remote Item Teleporter",
   "item.nwtg_automation.machine_wrench": "Machine Wrench",
-  "block.nwtg_automation.auto_crafting_machine": "Auto Crafting Machine",
-  "block.nwtg_automation.auto_crafting_machine_on": "Auto Crafting Machine",
   "block.nwtg_automation.machine_block": "Machine Block",
-  "block.nwtg_automation.auto_farming_machine_on": "Auto Farming Machine",
-  "itemGroup.tabnwtg_automation_tab": "NWTG Automation",
   "block.nwtg_automation.auto_farming_machine": "Auto Farming Machine",
   "block.nwtg_automation.auto_item_collector_machine": "Auto Item Collector Machine",
-  "block.nwtg_automation.auto_item_collector_machine_on": "Auto Item Collector Machine"
+  "block.nwtg_automation.auto_item_collector_machine_on": "Auto Item Collector Machine",
+  "block.nwtg_automation.remote_item_teleporter": "Remote Item Teleporter",
+  "block.nwtg_automation.auto_crafting_machine": "Auto Crafting Machine",
+  "block.nwtg_automation.auto_crafting_machine_on": "Auto Crafting Machine",
+  "block.nwtg_automation.auto_farming_machine_on": "Auto Farming Machine",
+  "block.nwtg_automation.breaker_panel": "Breaker Panel",
+  "itemGroup.tabnwtg_automation_tab": "NWTG Automation",
+  "block.nwtg_automation.breaker_panel_on": "Breaker Panel"
 }

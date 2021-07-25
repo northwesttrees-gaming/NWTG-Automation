@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "nwtg_automation:breaker_panel",
+    "nwtg_automation:breaker_panel_on"
+  ]
+}

@@ -4,7 +4,11 @@ import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraft.world.IWorld;
-import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Direction;
+import net.minecraft.state.EnumProperty;
+import net.minecraft.state.DirectionProperty;
+import net.minecraft.block.BlockState;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -40,51 +44,99 @@ public class AutoCraftingMachineSortingScriptProcedure extends NwtgAutomationMod
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		ItemStack itemChestInput = ItemStack.EMPTY;
-		ItemStack itemChestOutput = ItemStack.EMPTY;
-		ItemStack itemCraftingTable = ItemStack.EMPTY;
-		double slotCraftingTable = 0;
-		double slotChestInput = 0;
-		double slotChestOutput = 0;
-		double testSlotCraftingTable = 0;
-		double countChestOutputSlot = 0;
-		double countCraftingTableSlot = 0;
-		double countChestInputSlot = 0;
-		double testSlotChestInput = 0;
-		boolean sendToOutputChest = false;
-		boolean testCraftingTableItems = false;
 		if ((!(world.isRemote()))) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("world", world);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				AutoCraftingMachineSortingScriptNorthProcedure.executeProcedure($_dependencies);
-			}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("world", world);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				AutoCraftingMachineSortingScriptEastProcedure.executeProcedure($_dependencies);
-			}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("world", world);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				AutoCraftingMachineSortingScriptSouthProcedure.executeProcedure($_dependencies);
-			}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("world", world);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				AutoCraftingMachineSortingScriptWestProcedure.executeProcedure($_dependencies);
+			if (((new Object() {
+				public Direction getDirection(BlockPos pos) {
+					try {
+						BlockState _bs = world.getBlockState(pos);
+						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+						if (property != null)
+							return _bs.get(property);
+						return Direction.getFacingFromAxisDirection(
+								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+								Direction.AxisDirection.POSITIVE);
+					} catch (Exception e) {
+						return Direction.NORTH;
+					}
+				}
+			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.NORTH)) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					AutoCraftingMachineSortingScriptNorthProcedure.executeProcedure($_dependencies);
+				}
+			} else if (((new Object() {
+				public Direction getDirection(BlockPos pos) {
+					try {
+						BlockState _bs = world.getBlockState(pos);
+						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+						if (property != null)
+							return _bs.get(property);
+						return Direction.getFacingFromAxisDirection(
+								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+								Direction.AxisDirection.POSITIVE);
+					} catch (Exception e) {
+						return Direction.NORTH;
+					}
+				}
+			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.EAST)) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					AutoCraftingMachineSortingScriptEastProcedure.executeProcedure($_dependencies);
+				}
+			} else if (((new Object() {
+				public Direction getDirection(BlockPos pos) {
+					try {
+						BlockState _bs = world.getBlockState(pos);
+						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+						if (property != null)
+							return _bs.get(property);
+						return Direction.getFacingFromAxisDirection(
+								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+								Direction.AxisDirection.POSITIVE);
+					} catch (Exception e) {
+						return Direction.NORTH;
+					}
+				}
+			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.SOUTH)) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					AutoCraftingMachineSortingScriptSouthProcedure.executeProcedure($_dependencies);
+				}
+			} else if (((new Object() {
+				public Direction getDirection(BlockPos pos) {
+					try {
+						BlockState _bs = world.getBlockState(pos);
+						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+						if (property != null)
+							return _bs.get(property);
+						return Direction.getFacingFromAxisDirection(
+								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+								Direction.AxisDirection.POSITIVE);
+					} catch (Exception e) {
+						return Direction.NORTH;
+					}
+				}
+			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.WEST)) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					AutoCraftingMachineSortingScriptWestProcedure.executeProcedure($_dependencies);
+				}
 			}
 		}
 	}

@@ -1,8 +1,9 @@
 
 package net.nwtg.nwtgautomation.block;
 
-import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineUpdateTickProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineOnUpdateTickProcedure;
 import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineOnOnBlockRightClickedProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineBlockIsPlacedByProcedure;
 import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineBlockAddedProcedure;
 import net.nwtg.nwtgautomation.gui.AutoFarmingMachineInventoryGui;
 import net.nwtg.nwtgautomation.NwtgAutomationModElements;
@@ -53,6 +54,7 @@ import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
@@ -176,9 +178,26 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				AutoFarmingMachineUpdateTickProcedure.executeProcedure($_dependencies);
+				AutoFarmingMachineOnUpdateTickProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 5);
+		}
+
+		@Override
+		public void onBlockPlacedBy(World world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack itemstack) {
+			super.onBlockPlacedBy(world, pos, state, entity, itemstack);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AutoFarmingMachineBlockIsPlacedByProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override

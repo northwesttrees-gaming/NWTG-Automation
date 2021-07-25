@@ -3,7 +3,8 @@ package net.nwtg.nwtgautomation.block;
 
 import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineOnUpdateTickProcedure;
 import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineOnOnBlockRightClickedProcedure;
-import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineOnBlockAddedProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineBlockIsPlacedByProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineBlockAddedProcedure;
 import net.nwtg.nwtgautomation.gui.AutoItemCollectorMachineInventoryGui;
 import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 
@@ -53,6 +54,7 @@ import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
@@ -160,7 +162,7 @@ public class AutoItemCollectorMachineOnBlock extends NwtgAutomationModElements.M
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				AutoItemCollectorMachineOnBlockAddedProcedure.executeProcedure($_dependencies);
+				AutoItemCollectorMachineBlockAddedProcedure.executeProcedure($_dependencies);
 			}
 		}
 
@@ -179,6 +181,23 @@ public class AutoItemCollectorMachineOnBlock extends NwtgAutomationModElements.M
 				AutoItemCollectorMachineOnUpdateTickProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 5);
+		}
+
+		@Override
+		public void onBlockPlacedBy(World world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack itemstack) {
+			super.onBlockPlacedBy(world, pos, state, entity, itemstack);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AutoItemCollectorMachineBlockIsPlacedByProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override

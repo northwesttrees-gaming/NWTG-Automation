@@ -9,7 +9,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "machine_block",
-      "path": "~/Blocks/MachineBlock"
+      "path": "~/Blocks/Blocks/MachineBlock"
     },
     {
       "name": "NWTGAutomationTab",
@@ -19,7 +19,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "nwtg_automation_tab",
-      "path": "~/Other/Creative Tabs"
+      "path": "~/CreativeTabs"
     },
     {
       "name": "MachineBlockCrafting",
@@ -29,7 +29,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "machine_block_crafting",
-      "path": "~/Blocks/MachineBlock"
+      "path": "~/Recipes/Crafting_Table/Blocks/MachineBlock"
     },
     {
       "name": "AutoFarmingMachineInventory",
@@ -39,7 +39,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_farming_machine_inventory",
-      "path": "~/Blocks/Auto Blocks/Farming"
+      "path": "~/GUIs/Machines/AutoFarming"
     },
     {
       "name": "AutoFarmingMachine",
@@ -49,7 +49,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_farming_machine",
-      "path": "~/Blocks/Auto Blocks/Farming"
+      "path": "~/Blocks/Machines/AutoFarming"
     },
     {
       "name": "AutoFarmingMachineUpdateTick",
@@ -79,7 +79,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures"
     },
     {
       "name": "AutoFarmingMachineBlockAdded",
@@ -109,7 +109,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures"
     },
     {
       "name": "AutoFarmingMachineWheatScript",
@@ -139,7 +139,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "AutoFarmingMachineBeetrootScript",
@@ -169,7 +169,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "AutoFarmingMachineCarrotScript",
@@ -199,7 +199,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "AutoFarmingMachinePotatoScript",
@@ -229,7 +229,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "AutoFarmingMachineSweetBerryScript",
@@ -259,7 +259,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "AutoFarmingMachineNetherWartsScript",
@@ -289,7 +289,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "RemoteItemTeleporterOnBlockRightClicked",
@@ -323,7 +323,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Item Teleporter"
+      "path": "~/Blocks/Devices/RIT/Procedures"
     },
     {
       "name": "RemoteItemTeleporter",
@@ -333,7 +333,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "remote_item_teleporter",
-      "path": "~/Blocks/Item Teleporter"
+      "path": "~/Blocks/Devices/RIT"
     },
     {
       "name": "RemoteItemTeleporterUpdateTick",
@@ -363,7 +363,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Item Teleporter"
+      "path": "~/Blocks/Devices/RIT/Procedures"
     },
     {
       "name": "AutoFarmingMachineCrafting",
@@ -373,7 +373,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_farming_machine_crafting",
-      "path": "~/Blocks/Auto Blocks/Farming"
+      "path": "~/Recipes/Crafting_Table/Machines/AutoFarming"
     },
     {
       "name": "RemoteItemTeleporterCrafting",
@@ -383,7 +383,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "remote_item_teleporter_crafting",
-      "path": "~/Blocks/Item Teleporter"
+      "path": "~/Recipes/Crafting_Table/Devices/RIT"
     },
     {
       "name": "AutoCraftingMachine",
@@ -393,7 +393,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_crafting_machine",
-      "path": "~/Blocks/Auto Blocks/Crafting"
+      "path": "~/Blocks/Machines/AutoCrafting"
     },
     {
       "name": "AutoCraftingMachineOn",
@@ -403,7 +403,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_crafting_machine_on",
-      "path": "~/Blocks/Auto Blocks/Crafting"
+      "path": "~/Blocks/Machines/AutoCrafting"
     },
     {
       "name": "AutoCraftingMachineOnUpdateTick",
@@ -433,7 +433,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Procedures"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures"
     },
     {
       "name": "AutoCraftingMachineOnOnBlockRightClicked",
@@ -471,7 +471,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Procedures"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures"
     },
     {
       "name": "AutoCraftingMachineOnBlockRightClicked",
@@ -509,7 +509,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Procedures"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures"
     },
     {
       "name": "AutoCraftingMachineInventory",
@@ -519,7 +519,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_crafting_machine_inventory",
-      "path": "~/Blocks/Auto Blocks/Crafting"
+      "path": "~/GUIs/Machines/AutoCrafting"
     },
     {
       "name": "AutoCraftingMachineSortingScript",
@@ -549,7 +549,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Script"
     },
     {
       "name": "AutoCraftingMachineBreadRecipe",
@@ -579,7 +579,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Recipes/Food"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Food"
     },
     {
       "name": "AutoCraftingMachineBlockIsPlacedBy",
@@ -591,6 +591,10 @@
       "registry_name": "auto_crafting_machine_block_is_placed_by",
       "metadata": {
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -609,7 +613,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Procedures"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures"
     },
     {
       "name": "AutoFarmingMachineOn",
@@ -619,7 +623,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_farming_machine_on",
-      "path": "~/Blocks/Auto Blocks/Farming"
+      "path": "~/Blocks/Machines/AutoFarming"
     },
     {
       "name": "AutoFarmingMachineOnOnBlockRightClicked",
@@ -657,7 +661,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures"
     },
     {
       "name": "AutoFarmingMachineOnBlockRightClicked",
@@ -695,7 +699,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures"
     },
     {
       "name": "AutoFarmingMachineSugarcaneScript",
@@ -725,7 +729,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "AutoFarmingMachinePumpkinScript",
@@ -755,7 +759,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "AutoFarmingMachineMelonScript",
@@ -785,7 +789,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "AutoFarmingMachineCocoaBeansScript",
@@ -815,7 +819,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "MachineWrench",
@@ -825,7 +829,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "machine_wrench",
-      "path": "~/Items/MachineWrench"
+      "path": "~/Items/Basic/MachineWrench"
     },
     {
       "name": "MachineWrenchCraftingRecipe",
@@ -835,7 +839,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "machine_wrench_crafting_recipe",
-      "path": "~/Items/MachineWrench"
+      "path": "~/Recipes/Crafting_Table/Items/MachineWrench"
     },
     {
       "name": "BlocksMachineBlockTag",
@@ -845,7 +849,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "blocks_machine_block_tag",
-      "path": "~/Blocks/MachineBlock"
+      "path": "~/Tags/Blocks/MachineBlock"
     },
     {
       "name": "ItemsMachineBlockTag",
@@ -855,7 +859,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "items_machine_block_tag",
-      "path": "~/Blocks/MachineBlock"
+      "path": "~/Tags/Blocks/MachineBlock"
     },
     {
       "name": "ItemsMachineWrenchTag",
@@ -865,7 +869,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "items_machine_wrench_tag",
-      "path": "~/Items/MachineWrench"
+      "path": "~/Tags/Items/MachineWrench"
     },
     {
       "name": "BlocksRemoteItemTeleporterTag",
@@ -875,7 +879,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "blocks_remote_item_teleporter_tag",
-      "path": "~/Blocks/Item Teleporter"
+      "path": "~/Tags/Devices/RIT"
     },
     {
       "name": "ItemsRemoteItemTeleporterTag",
@@ -885,7 +889,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "items_remote_item_teleporter_tag",
-      "path": "~/Blocks/Item Teleporter"
+      "path": "~/Tags/Devices/RIT"
     },
     {
       "name": "ItemsAutoCraftingMachineTag",
@@ -895,7 +899,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "items_auto_crafting_machine_tag",
-      "path": "~/Blocks/Auto Blocks/Crafting"
+      "path": "~/Tags/Machines/AutoCrafting"
     },
     {
       "name": "ItemsAutoFarmingMachineTag",
@@ -905,7 +909,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "items_auto_farming_machine_tag",
-      "path": "~/Blocks/Auto Blocks/Farming"
+      "path": "~/Tags/Machines/AutoFarming"
     },
     {
       "name": "BlocksAutoFarmingMachineTag",
@@ -915,17 +919,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "blocks_auto_farming_machine_tag",
-      "path": "~/Blocks/Auto Blocks/Farming"
-    },
-    {
-      "name": "ItemsAutoFarmingMachineCraftingSeedsTag",
-      "type": "tag",
-      "sortid": 47,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "items_auto_farming_machine_crafting_seeds_tag",
-      "path": "~/Blocks/Auto Blocks/Farming"
+      "path": "~/Tags/Machines/AutoFarming"
     },
     {
       "name": "AutoFarmingMachineBambooScript",
@@ -955,7 +949,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "AutoFarmingMachineCactusScript",
@@ -985,7 +979,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "AutoFarmingMachineKelpScript",
@@ -1015,7 +1009,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Farming/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
     },
     {
       "name": "AutoItemCollectorMachine",
@@ -1025,7 +1019,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_item_collector_machine",
-      "path": "~/Blocks/Auto Blocks/ItemCollector"
+      "path": "~/Blocks/Machines/AutoItemCollector"
     },
     {
       "name": "AutoItemCollectorMachineOn",
@@ -1035,7 +1029,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_item_collector_machine_on",
-      "path": "~/Blocks/Auto Blocks/ItemCollector"
+      "path": "~/Blocks/Machines/AutoItemCollector"
     },
     {
       "name": "AutoItemCollectorMachineInventory",
@@ -1045,7 +1039,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_item_collector_machine_inventory",
-      "path": "~/Blocks/Auto Blocks/ItemCollector"
+      "path": "~/GUIs/Machines/AutoItemCollector"
     },
     {
       "name": "AutoItemCollectorMachineOnUpdateTick",
@@ -1075,7 +1069,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/ItemCollector/Procedures"
+      "path": "~/Blocks/Machines/AutoItemCollector/Procedures"
     },
     {
       "name": "AutoItemCollectorMachineEggScript",
@@ -1105,7 +1099,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/ItemCollector/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoItemCollector/Procedures/Script"
     },
     {
       "name": "AutoItemCollectorMachineOnBlockRightClicked",
@@ -1143,7 +1137,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/ItemCollector/Procedures"
+      "path": "~/Blocks/Machines/AutoItemCollector/Procedures"
     },
     {
       "name": "AutoItemCollectorMachineOnOnBlockRightClicked",
@@ -1181,7 +1175,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/ItemCollector/Procedures"
+      "path": "~/Blocks/Machines/AutoItemCollector/Procedures"
     },
     {
       "name": "AutoItemCollectorMachineBlockAdded",
@@ -1211,37 +1205,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/ItemCollector/Procedures"
-    },
-    {
-      "name": "AutoItemCollectorMachineOnBlockAdded",
-      "type": "procedure",
-      "sortid": 58,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "auto_item_collector_machine_on_block_added",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Blocks/Auto Blocks/ItemCollector/Procedures"
+      "path": "~/Blocks/Machines/AutoItemCollector/Procedures"
     },
     {
       "name": "AutoCraftingMachineSugarRecipe",
@@ -1271,7 +1235,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Recipes/Food"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Food"
     },
     {
       "name": "AutoCraftingMachinePumpkinPieRecipe",
@@ -1301,7 +1265,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Recipes/Food"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Food"
     },
     {
       "name": "AutoItemCollectorMachineCraftingRecipe",
@@ -1311,7 +1275,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_item_collector_machine_crafting_recipe",
-      "path": "~/Blocks/Auto Blocks/ItemCollector"
+      "path": "~/Recipes/Crafting_Table/Machines/AutoItemCollector"
     },
     {
       "name": "BlocksAutoItemCollectorMachineTag",
@@ -1321,7 +1285,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "blocks_auto_item_collector_machine_tag",
-      "path": "~/Blocks/Auto Blocks/ItemCollector"
+      "path": "~/Tags/Machines/AutoItemCollector"
     },
     {
       "name": "ItemsAutoItemCollectorMachineTag",
@@ -1331,7 +1295,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "items_auto_item_collector_machine_tag",
-      "path": "~/Blocks/Auto Blocks/ItemCollector"
+      "path": "~/Tags/Machines/AutoItemCollector"
     },
     {
       "name": "AutoCraftingMachineCraftingRecipe",
@@ -1341,7 +1305,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_crafting_machine_crafting_recipe",
-      "path": "~/Blocks/Auto Blocks/Crafting"
+      "path": "~/Recipes/Crafting_Table/Machines/AutoCrafting"
     },
     {
       "name": "AutoCraftingMachineSortingScriptNorth",
@@ -1371,7 +1335,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Script"
     },
     {
       "name": "AutoCraftingMachineSortingScriptEast",
@@ -1401,7 +1365,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Script"
     },
     {
       "name": "AutoCraftingMachineSortingScriptSouth",
@@ -1431,7 +1395,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Script"
     },
     {
       "name": "AutoCraftingMachineSortingScriptWest",
@@ -1461,7 +1425,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Auto Blocks/Crafting/Procedures/Script"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Script"
     },
     {
       "name": "BlocksAutoCraftingMachineTag",
@@ -1471,45 +1435,619 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "blocks_auto_crafting_machine_tag",
-      "path": "~/Blocks/Auto Blocks/Crafting"
+      "path": "~/Tags/Machines/AutoCrafting"
+    },
+    {
+      "name": "UnlockMachineBlockRecipe",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "unlock_machine_block_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Recipes/Unlocking"
+    },
+    {
+      "name": "UnlockMachineRecipes",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "unlock_machine_recipes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Recipes/Unlocking"
+    },
+    {
+      "name": "UnlockRemoteItemTeleporterRecipe",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "unlock_remote_item_teleporter_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Recipes/Unlocking"
+    },
+    {
+      "name": "UnlockMachineWrenchRecipe",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "unlock_machine_wrench_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Recipes/Unlocking"
+    },
+    {
+      "name": "BreakerPanel",
+      "type": "block",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "breaker_panel",
+      "path": "~/Blocks/Devices/BreakerPanel"
+    },
+    {
+      "name": "BreakerPanelOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "breaker_panel_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/BreakerPanel/Procedures"
+    },
+    {
+      "name": "PasswordScreen",
+      "type": "gui",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "password_screen",
+      "path": "~/GUIs/Screen/PasswordScreen"
+    },
+    {
+      "name": "PasswordScreenButtonPressed",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "password_screen_button_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Screen/PasswordScreen/Procedures"
+    },
+    {
+      "name": "BreakerPanelScreen",
+      "type": "gui",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "breaker_panel_screen",
+      "path": "~/GUIs/Devices/BreakerPannel"
+    },
+    {
+      "name": "BreakerPanelScreenSetButton",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "breaker_panel_screen_set_button",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Devices/BreakerPannel/Procedures"
+    },
+    {
+      "name": "BreakerPanelScreenToggleButton",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "breaker_panel_screen_toggle_button",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Devices/BreakerPannel/Procedures"
+    },
+    {
+      "name": "BreakerPanelOn",
+      "type": "block",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "breaker_panel_on",
+      "path": "~/Blocks/Devices/BreakerPanel"
+    },
+    {
+      "name": "BreakerPanelOnOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "breaker_panel_on_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/BreakerPanel/Procedures"
+    },
+    {
+      "name": "BlocksBreakerPanelTag",
+      "type": "tag",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blocks_breaker_panel_tag",
+      "path": "~/Tags/Devices/BreakerPanel"
+    },
+    {
+      "name": "BlocksBreakerPanelOnTag",
+      "type": "tag",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blocks_breaker_panel_on_tag",
+      "path": "~/Tags/Devices/BreakerPanel"
+    },
+    {
+      "name": "BlocksBreakerPanelOffTag",
+      "type": "tag",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blocks_breaker_panel_off_tag",
+      "path": "~/Tags/Devices/BreakerPanel"
+    },
+    {
+      "name": "ItemsBreakerPanelTag",
+      "type": "tag",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "items_breaker_panel_tag",
+      "path": "~/Tags/Devices/BreakerPanel"
+    },
+    {
+      "name": "AutoFarmingMachineBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_block_is_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoFarming/Procedures"
+    },
+    {
+      "name": "AutoCraftingMachineBlockAdded",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures"
+    },
+    {
+      "name": "AutoItemCollectorMachineBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_item_collector_machine_block_is_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoItemCollector/Procedures"
+    },
+    {
+      "name": "BreakerPanelBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "breaker_panel_block_is_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/BreakerPanel/Procedures"
+    },
+    {
+      "name": "AutoCraftingMachineUpdateTick",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures"
+    },
+    {
+      "name": "AutoFarmingMachineOnUpdateTick",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_on_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoFarming/Procedures"
+    },
+    {
+      "name": "AutoItemCollectorMachineUpdateTick",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_item_collector_machine_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoItemCollector/Procedures"
+    },
+    {
+      "name": "AutoCraftingMachineFoodRecipes",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_food_recipes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "nwtgPosX",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "nwtgPosY",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "nwtgPosZ",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "nwtgOwner",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
+    },
+    {
+      "name": "nwtgPassword",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.nwtg_automation.remote_item_teleporter": "Remote Item Teleporter",
       "item.nwtg_automation.machine_wrench": "Machine Wrench",
-      "block.nwtg_automation.auto_crafting_machine": "Auto Crafting Machine",
-      "block.nwtg_automation.auto_crafting_machine_on": "Auto Crafting Machine",
       "block.nwtg_automation.machine_block": "Machine Block",
-      "block.nwtg_automation.auto_farming_machine_on": "Auto Farming Machine",
-      "itemGroup.tabnwtg_automation_tab": "NWTG Automation",
       "block.nwtg_automation.auto_farming_machine": "Auto Farming Machine",
       "block.nwtg_automation.auto_item_collector_machine": "Auto Item Collector Machine",
-      "block.nwtg_automation.auto_item_collector_machine_on": "Auto Item Collector Machine"
+      "block.nwtg_automation.auto_item_collector_machine_on": "Auto Item Collector Machine",
+      "block.nwtg_automation.remote_item_teleporter": "Remote Item Teleporter",
+      "block.nwtg_automation.auto_crafting_machine": "Auto Crafting Machine",
+      "block.nwtg_automation.auto_crafting_machine_on": "Auto Crafting Machine",
+      "block.nwtg_automation.auto_farming_machine_on": "Auto Farming Machine",
+      "block.nwtg_automation.breaker_panel": "Breaker Panel",
+      "itemGroup.tabnwtg_automation_tab": "NWTG Automation",
+      "block.nwtg_automation.breaker_panel_on": "Breaker Panel"
     }
   },
   "foldersRoot": {
     "name": "~",
     "children": [
       {
-        "name": "Other",
-        "children": [
-          {
-            "name": "Creative Tabs",
-            "children": []
-          }
-        ]
-      },
-      {
         "name": "Blocks",
         "children": [
           {
-            "name": "Auto Blocks",
+            "name": "Machines",
             "children": [
               {
-                "name": "Farming",
+                "name": "AutoFarming",
                 "children": [
                   {
                     "name": "Procedures",
@@ -1523,7 +2061,7 @@
                 ]
               },
               {
-                "name": "Crafting",
+                "name": "AutoCrafting",
                 "children": [
                   {
                     "name": "Procedures",
@@ -1531,22 +2069,22 @@
                       {
                         "name": "Script",
                         "children": []
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Recipes",
-                    "children": [
+                      },
                       {
-                        "name": "Food",
-                        "children": []
+                        "name": "Recipes",
+                        "children": [
+                          {
+                            "name": "Food",
+                            "children": []
+                          }
+                        ]
                       }
                     ]
                   }
                 ]
               },
               {
-                "name": "ItemCollector",
+                "name": "AutoItemCollector",
                 "children": [
                   {
                     "name": "Procedures",
@@ -1562,12 +2100,36 @@
             ]
           },
           {
-            "name": "Item Teleporter",
-            "children": []
+            "name": "Blocks",
+            "children": [
+              {
+                "name": "MachineBlock",
+                "children": []
+              }
+            ]
           },
           {
-            "name": "MachineBlock",
-            "children": []
+            "name": "Devices",
+            "children": [
+              {
+                "name": "RIT",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "BreakerPanel",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1575,8 +2137,178 @@
         "name": "Items",
         "children": [
           {
-            "name": "MachineWrench",
+            "name": "Basic",
+            "children": [
+              {
+                "name": "MachineWrench",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Recipes",
+        "children": [
+          {
+            "name": "Unlocking",
             "children": []
+          },
+          {
+            "name": "Crafting_Table",
+            "children": [
+              {
+                "name": "Blocks",
+                "children": [
+                  {
+                    "name": "MachineBlock",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Devices",
+                "children": [
+                  {
+                    "name": "RIT",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Machines",
+                "children": [
+                  {
+                    "name": "AutoFarming",
+                    "children": []
+                  },
+                  {
+                    "name": "AutoCrafting",
+                    "children": []
+                  },
+                  {
+                    "name": "AutoItemCollector",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Items",
+                "children": [
+                  {
+                    "name": "MachineWrench",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CreativeTabs",
+        "children": []
+      },
+      {
+        "name": "Tags",
+        "children": [
+          {
+            "name": "Items",
+            "children": [
+              {
+                "name": "MachineWrench",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Blocks",
+            "children": [
+              {
+                "name": "MachineBlock",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Devices",
+            "children": [
+              {
+                "name": "RIT",
+                "children": []
+              },
+              {
+                "name": "BreakerPanel",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Machines",
+            "children": [
+              {
+                "name": "AutoItemCollector",
+                "children": []
+              },
+              {
+                "name": "AutoCrafting",
+                "children": []
+              },
+              {
+                "name": "AutoFarming",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "GUIs",
+        "children": [
+          {
+            "name": "Machines",
+            "children": [
+              {
+                "name": "AutoFarming",
+                "children": []
+              },
+              {
+                "name": "AutoCrafting",
+                "children": []
+              },
+              {
+                "name": "AutoItemCollector",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Devices",
+            "children": [
+              {
+                "name": "BreakerPannel",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Screen",
+            "children": [
+              {
+                "name": "PasswordScreen",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           }
         ]
       }

@@ -114,7 +114,10 @@
       "name": "AutoFarmingMachineBlockAdded"
     },
     "onTickUpdate": {
-      "name": "AutoFarmingMachineUpdateTick"
+      "name": "AutoFarmingMachineOnUpdateTick"
+    },
+    "onBlockPlayedBy": {
+      "name": "AutoFarmingMachineBlockIsPlacedBy"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
