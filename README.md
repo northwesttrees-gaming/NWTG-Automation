@@ -75,7 +75,10 @@ CONDITIONS:
 	F) Third-party versions shall disclose the changes made to the item.
 
 ## CHANGELOG
-(Coming Soon!)
+For more information on each build see the builds wiki page for an index of builds and thier changes.
+- [BUILDS](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Builds)
 
 ## GALLERY
-(Coming Soon!)
+| ![Screenshot 1](https://i.imgur.com/djDCGn3.png) | ![Screenshot 2](https://i.imgur.com/9lSsTqV.png) |
+| --- | --- |
+| ![Screenshot 3](https://i.imgur.com/FeNConG.png) | ![Screenshot 4](https://i.imgur.com/9Ne3whO.png) |
