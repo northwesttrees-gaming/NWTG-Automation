@@ -213,7 +213,7 @@ public class AutoCraftingMachineOnUpdateTickProcedure extends NwtgAutomationModE
 			$_dependencies.put("x", x);
 			$_dependencies.put("y", y);
 			$_dependencies.put("z", z);
-			AutoCraftingMachineFoodRecipesProcedure.executeProcedure($_dependencies);
+			AutoCraftingMachineRecipeIndexProcedure.executeProcedure($_dependencies);
 		}
 	}
 }

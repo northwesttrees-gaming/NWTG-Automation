@@ -1,0 +1,26 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.WARPED_STEM"
+      },
+      {
+        "value": "Blocks.STRIPPED_WARPED_STEM"
+      },
+      {
+        "value": "Blocks.WARPED_HYPHAE"
+      },
+      {
+        "value": "Blocks.STRIPPED_WARPED_HYPHAE"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "nwtg_automation/items/recipes/auto_crafting_machine/warped_log",
+    "namespace": "forge"
+  }
+}

@@ -579,7 +579,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Food"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Food/Bread"
     },
     {
       "name": "AutoCraftingMachineBlockIsPlacedBy",
@@ -890,36 +890,6 @@
       "ids": {},
       "registry_name": "items_remote_item_teleporter_tag",
       "path": "~/Tags/Devices/RIT"
-    },
-    {
-      "name": "ItemsAutoCraftingMachineTag",
-      "type": "tag",
-      "sortid": 43,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "items_auto_crafting_machine_tag",
-      "path": "~/Tags/Machines/AutoCrafting"
-    },
-    {
-      "name": "ItemsAutoFarmingMachineTag",
-      "type": "tag",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "items_auto_farming_machine_tag",
-      "path": "~/Tags/Machines/AutoFarming"
-    },
-    {
-      "name": "BlocksAutoFarmingMachineTag",
-      "type": "tag",
-      "sortid": 46,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "blocks_auto_farming_machine_tag",
-      "path": "~/Tags/Machines/AutoFarming"
     },
     {
       "name": "AutoFarmingMachineBambooScript",
@@ -1235,7 +1205,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Food"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Food/Sugar"
     },
     {
       "name": "AutoCraftingMachinePumpkinPieRecipe",
@@ -1265,7 +1235,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Food"
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Food/Pie"
     },
     {
       "name": "AutoItemCollectorMachineCraftingRecipe",
@@ -1426,16 +1396,6 @@
         ]
       },
       "path": "~/Blocks/Machines/AutoCrafting/Procedures/Script"
-    },
-    {
-      "name": "BlocksAutoCraftingMachineTag",
-      "type": "tag",
-      "sortid": 69,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "blocks_auto_crafting_machine_tag",
-      "path": "~/Tags/Machines/AutoCrafting"
     },
     {
       "name": "UnlockMachineBlockRecipe",
@@ -1985,7 +1945,557 @@
           }
         ]
       },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Food"
+    },
+    {
+      "name": "AutoCraftingMachinePlankRecipes",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_plank_recipes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Wood"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineOakLog",
+      "type": "tag",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_oak_log",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Wood"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineSpruceLog",
+      "type": "tag",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_spruce_log",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Wood"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineBirchLog",
+      "type": "tag",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_birch_log",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Wood"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineJungleLog",
+      "type": "tag",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_jungle_log",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Wood"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineAcaciaLog",
+      "type": "tag",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_acacia_log",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Wood"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineDarkOakLog",
+      "type": "tag",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_dark_oak_log",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Wood"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineWarpedLog",
+      "type": "tag",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_warped_log",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Wood"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineCrimsonLog",
+      "type": "tag",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_crimson_log",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Wood"
+    },
+    {
+      "name": "AutoCraftingMachineOakPlankRecipe",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_oak_plank_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Wood/Planks"
+    },
+    {
+      "name": "AutoCraftingMachineSprucePlankRecipe",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_spruce_plank_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Wood/Planks"
+    },
+    {
+      "name": "AutoCraftingMachineBirchPlankRecipe",
+      "type": "procedure",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_birch_plank_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Wood/Planks"
+    },
+    {
+      "name": "AutoCraftingMachineJunglePlankRecipe",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_jungle_plank_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Wood/Planks"
+    },
+    {
+      "name": "AutoCraftingMachineAcaciaPlankRecipe",
+      "type": "procedure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_acacia_plank_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Wood/Planks"
+    },
+    {
+      "name": "AutoCraftingMachineDarkOakPlankRecipe",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_dark_oak_plank_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Wood/Planks"
+    },
+    {
+      "name": "AutoCraftingMachineWarpedPlankRecipe",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_warped_plank_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Wood/Planks"
+    },
+    {
+      "name": "AutoCraftingMachineCrimsonPlankRecipe",
+      "type": "procedure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_crimson_plank_recipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Wood/Planks"
+    },
+    {
+      "name": "AutoCraftingMachineRecipeIndex",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_recipe_index",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
       "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineWheat",
+      "type": "tag",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_wheat",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Crops"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachinePumpkin",
+      "type": "tag",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_pumpkin",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Crops"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineEgg",
+      "type": "tag",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_egg",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Animal"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineSugar",
+      "type": "tag",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_sugar",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Resource"
+    },
+    {
+      "name": "NWTGAutomationItemsRecipesAutoCraftingMachineSugarcane",
+      "type": "tag",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_recipes_auto_crafting_machine_sugarcane",
+      "path": "~/Tags/Machines/AutoCrafting/Recipes/Crops"
+    },
+    {
+      "name": "NWTGAutomationItemsAutoCraftingMachine",
+      "type": "tag",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_auto_crafting_machine",
+      "path": "~/Tags/Machines/AutoCrafting"
+    },
+    {
+      "name": "NWTGAutomationItemsAutoCraftingMachineOn",
+      "type": "tag",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_auto_crafting_machine_on",
+      "path": "~/Tags/Machines/AutoCrafting"
+    },
+    {
+      "name": "NWTGAutomationItemsAutoCraftingMachineOff",
+      "type": "tag",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_auto_crafting_machine_off",
+      "path": "~/Tags/Machines/AutoCrafting"
+    },
+    {
+      "name": "NWTGAutomationBlocksAutoCraftingMachine",
+      "type": "tag",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_blocks_auto_crafting_machine",
+      "path": "~/Tags/Machines/AutoCrafting"
+    },
+    {
+      "name": "NWTGAutomationBlocksAutoCraftingMachineOn",
+      "type": "tag",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_blocks_auto_crafting_machine_on",
+      "path": "~/Tags/Machines/AutoCrafting"
+    },
+    {
+      "name": "NWTGAutomationBlocksAutoCraftingMachineOff",
+      "type": "tag",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_blocks_auto_crafting_machine_off",
+      "path": "~/Tags/Machines/AutoCrafting"
+    },
+    {
+      "name": "NWTGAutomationItemsAutoFarmingMachine",
+      "type": "tag",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_auto_farming_machine",
+      "path": "~/Tags/Machines/AutoFarming"
+    },
+    {
+      "name": "NWTGAutomationItemsAutoFarmingMachineOn",
+      "type": "tag",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_auto_farming_machine_on",
+      "path": "~/Tags/Machines/AutoFarming"
+    },
+    {
+      "name": "NWTGAutomationItemsAutoFarmingMachineOff",
+      "type": "tag",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_auto_farming_machine_off",
+      "path": "~/Tags/Machines/AutoFarming"
+    },
+    {
+      "name": "NWTGAutomationBlocksAutoFarmingMachine",
+      "type": "tag",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_blocks_auto_farming_machine",
+      "path": "~/Tags/Machines/AutoFarming"
+    },
+    {
+      "name": "NWTGAutomationBlocksAutoFarmingMachineOn",
+      "type": "tag",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_blocks_auto_farming_machine_on",
+      "path": "~/Tags/Machines/AutoFarming"
+    },
+    {
+      "name": "NWTGAutomationBlocksAutoFarmingMachineOff",
+      "type": "tag",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_blocks_auto_farming_machine_off",
+      "path": "~/Tags/Machines/AutoFarming"
     }
   ],
   "variable_elements": [
@@ -2075,7 +2585,65 @@
                         "children": [
                           {
                             "name": "Food",
-                            "children": []
+                            "children": [
+                              {
+                                "name": "Bread",
+                                "children": []
+                              },
+                              {
+                                "name": "Sugar",
+                                "children": []
+                              },
+                              {
+                                "name": "Pie",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Wood",
+                            "children": [
+                              {
+                                "name": "Planks",
+                                "children": []
+                              },
+                              {
+                                "name": "Planks_Slabs",
+                                "children": []
+                              },
+                              {
+                                "name": "Planks_Stairs",
+                                "children": []
+                              },
+                              {
+                                "name": "Planks_Doors",
+                                "children": []
+                              },
+                              {
+                                "name": "Planks_Trapdoors",
+                                "children": []
+                              },
+                              {
+                                "name": "Planks_Buttons",
+                                "children": []
+                              },
+                              {
+                                "name": "Planks_P_Plates",
+                                "children": []
+                              },
+                              {
+                                "name": "Planks_Fence",
+                                "children": []
+                              },
+                              {
+                                "name": "Planks_Fence_G",
+                                "children": []
+                              },
+                              {
+                                "name": "Sticks",
+                                "children": []
+                              }
+                            ]
                           }
                         ]
                       }
@@ -2252,7 +2820,29 @@
               },
               {
                 "name": "AutoCrafting",
-                "children": []
+                "children": [
+                  {
+                    "name": "Recipes",
+                    "children": [
+                      {
+                        "name": "Wood",
+                        "children": []
+                      },
+                      {
+                        "name": "Crops",
+                        "children": []
+                      },
+                      {
+                        "name": "Animal",
+                        "children": []
+                      },
+                      {
+                        "name": "Resource",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "name": "AutoFarming",

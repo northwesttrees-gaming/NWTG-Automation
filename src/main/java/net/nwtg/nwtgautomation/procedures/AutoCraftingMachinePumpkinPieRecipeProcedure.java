@@ -8,7 +8,9 @@ import net.minecraftforge.items.CapabilityItemHandler;
 
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.block.Blocks;
@@ -49,29 +51,20 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((((((new Object() {
-			public ItemStack getItemStack(BlockPos pos, int sltid) {
-				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+			public int getAmount(IWorld world, BlockPos pos, int sltid) {
+				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
 				if (_ent != null) {
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
+						_retval.set(capability.getStackInSlot(sltid).getCount());
 					});
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Blocks.PUMPKIN, (int) (1)).getItem())
-				&& ((new Object() {
-					public int getAmount(IWorld world, BlockPos pos, int sltid) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).getCount());
-							});
-						}
-						return _retval.get();
-					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) >= 2)) && ((((new Object() {
+		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) >= 2) && (ItemTags.getCollection()
+				.getTagByID(new ResourceLocation(
+						("forge:nwtg_automation/items/recipes/auto_crafting_machine/pumpkin").toLowerCase(java.util.Locale.ENGLISH)))
+				.contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -82,19 +75,32 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Items.SUGAR, (int) (1)).getItem())
-						&& ((new Object() {
-							public int getAmount(IWorld world, BlockPos pos, int sltid) {
-								AtomicInteger _retval = new AtomicInteger(0);
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem()))) && ((((new Object() {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+						AtomicInteger _retval = new AtomicInteger(0);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).getCount());
+							});
+						}
+						return _retval.get();
+					}
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1))) >= 2) && (ItemTags.getCollection()
+						.getTagByID(new ResourceLocation(
+								("forge:nwtg_automation/items/recipes/auto_crafting_machine/sugar").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
 									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).getCount());
+										_retval.set(capability.getStackInSlot(sltid).copy());
 									});
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1))) >= 2)) && (((new Object() {
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem()))) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -119,30 +125,32 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
 										.getItem()) && ((((new Object() {
-											public ItemStack getItemStack(BlockPos pos, int sltid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											public int getAmount(IWorld world, BlockPos pos, int sltid) {
+												AtomicInteger _retval = new AtomicInteger(0);
 												TileEntity _ent = world.getTileEntity(pos);
 												if (_ent != null) {
 													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-														_retval.set(capability.getStackInSlot(sltid).copy());
+														_retval.set(capability.getStackInSlot(sltid).getCount());
 													});
 												}
 												return _retval.get();
 											}
-										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (4)))
-												.getItem() == new ItemStack(Items.EGG, (int) (1)).getItem()) && ((new Object() {
-													public int getAmount(IWorld world, BlockPos pos, int sltid) {
-														AtomicInteger _retval = new AtomicInteger(0);
+										}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (4))) >= 2) && (ItemTags.getCollection()
+												.getTagByID(new ResourceLocation(("forge:nwtg_automation/items/recipes/auto_crafting_machine/egg")
+														.toLowerCase(java.util.Locale.ENGLISH)))
+												.contains((new Object() {
+													public ItemStack getItemStack(BlockPos pos, int sltid) {
+														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 														TileEntity _ent = world.getTileEntity(pos);
 														if (_ent != null) {
 															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
 																	.ifPresent(capability -> {
-																		_retval.set(capability.getStackInSlot(sltid).getCount());
+																		_retval.set(capability.getStackInSlot(sltid).copy());
 																	});
 														}
 														return _retval.get();
 													}
-												}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (4))) >= 2)) && (((new Object() {
+												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (4))).getItem()))) && (((new Object() {
 													public ItemStack getItemStack(BlockPos pos, int sltid) {
 														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 														TileEntity _ent = world.getTileEntity(pos);
@@ -397,29 +405,20 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 			}
 		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())
 				&& ((((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
+								_retval.set(capability.getStackInSlot(sltid).getCount());
 							});
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Blocks.PUMPKIN, (int) (1)).getItem())
-						&& ((new Object() {
-							public int getAmount(IWorld world, BlockPos pos, int sltid) {
-								AtomicInteger _retval = new AtomicInteger(0);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).getCount());
-									});
-								}
-								return _retval.get();
-							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1))) >= 2)) && ((((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1))) >= 2) && (ItemTags.getCollection()
+						.getTagByID(new ResourceLocation(
+								("forge:nwtg_automation/items/recipes/auto_crafting_machine/pumpkin").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -430,19 +429,32 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Items.SUGAR, (int) (1))
-								.getItem()) && ((new Object() {
-									public int getAmount(IWorld world, BlockPos pos, int sltid) {
-										AtomicInteger _retval = new AtomicInteger(0);
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem()))) && ((((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
+								AtomicInteger _retval = new AtomicInteger(0);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).getCount());
+									});
+								}
+								return _retval.get();
+							}
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) >= 2) && (ItemTags.getCollection()
+								.getTagByID(new ResourceLocation(
+										("forge:nwtg_automation/items/recipes/auto_crafting_machine/sugar").toLowerCase(java.util.Locale.ENGLISH)))
+								.contains((new Object() {
+									public ItemStack getItemStack(BlockPos pos, int sltid) {
+										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 										TileEntity _ent = world.getTileEntity(pos);
 										if (_ent != null) {
 											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-												_retval.set(capability.getStackInSlot(sltid).getCount());
+												_retval.set(capability.getStackInSlot(sltid).copy());
 											});
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) >= 2)) && (((new Object() {
+								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem()))) && (((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 										TileEntity _ent = world.getTileEntity(pos);
@@ -467,31 +479,35 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 											}
 										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (4)))
 												.getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) && ((((new Object() {
-													public ItemStack getItemStack(BlockPos pos, int sltid) {
-														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+													public int getAmount(IWorld world, BlockPos pos, int sltid) {
+														AtomicInteger _retval = new AtomicInteger(0);
 														TileEntity _ent = world.getTileEntity(pos);
 														if (_ent != null) {
 															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
 																	.ifPresent(capability -> {
-																		_retval.set(capability.getStackInSlot(sltid).copy());
+																		_retval.set(capability.getStackInSlot(sltid).getCount());
 																	});
 														}
 														return _retval.get();
 													}
-												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (5)))
-														.getItem() == new ItemStack(Items.EGG, (int) (1)).getItem()) && ((new Object() {
-															public int getAmount(IWorld world, BlockPos pos, int sltid) {
-																AtomicInteger _retval = new AtomicInteger(0);
+												}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (5))) >= 2) && (ItemTags
+														.getCollection()
+														.getTagByID(
+																new ResourceLocation(("forge:nwtg_automation/items/recipes/auto_crafting_machine/egg")
+																		.toLowerCase(java.util.Locale.ENGLISH)))
+														.contains((new Object() {
+															public ItemStack getItemStack(BlockPos pos, int sltid) {
+																AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 																TileEntity _ent = world.getTileEntity(pos);
 																if (_ent != null) {
 																	_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
 																			.ifPresent(capability -> {
-																				_retval.set(capability.getStackInSlot(sltid).getCount());
+																				_retval.set(capability.getStackInSlot(sltid).copy());
 																			});
 																}
 																return _retval.get();
 															}
-														}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (5))) >= 2))
+														}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem())))
 														&& (((new Object() {
 															public ItemStack getItemStack(BlockPos pos, int sltid) {
 																AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -758,29 +774,20 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
 								.getItem()) && ((((new Object() {
-									public ItemStack getItemStack(BlockPos pos, int sltid) {
-										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									public int getAmount(IWorld world, BlockPos pos, int sltid) {
+										AtomicInteger _retval = new AtomicInteger(0);
 										TileEntity _ent = world.getTileEntity(pos);
 										if (_ent != null) {
 											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-												_retval.set(capability.getStackInSlot(sltid).copy());
+												_retval.set(capability.getStackInSlot(sltid).getCount());
 											});
 										}
 										return _retval.get();
 									}
-								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
-										.getItem() == new ItemStack(Blocks.PUMPKIN, (int) (1)).getItem()) && ((new Object() {
-											public int getAmount(IWorld world, BlockPos pos, int sltid) {
-												AtomicInteger _retval = new AtomicInteger(0);
-												TileEntity _ent = world.getTileEntity(pos);
-												if (_ent != null) {
-													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-														_retval.set(capability.getStackInSlot(sltid).getCount());
-													});
-												}
-												return _retval.get();
-											}
-										}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) >= 2)) && ((((new Object() {
+								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) >= 2) && (ItemTags.getCollection()
+										.getTagByID(new ResourceLocation(("forge:nwtg_automation/items/recipes/auto_crafting_machine/pumpkin")
+												.toLowerCase(java.util.Locale.ENGLISH)))
+										.contains((new Object() {
 											public ItemStack getItemStack(BlockPos pos, int sltid) {
 												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 												TileEntity _ent = world.getTileEntity(pos);
@@ -791,20 +798,33 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 												}
 												return _retval.get();
 											}
-										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (4)))
-												.getItem() == new ItemStack(Items.SUGAR, (int) (1)).getItem()) && ((new Object() {
-													public int getAmount(IWorld world, BlockPos pos, int sltid) {
-														AtomicInteger _retval = new AtomicInteger(0);
+										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3))).getItem()))) && ((((new Object() {
+											public int getAmount(IWorld world, BlockPos pos, int sltid) {
+												AtomicInteger _retval = new AtomicInteger(0);
+												TileEntity _ent = world.getTileEntity(pos);
+												if (_ent != null) {
+													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+														_retval.set(capability.getStackInSlot(sltid).getCount());
+													});
+												}
+												return _retval.get();
+											}
+										}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (4))) >= 2) && (ItemTags.getCollection()
+												.getTagByID(new ResourceLocation(("forge:nwtg_automation/items/recipes/auto_crafting_machine/sugar")
+														.toLowerCase(java.util.Locale.ENGLISH)))
+												.contains((new Object() {
+													public ItemStack getItemStack(BlockPos pos, int sltid) {
+														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 														TileEntity _ent = world.getTileEntity(pos);
 														if (_ent != null) {
 															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
 																	.ifPresent(capability -> {
-																		_retval.set(capability.getStackInSlot(sltid).getCount());
+																		_retval.set(capability.getStackInSlot(sltid).copy());
 																	});
 														}
 														return _retval.get();
 													}
-												}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (4))) >= 2)) && (((new Object() {
+												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (4))).getItem()))) && (((new Object() {
 													public ItemStack getItemStack(BlockPos pos, int sltid) {
 														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 														TileEntity _ent = world.getTileEntity(pos);
@@ -831,33 +851,38 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 															}
 														}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (6)))
 																.getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) && ((((new Object() {
-																	public ItemStack getItemStack(BlockPos pos, int sltid) {
-																		AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+																	public int getAmount(IWorld world, BlockPos pos, int sltid) {
+																		AtomicInteger _retval = new AtomicInteger(0);
 																		TileEntity _ent = world.getTileEntity(pos);
 																		if (_ent != null) {
 																			_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
 																					.ifPresent(capability -> {
-																						_retval.set(capability.getStackInSlot(sltid).copy());
+																						_retval.set(capability.getStackInSlot(sltid).getCount());
 																					});
 																		}
 																		return _retval.get();
 																	}
-																}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (7)))
-																		.getItem() == new ItemStack(Items.EGG, (int) (1)).getItem())
-																		&& ((new Object() {
-																			public int getAmount(IWorld world, BlockPos pos, int sltid) {
-																				AtomicInteger _retval = new AtomicInteger(0);
-																				TileEntity _ent = world.getTileEntity(pos);
-																				if (_ent != null) {
-																					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY,
-																							null).ifPresent(capability -> {
-																								_retval.set(
-																										capability.getStackInSlot(sltid).getCount());
-																							});
-																				}
-																				return _retval.get();
-																			}
-																		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (7))) >= 2))
+																}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (7))) >= 2)
+																		&& (ItemTags.getCollection().getTagByID(new ResourceLocation(
+																				("forge:nwtg_automation/items/recipes/auto_crafting_machine/egg")
+																						.toLowerCase(java.util.Locale.ENGLISH)))
+																				.contains((new Object() {
+																					public ItemStack getItemStack(BlockPos pos, int sltid) {
+																						AtomicReference<ItemStack> _retval = new AtomicReference<>(
+																								ItemStack.EMPTY);
+																						TileEntity _ent = world.getTileEntity(pos);
+																						if (_ent != null) {
+																							_ent.getCapability(
+																									CapabilityItemHandler.ITEM_HANDLER_CAPABILITY,
+																									null).ifPresent(capability -> {
+																										_retval.set(capability.getStackInSlot(sltid)
+																												.copy());
+																									});
+																						}
+																						return _retval.get();
+																					}
+																				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (7)))
+																						.getItem())))
 																		&& ((new Object() {
 																			public ItemStack getItemStack(BlockPos pos, int sltid) {
 																				AtomicReference<ItemStack> _retval = new AtomicReference<>(
@@ -1109,30 +1134,20 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
 										.getItem()) && ((((new Object() {
-											public ItemStack getItemStack(BlockPos pos, int sltid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											public int getAmount(IWorld world, BlockPos pos, int sltid) {
+												AtomicInteger _retval = new AtomicInteger(0);
 												TileEntity _ent = world.getTileEntity(pos);
 												if (_ent != null) {
 													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-														_retval.set(capability.getStackInSlot(sltid).copy());
+														_retval.set(capability.getStackInSlot(sltid).getCount());
 													});
 												}
 												return _retval.get();
 											}
-										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (4)))
-												.getItem() == new ItemStack(Blocks.PUMPKIN, (int) (1)).getItem()) && ((new Object() {
-													public int getAmount(IWorld world, BlockPos pos, int sltid) {
-														AtomicInteger _retval = new AtomicInteger(0);
-														TileEntity _ent = world.getTileEntity(pos);
-														if (_ent != null) {
-															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
-																	.ifPresent(capability -> {
-																		_retval.set(capability.getStackInSlot(sltid).getCount());
-																	});
-														}
-														return _retval.get();
-													}
-												}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (4))) >= 2)) && ((((new Object() {
+										}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (4))) >= 2) && (ItemTags.getCollection()
+												.getTagByID(new ResourceLocation(("forge:nwtg_automation/items/recipes/auto_crafting_machine/pumpkin")
+														.toLowerCase(java.util.Locale.ENGLISH)))
+												.contains((new Object() {
 													public ItemStack getItemStack(BlockPos pos, int sltid) {
 														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 														TileEntity _ent = world.getTileEntity(pos);
@@ -1144,20 +1159,36 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 														}
 														return _retval.get();
 													}
-												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (5)))
-														.getItem() == new ItemStack(Items.SUGAR, (int) (1)).getItem()) && ((new Object() {
-															public int getAmount(IWorld world, BlockPos pos, int sltid) {
-																AtomicInteger _retval = new AtomicInteger(0);
-																TileEntity _ent = world.getTileEntity(pos);
-																if (_ent != null) {
-																	_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
-																			.ifPresent(capability -> {
-																				_retval.set(capability.getStackInSlot(sltid).getCount());
-																			});
-																}
-																return _retval.get();
-															}
-														}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (5))) >= 2))
+												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (4))).getItem()))) && ((((new Object() {
+													public int getAmount(IWorld world, BlockPos pos, int sltid) {
+														AtomicInteger _retval = new AtomicInteger(0);
+														TileEntity _ent = world.getTileEntity(pos);
+														if (_ent != null) {
+															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																	.ifPresent(capability -> {
+																		_retval.set(capability.getStackInSlot(sltid).getCount());
+																	});
+														}
+														return _retval.get();
+													}
+												}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (5))) >= 2)
+														&& (ItemTags.getCollection()
+																.getTagByID(new ResourceLocation(
+																		("forge:nwtg_automation/items/recipes/auto_crafting_machine/sugar")
+																				.toLowerCase(java.util.Locale.ENGLISH)))
+																.contains((new Object() {
+																	public ItemStack getItemStack(BlockPos pos, int sltid) {
+																		AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+																		TileEntity _ent = world.getTileEntity(pos);
+																		if (_ent != null) {
+																			_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																					.ifPresent(capability -> {
+																						_retval.set(capability.getStackInSlot(sltid).copy());
+																					});
+																		}
+																		return _retval.get();
+																	}
+																}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (5))).getItem())))
 														&& (((new Object() {
 															public ItemStack getItemStack(BlockPos pos, int sltid) {
 																AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -1186,36 +1217,40 @@ public class AutoCraftingMachinePumpkinPieRecipeProcedure extends NwtgAutomation
 																}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (7)))
 																		.getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())
 																		&& (((new Object() {
-																			public ItemStack getItemStack(BlockPos pos, int sltid) {
-																				AtomicReference<ItemStack> _retval = new AtomicReference<>(
-																						ItemStack.EMPTY);
+																			public int getAmount(IWorld world, BlockPos pos, int sltid) {
+																				AtomicInteger _retval = new AtomicInteger(0);
 																				TileEntity _ent = world.getTileEntity(pos);
 																				if (_ent != null) {
 																					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY,
 																							null).ifPresent(capability -> {
-																								_retval.set(capability.getStackInSlot(sltid).copy());
+																								_retval.set(
+																										capability.getStackInSlot(sltid).getCount());
 																							});
 																				}
 																				return _retval.get();
 																			}
-																		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (8)))
-																				.getItem() == new ItemStack(Items.EGG, (int) (1)).getItem())
-																				&& ((new Object() {
-																					public int getAmount(IWorld world, BlockPos pos, int sltid) {
-																						AtomicInteger _retval = new AtomicInteger(0);
-																						TileEntity _ent = world.getTileEntity(pos);
-																						if (_ent != null) {
-																							_ent.getCapability(
-																									CapabilityItemHandler.ITEM_HANDLER_CAPABILITY,
-																									null).ifPresent(capability -> {
-																										_retval.set(capability.getStackInSlot(sltid)
-																												.getCount());
-																									});
-																						}
-																						return _retval.get();
-																					}
-																				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z),
-																						(int) (8))) >= 2))))))))))
+																		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (8))) >= 2)
+																				&& (ItemTags.getCollection().getTagByID(new ResourceLocation(
+																						("forge:nwtg_automation/items/recipes/auto_crafting_machine/egg")
+																								.toLowerCase(java.util.Locale.ENGLISH)))
+																						.contains((new Object() {
+																							public ItemStack getItemStack(BlockPos pos, int sltid) {
+																								AtomicReference<ItemStack> _retval = new AtomicReference<>(
+																										ItemStack.EMPTY);
+																								TileEntity _ent = world.getTileEntity(pos);
+																								if (_ent != null) {
+																									_ent.getCapability(
+																											CapabilityItemHandler.ITEM_HANDLER_CAPABILITY,
+																											null).ifPresent(capability -> {
+																												_retval.set(capability
+																														.getStackInSlot(sltid)
+																														.copy());
+																											});
+																								}
+																								return _retval.get();
+																							}
+																						}.getItemStack(new BlockPos((int) x, (int) y, (int) z),
+																								(int) (8))).getItem())))))))))))
 				&& (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);

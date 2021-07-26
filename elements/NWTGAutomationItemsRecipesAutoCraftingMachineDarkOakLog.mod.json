@@ -1,0 +1,26 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.LOG2#1"
+      },
+      {
+        "value": "Blocks.STRIPPED_DARK_OAK_LOG"
+      },
+      {
+        "value": "Blocks.DARK_OAK_WOOD"
+      },
+      {
+        "value": "Blocks.STRIPPED_DARK_OAK_WOOD"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "nwtg_automation/items/recipes/auto_crafting_machine/dark_oak_log",
+    "namespace": "forge"
+  }
+}

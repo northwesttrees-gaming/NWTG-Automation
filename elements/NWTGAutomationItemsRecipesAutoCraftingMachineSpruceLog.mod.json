@@ -1,0 +1,26 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.LOG#1"
+      },
+      {
+        "value": "Blocks.STRIPPED_SPRUCE_LOG"
+      },
+      {
+        "value": "Blocks.SPRUCE_WOOD"
+      },
+      {
+        "value": "Blocks.STRIPPED_SPRUCE_WOOD"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "nwtg_automation/items/recipes/auto_crafting_machine/spruce_log",
+    "namespace": "forge"
+  }
+}

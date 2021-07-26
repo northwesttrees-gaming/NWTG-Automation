@@ -104,6 +104,25 @@ public class AutoItemCollectorMachineOnBlockRightClickedProcedure extends NwtgAu
 						if (world instanceof World)
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
+				} else {
+					{
+						Entity _ent = entity;
+						if (_ent instanceof ServerPlayerEntity) {
+							BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+							NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+								@Override
+								public ITextComponent getDisplayName() {
+									return new StringTextComponent("AutoItemCollectorMachineInventory");
+								}
+
+								@Override
+								public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+									return new AutoItemCollectorMachineInventoryGui.GuiContainerMod(id, inventory,
+											new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+								}
+							}, _bpos);
+						}
+					}
 				}
 			}
 		} else {
