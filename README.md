@@ -9,6 +9,14 @@ The Minecraft modification is designed to make things more automated using advan
 ### AUTO CRAFTING / AUTO CRAFTING REQUESTS
 Auto Crafting is a long term project that will take time to add recipes for this reason if you have a specific recipe in Vanilla Minecraft you want to be added in a future update we advise you to open a request on our GitHub repository under Issues > Custom Crafting Request. This will let us know there is a higher demand for a specific recipe.
 
+## MOD SITES
+- MCREATOR: [https://mcreator.net/modification/76920/nwtg-automation](https://mcreator.net/modification/76920/nwtg-automation)
+
+## CHANGELOG
+For more information on each build see the builds wiki page for an index of builds and thier changes.
+- [UPCOMING CHANGES](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Upcoming-Changes)
+- [BUILDS](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Builds)
+
 ### PLANNED FEATURES
 - Auto Killing Machines
 - Auto Breeding Machines
@@ -73,10 +81,6 @@ CONDITIONS:
 	E) Copyrights and licenses shall be posted and included in the download.
 
 	F) Third-party versions shall disclose the changes made to the item.
-
-## CHANGELOG
-For more information on each build see the builds wiki page for an index of builds and thier changes.
-- [BUILDS](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Builds)
 
 ## GALLERY
 | ![Screenshot 1](https://i.imgur.com/djDCGn3.png) | ![Screenshot 2](https://i.imgur.com/9lSsTqV.png) |
