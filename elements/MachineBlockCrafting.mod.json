@@ -10,31 +10,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Items.IRON_INGOT"
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
       },
       {
-        "value": "Items.REDSTONE"
+        "value": "TAG:forge:nwtg_automation/items/redstone"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
       }
     ],
     "recipeReturnStack": {

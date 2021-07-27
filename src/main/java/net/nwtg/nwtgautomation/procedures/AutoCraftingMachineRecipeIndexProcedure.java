@@ -53,7 +53,7 @@ public class AutoCraftingMachineRecipeIndexProcedure extends NwtgAutomationModEl
 			$_dependencies.put("x", x);
 			$_dependencies.put("y", y);
 			$_dependencies.put("z", z);
-			AutoCraftingMachinePlankRecipesProcedure.executeProcedure($_dependencies);
+			AutoCraftingMachineWoodRecipesProcedure.executeProcedure($_dependencies);
 		}
 	}
 }

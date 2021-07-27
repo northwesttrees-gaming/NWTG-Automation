@@ -13,7 +13,7 @@
         "value": ""
       },
       {
-        "value": "Blocks.DISPENSER"
+        "value": "TAG:forge:nwtg_automation/items/dispenser"
       },
       {
         "value": ""
@@ -22,7 +22,7 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:MachineBlock"
+        "value": "TAG:forge:nwtg_automation/items/machine_block"
       },
       {
         "value": ""
@@ -31,7 +31,7 @@
         "value": ""
       },
       {
-        "value": "Blocks.CRAFTING_TABLE"
+        "value": "TAG:forge:nwtg_automation/items/crafting_table"
       },
       {
         "value": ""
