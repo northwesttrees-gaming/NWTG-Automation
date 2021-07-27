@@ -32,8 +32,11 @@ For more information on each build see the builds wiki page for an index of buil
 - Auto Bee Keeping Machines
 - And Any Latter Plans!
 
-### CURRENT FEATURES
-- [Auto Farming Machines](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Farming-Machine)
+### MAIN FEATURES
+- [Auto Crafting Machine](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Crafting-Machine)
+- [Auto Farming Machine](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Farming-Machine)
+- [Auto Item Collector Machine](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Item-Collector-Machine)
+- [Remote Item Teleporter](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Remote-Item-Teleporter-Machine)
 
 ## LICENCE
 NWTG Public License 1.0
