@@ -11,6 +11,7 @@ Auto Crafting is a long term project that will take time to add recipes for this
 
 ## MOD SITES
 - MCREATOR: [https://mcreator.net/modification/76920/nwtg-automation](https://mcreator.net/modification/76920/nwtg-automation)
+- YouTube Playlist [View](https://www.youtube.com/watch?v=2eLalSnOnHo&list=PL5k7swYOU_yRoly-cK7T7JaSgWH054kxd&ab_channel=NorthWestTreesGaming)
 
 ## CHANGELOG
 For more information on each build see the builds wiki page for an index of builds and thier changes.
