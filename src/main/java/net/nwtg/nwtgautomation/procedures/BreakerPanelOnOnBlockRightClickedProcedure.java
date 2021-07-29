@@ -37,7 +37,7 @@ import io.netty.buffer.Unpooled;
 @NwtgAutomationModElements.ModElement.Tag
 public class BreakerPanelOnOnBlockRightClickedProcedure extends NwtgAutomationModElements.ModElement {
 	public BreakerPanelOnOnBlockRightClickedProcedure(NwtgAutomationModElements instance) {
-		super(instance, 71);
+		super(instance, 74);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

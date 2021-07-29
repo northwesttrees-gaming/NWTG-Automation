@@ -21,7 +21,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class WhenOwnerBlockIsBrokenProcedure extends NwtgAutomationModElements.ModElement {
 	public WhenOwnerBlockIsBrokenProcedure(NwtgAutomationModElements instance) {
-		super(instance, 266);
+		super(instance, 264);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

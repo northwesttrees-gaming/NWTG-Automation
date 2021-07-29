@@ -14,7 +14,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoItemCollectorMachineBlockAddedProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoItemCollectorMachineBlockAddedProcedure(NwtgAutomationModElements instance) {
-		super(instance, 51);
+		super(instance, 54);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

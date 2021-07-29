@@ -15,7 +15,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class BreakerPanelBlockIsPlacedByProcedure extends NwtgAutomationModElements.ModElement {
 	public BreakerPanelBlockIsPlacedByProcedure(NwtgAutomationModElements instance) {
-		super(instance, 75);
+		super(instance, 78);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -22,7 +22,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class UnlockMachineRecipesProcedure extends NwtgAutomationModElements.ModElement {
 	public UnlockMachineRecipesProcedure(NwtgAutomationModElements instance) {
-		super(instance, 61);
+		super(instance, 64);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -69,6 +69,9 @@ public class UnlockMachineRecipesProcedure extends NwtgAutomationModElements.Mod
 			}
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:auto_farming_machine")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:auto_tree_farm_machine")});
 			}
 		}
 	}

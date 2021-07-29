@@ -33,7 +33,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoFarmingMachineOnUpdateTickProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoFarmingMachineOnUpdateTickProcedure(NwtgAutomationModElements instance) {
-		super(instance, 77);
+		super(instance, 80);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

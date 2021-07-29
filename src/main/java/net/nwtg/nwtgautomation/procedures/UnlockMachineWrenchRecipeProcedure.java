@@ -1,6 +1,8 @@
 package net.nwtg.nwtgautomation.procedures;
 
 import net.nwtg.nwtgautomation.block.RemoteItemTeleporterBlock;
+import net.nwtg.nwtgautomation.block.BreakerPanelOnBlock;
+import net.nwtg.nwtgautomation.block.BreakerPanelBlock;
 import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
@@ -22,7 +24,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class UnlockMachineWrenchRecipeProcedure extends NwtgAutomationModElements.ModElement {
 	public UnlockMachineWrenchRecipeProcedure(NwtgAutomationModElements instance) {
-		super(instance, 63);
+		super(instance, 66);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -41,9 +43,15 @@ public class UnlockMachineWrenchRecipeProcedure extends NwtgAutomationModElement
 					return ((ClientPlayerEntity) _ent).getRecipeBook().isUnlocked(recipe);
 				return false;
 			}
-		}.hasRecipe(entity, new ResourceLocation("nwtg_automation:machine_wrench")))) && ((entity instanceof PlayerEntity)
+		}.hasRecipe(entity, new ResourceLocation("nwtg_automation:machine_wrench")))) && (((entity instanceof PlayerEntity)
 				? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(RemoteItemTeleporterBlock.block, (int) (1)))
-				: false))) {
+				: false)
+				|| (((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(BreakerPanelBlock.block, (int) (1)))
+						: false)
+						|| ((entity instanceof PlayerEntity)
+								? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(BreakerPanelOnBlock.block, (int) (1)))
+								: false))))) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:machine_wrench")});
 			}

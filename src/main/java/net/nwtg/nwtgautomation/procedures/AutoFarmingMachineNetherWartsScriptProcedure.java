@@ -28,7 +28,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoFarmingMachineNetherWartsScriptProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoFarmingMachineNetherWartsScriptProcedure(NwtgAutomationModElements instance) {
-		super(instance, 18);
+		super(instance, 21);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

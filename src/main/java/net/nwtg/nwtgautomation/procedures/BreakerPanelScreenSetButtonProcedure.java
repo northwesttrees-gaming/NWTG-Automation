@@ -26,7 +26,7 @@ import io.netty.buffer.Unpooled;
 @NwtgAutomationModElements.ModElement.Tag
 public class BreakerPanelScreenSetButtonProcedure extends NwtgAutomationModElements.ModElement {
 	public BreakerPanelScreenSetButtonProcedure(NwtgAutomationModElements instance) {
-		super(instance, 68);
+		super(instance, 71);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

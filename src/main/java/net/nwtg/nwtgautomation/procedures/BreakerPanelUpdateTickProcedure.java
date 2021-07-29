@@ -23,7 +23,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class BreakerPanelUpdateTickProcedure extends NwtgAutomationModElements.ModElement {
 	public BreakerPanelUpdateTickProcedure(NwtgAutomationModElements instance) {
-		super(instance, 268);
+		super(instance, 266);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

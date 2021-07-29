@@ -22,7 +22,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoCraftingMachineWarpedSignRecipeProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoCraftingMachineWarpedSignRecipeProcedure(NwtgAutomationModElements instance) {
-		super(instance, 215);
+		super(instance, 218);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

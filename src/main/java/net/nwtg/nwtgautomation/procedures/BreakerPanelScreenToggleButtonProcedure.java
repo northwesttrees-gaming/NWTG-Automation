@@ -16,7 +16,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class BreakerPanelScreenToggleButtonProcedure extends NwtgAutomationModElements.ModElement {
 	public BreakerPanelScreenToggleButtonProcedure(NwtgAutomationModElements instance) {
-		super(instance, 69);
+		super(instance, 72);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

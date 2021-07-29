@@ -27,7 +27,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoFarmingMachineBambooScriptProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoFarmingMachineBambooScriptProcedure(NwtgAutomationModElements instance) {
-		super(instance, 42);
+		super(instance, 45);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

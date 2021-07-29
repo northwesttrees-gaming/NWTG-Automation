@@ -21,7 +21,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoCraftingMachineWarpedTrapdoorRecipeProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoCraftingMachineWarpedTrapdoorRecipeProcedure(NwtgAutomationModElements instance) {
-		super(instance, 156);
+		super(instance, 159);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

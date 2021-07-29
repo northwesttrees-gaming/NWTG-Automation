@@ -15,7 +15,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoTreeFarmMachineVersionUpdateScriptProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoTreeFarmMachineVersionUpdateScriptProcedure(NwtgAutomationModElements instance) {
-		super(instance, 275);
+		super(instance, 272);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

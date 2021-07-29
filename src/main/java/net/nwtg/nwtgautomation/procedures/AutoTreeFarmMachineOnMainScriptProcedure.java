@@ -33,7 +33,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoTreeFarmMachineOnMainScriptProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoTreeFarmMachineOnMainScriptProcedure(NwtgAutomationModElements instance) {
-		super(instance, 276);
+		super(instance, 273);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
