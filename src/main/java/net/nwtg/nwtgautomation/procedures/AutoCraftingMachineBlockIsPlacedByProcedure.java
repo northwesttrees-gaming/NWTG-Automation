@@ -7,6 +7,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.block.BlockState;
 
 import java.util.Map;
@@ -14,10 +15,15 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoCraftingMachineBlockIsPlacedByProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoCraftingMachineBlockIsPlacedByProcedure(NwtgAutomationModElements instance) {
-		super(instance, 29);
+		super(instance, 30);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				NwtgAutomationMod.LOGGER.warn("Failed to load dependency entity for procedure AutoCraftingMachineBlockIsPlacedBy!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				NwtgAutomationMod.LOGGER.warn("Failed to load dependency x for procedure AutoCraftingMachineBlockIsPlacedBy!");
@@ -38,6 +44,7 @@ public class AutoCraftingMachineBlockIsPlacedByProcedure extends NwtgAutomationM
 				NwtgAutomationMod.LOGGER.warn("Failed to load dependency world for procedure AutoCraftingMachineBlockIsPlacedBy!");
 			return;
 		}
+		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
@@ -47,16 +54,7 @@ public class AutoCraftingMachineBlockIsPlacedByProcedure extends NwtgAutomationM
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("RitTimer", 0);
-			if (world instanceof World)
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
-		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("CraftingSlot", 0);
+				_tileEntity.getTileData().putString("Owner", (entity.getDisplayName().getString()));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}

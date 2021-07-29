@@ -2,11 +2,11 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "machine_block",
-    "textureTop": "auto_machine_device_output",
-    "textureLeft": "machine_block",
+    "texture": "auto_farming_machine_bottom",
+    "textureTop": "auto_farming_machine_device_output",
+    "textureLeft": "auto_farming_machine_sides",
     "textureFront": "auto_farming_machine_on",
-    "textureRight": "machine_block",
+    "textureRight": "auto_farming_machine_sides",
     "textureBack": "auto_farming_machine_on",
     "renderType": 10,
     "customModelName": "Normal",
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Auto Farming Machine",
+    "name": "Auto Farming Machine On",
     "specialInfo": [],
     "hardness": 5.0,
     "resistance": 6.0,
@@ -54,7 +54,7 @@
     "material": {
       "value": "IRON"
     },
-    "tickRate": 5,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "IRON",
@@ -74,7 +74,7 @@
     "soundOnStep": {
       "value": "METAL"
     },
-    "luminance": 14,
+    "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 2,
     "spawnParticles": false,
@@ -87,17 +87,19 @@
     "hasInventory": true,
     "guiBoundTo": "AutoFarmingMachineInventory",
     "openGUIOnRightClick": false,
-    "inventorySize": 3,
+    "inventorySize": 4,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [
       1,
-      2
+      2,
+      3
     ],
     "inventoryInSlotIDs": [
       1,
-      2
+      2,
+      3
     ],
     "hasEnergyStorage": false,
     "energyInitial": 0,
@@ -114,7 +116,10 @@
       "name": "AutoFarmingMachineBlockAdded"
     },
     "onTickUpdate": {
-      "name": "AutoFarmingMachineUpdateTick"
+      "name": "AutoFarmingMachineOnUpdateTick"
+    },
+    "onBlockPlayedBy": {
+      "name": "AutoFarmingMachineBlockIsPlacedBy"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

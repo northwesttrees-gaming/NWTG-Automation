@@ -8,13 +8,13 @@
   ],
   "key": {
     "0": {
-      "item": "minecraft:dispenser"
+      "tag": "forge:nwtg_automation/items/dispenser"
     },
     "1": {
-      "item": "nwtg_automation:machine_block"
+      "tag": "forge:nwtg_automation/items/machine_block"
     },
     "2": {
-      "item": "minecraft:iron_hoe"
+      "tag": "forge:nwtg_automation/items/hoes"
     }
   },
   "result": {

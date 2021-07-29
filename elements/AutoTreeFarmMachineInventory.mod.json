@@ -1,0 +1,108 @@
+{
+  "_fv": 18,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": -20,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Auto Tree Farm Machine",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Auto Tree Farm Machine",
+          "x": 132,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_tree_farm_machine_gui.png",
+          "use1Xscale": false,
+          "name": "auto_tree_farm_machine_gui.png",
+          "x": 125,
+          "y": 57
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 132,
+          "y": 73
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 159,
+          "y": 73
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 186,
+          "y": 73
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 249,
+          "y": 73
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 4,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #4",
+          "x": 276,
+          "y": 73
+        }
+      }
+    ]
+  }
+}

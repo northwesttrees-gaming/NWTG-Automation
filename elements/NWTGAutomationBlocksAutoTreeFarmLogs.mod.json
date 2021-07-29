@@ -1,0 +1,38 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "Blocks.LOG#0"
+      },
+      {
+        "value": "Blocks.LOG#1"
+      },
+      {
+        "value": "Blocks.LOG#2"
+      },
+      {
+        "value": "Blocks.LOG#3"
+      },
+      {
+        "value": "Blocks.LOG2#0"
+      },
+      {
+        "value": "Blocks.LOG2#1"
+      },
+      {
+        "value": "Blocks.WARPED_STEM"
+      },
+      {
+        "value": "Blocks.CRIMSON_STEM"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "nwtg_automation/blocks/auto_tree_farm/logs",
+    "namespace": "forge"
+  }
+}

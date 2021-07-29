@@ -40,7 +40,7 @@ public class AutoFarmingMachineInventoryGui extends NwtgAutomationModElements.Mo
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public AutoFarmingMachineInventoryGui(NwtgAutomationModElements instance) {
-		super(instance, 9);
+		super(instance, 10);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -75,7 +75,7 @@ public class AutoFarmingMachineInventoryGui extends NwtgAutomationModElements.Mo
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new ItemStackHandler(3);
+			this.internal = new ItemStackHandler(4);
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -115,9 +115,11 @@ public class AutoFarmingMachineInventoryGui extends NwtgAutomationModElements.Mo
 			}
 			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 37) {
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 124, 37) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 97, 37) {
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 151, 37) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 124, 37) {
+			}));
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 151, 37) {
 			}));
 			int si;
 			int sj;
@@ -144,18 +146,18 @@ public class AutoFarmingMachineInventoryGui extends NwtgAutomationModElements.Mo
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 3) {
-					if (!this.mergeItemStack(itemstack1, 3, this.inventorySlots.size(), true)) {
+				if (index < 4) {
+					if (!this.mergeItemStack(itemstack1, 4, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 3, false)) {
-					if (index < 3 + 27) {
-						if (!this.mergeItemStack(itemstack1, 3 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 4, false)) {
+					if (index < 4 + 27) {
+						if (!this.mergeItemStack(itemstack1, 4 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 3, 3 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 4, 4 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}

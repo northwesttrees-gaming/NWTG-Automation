@@ -91,7 +91,7 @@ public class RemoteItemTeleporterBlock extends NwtgAutomationModElements.ModElem
 	@ObjectHolder("nwtg_automation:remote_item_teleporter")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public RemoteItemTeleporterBlock(NwtgAutomationModElements instance) {
-		super(instance, 6);
+		super(instance, 1);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -139,17 +139,17 @@ public class RemoteItemTeleporterBlock extends NwtgAutomationModElements.ModElem
 			switch ((Direction) state.get(FACING)) {
 				case SOUTH :
 				default :
-					return VoxelShapes.or(makeCuboidShape(15, 1, 6, 1, 15, 0)).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(16, 0, 6, 0, 16, 0)).withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
-					return VoxelShapes.or(makeCuboidShape(1, 1, 10, 15, 15, 16)).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(0, 0, 10, 16, 16, 16)).withOffset(offset.x, offset.y, offset.z);
 				case EAST :
-					return VoxelShapes.or(makeCuboidShape(6, 1, 1, 0, 15, 15)).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(6, 0, 0, 0, 16, 16)).withOffset(offset.x, offset.y, offset.z);
 				case WEST :
-					return VoxelShapes.or(makeCuboidShape(10, 1, 15, 16, 15, 1)).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(10, 0, 16, 16, 16, 0)).withOffset(offset.x, offset.y, offset.z);
 				case UP :
-					return VoxelShapes.or(makeCuboidShape(1, 6, 1, 15, 0, 15)).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(0, 6, 0, 16, 0, 16)).withOffset(offset.x, offset.y, offset.z);
 				case DOWN :
-					return VoxelShapes.or(makeCuboidShape(1, 10, 15, 15, 16, 1)).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(0, 10, 16, 16, 16, 0)).withOffset(offset.x, offset.y, offset.z);
 			}
 		}
 

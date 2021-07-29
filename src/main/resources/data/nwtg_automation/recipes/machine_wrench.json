@@ -7,10 +7,10 @@
   ],
   "key": {
     "1": {
-      "item": "minecraft:iron_ingot"
+      "tag": "forge:nwtg_automation/items/iron_ingot"
     },
     "2": {
-      "item": "minecraft:red_dye"
+      "tag": "forge:nwtg_automation/items/red_dye"
     }
   },
   "result": {

@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.PLANKS#0"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "nwtg_automation/recipes/auto_crafting/oak_plank",
+    "namespace": "forge"
+  }
+}

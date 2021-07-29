@@ -1,8 +1,10 @@
 
 package net.nwtg.nwtgautomation.block;
 
+import net.nwtg.nwtgautomation.procedures.AutoCraftingMachineUpdateTickProcedure;
 import net.nwtg.nwtgautomation.procedures.AutoCraftingMachineOnBlockRightClickedProcedure;
 import net.nwtg.nwtgautomation.procedures.AutoCraftingMachineBlockIsPlacedByProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoCraftingMachineBlockAddedProcedure;
 import net.nwtg.nwtgautomation.itemgroup.NWTGAutomationTabItemGroup;
 import net.nwtg.nwtgautomation.gui.AutoCraftingMachineInventoryGui;
 import net.nwtg.nwtgautomation.NwtgAutomationModElements;
@@ -18,6 +20,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.ToolType;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
@@ -63,6 +66,7 @@ import net.minecraft.block.Block;
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
+import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
@@ -77,7 +81,7 @@ public class AutoCraftingMachineBlock extends NwtgAutomationModElements.ModEleme
 	@ObjectHolder("nwtg_automation:auto_crafting_machine")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public AutoCraftingMachineBlock(NwtgAutomationModElements instance) {
-		super(instance, 5);
+		super(instance, 4);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -142,6 +146,40 @@ public class AutoCraftingMachineBlock extends NwtgAutomationModElements.ModEleme
 		}
 
 		@Override
+		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(state, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 5);
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AutoCraftingMachineBlockAddedProcedure.executeProcedure($_dependencies);
+			}
+		}
+
+		@Override
+		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+			super.tick(state, world, pos, random);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AutoCraftingMachineUpdateTickProcedure.executeProcedure($_dependencies);
+			}
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 5);
+		}
+
+		@Override
 		public void onBlockPlacedBy(World world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack itemstack) {
 			super.onBlockPlacedBy(world, pos, state, entity, itemstack);
 			int x = pos.getX();
@@ -149,6 +187,7 @@ public class AutoCraftingMachineBlock extends NwtgAutomationModElements.ModEleme
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

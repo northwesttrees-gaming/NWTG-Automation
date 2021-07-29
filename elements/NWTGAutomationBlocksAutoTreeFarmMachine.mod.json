@@ -1,0 +1,20 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:AutoTreeFarmMachine"
+      },
+      {
+        "value": "CUSTOM:AutoTreeFarmMachineOn"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "nwtg_automation/blocks/auto_tree_farm_machine",
+    "namespace": "forge"
+  }
+}

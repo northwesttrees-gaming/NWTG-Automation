@@ -1,0 +1,26 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.LOG#0"
+      },
+      {
+        "value": "Blocks.STRIPPED_OAK_LOG"
+      },
+      {
+        "value": "Blocks.OAK_WOOD"
+      },
+      {
+        "value": "Blocks.STRIPPED_OAK_WOOD"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "nwtg_automation/recipes/auto_crafting/oak_logs",
+    "namespace": "forge"
+  }
+}

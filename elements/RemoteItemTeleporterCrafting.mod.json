@@ -13,7 +13,7 @@
         "value": ""
       },
       {
-        "value": "Items.COMPASS"
+        "value": "TAG:forge:nwtg_automation/items/compass"
       },
       {
         "value": ""
@@ -22,7 +22,7 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:MachineBlock"
+        "value": "TAG:forge:nwtg_automation/items/machine_block"
       },
       {
         "value": ""
@@ -31,7 +31,7 @@
         "value": ""
       },
       {
-        "value": "Blocks.OBSERVER"
+        "value": "TAG:forge:nwtg_automation/items/observer"
       },
       {
         "value": ""

@@ -14,7 +14,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoItemCollectorMachineBlockAddedProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoItemCollectorMachineBlockAddedProcedure(NwtgAutomationModElements instance) {
-		super(instance, 57);
+		super(instance, 51);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -48,6 +48,42 @@ public class AutoItemCollectorMachineBlockAddedProcedure extends NwtgAutomationM
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putBoolean("CollectItem", (false));
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+		}
+		if (!world.isRemote()) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putBoolean("ConnectedToBreaker", (false));
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+		}
+		if (!world.isRemote()) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putDouble("BreakerPosX", 0);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+		}
+		if (!world.isRemote()) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putDouble("BreakerPosY", 0);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+		}
+		if (!world.isRemote()) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putDouble("BreakerPosZ", 0);
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}

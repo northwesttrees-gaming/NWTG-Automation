@@ -8,13 +8,13 @@
   ],
   "key": {
     "0": {
-      "item": "minecraft:compass"
+      "tag": "forge:nwtg_automation/items/compass"
     },
     "1": {
-      "item": "nwtg_automation:machine_block"
+      "tag": "forge:nwtg_automation/items/machine_block"
     },
     "2": {
-      "item": "minecraft:observer"
+      "tag": "forge:nwtg_automation/items/observer"
     }
   },
   "result": {
