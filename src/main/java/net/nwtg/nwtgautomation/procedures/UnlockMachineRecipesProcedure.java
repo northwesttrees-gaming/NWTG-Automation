@@ -22,7 +22,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class UnlockMachineRecipesProcedure extends NwtgAutomationModElements.ModElement {
 	public UnlockMachineRecipesProcedure(NwtgAutomationModElements instance) {
-		super(instance, 71);
+		super(instance, 61);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

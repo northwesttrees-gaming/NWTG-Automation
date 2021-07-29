@@ -32,7 +32,7 @@ import java.util.Comparator;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoItemCollectorMachineEggScriptProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoItemCollectorMachineEggScriptProcedure(NwtgAutomationModElements instance) {
-		super(instance, 54);
+		super(instance, 48);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -102,7 +102,7 @@ public class AutoFarmingMachineBlock extends NwtgAutomationModElements.ModElemen
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 6f).setLightLevel(s -> 14).harvestLevel(2)
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 6f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("auto_farming_machine");
@@ -151,7 +151,7 @@ public class AutoFarmingMachineBlock extends NwtgAutomationModElements.ModElemen
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 5);
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1);
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
@@ -176,7 +176,7 @@ public class AutoFarmingMachineBlock extends NwtgAutomationModElements.ModElemen
 				$_dependencies.put("world", world);
 				AutoFarmingMachineUpdateTickProcedure.executeProcedure($_dependencies);
 			}
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 5);
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1);
 		}
 
 		@Override
@@ -254,7 +254,7 @@ public class AutoFarmingMachineBlock extends NwtgAutomationModElements.ModElemen
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -341,6 +341,8 @@ public class AutoFarmingMachineBlock extends NwtgAutomationModElements.ModElemen
 				return false;
 			if (index == 2)
 				return false;
+			if (index == 3)
+				return false;
 			return true;
 		}
 
@@ -359,6 +361,8 @@ public class AutoFarmingMachineBlock extends NwtgAutomationModElements.ModElemen
 			if (index == 1)
 				return false;
 			if (index == 2)
+				return false;
+			if (index == 3)
 				return false;
 			return true;
 		}

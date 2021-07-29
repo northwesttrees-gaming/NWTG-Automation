@@ -33,7 +33,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoFarmingMachineOnUpdateTickProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoFarmingMachineOnUpdateTickProcedure(NwtgAutomationModElements instance) {
-		super(instance, 93);
+		super(instance, 77);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -262,7 +262,9 @@ public class AutoFarmingMachineOnUpdateTickProcedure extends NwtgAutomationModEl
 							((World) world).getServer().getCommandManager().handleCommand(
 									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-									(("execute if block ") + "" + ((posX)) + "" + (" ") + "" + ((posY)) + "" + (" ") + "" + ((posZ)) + ""
+									(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posZ)))) + ""
 											+ (" minecraft:carrots[age=7] run data modify block ~ ~ ~ ForgeData.HarvestCrop set value 1")));
 						}
 					}
@@ -283,7 +285,9 @@ public class AutoFarmingMachineOnUpdateTickProcedure extends NwtgAutomationModEl
 							((World) world).getServer().getCommandManager().handleCommand(
 									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-									(("execute if block ") + "" + ((posX)) + "" + (" ") + "" + ((posY)) + "" + (" ") + "" + ((posZ)) + ""
+									(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posZ)))) + ""
 											+ (" minecraft:potatoes[age=7] run data modify block ~ ~ ~ ForgeData.HarvestCrop set value 1")));
 						}
 					}
@@ -304,7 +308,9 @@ public class AutoFarmingMachineOnUpdateTickProcedure extends NwtgAutomationModEl
 							((World) world).getServer().getCommandManager().handleCommand(
 									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-									(("execute if block ") + "" + ((posX)) + "" + (" ") + "" + ((posY)) + "" + (" ") + "" + ((posZ)) + ""
+									(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posZ)))) + ""
 											+ (" minecraft:sweet_berry_bush[age=3] run data modify block ~ ~ ~ ForgeData.HarvestCrop set value 1")));
 						}
 					}
@@ -325,7 +331,9 @@ public class AutoFarmingMachineOnUpdateTickProcedure extends NwtgAutomationModEl
 							((World) world).getServer().getCommandManager().handleCommand(
 									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-									(("execute if block ") + "" + ((posX)) + "" + (" ") + "" + ((posY)) + "" + (" ") + "" + ((posZ)) + ""
+									(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posZ)))) + ""
 											+ (" minecraft:nether_wart[age=3] run data modify block ~ ~ ~ ForgeData.HarvestCrop set value 1")));
 						}
 					}
@@ -506,36 +514,46 @@ public class AutoFarmingMachineOnUpdateTickProcedure extends NwtgAutomationModEl
 							((World) world).getServer().getCommandManager().handleCommand(
 									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-									(("execute if block ") + "" + ((posX)) + "" + (" ") + "" + ((posY)) + "" + (" ") + "" + ((posZ)) + ""
+									(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posZ)))) + ""
+											+ (" minecraft:cocoa[facing=north] run data modify block ~ ~ ~ ForgeData.Direction set value 0")));
+						}
+						if (world instanceof ServerWorld) {
+							((World) world).getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+									(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posZ)))) + ""
+											+ (" minecraft:cocoa[facing=east] run data modify block ~ ~ ~ ForgeData.Direction set value 1")));
+						}
+						if (world instanceof ServerWorld) {
+							((World) world).getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+									(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posZ)))) + ""
+											+ (" minecraft:cocoa[facing=south] run data modify block ~ ~ ~ ForgeData.Direction set value 2")));
+						}
+						if (world instanceof ServerWorld) {
+							((World) world).getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+									(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posZ)))) + ""
+											+ (" minecraft:cocoa[facing=west] run data modify block ~ ~ ~ ForgeData.Direction set value 3")));
+						}
+						if (world instanceof ServerWorld) {
+							((World) world).getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+									(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
+											+ ((new java.text.DecimalFormat("##").format((posZ)))) + ""
 											+ (" minecraft:cocoa[age=2] run data modify block ~ ~ ~ ForgeData.HarvestCrop set value 1")));
-						}
-						if (world instanceof ServerWorld) {
-							((World) world).getServer().getCommandManager().handleCommand(
-									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-									(("execute if block ") + "" + ((posX)) + "" + (" ") + "" + ((posY)) + "" + (" ") + "" + ((posZ)) + ""
-											+ (" minecraft:cocoa[direction=0] run data modify block ~ ~ ~ ForgeData.Direction set value 0")));
-						}
-						if (world instanceof ServerWorld) {
-							((World) world).getServer().getCommandManager().handleCommand(
-									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-									(("execute if block ") + "" + ((posX)) + "" + (" ") + "" + ((posY)) + "" + (" ") + "" + ((posZ)) + ""
-											+ (" minecraft:cocoa[direction=1] run data modify block ~ ~ ~ ForgeData.Direction set value 1")));
-						}
-						if (world instanceof ServerWorld) {
-							((World) world).getServer().getCommandManager().handleCommand(
-									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-									(("execute if block ") + "" + ((posX)) + "" + (" ") + "" + ((posY)) + "" + (" ") + "" + ((posZ)) + ""
-											+ (" minecraft:cocoa[direction=2] run data modify block ~ ~ ~ ForgeData.Direction set value 2")));
-						}
-						if (world instanceof ServerWorld) {
-							((World) world).getServer().getCommandManager().handleCommand(
-									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-									(("execute if block ") + "" + ((posX)) + "" + (" ") + "" + ((posY)) + "" + (" ") + "" + ((posZ)) + ""
-											+ (" minecraft:cocoa[direction=3] run data modify block ~ ~ ~ ForgeData.Direction set value 3")));
 						}
 					}
 					if (((new Object() {
@@ -738,7 +756,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure extends NwtgAutomationModEl
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Blocks.SUGAR_CANE, (int) (1)).getItem())) {
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Items.SUGAR_CANE, (int) (1)).getItem())) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("world", world);

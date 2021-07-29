@@ -2,11 +2,11 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "auto_crafting_machine_bottom",
-    "textureTop": "auto_crafting_machine_bottom",
-    "textureLeft": "machine_block",
+    "texture": "breaker_panel_end",
+    "textureTop": "breaker_panel_end",
+    "textureLeft": "breaker_panel_side",
     "textureFront": "breaker_panel_on",
-    "textureRight": "remote_item_teleporter_base",
+    "textureRight": "breaker_panel_side",
     "textureBack": "breaker_panel_on",
     "renderType": 10,
     "customModelName": "Normal",
@@ -32,14 +32,14 @@
         "subtract": false
       }
     ],
-    "name": "Breaker Panel",
+    "name": "Breaker Panel On",
     "specialInfo": [],
     "hardness": 5.0,
     "resistance": 6.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:NWTGAutomationTab"
+      "value": "No creative tab entry"
     },
     "destroyTool": "pickaxe",
     "customDrop": {
@@ -54,7 +54,7 @@
     "material": {
       "value": "IRON"
     },
-    "tickRate": 10,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "IRON",
@@ -107,6 +107,9 @@
     "fluidRestrictions": [],
     "onRightClicked": {
       "name": "BreakerPanelOnOnBlockRightClicked"
+    },
+    "onTickUpdate": {
+      "name": "BreakerPanelUpdateTick"
     },
     "onBlockPlayedBy": {
       "name": "BreakerPanelBlockIsPlacedBy"

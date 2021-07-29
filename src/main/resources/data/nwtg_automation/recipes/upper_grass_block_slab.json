@@ -1,0 +1,13 @@
+{
+  "group": "upper_grass_block_slab",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nwtg_automation:grass_block_slab_lower"
+    }
+  ],
+  "result": {
+    "item": "nwtg_automation:grass_block_slab_upper",
+    "count": 1
+  }
+}

@@ -11,7 +11,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoCraftingMachineWoodPressurePlateRecipesProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoCraftingMachineWoodPressurePlateRecipesProcedure(NwtgAutomationModElements instance) {
-		super(instance, 234);
+		super(instance, 189);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "nwtg_automation:blocks/auto_crafting_machine_bottom",
-    "up": "nwtg_automation:blocks/auto_crafting_machine_bottom",
+    "down": "nwtg_automation:blocks/breaker_panel_end",
+    "up": "nwtg_automation:blocks/breaker_panel_end",
     "north": "nwtg_automation:blocks/breaker_panel_off",
-    "east": "nwtg_automation:blocks/machine_block",
+    "east": "nwtg_automation:blocks/breaker_panel_side",
     "south": "nwtg_automation:blocks/breaker_panel_off",
-    "west": "nwtg_automation:blocks/remote_item_teleporter_base",
-    "particle": "nwtg_automation:blocks/auto_crafting_machine_bottom"
+    "west": "nwtg_automation:blocks/breaker_panel_side",
+    "particle": "nwtg_automation:blocks/breaker_panel_end"
   }
 }

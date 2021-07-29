@@ -15,7 +15,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class BreakerPanelBlockIsPlacedByProcedure extends NwtgAutomationModElements.ModElement {
 	public BreakerPanelBlockIsPlacedByProcedure(NwtgAutomationModElements instance) {
-		super(instance, 91);
+		super(instance, 75);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -54,6 +54,15 @@ public class BreakerPanelBlockIsPlacedByProcedure extends NwtgAutomationModEleme
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
+				_tileEntity.getTileData().putBoolean("IsBlockOn", (false));
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+		}
+		if (!world.isRemote()) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
 				_tileEntity.getTileData().putString("Owner", (entity.getDisplayName().getString()));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
@@ -64,6 +73,15 @@ public class BreakerPanelBlockIsPlacedByProcedure extends NwtgAutomationModEleme
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putString("PasswordState", "DISABLED");
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+		}
+		if (!world.isRemote()) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putString("Password", "12345");
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}

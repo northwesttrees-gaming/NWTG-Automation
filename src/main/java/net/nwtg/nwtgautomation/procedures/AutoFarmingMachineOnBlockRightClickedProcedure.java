@@ -37,7 +37,7 @@ import io.netty.buffer.Unpooled;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoFarmingMachineOnBlockRightClickedProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoFarmingMachineOnBlockRightClickedProcedure(NwtgAutomationModElements instance) {
-		super(instance, 32);
+		super(instance, 33);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -21,7 +21,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoCraftingMachineDarkOakSaplingRecipeProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoCraftingMachineDarkOakSaplingRecipeProcedure(NwtgAutomationModElements instance) {
-		super(instance, 278);
+		super(instance, 233);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

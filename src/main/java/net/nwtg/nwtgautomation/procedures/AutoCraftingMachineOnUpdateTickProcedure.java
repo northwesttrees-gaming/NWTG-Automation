@@ -21,7 +21,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoCraftingMachineOnUpdateTickProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoCraftingMachineOnUpdateTickProcedure(NwtgAutomationModElements instance) {
-		super(instance, 23);
+		super(instance, 24);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

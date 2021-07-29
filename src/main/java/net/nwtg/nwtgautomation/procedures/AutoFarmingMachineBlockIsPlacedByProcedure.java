@@ -15,7 +15,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoFarmingMachineBlockIsPlacedByProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoFarmingMachineBlockIsPlacedByProcedure(NwtgAutomationModElements instance) {
-		super(instance, 88);
+		super(instance, 72);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

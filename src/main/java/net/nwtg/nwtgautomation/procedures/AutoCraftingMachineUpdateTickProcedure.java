@@ -19,7 +19,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoCraftingMachineUpdateTickProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoCraftingMachineUpdateTickProcedure(NwtgAutomationModElements instance) {
-		super(instance, 92);
+		super(instance, 76);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

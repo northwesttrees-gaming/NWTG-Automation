@@ -15,7 +15,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoItemCollectorMachineBlockIsPlacedByProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoItemCollectorMachineBlockIsPlacedByProcedure(NwtgAutomationModElements instance) {
-		super(instance, 90);
+		super(instance, 74);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

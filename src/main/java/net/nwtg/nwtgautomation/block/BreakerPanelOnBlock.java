@@ -1,9 +1,9 @@
 
 package net.nwtg.nwtgautomation.block;
 
+import net.nwtg.nwtgautomation.procedures.BreakerPanelUpdateTickProcedure;
 import net.nwtg.nwtgautomation.procedures.BreakerPanelOnOnBlockRightClickedProcedure;
 import net.nwtg.nwtgautomation.procedures.BreakerPanelBlockIsPlacedByProcedure;
-import net.nwtg.nwtgautomation.itemgroup.NWTGAutomationTabItemGroup;
 import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -17,6 +17,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.ToolType;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
@@ -61,6 +62,7 @@ import net.minecraft.block.Block;
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
+import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
@@ -73,15 +75,14 @@ public class BreakerPanelOnBlock extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:breaker_panel_on")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BreakerPanelOnBlock(NwtgAutomationModElements instance) {
-		super(instance, 81);
+		super(instance, 70);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(
-				() -> new BlockItem(block, new Item.Properties().group(NWTGAutomationTabItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
@@ -134,6 +135,32 @@ public class BreakerPanelOnBlock extends NwtgAutomationModElements.ModElement {
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
+		}
+
+		@Override
+		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(state, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1);
+		}
+
+		@Override
+		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+			super.tick(state, world, pos, random);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				BreakerPanelUpdateTickProcedure.executeProcedure($_dependencies);
+			}
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1);
 		}
 
 		@Override
@@ -281,7 +308,7 @@ public class BreakerPanelOnBlock extends NwtgAutomationModElements.ModElement {
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Breaker Panel");
+			return new StringTextComponent("Breaker Panel On");
 		}
 
 		@Override

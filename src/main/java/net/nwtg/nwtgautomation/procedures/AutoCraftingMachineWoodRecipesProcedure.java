@@ -11,7 +11,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoCraftingMachineWoodRecipesProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoCraftingMachineWoodRecipesProcedure(NwtgAutomationModElements instance) {
-		super(instance, 244);
+		super(instance, 199);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -134,6 +134,14 @@ public class AutoCraftingMachineWoodRecipesProcedure extends NwtgAutomationModEl
 			$_dependencies.put("y", y);
 			$_dependencies.put("z", z);
 			AutoCraftingMachineWoodSignRecipesProcedure.executeProcedure($_dependencies);
+		}
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("world", world);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			AutoCraftingMachineSaplingRecipesProcedure.executeProcedure($_dependencies);
 		}
 	}
 }

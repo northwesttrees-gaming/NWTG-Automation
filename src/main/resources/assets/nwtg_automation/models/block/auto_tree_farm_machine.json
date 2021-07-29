@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "nwtg_automation:blocks/auto_tree_farm_machine_bottom",
+    "up": "nwtg_automation:blocks/auto_tree_farm_machine_top",
+    "north": "nwtg_automation:blocks/auto_tree_farm_machine_off",
+    "east": "nwtg_automation:blocks/auto_tree_farm_machine_side",
+    "south": "nwtg_automation:blocks/auto_tree_farm_machine_off",
+    "west": "nwtg_automation:blocks/auto_tree_farm_machine_chest_input",
+    "particle": "nwtg_automation:blocks/auto_tree_farm_machine_bottom"
+  }
+}

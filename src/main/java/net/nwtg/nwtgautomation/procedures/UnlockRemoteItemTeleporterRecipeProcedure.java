@@ -27,7 +27,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class UnlockRemoteItemTeleporterRecipeProcedure extends NwtgAutomationModElements.ModElement {
 	public UnlockRemoteItemTeleporterRecipeProcedure(NwtgAutomationModElements instance) {
-		super(instance, 72);
+		super(instance, 62);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

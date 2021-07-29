@@ -14,7 +14,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoCraftingMachineBlockAddedProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoCraftingMachineBlockAddedProcedure(NwtgAutomationModElements instance) {
-		super(instance, 89);
+		super(instance, 73);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

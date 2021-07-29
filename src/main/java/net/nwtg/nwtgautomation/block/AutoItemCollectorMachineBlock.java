@@ -81,7 +81,7 @@ public class AutoItemCollectorMachineBlock extends NwtgAutomationModElements.Mod
 	@ObjectHolder("nwtg_automation:auto_item_collector_machine")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public AutoItemCollectorMachineBlock(NwtgAutomationModElements instance) {
-		super(instance, 4);
+		super(instance, 5);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
