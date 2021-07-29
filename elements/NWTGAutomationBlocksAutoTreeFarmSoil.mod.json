@@ -15,10 +15,10 @@
         "value": "Blocks.DIRT#2"
       },
       {
-        "value": "Blocks.NETHERRACK"
+        "value": "Blocks.WARPED_NYLIUM"
       },
       {
-        "value": "Blocks.WARPED_NYLIUM"
+        "value": "Blocks.CRIMSON_NYLIUM"
       }
     ],
     "functions": [],
