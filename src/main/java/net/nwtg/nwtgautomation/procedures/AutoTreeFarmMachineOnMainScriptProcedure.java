@@ -115,7 +115,7 @@ public class AutoTreeFarmMachineOnMainScriptProcedure extends NwtgAutomationModE
 												return _retval.get();
 											}
 										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))))).getBlock()))) {
-							if ((((!((new Object() {
+							if (((!((new Object() {
 								public ItemStack getItemStack(BlockPos pos, int sltid) {
 									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 									TileEntity _ent = world.getTileEntity(pos);
@@ -128,28 +128,26 @@ public class AutoTreeFarmMachineOnMainScriptProcedure extends NwtgAutomationModE
 								}
 							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
 									.getItem()))
-									&& (ItemTags.getCollection()
-											.getTagByID(new ResourceLocation(
-													("forge:nwtg_automation/items/auto_tree_farm/saplings").toLowerCase(java.util.Locale.ENGLISH)))
-											.contains((new Object() {
-												public ItemStack getItemStack(BlockPos pos, int sltid) {
-													AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-													TileEntity _ent = world.getTileEntity(pos);
-													if (_ent != null) {
-														_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
-																.ifPresent(capability -> {
-																	_retval.set(capability.getStackInSlot(sltid).copy());
-																});
-													}
-													return _retval.get();
-												}
-											}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem())))
-									&& (BlockTags.getCollection()
+									&& ((BlockTags.getCollection()
 											.getTagByID(new ResourceLocation(
 													("forge:nwtg_automation/blocks/auto_tree_farm/soil").toLowerCase(java.util.Locale.ENGLISH)))
-											.contains((world.getBlockState(new BlockPos((int) (posX), (int) ((posY) - 1), (int) (posZ))))
-													.getBlock())))) {
-								if (((new Object() {
+											.contains((world.getBlockState(new BlockPos((int) (posX), (int) ((posY) - 1), (int) (posZ)))).getBlock()))
+											&& (ItemTags.getCollection().getTagByID(new ResourceLocation(
+													("forge:nwtg_automation/items/auto_tree_farm/saplings").toLowerCase(java.util.Locale.ENGLISH)))
+													.contains((new Object() {
+														public ItemStack getItemStack(BlockPos pos, int sltid) {
+															AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+															TileEntity _ent = world.getTileEntity(pos);
+															if (_ent != null) {
+																_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																		.ifPresent(capability -> {
+																			_retval.set(capability.getStackInSlot(sltid).copy());
+																		});
+															}
+															return _retval.get();
+														}
+													}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem()))))) {
+								if ((((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 										TileEntity _ent = world.getTileEntity(pos);
@@ -161,7 +159,46 @@ public class AutoTreeFarmMachineOnMainScriptProcedure extends NwtgAutomationModE
 										return _retval.get();
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
-										.getItem() == new ItemStack(Blocks.WARPED_FUNGUS, (int) (1)).getItem())) {
+										.getItem() == new ItemStack(Blocks.WARPED_FUNGUS, (int) (1)).getItem()) && (((new Object() {
+											public ItemStack getItemStack(BlockPos pos, int sltid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												TileEntity _ent = world.getTileEntity(pos);
+												if (_ent != null) {
+													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+														_retval.set(capability.getStackInSlot(sltid).copy());
+													});
+												}
+												return _retval.get();
+											}
+										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
+												.getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) || (((new Object() {
+													public ItemStack getItemStack(BlockPos pos, int sltid) {
+														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+														TileEntity _ent = world.getTileEntity(pos);
+														if (_ent != null) {
+															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																	.ifPresent(capability -> {
+																		_retval.set(capability.getStackInSlot(sltid).copy());
+																	});
+														}
+														return _retval.get();
+													}
+												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3))).getItem() == (new ItemStack(
+														(world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ)))).getBlock()))
+																.getItem())
+														&& ((new Object() {
+															public int getAmount(IWorld world, BlockPos pos, int sltid) {
+																AtomicInteger _retval = new AtomicInteger(0);
+																TileEntity _ent = world.getTileEntity(pos);
+																if (_ent != null) {
+																	_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																			.ifPresent(capability -> {
+																				_retval.set(capability.getStackInSlot(sltid).getCount());
+																			});
+																}
+																return _retval.get();
+															}
+														}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) < 64))))) {
 									{
 										TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 										if (_ent != null) {
@@ -232,7 +269,7 @@ public class AutoTreeFarmMachineOnMainScriptProcedure extends NwtgAutomationModE
 									}
 									stopScript = (boolean) (true);
 									break;
-								} else if (((new Object() {
+								} else if ((((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 										TileEntity _ent = world.getTileEntity(pos);
@@ -244,7 +281,46 @@ public class AutoTreeFarmMachineOnMainScriptProcedure extends NwtgAutomationModE
 										return _retval.get();
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
-										.getItem() == new ItemStack(Blocks.CRIMSON_FUNGUS, (int) (1)).getItem())) {
+										.getItem() == new ItemStack(Blocks.CRIMSON_FUNGUS, (int) (1)).getItem()) && (((new Object() {
+											public ItemStack getItemStack(BlockPos pos, int sltid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												TileEntity _ent = world.getTileEntity(pos);
+												if (_ent != null) {
+													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+														_retval.set(capability.getStackInSlot(sltid).copy());
+													});
+												}
+												return _retval.get();
+											}
+										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
+												.getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) || (((new Object() {
+													public ItemStack getItemStack(BlockPos pos, int sltid) {
+														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+														TileEntity _ent = world.getTileEntity(pos);
+														if (_ent != null) {
+															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																	.ifPresent(capability -> {
+																		_retval.set(capability.getStackInSlot(sltid).copy());
+																	});
+														}
+														return _retval.get();
+													}
+												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3))).getItem() == (new ItemStack(
+														(world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ)))).getBlock()))
+																.getItem())
+														&& ((new Object() {
+															public int getAmount(IWorld world, BlockPos pos, int sltid) {
+																AtomicInteger _retval = new AtomicInteger(0);
+																TileEntity _ent = world.getTileEntity(pos);
+																if (_ent != null) {
+																	_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																			.ifPresent(capability -> {
+																				_retval.set(capability.getStackInSlot(sltid).getCount());
+																			});
+																}
+																return _retval.get();
+															}
+														}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) < 64))))) {
 									{
 										TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 										if (_ent != null) {
@@ -315,7 +391,44 @@ public class AutoTreeFarmMachineOnMainScriptProcedure extends NwtgAutomationModE
 									}
 									stopScript = (boolean) (true);
 									break;
-								} else {
+								} else if ((((new Object() {
+									public ItemStack getItemStack(BlockPos pos, int sltid) {
+										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+										TileEntity _ent = world.getTileEntity(pos);
+										if (_ent != null) {
+											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+												_retval.set(capability.getStackInSlot(sltid).copy());
+											});
+										}
+										return _retval.get();
+									}
+								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
+										.getItem()) || (((new Object() {
+											public ItemStack getItemStack(BlockPos pos, int sltid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												TileEntity _ent = world.getTileEntity(pos);
+												if (_ent != null) {
+													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+														_retval.set(capability.getStackInSlot(sltid).copy());
+													});
+												}
+												return _retval.get();
+											}
+										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3))).getItem() == (new ItemStack(
+												(world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ)))).getBlock())).getItem())
+												&& ((new Object() {
+													public int getAmount(IWorld world, BlockPos pos, int sltid) {
+														AtomicInteger _retval = new AtomicInteger(0);
+														TileEntity _ent = world.getTileEntity(pos);
+														if (_ent != null) {
+															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																	.ifPresent(capability -> {
+																		_retval.set(capability.getStackInSlot(sltid).getCount());
+																	});
+														}
+														return _retval.get();
+													}
+												}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) < 64)))) {
 									{
 										TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 										if (_ent != null) {
@@ -382,7 +495,44 @@ public class AutoTreeFarmMachineOnMainScriptProcedure extends NwtgAutomationModE
 									stopScript = (boolean) (true);
 									break;
 								}
-							} else {
+							} else if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
+									.getItem()) || (((new Object() {
+										public ItemStack getItemStack(BlockPos pos, int sltid) {
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											TileEntity _ent = world.getTileEntity(pos);
+											if (_ent != null) {
+												_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+													_retval.set(capability.getStackInSlot(sltid).copy());
+												});
+											}
+											return _retval.get();
+										}
+									}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3))).getItem() == (new ItemStack(
+											(world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ)))).getBlock())).getItem())
+											&& ((new Object() {
+												public int getAmount(IWorld world, BlockPos pos, int sltid) {
+													AtomicInteger _retval = new AtomicInteger(0);
+													TileEntity _ent = world.getTileEntity(pos);
+													if (_ent != null) {
+														_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																.ifPresent(capability -> {
+																	_retval.set(capability.getStackInSlot(sltid).getCount());
+																});
+													}
+													return _retval.get();
+												}
+											}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) < 64)))) {
 								{
 									TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 									if (_ent != null) {
@@ -422,7 +572,7 @@ public class AutoTreeFarmMachineOnMainScriptProcedure extends NwtgAutomationModE
 								.getTagByID(new ResourceLocation(
 										("forge:nwtg_automation/blocks/auto_tree_farm/leaves").toLowerCase(java.util.Locale.ENGLISH)))
 								.contains((world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ)))).getBlock()))
-								&& ((world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ))))
+								&& ((((world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ))))
 										.getBlock() == /* @BlockState */(new Object() {
 											public BlockState toBlock(ItemStack _stk) {
 												if (_stk.getItem() instanceof BlockItem) {
@@ -441,7 +591,49 @@ public class AutoTreeFarmMachineOnMainScriptProcedure extends NwtgAutomationModE
 												}
 												return _retval.get();
 											}
-										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))))).getBlock()))) {
+										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))))).getBlock())
+										|| ((world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ))))
+												.getBlock() == Blocks.SHROOMLIGHT.getDefaultState().getBlock()))
+										&& (((new Object() {
+											public ItemStack getItemStack(BlockPos pos, int sltid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												TileEntity _ent = world.getTileEntity(pos);
+												if (_ent != null) {
+													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+														_retval.set(capability.getStackInSlot(sltid).copy());
+													});
+												}
+												return _retval.get();
+											}
+										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (4)))
+												.getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) || (((new Object() {
+													public ItemStack getItemStack(BlockPos pos, int sltid) {
+														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+														TileEntity _ent = world.getTileEntity(pos);
+														if (_ent != null) {
+															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																	.ifPresent(capability -> {
+																		_retval.set(capability.getStackInSlot(sltid).copy());
+																	});
+														}
+														return _retval.get();
+													}
+												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (4))).getItem() == (new ItemStack(
+														(world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ)))).getBlock()))
+																.getItem())
+														&& ((new Object() {
+															public int getAmount(IWorld world, BlockPos pos, int sltid) {
+																AtomicInteger _retval = new AtomicInteger(0);
+																TileEntity _ent = world.getTileEntity(pos);
+																if (_ent != null) {
+																	_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																			.ifPresent(capability -> {
+																				_retval.set(capability.getStackInSlot(sltid).getCount());
+																			});
+																}
+																return _retval.get();
+															}
+														}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (4))) < 64)))))) {
 							{
 								TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 								if (_ent != null) {
