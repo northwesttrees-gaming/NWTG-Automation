@@ -27,6 +27,9 @@
       },
       {
         "value": "Blocks.NETHER_WART_BLOCK"
+      },
+      {
+        "value": "Blocks.SHROOMLIGHT"
       }
     ],
     "blocks": [],
