@@ -6,14 +6,14 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "nwtg_automation_auto_tree_farm_machine",
+    "group": "nwtg_automation_machines",
     "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/dispencer"
+        "value": "TAG:forge:nwtg_automation/items/dispenser"
       },
       {
         "value": ""
@@ -40,7 +40,7 @@
     "recipeReturnStack": {
       "value": "CUSTOM:AutoTreeFarmMachine"
     },
-    "name": "auto_tree_farm_machine",
+    "name": "auto_tree_farm_machine_crafting_recipe",
     "namespace": "mod"
   }
 }

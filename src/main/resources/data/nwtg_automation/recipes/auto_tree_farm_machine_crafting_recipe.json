@@ -1,5 +1,5 @@
 {
-  "group": "nwtg_automation_auto_tree_farm_machine",
+  "group": "nwtg_automation_machines",
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "0",
@@ -8,7 +8,7 @@
   ],
   "key": {
     "0": {
-      "tag": "forge:nwtg_automation/items/dispencer"
+      "tag": "forge:nwtg_automation/items/dispenser"
     },
     "1": {
       "tag": "forge:nwtg_automation/items/machine_block"

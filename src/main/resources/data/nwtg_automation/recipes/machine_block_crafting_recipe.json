@@ -1,5 +1,5 @@
 {
-  "group": "nwtg_automation_machine_block",
+  "group": "nwtg_automation_blocks",
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "012",

@@ -6,7 +6,7 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "nwtg_automation_remote_item_teleporter",
+    "group": "nwtg_automation_devices",
     "recipeShapeless": false,
     "recipeSlots": [
       {
@@ -40,7 +40,7 @@
     "recipeReturnStack": {
       "value": "CUSTOM:RemoteItemTeleporter"
     },
-    "name": "remote_item_teleporter",
+    "name": "remote_item_teleporter_crafting_recipe",
     "namespace": "mod"
   }
 }

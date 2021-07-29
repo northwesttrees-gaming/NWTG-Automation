@@ -22,16 +22,6 @@
       "path": "~/CreativeTabs"
     },
     {
-      "name": "MachineBlockCrafting",
-      "type": "recipe",
-      "sortid": 12,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "machine_block_crafting",
-      "path": "~/Recipes/Crafting_Table/Blocks/MachineBlock"
-    },
-    {
       "name": "AutoFarmingMachineInventory",
       "type": "gui",
       "sortid": 13,
@@ -364,26 +354,6 @@
         ]
       },
       "path": "~/Blocks/Devices/RIT/Procedures"
-    },
-    {
-      "name": "AutoFarmingMachineCrafting",
-      "type": "recipe",
-      "sortid": 24,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "auto_farming_machine_crafting",
-      "path": "~/Recipes/Crafting_Table/Machines/AutoFarming"
-    },
-    {
-      "name": "RemoteItemTeleporterCrafting",
-      "type": "recipe",
-      "sortid": 25,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "remote_item_teleporter_crafting",
-      "path": "~/Recipes/Crafting_Table/Devices/RIT"
     },
     {
       "name": "AutoCraftingMachine",
@@ -832,16 +802,6 @@
       "path": "~/Items/Basic/MachineWrench"
     },
     {
-      "name": "MachineWrenchCraftingRecipe",
-      "type": "recipe",
-      "sortid": 41,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "machine_wrench_crafting_recipe",
-      "path": "~/Recipes/Crafting_Table/Items/MachineWrench"
-    },
-    {
       "name": "BlocksMachineBlockTag",
       "type": "tag",
       "sortid": 42,
@@ -1216,26 +1176,6 @@
         ]
       },
       "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Food/Pie"
-    },
-    {
-      "name": "AutoItemCollectorMachineCraftingRecipe",
-      "type": "recipe",
-      "sortid": 57,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "auto_item_collector_machine_crafting_recipe",
-      "path": "~/Recipes/Crafting_Table/Machines/AutoItemCollector"
-    },
-    {
-      "name": "AutoCraftingMachineCraftingRecipe",
-      "type": "recipe",
-      "sortid": 58,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "auto_crafting_machine_crafting_recipe",
-      "path": "~/Recipes/Crafting_Table/Machines/AutoCrafting"
     },
     {
       "name": "AutoCraftingMachineSortingScriptNorth",
@@ -5628,26 +5568,6 @@
       "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Wood/Saplings"
     },
     {
-      "name": "BreakerPanelCraftingRecipe",
-      "type": "recipe",
-      "sortid": 239,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "breaker_panel_crafting_recipe",
-      "path": "~/Recipes/Crafting_Table/Devices/Breaker_Panel"
-    },
-    {
-      "name": "NWTAutomationItemsLever",
-      "type": "tag",
-      "sortid": 240,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "nwt_automation_items_lever",
-      "path": "~/Tags/Items/Vanilla"
-    },
-    {
       "name": "NWTAutomationItemsRedstone",
       "type": "tag",
       "sortid": 241,
@@ -6516,36 +6436,6 @@
       "path": "~/Tags/Machines/AutoTreeFarm/Script"
     },
     {
-      "name": "LowerGrassBlockSlabCraftingRecipe2",
-      "type": "recipe",
-      "sortid": 298,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "lower_grass_block_slab_crafting_recipe_2",
-      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
-    },
-    {
-      "name": "LowerGrassBlockSlabCraftingRecipe1",
-      "type": "recipe",
-      "sortid": 299,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "lower_grass_block_slab_crafting_recipe_1",
-      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
-    },
-    {
-      "name": "UpperGrassBlockSlabCraftingRecipe1",
-      "type": "recipe",
-      "sortid": 300,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "upper_grass_block_slab_crafting_recipe_1",
-      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
-    },
-    {
       "name": "NWTGAutomationItemsAxes",
       "type": "tag",
       "sortid": 301,
@@ -6556,14 +6446,134 @@
       "path": "~/Tags/Items/Vanilla"
     },
     {
+      "name": "BreakerPanelCraftingRecipe",
+      "type": "recipe",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "breaker_panel_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Devices/Breaker_Panel"
+    },
+    {
+      "name": "RemoteItemTeleporterCraftingRecipe",
+      "type": "recipe",
+      "sortid": 305,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "remote_item_teleporter_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Devices/RIT"
+    },
+    {
+      "name": "AutoFarmingMachineCraftingRecipe",
+      "type": "recipe",
+      "sortid": 306,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Machines/AutoFarming"
+    },
+    {
+      "name": "AutoCraftingMachineCraftingRecipe",
+      "type": "recipe",
+      "sortid": 308,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_crafting_machine_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Machines/AutoCrafting"
+    },
+    {
+      "name": "AutoItemCollectorMachineCraftingRecipe",
+      "type": "recipe",
+      "sortid": 310,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_item_collector_machine_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Machines/AutoItemCollector"
+    },
+    {
       "name": "AutoTreeFarmMachineCraftingRecipe",
       "type": "recipe",
-      "sortid": 302,
+      "sortid": 312,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_tree_farm_machine_crafting_recipe",
       "path": "~/Recipes/Crafting_Table/Machines/AutoTreeFarm"
+    },
+    {
+      "name": "MachineBlockCraftingRecipe",
+      "type": "recipe",
+      "sortid": 313,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_block_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Blocks/MachineBlock"
+    },
+    {
+      "name": "LowerGrassBlockSlabCraftingRecipe1",
+      "type": "recipe",
+      "sortid": 315,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lower_grass_block_slab_crafting_recipe_1",
+      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
+    },
+    {
+      "name": "LowerGrassBlockSlabCraftingRecipe2",
+      "type": "recipe",
+      "sortid": 317,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lower_grass_block_slab_crafting_recipe_2",
+      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
+    },
+    {
+      "name": "UpperGrassBlockSlabCraftingRecipe1",
+      "type": "recipe",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "upper_grass_block_slab_crafting_recipe_1",
+      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
+    },
+    {
+      "name": "MachineWrenchCraftingRecipe",
+      "type": "recipe",
+      "sortid": 321,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_wrench_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Items/MachineWrench"
+    },
+    {
+      "name": "NWTGAutomationItemsRedstone",
+      "type": "tag",
+      "sortid": 322,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_redstone",
+      "path": "~/Tags/Items/Vanilla"
+    },
+    {
+      "name": "NWTGAutomationItemsLever",
+      "type": "tag",
+      "sortid": 323,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_items_lever",
+      "path": "~/Tags/Items/Vanilla"
     }
   ],
   "variable_elements": [
