@@ -6,7 +6,7 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "upper_grass_block_slab",
+    "group": "upper_grass_block_slab_1",
     "recipeShapeless": true,
     "recipeSlots": [
       {
@@ -40,7 +40,7 @@
     "recipeReturnStack": {
       "value": "CUSTOM:GrassBlockSlabUpper"
     },
-    "name": "upper_grass_block_slab",
+    "name": "upper_grass_block_slab_1",
     "namespace": "mod"
   }
 }

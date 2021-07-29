@@ -5898,36 +5898,6 @@
       "path": "~/Blocks/Blocks/GrassBlockSlabs"
     },
     {
-      "name": "LowerGrassBlockSlabCraftingRecipe1",
-      "type": "recipe",
-      "sortid": 263,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "lower_grass_block_slab_crafting_recipe_1",
-      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
-    },
-    {
-      "name": "UpperGrassBlockSlabCraftingRecipe",
-      "type": "recipe",
-      "sortid": 264,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "upper_grass_block_slab_crafting_recipe",
-      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
-    },
-    {
-      "name": "LowerGrassBlockSlabCraftingRecipe2",
-      "type": "recipe",
-      "sortid": 265,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "lower_grass_block_slab_crafting_recipe_2",
-      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
-    },
-    {
       "name": "WhenOwnerBlockIsBroken",
       "type": "procedure",
       "sortid": 266,
@@ -6534,6 +6504,46 @@
         ]
       },
       "path": "~/Blocks/Machines/AutoCrafting/Procedures/Recipes/Wood"
+    },
+    {
+      "name": "NWTGAutomationBlocksAutoTreeFarmSurfaceLeaves",
+      "type": "tag",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nwtg_automation_blocks_auto_tree_farm_surface_leaves",
+      "path": "~/Tags/Machines/AutoTreeFarm/Script"
+    },
+    {
+      "name": "LowerGrassBlockSlabCraftingRecipe2",
+      "type": "recipe",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lower_grass_block_slab_crafting_recipe_2",
+      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
+    },
+    {
+      "name": "LowerGrassBlockSlabCraftingRecipe1",
+      "type": "recipe",
+      "sortid": 303,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lower_grass_block_slab_crafting_recipe_1",
+      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
+    },
+    {
+      "name": "UpperGrassBlockSlabCraftingRecipe1",
+      "type": "recipe",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "upper_grass_block_slab_crafting_recipe_1",
+      "path": "~/Recipes/Crafting_Table/Blocks/GrassBlockSlabs"
     }
   ],
   "variable_elements": [
