@@ -6,7 +6,7 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "nwtg_automation_machine_block",
+    "group": "nwtg_automation_blocks",
     "recipeShapeless": false,
     "recipeSlots": [
       {
@@ -40,7 +40,7 @@
     "recipeReturnStack": {
       "value": "CUSTOM:MachineBlock"
     },
-    "name": "machine_block",
+    "name": "machine_block_crafting_recipe",
     "namespace": "mod"
   }
 }

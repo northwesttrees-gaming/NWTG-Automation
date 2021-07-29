@@ -19,7 +19,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class RemoteItemTeleporterOnBlockRightClickedProcedure extends NwtgAutomationModElements.ModElement {
 	public RemoteItemTeleporterOnBlockRightClickedProcedure(NwtgAutomationModElements instance) {
-		super(instance, 19);
+		super(instance, 22);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

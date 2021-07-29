@@ -6,7 +6,7 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "nwtg_automation_auto_crafting_machine",
+    "group": "nwtg_automation_machines",
     "recipeShapeless": false,
     "recipeSlots": [
       {
@@ -40,7 +40,7 @@
     "recipeReturnStack": {
       "value": "CUSTOM:AutoCraftingMachine"
     },
-    "name": "auto_crafting_machine",
+    "name": "auto_crafting_machine_crafting_recipe",
     "namespace": "mod"
   }
 }

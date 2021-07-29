@@ -1,5 +1,7 @@
 package net.nwtg.nwtgautomation.procedures;
 
+import net.nwtg.nwtgautomation.block.GrassBlockSlabUpperBlock;
+import net.nwtg.nwtgautomation.block.GrassBlockSlabLowerBlock;
 import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
@@ -14,7 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
+import net.minecraft.block.Blocks;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -22,7 +24,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class UnlockMachineBlockRecipeProcedure extends NwtgAutomationModElements.ModElement {
 	public UnlockMachineBlockRecipeProcedure(NwtgAutomationModElements instance) {
-		super(instance, 60);
+		super(instance, 63);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -33,19 +35,33 @@ public class UnlockMachineBlockRecipeProcedure extends NwtgAutomationModElements
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((!(new Object() {
-			public boolean hasRecipe(Entity _ent, ResourceLocation recipe) {
-				if (_ent instanceof ServerPlayerEntity)
-					return ((ServerPlayerEntity) _ent).getRecipeBook().isUnlocked(recipe);
-				else if (_ent.world.isRemote() && _ent instanceof ClientPlayerEntity)
-					return ((ClientPlayerEntity) _ent).getRecipeBook().isUnlocked(recipe);
-				return false;
-			}
-		}.hasRecipe(entity, new ResourceLocation("nwtg_automation:machine_block")))) && ((entity instanceof PlayerEntity)
-				? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(Items.IRON_INGOT, (int) (1)))
-				: false))) {
+		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(Items.IRON_INGOT, (int) (1))) : false)
+				|| ((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(Items.REDSTONE, (int) (1)))
+						: false))) {
 			if (entity instanceof ServerPlayerEntity) {
-				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:machine_block")});
+				((ServerPlayerEntity) entity)
+						.unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:machine_block_crafting_recipe")});
+			}
+		}
+		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(Blocks.GRASS_BLOCK, (int) (1))) : false)
+				|| (((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(GrassBlockSlabLowerBlock.block, (int) (1)))
+						: false)
+						|| ((entity instanceof PlayerEntity)
+								? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(GrassBlockSlabUpperBlock.block, (int) (1)))
+								: false)))) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity)
+						.unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:lower_grass_block_slab_crafting_recipe_1")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity)
+						.unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:lower_grass_block_slab_crafting_recipe_2")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity)
+						.unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:upper_grass_block_slab_crafting_recipe_1")});
 			}
 		}
 	}

@@ -33,7 +33,7 @@ import io.netty.buffer.Unpooled;
 @NwtgAutomationModElements.ModElement.Tag
 public class PasswordScreenButtonPressedProcedure extends NwtgAutomationModElements.ModElement {
 	public PasswordScreenButtonPressedProcedure(NwtgAutomationModElements instance) {
-		super(instance, 66);
+		super(instance, 69);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

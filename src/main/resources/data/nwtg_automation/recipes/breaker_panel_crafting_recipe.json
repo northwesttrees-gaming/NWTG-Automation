@@ -1,5 +1,5 @@
 {
-  "group": "nwtg_automation_auto_crafting_machine",
+  "group": "nwtg_automation_devices",
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "0",
@@ -8,17 +8,17 @@
   ],
   "key": {
     "0": {
-      "tag": "forge:nwtg_automation/items/dispenser"
+      "tag": "forge:nwtg_automation/items/lever"
     },
     "1": {
       "tag": "forge:nwtg_automation/items/machine_block"
     },
     "2": {
-      "tag": "forge:nwtg_automation/items/crafting_table"
+      "tag": "forge:nwtg_automation/items/redstone"
     }
   },
   "result": {
-    "item": "nwtg_automation:auto_crafting_machine",
+    "item": "nwtg_automation:breaker_panel",
     "count": 1
   }
 }

@@ -1,5 +1,5 @@
 {
-  "group": "lower_grass_block_slab_1",
+  "group": "nwtg_automation_blocks",
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "012"

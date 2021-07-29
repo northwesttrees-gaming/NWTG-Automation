@@ -1,5 +1,7 @@
 package net.nwtg.nwtgautomation.procedures;
 
+import net.nwtg.nwtgautomation.block.AutoTreeFarmMachineOnBlock;
+import net.nwtg.nwtgautomation.block.AutoTreeFarmMachineBlock;
 import net.nwtg.nwtgautomation.block.AutoItemCollectorMachineOnBlock;
 import net.nwtg.nwtgautomation.block.AutoItemCollectorMachineBlock;
 import net.nwtg.nwtgautomation.block.AutoFarmingMachineOnBlock;
@@ -19,7 +21,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -27,7 +28,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class UnlockRemoteItemTeleporterRecipeProcedure extends NwtgAutomationModElements.ModElement {
 	public UnlockRemoteItemTeleporterRecipeProcedure(NwtgAutomationModElements instance) {
-		super(instance, 62);
+		super(instance, 65);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -38,15 +39,7 @@ public class UnlockRemoteItemTeleporterRecipeProcedure extends NwtgAutomationMod
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((!(new Object() {
-			public boolean hasRecipe(Entity _ent, ResourceLocation recipe) {
-				if (_ent instanceof ServerPlayerEntity)
-					return ((ServerPlayerEntity) _ent).getRecipeBook().isUnlocked(recipe);
-				else if (_ent.world.isRemote() && _ent instanceof ClientPlayerEntity)
-					return ((ClientPlayerEntity) _ent).getRecipeBook().isUnlocked(recipe);
-				return false;
-			}
-		}.hasRecipe(entity, new ResourceLocation("nwtg_automation:remote_item_teleporter")))) && ((((entity instanceof PlayerEntity)
+		if (((((entity instanceof PlayerEntity)
 				? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AutoFarmingMachineBlock.block, (int) (1)))
 				: false)
 				|| ((entity instanceof PlayerEntity)
@@ -58,15 +51,27 @@ public class UnlockRemoteItemTeleporterRecipeProcedure extends NwtgAutomationMod
 						|| ((entity instanceof PlayerEntity)
 								? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AutoCraftingMachineOnBlock.block, (int) (1)))
 								: false))
-						|| (((entity instanceof PlayerEntity)
+						|| ((((entity instanceof PlayerEntity)
 								? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AutoItemCollectorMachineBlock.block, (int) (1)))
 								: false)
 								|| ((entity instanceof PlayerEntity)
 										? ((PlayerEntity) entity).inventory
 												.hasItemStack(new ItemStack(AutoItemCollectorMachineOnBlock.block, (int) (1)))
-										: false)))))) {
+										: false))
+								|| (((entity instanceof PlayerEntity)
+										? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AutoTreeFarmMachineBlock.block, (int) (1)))
+										: false)
+										|| ((entity instanceof PlayerEntity)
+												? ((PlayerEntity) entity).inventory
+														.hasItemStack(new ItemStack(AutoTreeFarmMachineOnBlock.block, (int) (1)))
+												: false)))))) {
 			if (entity instanceof ServerPlayerEntity) {
-				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:remote_item_teleporter")});
+				((ServerPlayerEntity) entity)
+						.unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:remote_item_teleporter_crafting_recipe")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity)
+						.unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:breaker_panel_crafting_recipe")});
 			}
 		}
 	}

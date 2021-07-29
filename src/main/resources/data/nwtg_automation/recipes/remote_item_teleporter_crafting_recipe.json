@@ -1,5 +1,5 @@
 {
-  "group": "nwtg_automation_remote_item_teleporter",
+  "group": "nwtg_automation_devices",
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "0",

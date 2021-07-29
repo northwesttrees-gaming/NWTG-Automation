@@ -20,7 +20,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class AutoTreeFarmMachineToggleStateScriptProcedure extends NwtgAutomationModElements.ModElement {
 	public AutoTreeFarmMachineToggleStateScriptProcedure(NwtgAutomationModElements instance) {
-		super(instance, 285);
+		super(instance, 282);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -1,5 +1,5 @@
 {
-  "group": "nwtg_automation_auto_farming_machine",
+  "group": "nwtg_automation_machines",
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "0",
@@ -14,11 +14,11 @@
       "tag": "forge:nwtg_automation/items/machine_block"
     },
     "2": {
-      "tag": "forge:nwtg_automation/items/hoes"
+      "tag": "forge:nwtg_automation/items/crafting_table"
     }
   },
   "result": {
-    "item": "nwtg_automation:auto_farming_machine",
+    "item": "nwtg_automation:auto_crafting_machine",
     "count": 1
   }
 }

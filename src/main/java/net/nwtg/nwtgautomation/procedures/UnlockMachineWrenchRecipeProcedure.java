@@ -1,6 +1,8 @@
 package net.nwtg.nwtgautomation.procedures;
 
 import net.nwtg.nwtgautomation.block.RemoteItemTeleporterBlock;
+import net.nwtg.nwtgautomation.block.BreakerPanelOnBlock;
+import net.nwtg.nwtgautomation.block.BreakerPanelBlock;
 import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
@@ -14,7 +16,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -22,7 +23,7 @@ import java.util.HashMap;
 @NwtgAutomationModElements.ModElement.Tag
 public class UnlockMachineWrenchRecipeProcedure extends NwtgAutomationModElements.ModElement {
 	public UnlockMachineWrenchRecipeProcedure(NwtgAutomationModElements instance) {
-		super(instance, 63);
+		super(instance, 66);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -33,19 +34,18 @@ public class UnlockMachineWrenchRecipeProcedure extends NwtgAutomationModElement
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((!(new Object() {
-			public boolean hasRecipe(Entity _ent, ResourceLocation recipe) {
-				if (_ent instanceof ServerPlayerEntity)
-					return ((ServerPlayerEntity) _ent).getRecipeBook().isUnlocked(recipe);
-				else if (_ent.world.isRemote() && _ent instanceof ClientPlayerEntity)
-					return ((ClientPlayerEntity) _ent).getRecipeBook().isUnlocked(recipe);
-				return false;
-			}
-		}.hasRecipe(entity, new ResourceLocation("nwtg_automation:machine_wrench")))) && ((entity instanceof PlayerEntity)
+		if ((((entity instanceof PlayerEntity)
 				? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(RemoteItemTeleporterBlock.block, (int) (1)))
-				: false))) {
+				: false)
+				|| (((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(BreakerPanelBlock.block, (int) (1)))
+						: false)
+						|| ((entity instanceof PlayerEntity)
+								? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(BreakerPanelOnBlock.block, (int) (1)))
+								: false)))) {
 			if (entity instanceof ServerPlayerEntity) {
-				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:machine_wrench")});
+				((ServerPlayerEntity) entity)
+						.unlockRecipes(new ResourceLocation[]{new ResourceLocation("nwtg_automation:machine_wrench_crafting_recipe")});
 			}
 		}
 	}

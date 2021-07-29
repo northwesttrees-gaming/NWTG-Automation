@@ -6,7 +6,7 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "lower_grass_block_slab_2",
+    "group": "nwtg_automation_blocks",
     "recipeShapeless": true,
     "recipeSlots": [
       {
@@ -40,7 +40,7 @@
     "recipeReturnStack": {
       "value": "CUSTOM:GrassBlockSlabLower"
     },
-    "name": "lower_grass_block_slab_2",
+    "name": "lower_grass_block_slab_crafting_recipe_2",
     "namespace": "mod"
   }
 }

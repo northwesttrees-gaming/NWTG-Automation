@@ -26,7 +26,7 @@ import java.util.Map;
 @NwtgAutomationModElements.ModElement.Tag
 public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModElements.ModElement {
 	public RemoteItemTeleporterUpdateTickProcedure(NwtgAutomationModElements instance) {
-		super(instance, 20);
+		super(instance, 23);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
