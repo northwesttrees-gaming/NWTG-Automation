@@ -1,0 +1,22 @@
+{
+  "group": "lower_grass_block_slab_1",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:grass_block"
+    },
+    "1": {
+      "item": "minecraft:grass_block"
+    },
+    "2": {
+      "item": "minecraft:grass_block"
+    }
+  },
+  "result": {
+    "item": "nwtg_automation:grass_block_slab_lower",
+    "count": 6
+  }
+}
