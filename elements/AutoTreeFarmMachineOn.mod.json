@@ -6,7 +6,7 @@
     "textureTop": "auto_tree_farm_machine_top",
     "textureLeft": "auto_tree_farm_machine_side",
     "textureFront": "auto_tree_farm_machine_on",
-    "textureRight": "auto_tree_farm_machine_chest_input",
+    "textureRight": "auto_tree_farm_machine_device_input",
     "textureBack": "auto_tree_farm_machine_on",
     "renderType": 10,
     "customModelName": "Normal",

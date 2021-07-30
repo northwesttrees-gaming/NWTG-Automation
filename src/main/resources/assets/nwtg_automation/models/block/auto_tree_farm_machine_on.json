@@ -6,7 +6,7 @@
     "north": "nwtg_automation:blocks/auto_tree_farm_machine_on",
     "east": "nwtg_automation:blocks/auto_tree_farm_machine_side",
     "south": "nwtg_automation:blocks/auto_tree_farm_machine_on",
-    "west": "nwtg_automation:blocks/auto_tree_farm_machine_chest_input",
+    "west": "nwtg_automation:blocks/auto_tree_farm_machine_device_input",
     "particle": "nwtg_automation:blocks/auto_tree_farm_machine_bottom"
   }
 }
