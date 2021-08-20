@@ -10,12 +10,11 @@ The Minecraft modification is designed to make things more automated using advan
 Auto Crafting is a long term project that will take time to add recipes for this reason if you have a specific recipe in Vanilla Minecraft you want to be added in a future update we advise you to open a request on our GitHub repository under Issues > Custom Crafting Request. This will let us know there is a higher demand for a specific recipe.
 
 ## MOD SITES
-- MCREATOR: [https://mcreator.net/modification/76920/nwtg-automation](https://mcreator.net/modification/76920/nwtg-automation)
-- YouTube Playlist [View](https://www.youtube.com/watch?v=2eLalSnOnHo&list=PL5k7swYOU_yRoly-cK7T7JaSgWH054kxd&ab_channel=NorthWestTreesGaming)
-
+- MCreator Page: [Visit](https://mcreator.net/modification/76920/nwtg-automation)
+- YouTube Playlist: [Visit](https://www.youtube.com/watch?v=2eLalSnOnHo&list=PL5k7swYOU_yRoly-cK7T7JaSgWH054kxd&ab_channel=NorthWestTreesGaming)
+- Official Mod Site: [VISIT](https://northwesttrees-gaming.github.io/minecraft-mods/nwtg-automation/nwtg-automation.html)
 ## CHANGELOG
 For more information on each build see the builds wiki page for an index of builds and thier changes.
-- [UPCOMING CHANGES](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Upcoming-Changes)
 - [BUILDS](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Builds)
 
 ### PLANNED FEATURES
