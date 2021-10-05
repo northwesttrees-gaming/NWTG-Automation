@@ -49,6 +49,16 @@ public class AutoFarmingMachineInventoryGuiWindow extends ContainerScreen<AutoFa
 		RenderSystem.defaultBlendFunc();
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/auto_farming_machine_gui.png"));
 		this.blit(ms, this.guiLeft + 0, this.guiTop + 20, 0, 0, 176, 126, 176, 126);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/green_light.png"));
+		this.blit(ms, this.guiLeft + 156, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/yellow_light.png"));
+		this.blit(ms, this.guiLeft + 156, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/red_light.png"));
+		this.blit(ms, this.guiLeft + 156, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/green_light.png"));
+		this.blit(ms, this.guiLeft + 165, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/red_light.png"));
+		this.blit(ms, this.guiLeft + 165, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
 		RenderSystem.disableBlend();
 	}
 

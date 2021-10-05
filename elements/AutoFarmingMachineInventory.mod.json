@@ -57,7 +57,7 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
-          "x": 222,
+          "x": 249,
           "y": 73
         }
       },
@@ -71,22 +71,58 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
-          "x": 249,
+          "x": 276,
           "y": 73
         }
       },
       {
-        "type": "inputslot",
+        "type": "image",
         "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "id": 3,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #3",
-          "x": 276,
-          "y": 73
+          "image": "green_light.png",
+          "use1Xscale": false,
+          "name": "green_light.png",
+          "x": 282,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "yellow_light.png",
+          "use1Xscale": false,
+          "name": "yellow_light.png",
+          "x": 282,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red_light.png",
+          "use1Xscale": false,
+          "name": "red_light.png",
+          "x": 282,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "green_light.png",
+          "use1Xscale": false,
+          "name": "green_light.png",
+          "x": 291,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red_light.png",
+          "use1Xscale": false,
+          "name": "red_light.png",
+          "x": 291,
+          "y": 63
         }
       }
     ],

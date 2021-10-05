@@ -5849,7 +5849,7 @@
           }
         ]
       },
-      "path": "~/GlobalProcedures"
+      "path": "~/Procedures/Global"
     },
     {
       "name": "NWTGAutomationBlocksOwnershipBlocks",
@@ -7071,8 +7071,13 @@
         ]
       },
       {
-        "name": "GlobalProcedures",
-        "children": []
+        "name": "Procedures",
+        "children": [
+          {
+            "name": "Global",
+            "children": []
+          }
+        ]
       }
     ]
   },
