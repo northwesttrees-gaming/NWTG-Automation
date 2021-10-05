@@ -2,7 +2,6 @@ package net.nwtg.nwtgautomation.procedures;
 
 import net.nwtg.nwtgautomation.gui.AutoCraftingMachineInventoryGui;
 import net.nwtg.nwtgautomation.block.AutoCraftingMachineOnBlock;
-import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraftforge.fml.network.NetworkHooks;
@@ -30,12 +29,7 @@ import java.util.Map;
 
 import io.netty.buffer.Unpooled;
 
-@NwtgAutomationModElements.ModElement.Tag
-public class AutoCraftingMachineOnBlockRightClickedProcedure extends NwtgAutomationModElements.ModElement {
-	public AutoCraftingMachineOnBlockRightClickedProcedure(NwtgAutomationModElements instance) {
-		super(instance, 25);
-	}
-
+public class AutoCraftingMachineOnBlockRightClickedProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("direction") == null) {
 			if (!dependencies.containsKey("direction"))

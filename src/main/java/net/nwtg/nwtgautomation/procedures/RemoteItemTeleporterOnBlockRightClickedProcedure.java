@@ -1,7 +1,6 @@
 package net.nwtg.nwtgautomation.procedures;
 
 import net.nwtg.nwtgautomation.item.MachineWrenchItem;
-import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraft.world.World;
@@ -16,12 +15,7 @@ import net.minecraft.block.BlockState;
 
 import java.util.Map;
 
-@NwtgAutomationModElements.ModElement.Tag
-public class RemoteItemTeleporterOnBlockRightClickedProcedure extends NwtgAutomationModElements.ModElement {
-	public RemoteItemTeleporterOnBlockRightClickedProcedure(NwtgAutomationModElements instance) {
-		super(instance, 18);
-	}
-
+public class RemoteItemTeleporterOnBlockRightClickedProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -54,7 +48,7 @@ public class RemoteItemTeleporterOnBlockRightClickedProcedure extends NwtgAutoma
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() == new ItemStack(MachineWrenchItem.block, (int) (1)).getItem())) {
+				.getItem() == MachineWrenchItem.block)) {
 			if (((entity.isSneaking()) == (true))) {
 				if (((new Object() {
 					public boolean getValue(IWorld world, BlockPos pos, String tag) {

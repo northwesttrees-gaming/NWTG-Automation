@@ -4,10 +4,11 @@ license="NWTG Public License 1.0"
 
 [[mods]]
 modId="nwtg_automation"
-version="0.1.0"
-displayName="NWTG Automation"
+version="0.2.0"
+displayName="Automation"
 credits="MCreator, Forge, Mojang"
 displayURL="https://github.com/northwesttrees-gaming/NWTG-Automation"
+updateJSONURL="https://raw.githubusercontent.com/northwesttrees-gaming/northwesttrees-gaming.github.io/main/mods/nwtg-automation/updates/mod-updates.json"
 logoFile="logo.png"
 authors="NorthWestTrees Gaming"
 description='''

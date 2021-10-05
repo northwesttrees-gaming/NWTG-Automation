@@ -1,6 +1,5 @@
 package net.nwtg.nwtgautomation.procedures;
 
-import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraftforge.items.IItemHandlerModifiable;
@@ -21,12 +20,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Map;
 
-@NwtgAutomationModElements.ModElement.Tag
-public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomationModElements.ModElement {
-	public AutoCraftingMachineSortingScriptEastProcedure(NwtgAutomationModElements instance) {
-		super(instance, 66);
-	}
-
+public class AutoCraftingMachineSortingScriptEastProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -80,9 +74,8 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 				}
 			}
 		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.EAST)
-				&& (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.CHEST.getDefaultState().getBlock())
-						&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.CHEST.getDefaultState()
-								.getBlock())))) {
+				&& (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.CHEST)
+						&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.CHEST)))) {
 			sendToOutputChest = (boolean) (false);
 			testCraftingTableItems = (boolean) (false);
 			slotChestInput = (double) (new Object() {
@@ -107,7 +100,7 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 					}
 					return _retval.get();
 				}
-			}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z + 1)), (int) ((slotChestInput))));
+			}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z + 1)), (int) (slotChestInput)));
 			itemChestInput = (new Object() {
 				public ItemStack getItemStack(BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -119,7 +112,7 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) (z + 1)), (int) ((slotChestInput))));
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) (z + 1)), (int) (slotChestInput)));
 			for (int index0 = 0; index0 < (int) (9); index0++) {
 				if (((itemChestInput).getItem() == (new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
@@ -132,7 +125,7 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((testSlotCraftingTable)))).getItem())) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (testSlotCraftingTable))).getItem())) {
 					if (((new Object() {
 						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -144,7 +137,7 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 							}
 							return _retval.get();
 						}
-					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((testSlotCraftingTable)))) == 1)) {
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (testSlotCraftingTable))) == 1)) {
 						itemCraftingTable = (new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -156,17 +149,17 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((testSlotCraftingTable))));
-						slotCraftingTable = (double) (testSlotCraftingTable);
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (testSlotCraftingTable)));
+						slotCraftingTable = (double) testSlotCraftingTable;
 						testCraftingTableItems = (boolean) (false);
 						break;
 					}
 				} else {
 					testCraftingTableItems = (boolean) (true);
 				}
-				testSlotCraftingTable = (double) ((testSlotCraftingTable) + 1);
+				testSlotCraftingTable = (double) (testSlotCraftingTable + 1);
 			}
-			if (((testCraftingTableItems) == (true))) {
+			if ((testCraftingTableItems == (true))) {
 				if (((!((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -267,12 +260,12 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 						return _retval.get();
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (8))).getItem() == (itemChestInput).getItem()))
-						&& (!((itemChestInput).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())))))))))))) {
+						&& (!((itemChestInput).getItem() == Blocks.AIR.asItem())))))))))))) {
 					sendToOutputChest = (boolean) (true);
 				} else {
 					sendToOutputChest = (boolean) (false);
 				}
-				if ((((sendToOutputChest) == (true)) && ((countChestInputSlot) >= 1))) {
+				if (((sendToOutputChest == (true)) && (countChestInputSlot >= 1))) {
 					for (int index1 = 0; index1 < (int) (27); index1++) {
 						itemChestOutput = (new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
@@ -285,7 +278,7 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) (z - 1)), (int) ((slotChestOutput))));
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) (z - 1)), (int) (slotChestOutput)));
 						countChestOutputSlot = (double) (new Object() {
 							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -297,7 +290,7 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) ((slotChestOutput))));
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) (slotChestOutput)));
 						if ((((new Object() {
 							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -309,7 +302,7 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) ((slotChestOutput)))) == 0) || ((((new Object() {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) (slotChestOutput))) == 0) || ((((new Object() {
 							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -320,7 +313,7 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) ((slotChestOutput)))) > 0) && ((new Object() {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) (slotChestOutput))) > 0) && ((new Object() {
 							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -331,14 +324,14 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) ((slotChestOutput)))) < 64))
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) (slotChestOutput))) < 64))
 								&& ((itemChestInput).getItem() == (itemChestOutput).getItem())))) {
 							{
 								TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
 								if (_ent != null) {
-									final int _sltid = (int) ((slotChestOutput));
+									final int _sltid = (int) (slotChestOutput);
 									final ItemStack _setstack = (itemChestInput);
-									_setstack.setCount((int) ((countChestOutputSlot) + 1));
+									_setstack.setCount((int) (countChestOutputSlot + 1));
 									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 										if (capability instanceof IItemHandlerModifiable) {
 											((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -349,7 +342,7 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 							{
 								TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
 								if (_ent != null) {
-									final int _sltid = (int) ((slotChestInput));
+									final int _sltid = (int) (slotChestInput);
 									final int _amount = (int) 1;
 									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 										if (capability instanceof IItemHandlerModifiable) {
@@ -362,11 +355,11 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 							}
 							break;
 						}
-						slotChestOutput = (double) ((slotChestOutput) + 1);
+						slotChestOutput = (double) (slotChestOutput + 1);
 					}
 				}
 			} else {
-				if ((((countChestInputSlot) >= 1) && (((new Object() {
+				if (((countChestInputSlot >= 1) && (((new Object() {
 					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -377,7 +370,7 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotCraftingTable)))) == 1)
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotCraftingTable))) == 1)
 						&& ((itemChestInput).getItem() == (itemCraftingTable).getItem())))) {
 					countCraftingTableSlot = (double) (new Object() {
 						public int getAmount(IWorld world, BlockPos pos, int sltid) {
@@ -390,13 +383,13 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 							}
 							return _retval.get();
 						}
-					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotCraftingTable))));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotCraftingTable)));
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						if (_ent != null) {
-							final int _sltid = (int) ((slotCraftingTable));
+							final int _sltid = (int) (slotCraftingTable);
 							final ItemStack _setstack = (itemChestInput);
-							_setstack.setCount((int) ((countCraftingTableSlot) + 1));
+							_setstack.setCount((int) (countCraftingTableSlot + 1));
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {
 									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -407,7 +400,7 @@ public class AutoCraftingMachineSortingScriptEastProcedure extends NwtgAutomatio
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
 						if (_ent != null) {
-							final int _sltid = (int) ((slotChestInput));
+							final int _sltid = (int) (slotChestInput);
 							final int _amount = (int) 1;
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {

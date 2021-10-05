@@ -1,6 +1,5 @@
 package net.nwtg.nwtgautomation.procedures;
 
-import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraft.world.World;
@@ -11,12 +10,7 @@ import net.minecraft.block.BlockState;
 
 import java.util.Map;
 
-@NwtgAutomationModElements.ModElement.Tag
-public class AutoItemCollectorMachineOnBlockAddedProcedure extends NwtgAutomationModElements.ModElement {
-	public AutoItemCollectorMachineOnBlockAddedProcedure(NwtgAutomationModElements instance) {
-		super(instance, 58);
-	}
-
+public class AutoItemCollectorMachineOnBlockAddedProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))

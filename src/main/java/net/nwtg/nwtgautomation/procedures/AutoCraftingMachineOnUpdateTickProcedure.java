@@ -1,6 +1,5 @@
 package net.nwtg.nwtgautomation.procedures;
 
-import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraft.world.World;
@@ -12,12 +11,7 @@ import net.minecraft.block.BlockState;
 import java.util.Map;
 import java.util.HashMap;
 
-@NwtgAutomationModElements.ModElement.Tag
-public class AutoCraftingMachineOnUpdateTickProcedure extends NwtgAutomationModElements.ModElement {
-	public AutoCraftingMachineOnUpdateTickProcedure(NwtgAutomationModElements instance) {
-		super(instance, 23);
-	}
-
+public class AutoCraftingMachineOnUpdateTickProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))

@@ -1,6 +1,5 @@
 package net.nwtg.nwtgautomation.procedures;
 
-import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraft.world.IWorld;
@@ -9,12 +8,7 @@ import net.minecraft.item.ItemStack;
 import java.util.Map;
 import java.util.HashMap;
 
-@NwtgAutomationModElements.ModElement.Tag
-public class AutoCraftingMachineSortingScriptProcedure extends NwtgAutomationModElements.ModElement {
-	public AutoCraftingMachineSortingScriptProcedure(NwtgAutomationModElements instance) {
-		super(instance, 27);
-	}
-
+public class AutoCraftingMachineSortingScriptProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))

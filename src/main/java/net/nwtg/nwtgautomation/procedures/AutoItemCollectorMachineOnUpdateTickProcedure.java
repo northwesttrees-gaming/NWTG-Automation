@@ -1,6 +1,5 @@
 package net.nwtg.nwtgautomation.procedures;
 
-import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -23,12 +22,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
 import java.util.HashMap;
 
-@NwtgAutomationModElements.ModElement.Tag
-public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomationModElements.ModElement {
-	public AutoItemCollectorMachineOnUpdateTickProcedure(NwtgAutomationModElements instance) {
-		super(instance, 53);
-	}
-
+public class AutoItemCollectorMachineOnUpdateTickProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -82,16 +76,15 @@ public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomatio
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Items.EGG, (int) (1))
-								.getItem())) {
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.EGG)) {
 							if (world instanceof ServerWorld) {
 								((World) world).getServer().getCommandManager().handleCommand(
 										new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 												new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 										(("execute ") + "" + ("if ") + "" + ("entity ") + "" + ("@e[") + "" + ("type=minecraft:item,") + ""
-												+ ("name=Egg,") + "" + ("x=") + "" + ((new java.text.DecimalFormat("##.##").format((posX)))) + ""
-												+ (",y=") + "" + ((new java.text.DecimalFormat("##.##").format((posY)))) + "" + (",z=") + ""
-												+ ((new java.text.DecimalFormat("##.##").format((posZ)))) + "" + (",dx=1") + "" + (",dy=1") + ""
+												+ ("name=Egg,") + "" + ("x=") + "" + ((new java.text.DecimalFormat("##.##").format(posX))) + ""
+												+ (",y=") + "" + ((new java.text.DecimalFormat("##.##").format(posY))) + "" + (",z=") + ""
+												+ ((new java.text.DecimalFormat("##.##").format(posZ))) + "" + (",dx=1") + "" + (",dy=1") + ""
 												+ (",dz=1") + "" + ("] ") + "" + ("run ") + "" + ("data ") + "" + ("modify ") + "" + ("block ") + ""
 												+ ("~ ") + "" + ("~ ") + "" + ("~ ") + "" + ("ForgeData.CollectItem ") + "" + ("set ") + ""
 												+ ("value ") + "" + ("1")));
@@ -107,7 +100,7 @@ public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomatio
 						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CollectItem")) == (true))) {
 							break;
 						}
-						posX = (double) ((posX) + 1);
+						posX = (double) (posX + 1);
 					}
 					if (((new Object() {
 						public boolean getValue(IWorld world, BlockPos pos, String tag) {
@@ -120,7 +113,7 @@ public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomatio
 						break;
 					}
 					posX = (double) (x - 4);
-					posZ = (double) ((posZ) + 1);
+					posZ = (double) (posZ + 1);
 				}
 				if (((new Object() {
 					public boolean getValue(IWorld world, BlockPos pos, String tag) {
@@ -134,14 +127,14 @@ public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomatio
 				}
 				posX = (double) (x - 4);
 				posZ = (double) (z - 4);
-				posY = (double) ((posY) + 1);
+				posY = (double) (posY + 1);
 			}
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
-					_tileEntity.getTileData().putDouble("ItemPosX", (posX));
+					_tileEntity.getTileData().putDouble("ItemPosX", posX);
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
@@ -150,7 +143,7 @@ public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomatio
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
-					_tileEntity.getTileData().putDouble("ItemPosY", (posY));
+					_tileEntity.getTileData().putDouble("ItemPosY", posY);
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
@@ -159,7 +152,7 @@ public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomatio
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
-					_tileEntity.getTileData().putDouble("ItemPosZ", (posZ));
+					_tileEntity.getTileData().putDouble("ItemPosZ", posZ);
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
@@ -183,7 +176,7 @@ public class AutoItemCollectorMachineOnUpdateTickProcedure extends NwtgAutomatio
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Items.EGG, (int) (1)).getItem())) {
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.EGG)) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("world", world);

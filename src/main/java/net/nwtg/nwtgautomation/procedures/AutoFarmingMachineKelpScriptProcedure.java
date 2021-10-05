@@ -1,6 +1,5 @@
 package net.nwtg.nwtgautomation.procedures;
 
-import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraftforge.items.IItemHandlerModifiable;
@@ -24,12 +23,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Map;
 
-@NwtgAutomationModElements.ModElement.Tag
-public class AutoFarmingMachineKelpScriptProcedure extends NwtgAutomationModElements.ModElement {
-	public AutoFarmingMachineKelpScriptProcedure(NwtgAutomationModElements instance) {
-		super(instance, 50);
-	}
-
+public class AutoFarmingMachineKelpScriptProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -142,10 +136,10 @@ public class AutoFarmingMachineKelpScriptProcedure extends NwtgAutomationModElem
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.KELP, (int) (1)).getItem())))) {
-			world.destroyBlock(new BlockPos((int) (posX), (int) (posY), (int) (posZ)), false);
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == Blocks.KELP.asItem())))) {
+			world.destroyBlock(new BlockPos((int) posX, (int) posY, (int) posZ), false);
 			{
-				BlockPos _bp = new BlockPos((int) (posX), (int) (posY), (int) (posZ));
+				BlockPos _bp = new BlockPos((int) posX, (int) posY, (int) posZ);
 				BlockState _bs = Blocks.WATER.getDefaultState();
 				world.setBlockState(_bp, _bs, 3);
 			}
@@ -153,9 +147,9 @@ public class AutoFarmingMachineKelpScriptProcedure extends NwtgAutomationModElem
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						(((("particle minecraft:composter ") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosX)))) + "" + (" ") + ""
-								+ ((new java.text.DecimalFormat("##.##").format((particlePosY)))) + "" + (" ") + ""
-								+ ((new java.text.DecimalFormat("##.##").format((particlePosZ))))))
+						(((("particle minecraft:composter ") + "" + ((new java.text.DecimalFormat("##.##").format(particlePosX))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##.##").format(particlePosY))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##.##").format(particlePosZ)))))
 								+ ""
 								+ (((" ") + "" + ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
 										+ ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
@@ -164,9 +158,9 @@ public class AutoFarmingMachineKelpScriptProcedure extends NwtgAutomationModElem
 								+ (((" ") + "" + ((new java.text.DecimalFormat("##").format(1))) + "" + (" ") + ""
 										+ ((new java.text.DecimalFormat("##").format(10)))))
 								+ ""
-								+ (((" force @a[x=") + "" + ((new java.text.DecimalFormat("##.##").format(((particlePosX) - 30)))) + "" + (",y=") + ""
-										+ ((new java.text.DecimalFormat("##.##").format(((particlePosY) - 30)))) + "" + (",z=") + ""
-										+ ((new java.text.DecimalFormat("##.##").format(((particlePosZ) - 30))))))
+								+ (((" force @a[x=") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosX - 30)))) + "" + (",y=") + ""
+										+ ((new java.text.DecimalFormat("##.##").format((particlePosY - 30)))) + "" + (",z=") + ""
+										+ ((new java.text.DecimalFormat("##.##").format((particlePosZ - 30))))))
 								+ ""
 								+ (((",dx=") + "" + ((new java.text.DecimalFormat("##").format(61))) + "" + (",dy=") + ""
 										+ ((new java.text.DecimalFormat("##").format(61))) + "" + (",dz=") + ""
@@ -176,7 +170,7 @@ public class AutoFarmingMachineKelpScriptProcedure extends NwtgAutomationModElem
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
 					final int _sltid = (int) (2);
-					final ItemStack _setstack = new ItemStack(Blocks.KELP, (int) (1));
+					final ItemStack _setstack = new ItemStack(Blocks.KELP);
 					_setstack.setCount((int) ((new Object() {
 						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);

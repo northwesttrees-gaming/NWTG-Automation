@@ -22,7 +22,7 @@ public class NWTGAutomationTabItemGroup extends NwtgAutomationModElements.ModEle
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(MachineBlockBlock.block, (int) (1));
+				return new ItemStack(MachineBlockBlock.block);
 			}
 
 			@OnlyIn(Dist.CLIENT)

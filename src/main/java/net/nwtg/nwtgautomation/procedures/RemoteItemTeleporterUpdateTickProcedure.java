@@ -1,6 +1,5 @@
 package net.nwtg.nwtgautomation.procedures;
 
-import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraftforge.items.IItemHandlerModifiable;
@@ -22,12 +21,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Map;
 
-@NwtgAutomationModElements.ModElement.Tag
-public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModElements.ModElement {
-	public RemoteItemTeleporterUpdateTickProcedure(NwtgAutomationModElements instance) {
-		super(instance, 19);
-	}
-
+public class RemoteItemTeleporterUpdateTickProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -101,7 +95,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 							}
 							return _retval.get();
 						}
-					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) == 0) || (((new Object() {
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) == 0) || (((new Object() {
 						public ItemStack getItemStack(BlockPos pos, int sltid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							TileEntity _ent = world.getTileEntity(pos);
@@ -123,7 +117,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 							}
 							return _retval.get();
 						}
-					}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))).getItem()) && ((new Object() {
+					}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))).getItem()) && ((new Object() {
 						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
@@ -134,11 +128,11 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 							}
 							return _retval.get();
 						}
-					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) < 64))))) {
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) < 64))))) {
 						{
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
-								final int _sltid = (int) ((slotNumber1));
+								final int _sltid = (int) (slotNumber1);
 								final ItemStack _setstack = (new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -162,7 +156,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) + 1));
+								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) + 1));
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
 										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -207,7 +201,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 							}
 							return _retval.get();
 						}
-					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) == 0) || (((new Object() {
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) == 0) || (((new Object() {
 						public ItemStack getItemStack(BlockPos pos, int sltid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							TileEntity _ent = world.getTileEntity(pos);
@@ -229,7 +223,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 							}
 							return _retval.get();
 						}
-					}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))).getItem()) && ((new Object() {
+					}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))).getItem()) && ((new Object() {
 						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
@@ -240,11 +234,11 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 							}
 							return _retval.get();
 						}
-					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) < 64))))) {
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) < 64))))) {
 						{
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
-								final int _sltid = (int) ((slotNumber1));
+								final int _sltid = (int) (slotNumber1);
 								final ItemStack _setstack = (new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -268,7 +262,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) + 1));
+								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) + 1));
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
 										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -291,7 +285,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 							}
 						}
 					}
-					slotNumber1 = (double) ((slotNumber1) + 1);
+					slotNumber1 = (double) (slotNumber1 + 1);
 				}
 			}
 			if (((BlockTags.getCollection()
@@ -329,7 +323,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) == 0) || (((new Object() {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) == 0) || (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -351,7 +345,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))).getItem()) && ((new Object() {
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))).getItem()) && ((new Object() {
 							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -362,11 +356,11 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) < 64))))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) < 64))))) {
 							{
 								TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 								if (_ent != null) {
-									final int _sltid = (int) ((slotNumber1));
+									final int _sltid = (int) (slotNumber1);
 									final ItemStack _setstack = (new Object() {
 										public ItemStack getItemStack(BlockPos pos, int sltid) {
 											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -390,7 +384,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 											}
 											return _retval.get();
 										}
-									}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) + 1));
+									}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) + 1));
 									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 										if (capability instanceof IItemHandlerModifiable) {
 											((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -422,7 +416,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 						}
-						slotNumber1 = (double) ((slotNumber1) + 1);
+						slotNumber1 = (double) (slotNumber1 + 1);
 					}
 				}
 			}
@@ -445,7 +439,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) (y - 1), (int) z), (int) ((slotNumber2)))) > 0) && (((new Object() {
+						}.getAmount(world, new BlockPos((int) x, (int) (y - 1), (int) z), (int) (slotNumber2))) > 0) && (((new Object() {
 							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -456,7 +450,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) == 0) || (((new Object() {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) == 0) || (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -467,7 +461,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) (y - 1), (int) z), (int) ((slotNumber2)))).getItem() == (new Object() {
+						}.getItemStack(new BlockPos((int) x, (int) (y - 1), (int) z), (int) (slotNumber2))).getItem() == (new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -478,7 +472,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))).getItem()) && ((new Object() {
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))).getItem()) && ((new Object() {
 							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -489,11 +483,11 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) < 64))))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) < 64))))) {
 							{
 								TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 								if (_ent != null) {
-									final int _sltid = (int) ((slotNumber1));
+									final int _sltid = (int) (slotNumber1);
 									final ItemStack _setstack = (new Object() {
 										public ItemStack getItemStack(BlockPos pos, int sltid) {
 											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -505,7 +499,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 											}
 											return _retval.get();
 										}
-									}.getItemStack(new BlockPos((int) x, (int) (y - 1), (int) z), (int) ((slotNumber2))));
+									}.getItemStack(new BlockPos((int) x, (int) (y - 1), (int) z), (int) (slotNumber2)));
 									_setstack.setCount((int) ((new Object() {
 										public int getAmount(IWorld world, BlockPos pos, int sltid) {
 											AtomicInteger _retval = new AtomicInteger(0);
@@ -517,7 +511,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 											}
 											return _retval.get();
 										}
-									}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) + 1));
+									}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) + 1));
 									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 										if (capability instanceof IItemHandlerModifiable) {
 											((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -528,7 +522,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 							{
 								TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 								if (_ent != null) {
-									final int _sltid = (int) ((slotNumber2));
+									final int _sltid = (int) (slotNumber2);
 									final int _amount = (int) 1;
 									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 										if (capability instanceof IItemHandlerModifiable) {
@@ -540,10 +534,10 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 								}
 							}
 						}
-						slotNumber2 = (double) ((slotNumber2) + 1);
+						slotNumber2 = (double) (slotNumber2 + 1);
 					}
 					slotNumber2 = (double) 1;
-					slotNumber1 = (double) ((slotNumber1) + 1);
+					slotNumber1 = (double) (slotNumber1 + 1);
 				}
 			}
 		}
@@ -592,7 +586,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) (posX), (int) (posY), (int) (posZ)), (int) ((slotNumber1))));
+				}.getItemStack(new BlockPos((int) posX, (int) posY, (int) posZ), (int) (slotNumber1)));
 				if ((((new Object() {
 					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
@@ -604,7 +598,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) (posX), (int) (posY), (int) (posZ)), (int) ((slotNumber1)))) > 0) && (((new Object() {
+				}.getAmount(world, new BlockPos((int) posX, (int) posY, (int) posZ), (int) (slotNumber1))) > 0) && (((new Object() {
 					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -615,7 +609,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) == 0) || (((Item1).getItem() == (new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) == 0) || (((Item1).getItem() == (new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -626,7 +620,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))).getItem()) && ((new Object() {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))).getItem()) && ((new Object() {
 					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -637,11 +631,11 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) < 64))))) {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) < 64))))) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						if (_ent != null) {
-							final int _sltid = (int) ((slotNumber1));
+							final int _sltid = (int) (slotNumber1);
 							final ItemStack _setstack = (Item1);
 							_setstack.setCount((int) ((new Object() {
 								public int getAmount(IWorld world, BlockPos pos, int sltid) {
@@ -654,7 +648,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 									}
 									return _retval.get();
 								}
-							}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) ((slotNumber1)))) + 1));
+							}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (slotNumber1))) + 1));
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {
 									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -663,9 +657,9 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 						}
 					}
 					{
-						TileEntity _ent = world.getTileEntity(new BlockPos((int) (posX), (int) (posY), (int) (posZ)));
+						TileEntity _ent = world.getTileEntity(new BlockPos((int) posX, (int) posY, (int) posZ));
 						if (_ent != null) {
-							final int _sltid = (int) ((slotNumber1));
+							final int _sltid = (int) (slotNumber1);
 							final int _amount = (int) 1;
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {
@@ -677,7 +671,7 @@ public class RemoteItemTeleporterUpdateTickProcedure extends NwtgAutomationModEl
 						}
 					}
 				}
-				slotNumber1 = (double) ((slotNumber1) + 1);
+				slotNumber1 = (double) (slotNumber1 + 1);
 			}
 		}
 	}

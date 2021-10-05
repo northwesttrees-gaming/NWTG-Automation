@@ -1,6 +1,5 @@
 package net.nwtg.nwtgautomation.procedures;
 
-import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraftforge.items.IItemHandlerModifiable;
@@ -24,12 +23,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Map;
 
-@NwtgAutomationModElements.ModElement.Tag
-public class AutoFarmingMachineCocoaBeansScriptProcedure extends NwtgAutomationModElements.ModElement {
-	public AutoFarmingMachineCocoaBeansScriptProcedure(NwtgAutomationModElements instance) {
-		super(instance, 36);
-	}
-
+public class AutoFarmingMachineCocoaBeansScriptProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -152,50 +146,48 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure extends NwtgAutomationM
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Items.COCOA_BEANS, (int) (1)).getItem())))
-				&& (((new Object() {
-					public int getAmount(IWorld world, BlockPos pos, int sltid) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).getCount());
-							});
-						}
-						return _retval.get();
-					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || (((new Object() {
-					public int getAmount(IWorld world, BlockPos pos, int sltid) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).getCount());
-							});
-						}
-						return _retval.get();
-					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63) && ((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
-						return _retval.get();
-					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Items.COCOA_BEANS, (int) (1))
-						.getItem()))))) {
-			world.destroyBlock(new BlockPos((int) (posX), (int) (posY), (int) (posZ)), false);
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.COCOA_BEANS))) && (((new Object() {
+			public int getAmount(IWorld world, BlockPos pos, int sltid) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null) {
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						_retval.set(capability.getStackInSlot(sltid).getCount());
+					});
+				}
+				return _retval.get();
+			}
+		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || (((new Object() {
+			public int getAmount(IWorld world, BlockPos pos, int sltid) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null) {
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						_retval.set(capability.getStackInSlot(sltid).getCount());
+					});
+				}
+				return _retval.get();
+			}
+		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63) && ((new Object() {
+			public ItemStack getItemStack(BlockPos pos, int sltid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null) {
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						_retval.set(capability.getStackInSlot(sltid).copy());
+					});
+				}
+				return _retval.get();
+			}
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == Items.COCOA_BEANS))))) {
+			world.destroyBlock(new BlockPos((int) posX, (int) posY, (int) posZ), false);
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						(((("particle minecraft:composter ") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosX)))) + "" + (" ") + ""
-								+ ((new java.text.DecimalFormat("##.##").format((particlePosY)))) + "" + (" ") + ""
-								+ ((new java.text.DecimalFormat("##.##").format((particlePosZ))))))
+						(((("particle minecraft:composter ") + "" + ((new java.text.DecimalFormat("##.##").format(particlePosX))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##.##").format(particlePosY))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##.##").format(particlePosZ)))))
 								+ ""
 								+ (((" ") + "" + ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
 										+ ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
@@ -204,9 +196,9 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure extends NwtgAutomationM
 								+ (((" ") + "" + ((new java.text.DecimalFormat("##").format(1))) + "" + (" ") + ""
 										+ ((new java.text.DecimalFormat("##").format(10)))))
 								+ ""
-								+ (((" force @a[x=") + "" + ((new java.text.DecimalFormat("##.##").format(((particlePosX) - 30)))) + "" + (",y=") + ""
-										+ ((new java.text.DecimalFormat("##.##").format(((particlePosY) - 30)))) + "" + (",z=") + ""
-										+ ((new java.text.DecimalFormat("##.##").format(((particlePosZ) - 30))))))
+								+ (((" force @a[x=") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosX - 30)))) + "" + (",y=") + ""
+										+ ((new java.text.DecimalFormat("##.##").format((particlePosY - 30)))) + "" + (",z=") + ""
+										+ ((new java.text.DecimalFormat("##.##").format((particlePosZ - 30))))))
 								+ ""
 								+ (((",dx=") + "" + ((new java.text.DecimalFormat("##").format(61))) + "" + (",dy=") + ""
 										+ ((new java.text.DecimalFormat("##").format(61))) + "" + (",dz=") + ""
@@ -216,10 +208,10 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure extends NwtgAutomationM
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						(("setblock ") + "" + ((new java.text.DecimalFormat("##").format((posX)))) + "" + (" ") + ""
-								+ ((new java.text.DecimalFormat("##").format((posY)))) + "" + (" ") + ""
-								+ ((new java.text.DecimalFormat("##").format((posZ)))) + "" + (" minecraft:cocoa[age=0,") + "" + ("direction=") + ""
-								+ ((new java.text.DecimalFormat("##").format((direction)))) + "" + ("]")));
+						(("setblock ") + "" + ((new java.text.DecimalFormat("##").format(posX))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##").format(posY))) + "" + (" ") + ""
+								+ ((new java.text.DecimalFormat("##").format(posZ))) + "" + (" minecraft:cocoa[age=0,") + "" + ("direction=") + ""
+								+ ((new java.text.DecimalFormat("##").format(direction))) + "" + ("]")));
 			}
 			RunScript = (boolean) (true);
 		}
@@ -256,12 +248,12 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure extends NwtgAutomationM
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Items.COCOA_BEANS, (int) (1)).getItem())))) {
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.COCOA_BEANS)))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
 					final int _sltid = (int) (1);
-					final ItemStack _setstack = new ItemStack(Items.COCOA_BEANS, (int) (1));
+					final ItemStack _setstack = new ItemStack(Items.COCOA_BEANS);
 					_setstack.setCount((int) ((new Object() {
 						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -315,12 +307,12 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure extends NwtgAutomationM
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Items.COCOA_BEANS, (int) (1)).getItem())))) {
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == Items.COCOA_BEANS)))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
 					final int _sltid = (int) (2);
-					final ItemStack _setstack = new ItemStack(Items.COCOA_BEANS, (int) (1));
+					final ItemStack _setstack = new ItemStack(Items.COCOA_BEANS);
 					_setstack.setCount((int) ((new Object() {
 						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -341,7 +333,7 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure extends NwtgAutomationM
 				}
 			}
 		}
-		if (((RunScript) == (true))) {
+		if ((RunScript == (true))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
