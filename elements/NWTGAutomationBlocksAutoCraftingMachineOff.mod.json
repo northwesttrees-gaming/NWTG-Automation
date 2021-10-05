@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:AutoCraftingMachine"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "nwtg_automation/blocks/auto_crafting_machine_off",
+    "namespace": "forge"
+  }
+}

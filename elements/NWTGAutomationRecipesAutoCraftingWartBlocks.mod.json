@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.WARPED_WART_BLOCK"
+      },
+      {
+        "value": "Blocks.NETHER_WART_BLOCK"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "nwtg_automation/recipes/auto_crafting/wart_blocks",
+    "namespace": "forge"
+  }
+}

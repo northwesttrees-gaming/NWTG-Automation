@@ -1,0 +1,42 @@
+{
+  "group": "nwtg_automation_blocks",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "tag": "forge:nwtg_automation/items/iron_ingot"
+    },
+    "1": {
+      "tag": "forge:nwtg_automation/items/iron_ingot"
+    },
+    "2": {
+      "tag": "forge:nwtg_automation/items/iron_ingot"
+    },
+    "3": {
+      "tag": "forge:nwtg_automation/items/iron_ingot"
+    },
+    "4": {
+      "tag": "forge:nwtg_automation/items/redstone"
+    },
+    "5": {
+      "tag": "forge:nwtg_automation/items/iron_ingot"
+    },
+    "6": {
+      "tag": "forge:nwtg_automation/items/iron_ingot"
+    },
+    "7": {
+      "tag": "forge:nwtg_automation/items/iron_ingot"
+    },
+    "8": {
+      "tag": "forge:nwtg_automation/items/iron_ingot"
+    }
+  },
+  "result": {
+    "item": "nwtg_automation:machine_block",
+    "count": 1
+  }
+}

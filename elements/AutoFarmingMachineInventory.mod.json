@@ -11,6 +11,29 @@
     "doesPauseGame": false,
     "components": [
       {
+        "type": "label",
+        "data": {
+          "text": "Auto Farming Machine",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Auto Farming Machine",
+          "x": 132,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_farming_machine_gui.png",
+          "use1Xscale": false,
+          "name": "auto_farming_machine_gui.png",
+          "x": 125,
+          "y": 57
+        }
+      },
+      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -34,7 +57,7 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
-          "x": 249,
+          "x": 222,
           "y": 73
         }
       },
@@ -48,31 +71,22 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
-          "x": 276,
+          "x": 249,
           "y": 73
         }
       },
       {
-        "type": "label",
+        "type": "inputslot",
         "data": {
-          "text": "Auto Farming Machine",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
+          "inputLimit": {
+            "value": ""
           },
-          "name": "Auto Farming Machine",
-          "x": 132,
-          "y": 61
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "auto_farming_machine_gui.png",
-          "use1Xscale": false,
-          "name": "auto_farming_machine_gui.png",
-          "x": 125,
-          "y": 57
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 276,
+          "y": 73
         }
       }
     ],

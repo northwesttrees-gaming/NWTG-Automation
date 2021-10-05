@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "nwtg_automation:block/breaker_panel_on"
+    },
+    "facing=east": {
+      "model": "nwtg_automation:block/breaker_panel_on",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "nwtg_automation:block/breaker_panel_on",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "nwtg_automation:block/breaker_panel_on",
+      "y": 270
+    }
+  }
+}

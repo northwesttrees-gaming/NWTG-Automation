@@ -9,6 +9,14 @@ The Minecraft modification is designed to make things more automated using advan
 ### AUTO CRAFTING / AUTO CRAFTING REQUESTS
 Auto Crafting is a long term project that will take time to add recipes for this reason if you have a specific recipe in Vanilla Minecraft you want to be added in a future update we advise you to open a request on our GitHub repository under Issues > Custom Crafting Request. This will let us know there is a higher demand for a specific recipe.
 
+## OFFICIAL MOD SITES
+- [MCREATOR PAGE](https://mcreator.net/modification/76920/nwtg-automation)
+- [YOUTUBE PLAYLIST](https://www.youtube.com/watch?v=2eLalSnOnHo&list=PL5k7swYOU_yRoly-cK7T7JaSgWH054kxd&ab_channel=NorthWestTreesGaming)
+- [MOD WEBSITE](https://northwesttrees-gaming.github.io/minecraft-mods/nwtg-automation/nwtg-automation.html)
+## CHANGELOG
+For more information on each build see the builds wiki page for an index of builds and thier changes.
+- [BUILDS](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Builds)
+
 ### PLANNED FEATURES
 - Auto Killing Machines
 - Auto Breeding Machines
@@ -24,8 +32,11 @@ Auto Crafting is a long term project that will take time to add recipes for this
 - Auto Bee Keeping Machines
 - And Any Latter Plans!
 
-### CURRENT FEATURES
-- [Auto Farming Machines](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Farming-Machine)
+### MAIN FEATURES
+- [Auto Crafting Machine](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Crafting-Machine)
+- [Auto Farming Machine](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Farming-Machine)
+- [Auto Item Collector Machine](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Item-Collector-Machine)
+- [Remote Item Teleporter](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Remote-Item-Teleporter-Machine)
 
 ## LICENCE
 NWTG Public License 1.0
@@ -74,8 +85,7 @@ CONDITIONS:
 
 	F) Third-party versions shall disclose the changes made to the item.
 
-## CHANGELOG
-(Coming Soon!)
-
 ## GALLERY
-(Coming Soon!)
+| ![Screenshot 1](https://i.imgur.com/djDCGn3.png) | ![Screenshot 2](https://i.imgur.com/9lSsTqV.png) |
+| --- | --- |
+| ![Screenshot 3](https://i.imgur.com/FeNConG.png) | ![Screenshot 4](https://i.imgur.com/9Ne3whO.png) |

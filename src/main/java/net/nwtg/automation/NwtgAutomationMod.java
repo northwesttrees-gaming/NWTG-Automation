@@ -15,7 +15,7 @@
  *    will be REGENERATED on each build.
  *
  */
-package net.nwtg.automation;
+package net.nwtg.nwtgautomation;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;

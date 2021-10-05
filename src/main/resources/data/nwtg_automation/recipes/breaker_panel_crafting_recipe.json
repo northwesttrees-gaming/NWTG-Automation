@@ -1,0 +1,24 @@
+{
+  "group": "nwtg_automation_devices",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "tag": "forge:nwtg_automation/items/lever"
+    },
+    "1": {
+      "tag": "forge:nwtg_automation/items/machine_block"
+    },
+    "2": {
+      "tag": "forge:nwtg_automation/items/redstone"
+    }
+  },
+  "result": {
+    "item": "nwtg_automation:breaker_panel",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "group": "nwtg_automation_machines",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "tag": "forge:nwtg_automation/items/dispenser"
+    },
+    "1": {
+      "tag": "forge:nwtg_automation/items/machine_block"
+    },
+    "2": {
+      "tag": "forge:nwtg_automation/items/crafting_table"
+    }
+  },
+  "result": {
+    "item": "nwtg_automation:auto_crafting_machine",
+    "count": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "nwtg_automation:custom/grass_block_slab_upper",
+  "textures": {
+    "all": "nwtg_automation:blocks/grass_block_slab_top",
+    "particle": "nwtg_automation:blocks/grass_block_slab_top",
+    "side": "nwtg_automation:blocks/grass_block_slab_side",
+    "side_overlay": "nwtg_automation:blocks/grass_block_slab_side_overlay",
+    "bottom": "nwtg_automation:blocks/grass_block_slab_bottom",
+    "top_overlay": "nwtg_automation:blocks/grass_block_slab_top"
+  }
+}

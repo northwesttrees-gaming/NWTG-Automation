@@ -109,6 +109,12 @@
     "onBlockAdded": {
       "name": "AutoItemCollectorMachineBlockAdded"
     },
+    "onTickUpdate": {
+      "name": "AutoItemCollectorMachineUpdateTick"
+    },
+    "onBlockPlayedBy": {
+      "name": "AutoItemCollectorMachineBlockIsPlacedBy"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

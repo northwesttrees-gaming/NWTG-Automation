@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "nwtg_automation_blocks",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+      },
+      {
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+      },
+      {
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+      },
+      {
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+      },
+      {
+        "value": "TAG:forge:nwtg_automation/items/redstone"
+      },
+      {
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+      },
+      {
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+      },
+      {
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+      },
+      {
+        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:MachineBlock"
+    },
+    "name": "machine_block_crafting_recipe",
+    "namespace": "mod"
+  }
+}

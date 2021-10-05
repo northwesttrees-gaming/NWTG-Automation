@@ -2,11 +2,11 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "machine_block",
-    "textureTop": "auto_machine_device_output",
-    "textureLeft": "auto_machine_chest_input",
+    "texture": "auto_crafting_machine_bottom",
+    "textureTop": "auto_crafting_machine_device_output",
+    "textureLeft": "auto_crafting_machine_chest_input",
     "textureFront": "auto_crafting_machine_on",
-    "textureRight": "auto_machine_device_output",
+    "textureRight": "auto_crafting_machine_chest_output",
     "textureBack": "auto_crafting_machine_on",
     "renderType": 10,
     "customModelName": "Normal",
@@ -110,8 +110,14 @@
     "onRightClicked": {
       "name": "AutoCraftingMachineOnOnBlockRightClicked"
     },
+    "onBlockAdded": {
+      "name": "AutoCraftingMachineBlockAdded"
+    },
     "onTickUpdate": {
       "name": "AutoCraftingMachineOnUpdateTick"
+    },
+    "onBlockPlayedBy": {
+      "name": "AutoCraftingMachineBlockIsPlacedBy"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

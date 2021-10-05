@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:GrassBlockSlabUpper"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "nwtg_automation/blocks/grass_block_slabs_upper",
+    "namespace": "forge"
+  }
+}

@@ -1,8 +1,9 @@
 
 package net.nwtg.nwtgautomation.block;
 
-import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineUpdateTickProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineOnUpdateTickProcedure;
 import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineOnOnBlockRightClickedProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineBlockIsPlacedByProcedure;
 import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineBlockAddedProcedure;
 import net.nwtg.nwtgautomation.gui.AutoFarmingMachineInventoryGui;
 import net.nwtg.nwtgautomation.NwtgAutomationModElements;
@@ -53,6 +54,7 @@ import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
@@ -99,7 +101,7 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 6f).setLightLevel(s -> 14).harvestLevel(2)
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 6f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("auto_farming_machine_on");
@@ -158,7 +160,7 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 5);
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1);
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
@@ -181,9 +183,26 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				AutoFarmingMachineUpdateTickProcedure.executeProcedure($_dependencies);
+				AutoFarmingMachineOnUpdateTickProcedure.executeProcedure($_dependencies);
 			}
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 5);
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1);
+		}
+
+		@Override
+		public void onBlockPlacedBy(World world, BlockPos pos, BlockState blockstate, LivingEntity entity, ItemStack itemstack) {
+			super.onBlockPlacedBy(world, pos, blockstate, entity, itemstack);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AutoFarmingMachineBlockIsPlacedByProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
@@ -247,7 +266,7 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -315,7 +334,7 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Auto Farming Machine");
+			return new StringTextComponent("Auto Farming Machine On");
 		}
 
 		@Override
@@ -333,6 +352,8 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 			if (index == 1)
 				return false;
 			if (index == 2)
+				return false;
+			if (index == 3)
 				return false;
 			return true;
 		}
@@ -352,6 +373,8 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 			if (index == 1)
 				return false;
 			if (index == 2)
+				return false;
+			if (index == 3)
 				return false;
 			return true;
 		}

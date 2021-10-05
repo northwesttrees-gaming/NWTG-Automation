@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "grass_block_slab_side",
+        "side_overlay": "grass_block_slab_side_overlay",
+        "bottom": "grass_block_slab_bottom",
+        "top_overlay": "grass_block_slab_top"
+      },
+      "name": "default"
+    }
+  }
+}

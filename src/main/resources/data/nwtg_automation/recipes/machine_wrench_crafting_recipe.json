@@ -1,0 +1,20 @@
+{
+  "group": "nwtg_automation_tools",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1",
+    "2 "
+  ],
+  "key": {
+    "1": {
+      "tag": "forge:nwtg_automation/items/iron_ingot"
+    },
+    "2": {
+      "tag": "forge:nwtg_automation/items/red_dye"
+    }
+  },
+  "result": {
+    "item": "nwtg_automation:machine_wrench",
+    "count": 1
+  }
+}

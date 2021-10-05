@@ -1,7 +1,9 @@
 
 package net.nwtg.nwtgautomation.block;
 
+import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineUpdateTickProcedure;
 import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineOnBlockRightClickedProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineBlockIsPlacedByProcedure;
 import net.nwtg.nwtgautomation.procedures.AutoItemCollectorMachineBlockAddedProcedure;
 import net.nwtg.nwtgautomation.itemgroup.NWTGAutomationTabItemGroup;
 import net.nwtg.nwtgautomation.gui.AutoItemCollectorMachineInventoryGui;
@@ -18,6 +20,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.ToolType;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
@@ -51,6 +54,7 @@ import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
@@ -62,6 +66,7 @@ import net.minecraft.block.Block;
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
+import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
@@ -151,6 +156,7 @@ public class AutoItemCollectorMachineBlock extends NwtgAutomationModElements.Mod
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 5);
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
@@ -158,6 +164,40 @@ public class AutoItemCollectorMachineBlock extends NwtgAutomationModElements.Mod
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				AutoItemCollectorMachineBlockAddedProcedure.executeProcedure($_dependencies);
+			}
+		}
+
+		@Override
+		public void tick(BlockState blockstate, ServerWorld world, BlockPos pos, Random random) {
+			super.tick(blockstate, world, pos, random);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AutoItemCollectorMachineUpdateTickProcedure.executeProcedure($_dependencies);
+			}
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 5);
+		}
+
+		@Override
+		public void onBlockPlacedBy(World world, BlockPos pos, BlockState blockstate, LivingEntity entity, ItemStack itemstack) {
+			super.onBlockPlacedBy(world, pos, blockstate, entity, itemstack);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AutoItemCollectorMachineBlockIsPlacedByProcedure.executeProcedure($_dependencies);
 			}
 		}
 

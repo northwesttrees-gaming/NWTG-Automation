@@ -1,0 +1,44 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:AutoFarmingMachine"
+      },
+      {
+        "value": "CUSTOM:AutoCraftingMachine"
+      },
+      {
+        "value": "CUSTOM:AutoCraftingMachineOn"
+      },
+      {
+        "value": "CUSTOM:AutoFarmingMachineOn"
+      },
+      {
+        "value": "CUSTOM:AutoItemCollectorMachine"
+      },
+      {
+        "value": "CUSTOM:AutoItemCollectorMachineOn"
+      },
+      {
+        "value": "CUSTOM:BreakerPanel"
+      },
+      {
+        "value": "CUSTOM:BreakerPanelOn"
+      },
+      {
+        "value": "CUSTOM:AutoTreeFarmMachine"
+      },
+      {
+        "value": "CUSTOM:AutoTreeFarmMachineOn"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "nwtg_automation/blocks/ownership_blocks",
+    "namespace": "forge"
+  }
+}

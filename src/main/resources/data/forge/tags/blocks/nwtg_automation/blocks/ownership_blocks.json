@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "nwtg_automation:auto_farming_machine",
+    "nwtg_automation:auto_crafting_machine",
+    "nwtg_automation:auto_crafting_machine_on",
+    "nwtg_automation:auto_farming_machine_on",
+    "nwtg_automation:auto_item_collector_machine",
+    "nwtg_automation:auto_item_collector_machine_on",
+    "nwtg_automation:breaker_panel",
+    "nwtg_automation:breaker_panel_on",
+    "nwtg_automation:auto_tree_farm_machine",
+    "nwtg_automation:auto_tree_farm_machine_on"
+  ]
+}
