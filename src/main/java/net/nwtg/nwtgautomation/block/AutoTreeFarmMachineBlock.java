@@ -80,7 +80,7 @@ public class AutoTreeFarmMachineBlock extends NwtgAutomationModElements.ModEleme
 	@ObjectHolder("nwtg_automation:auto_tree_farm_machine")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public AutoTreeFarmMachineBlock(NwtgAutomationModElements instance) {
-		super(instance, 7);
+		super(instance, 6);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

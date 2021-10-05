@@ -203,9 +203,9 @@ public class NwtgAutomationModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
-			nbt.putDouble("nwtgPosZ", instance.nwtgPosZ);
 			nbt.putDouble("nwtgPosX", instance.nwtgPosX);
 			nbt.putDouble("nwtgPosY", instance.nwtgPosY);
+			nbt.putDouble("nwtgPosZ", instance.nwtgPosZ);
 			nbt.putString("nwtgOwner", instance.nwtgOwner);
 			nbt.putString("nwtgPassword", instance.nwtgPassword);
 			return nbt;
@@ -214,18 +214,18 @@ public class NwtgAutomationModVariables {
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
-			instance.nwtgPosZ = nbt.getDouble("nwtgPosZ");
 			instance.nwtgPosX = nbt.getDouble("nwtgPosX");
 			instance.nwtgPosY = nbt.getDouble("nwtgPosY");
+			instance.nwtgPosZ = nbt.getDouble("nwtgPosZ");
 			instance.nwtgOwner = nbt.getString("nwtgOwner");
 			instance.nwtgPassword = nbt.getString("nwtgPassword");
 		}
 	}
 
 	public static class PlayerVariables {
-		public double nwtgPosZ = 0;
 		public double nwtgPosX = 0;
 		public double nwtgPosY = 0;
+		public double nwtgPosZ = 0;
 		public String nwtgOwner = "";
 		public String nwtgPassword = "";
 		public void syncPlayerVariables(Entity entity) {
@@ -261,9 +261,9 @@ public class NwtgAutomationModVariables {
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		if (!event.isWasDeath()) {
-			clone.nwtgPosZ = original.nwtgPosZ;
 			clone.nwtgPosX = original.nwtgPosX;
 			clone.nwtgPosY = original.nwtgPosY;
+			clone.nwtgPosZ = original.nwtgPosZ;
 			clone.nwtgOwner = original.nwtgOwner;
 			clone.nwtgPassword = original.nwtgPassword;
 		}
@@ -289,9 +289,9 @@ public class NwtgAutomationModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
-					variables.nwtgPosZ = message.data.nwtgPosZ;
 					variables.nwtgPosX = message.data.nwtgPosX;
 					variables.nwtgPosY = message.data.nwtgPosY;
+					variables.nwtgPosZ = message.data.nwtgPosZ;
 					variables.nwtgOwner = message.data.nwtgOwner;
 					variables.nwtgPassword = message.data.nwtgPassword;
 				}
