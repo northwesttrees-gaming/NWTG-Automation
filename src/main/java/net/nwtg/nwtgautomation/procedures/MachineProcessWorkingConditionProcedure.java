@@ -44,6 +44,6 @@ public class MachineProcessWorkingConditionProcedure {
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "machineProcess"))).equals("working"))) {
 			return (true);
 		}
-		return (true);
+		return (false);
 	}
 }

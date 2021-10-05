@@ -81,7 +81,7 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 	@ObjectHolder("nwtg_automation:auto_farming_machine_on")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public AutoFarmingMachineOnBlock(NwtgAutomationModElements instance) {
-		super(instance, 34);
+		super(instance, 37);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -349,12 +349,6 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 
 		@Override
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
-			if (index == 1)
-				return false;
-			if (index == 2)
-				return false;
-			if (index == 3)
-				return false;
 			return true;
 		}
 
@@ -370,12 +364,6 @@ public class AutoFarmingMachineOnBlock extends NwtgAutomationModElements.ModElem
 
 		@Override
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
-			if (index == 1)
-				return false;
-			if (index == 2)
-				return false;
-			if (index == 3)
-				return false;
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());

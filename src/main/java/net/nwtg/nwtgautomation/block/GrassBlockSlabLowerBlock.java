@@ -1,6 +1,7 @@
 
 package net.nwtg.nwtgautomation.block;
 
+import net.nwtg.nwtgautomation.itemgroup.NWTGAutomationTabItemGroup;
 import net.nwtg.nwtgautomation.NwtgAutomationModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -28,7 +29,6 @@ import net.minecraft.state.StateContainer;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
@@ -51,7 +51,7 @@ public class GrassBlockSlabLowerBlock extends NwtgAutomationModElements.ModEleme
 	@ObjectHolder("nwtg_automation:grass_block_slab_lower")
 	public static final Block block = null;
 	public GrassBlockSlabLowerBlock(NwtgAutomationModElements instance) {
-		super(instance, 9);
+		super(instance, 8);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BlockColorRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ItemColorRegisterHandler());
 	}
@@ -59,8 +59,8 @@ public class GrassBlockSlabLowerBlock extends NwtgAutomationModElements.ModEleme
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
+		elements.items.add(
+				() -> new BlockItem(block, new Item.Properties().group(NWTGAutomationTabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override

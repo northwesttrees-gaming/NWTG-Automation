@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "particle",
+  "definition": {
+    "texture": "farming_particle.png",
+    "animate": true,
+    "frameDuration": 3,
+    "width": 0.2,
+    "height": 0.2,
+    "scale": 1.0,
+    "speedFactor": 0.05,
+    "gravity": -0.005,
+    "maxAge": 40,
+    "maxAgeDiff": 20,
+    "angularVelocity": 0.0,
+    "angularAcceleration": 0.0,
+    "canCollide": false,
+    "alwaysShow": true,
+    "renderType": "OPAQUE"
+  }
+}

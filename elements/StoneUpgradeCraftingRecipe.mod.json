@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "nwtg_automation_upgrades",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "TAG:forge:stone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "TAG:forge:stone"
+      },
+      {
+        "value": "TAG:nwtg_automation:upgrades/wooden"
+      },
+      {
+        "value": "TAG:forge:stone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "TAG:forge:stone"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:StoneUpgrade"
+    },
+    "name": "stone_upgrade_crafting_recipe",
+    "namespace": "mod"
+  }
+}

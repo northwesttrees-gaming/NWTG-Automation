@@ -1,0 +1,30 @@
+{
+  "group": "nwtg_automation_upgrades",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "tag": "forge:gems/diamond"
+    },
+    "3": {
+      "tag": "forge:gems/diamond"
+    },
+    "4": {
+      "tag": "nwtg_automation:upgrades/golden"
+    },
+    "5": {
+      "tag": "forge:gems/diamond"
+    },
+    "7": {
+      "tag": "forge:gems/diamond"
+    }
+  },
+  "result": {
+    "item": "nwtg_automation:diamond_upgrade",
+    "count": 1
+  }
+}

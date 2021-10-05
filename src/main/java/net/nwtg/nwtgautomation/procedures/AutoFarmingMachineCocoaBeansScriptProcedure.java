@@ -136,22 +136,16 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						(((("particle minecraft:composter ") + "" + ((new java.text.DecimalFormat("##.##").format(particlePosX))) + "" + (" ") + ""
-								+ ((new java.text.DecimalFormat("##.##").format(particlePosY))) + "" + (" ") + ""
-								+ ((new java.text.DecimalFormat("##.##").format(particlePosZ)))))
+						(((("particle nwtg_automation:farming_particle ") + ""
+								+ ((((((new java.text.DecimalFormat("##.##").format(particlePosX))) + "" + (" "))) + ""
+										+ ((((new java.text.DecimalFormat("##.##").format(particlePosY))) + "" + (" "))) + ""
+										+ ((((new java.text.DecimalFormat("##.##").format(particlePosZ))) + "" + (" ")))))
+								+ "" + ("0.33 0.33 0.33 ") + "" + ("0 8 ")))
 								+ ""
-								+ (((" ") + "" + ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
-										+ ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
-										+ ((new java.text.DecimalFormat("##.##").format(0.25)))))
-								+ ""
-								+ (((" ") + "" + ((new java.text.DecimalFormat("##").format(1))) + "" + (" ") + ""
-										+ ((new java.text.DecimalFormat("##").format(10)))))
-								+ ""
-								+ (((" force @a[x=") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosX - 30)))) + "" + (",y=") + ""
-										+ ((new java.text.DecimalFormat("##.##").format((particlePosY - 30)))) + "" + (",z=") + ""
-										+ ((new java.text.DecimalFormat("##.##").format((particlePosZ - 30))))))
-								+ ""
-								+ (((",dx=") + "" + ((new java.text.DecimalFormat("##").format(61))) + "" + (",dy=") + ""
+								+ ((("force @a[") + "" + ("x=") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosX - 30)))) + ""
+										+ (",y=") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosY - 30)))) + "" + (",z=") + ""
+										+ ((new java.text.DecimalFormat("##.##").format((particlePosZ - 30)))) + "" + (",dx=") + ""
+										+ ((new java.text.DecimalFormat("##").format(61))) + "" + (",dy=") + ""
 										+ ((new java.text.DecimalFormat("##").format(61))) + "" + (",dz=") + ""
 										+ ((new java.text.DecimalFormat("##").format(61))) + "" + ("]")))));
 			}

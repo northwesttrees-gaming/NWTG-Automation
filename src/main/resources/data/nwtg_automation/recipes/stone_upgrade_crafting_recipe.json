@@ -1,0 +1,30 @@
+{
+  "group": "nwtg_automation_upgrades",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "tag": "forge:stone"
+    },
+    "3": {
+      "tag": "forge:stone"
+    },
+    "4": {
+      "tag": "nwtg_automation:upgrades/wooden"
+    },
+    "5": {
+      "tag": "forge:stone"
+    },
+    "7": {
+      "tag": "forge:stone"
+    }
+  },
+  "result": {
+    "item": "nwtg_automation:stone_upgrade",
+    "count": 1
+  }
+}

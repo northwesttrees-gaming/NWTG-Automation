@@ -1,0 +1,30 @@
+{
+  "group": "nwtg_automation_upgrades",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "tag": "forge:ingots/nethertie"
+    },
+    "3": {
+      "tag": "forge:ingots/nethertie"
+    },
+    "4": {
+      "tag": "nwtg_automation:upgrades/diamond"
+    },
+    "5": {
+      "tag": "forge:ingots/nethertie"
+    },
+    "7": {
+      "tag": "forge:ingots/nethertie"
+    }
+  },
+  "result": {
+    "item": "nwtg_automation:netherite_upgrade",
+    "count": 1
+  }
+}

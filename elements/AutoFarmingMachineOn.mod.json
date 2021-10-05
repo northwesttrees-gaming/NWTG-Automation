@@ -58,6 +58,9 @@
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
     "colorOnMap": "IRON",
     "creativePickItem": {
       "value": "CUSTOM:AutoFarmingMachine"
@@ -76,6 +79,21 @@
     "soundOnStep": {
       "value": "METAL"
     },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 2,
@@ -93,16 +111,8 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": false,
-    "inventoryOutSlotIDs": [
-      1,
-      2,
-      3
-    ],
-    "inventoryInSlotIDs": [
-      1,
-      2,
-      3
-    ],
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,
