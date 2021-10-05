@@ -29,7 +29,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_farming_machine_inventory",
-      "path": "~/GUIs/Machines/AutoFarming"
+      "path": "~/GUIs/Machines/Auto_Farming"
     },
     {
       "name": "AutoFarmingMachine",
@@ -6574,6 +6574,221 @@
       "ids": {},
       "registry_name": "nwtg_automation_items_lever",
       "path": "~/Tags/Items/Vanilla"
+    },
+    {
+      "name": "MachinesAutoFarmingBlockTag",
+      "type": "tag",
+      "sortid": 324,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machines_auto_farming_block_tag",
+      "path": "~/NewTags/NWTG_Automation/Machines/block/Auto_Farming"
+    },
+    {
+      "name": "MachinesAutoFarmingItemTag",
+      "type": "tag",
+      "sortid": 325,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machines_auto_farming_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Machines/item/Auto_Farming"
+    },
+    {
+      "name": "MachinesAutoFarmingOffBlockTag",
+      "type": "tag",
+      "sortid": 326,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machines_auto_farming_off_block_tag",
+      "path": "~/NewTags/NWTG_Automation/Machines/block/Auto_Farming"
+    },
+    {
+      "name": "MachinesAutoFarmingOnBlockTag",
+      "type": "tag",
+      "sortid": 327,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machines_auto_farming_on_block_tag",
+      "path": "~/NewTags/NWTG_Automation/Machines/block/Auto_Farming"
+    },
+    {
+      "name": "MachinesAutoFarmingOffItemTag",
+      "type": "tag",
+      "sortid": 328,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machines_auto_farming_off_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Machines/item/Auto_Farming"
+    },
+    {
+      "name": "MachinesAutoFarmingOnItemTag",
+      "type": "tag",
+      "sortid": 329,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machines_auto_farming_on_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Machines/item/Auto_Farming"
+    },
+    {
+      "name": "MachineStateOnCondition",
+      "type": "procedure",
+      "sortid": 330,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_state_on_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Machines/Conditions"
+    },
+    {
+      "name": "MachineStateOffCondition",
+      "type": "procedure",
+      "sortid": 331,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_state_off_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Machines/Conditions"
+    },
+    {
+      "name": "MachineProcessIdleCondition",
+      "type": "procedure",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_process_idle_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Machines/Conditions"
+    },
+    {
+      "name": "MachineProcessWorkingCondition",
+      "type": "procedure",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_process_working_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Machines/Conditions"
+    },
+    {
+      "name": "MachineProcessNoneCondition",
+      "type": "procedure",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_process_none_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Machines/Conditions"
     }
   ],
   "variable_elements": [
@@ -7023,10 +7238,6 @@
             "name": "Machines",
             "children": [
               {
-                "name": "AutoFarming",
-                "children": []
-              },
-              {
                 "name": "AutoCrafting",
                 "children": []
               },
@@ -7036,6 +7247,14 @@
               },
               {
                 "name": "AutoTreeFarm",
+                "children": []
+              },
+              {
+                "name": "Conditions",
+                "children": []
+              },
+              {
+                "name": "Auto_Farming",
                 "children": []
               }
             ]
@@ -7076,6 +7295,39 @@
           {
             "name": "Global",
             "children": []
+          }
+        ]
+      },
+      {
+        "name": "NewTags",
+        "children": [
+          {
+            "name": "NWTG_Automation",
+            "children": [
+              {
+                "name": "Machines",
+                "children": [
+                  {
+                    "name": "block",
+                    "children": [
+                      {
+                        "name": "Auto_Farming",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "item",
+                    "children": [
+                      {
+                        "name": "Auto_Farming",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       }

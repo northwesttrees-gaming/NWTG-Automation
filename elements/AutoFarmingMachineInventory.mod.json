@@ -11,6 +11,81 @@
     "doesPauseGame": false,
     "components": [
       {
+        "type": "image",
+        "data": {
+          "image": "auto_farming_machine_gui.png",
+          "use1Xscale": false,
+          "name": "auto_farming_machine_gui.png",
+          "x": 125,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "green_light.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "MachineProcessWorkingCondition"
+          },
+          "name": "green_light.png",
+          "x": 282,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "green_light.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "MachineStateOnCondition"
+          },
+          "name": "green_light.png",
+          "x": 291,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red_light.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "MachineProcessNoneCondition"
+          },
+          "name": "red_light.png",
+          "x": 282,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red_light.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "MachineStateOffCondition"
+          },
+          "name": "red_light.png",
+          "x": 291,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "yellow_light.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "MachineProcessIdleCondition"
+          },
+          "name": "yellow_light.png",
+          "x": 282,
+          "y": 63
+        }
+      },
+      {
         "type": "label",
         "data": {
           "text": "Auto Farming Machine",
@@ -21,16 +96,6 @@
           "name": "Auto Farming Machine",
           "x": 132,
           "y": 61
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "auto_farming_machine_gui.png",
-          "use1Xscale": false,
-          "name": "auto_farming_machine_gui.png",
-          "x": 125,
-          "y": 57
         }
       },
       {
@@ -73,56 +138,6 @@
           "name": "Slot #2",
           "x": 276,
           "y": 73
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "green_light.png",
-          "use1Xscale": false,
-          "name": "green_light.png",
-          "x": 282,
-          "y": 63
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "yellow_light.png",
-          "use1Xscale": false,
-          "name": "yellow_light.png",
-          "x": 282,
-          "y": 63
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "red_light.png",
-          "use1Xscale": false,
-          "name": "red_light.png",
-          "x": 282,
-          "y": 63
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "green_light.png",
-          "use1Xscale": false,
-          "name": "green_light.png",
-          "x": 291,
-          "y": 63
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "red_light.png",
-          "use1Xscale": false,
-          "name": "red_light.png",
-          "x": 291,
-          "y": 63
         }
       }
     ],

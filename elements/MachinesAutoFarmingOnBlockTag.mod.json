@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:AutoFarmingMachineOn"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "machines/auto_farming/on",
+    "namespace": "forge"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:AutoFarmingMachine"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "machines/auto_farming/off",
+    "namespace": "nwtg_automation"
+  }
+}

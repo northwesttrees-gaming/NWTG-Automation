@@ -1,6 +1,12 @@
 
 package net.nwtg.nwtgautomation.gui;
 
+import net.nwtg.nwtgautomation.procedures.MachineStateOnConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.MachineStateOffConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.MachineProcessWorkingConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.MachineProcessNoneConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.MachineProcessIdleConditionProcedure;
+
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -16,6 +22,8 @@ import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
+
+import com.google.common.collect.ImmutableMap;
 
 @OnlyIn(Dist.CLIENT)
 public class AutoFarmingMachineInventoryGuiWindow extends ContainerScreen<AutoFarmingMachineInventoryGui.GuiContainerMod> {
@@ -49,16 +57,26 @@ public class AutoFarmingMachineInventoryGuiWindow extends ContainerScreen<AutoFa
 		RenderSystem.defaultBlendFunc();
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/auto_farming_machine_gui.png"));
 		this.blit(ms, this.guiLeft + 0, this.guiTop + 20, 0, 0, 176, 126, 176, 126);
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/green_light.png"));
-		this.blit(ms, this.guiLeft + 156, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/yellow_light.png"));
-		this.blit(ms, this.guiLeft + 156, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/red_light.png"));
-		this.blit(ms, this.guiLeft + 156, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/green_light.png"));
-		this.blit(ms, this.guiLeft + 165, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/red_light.png"));
-		this.blit(ms, this.guiLeft + 165, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
+		if (MachineProcessWorkingConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/green_light.png"));
+			this.blit(ms, this.guiLeft + 156, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
+		}
+		if (MachineStateOnConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/green_light.png"));
+			this.blit(ms, this.guiLeft + 165, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
+		}
+		if (MachineProcessNoneConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/red_light.png"));
+			this.blit(ms, this.guiLeft + 156, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
+		}
+		if (MachineStateOffConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/red_light.png"));
+			this.blit(ms, this.guiLeft + 165, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
+		}
+		if (MachineProcessIdleConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/yellow_light.png"));
+			this.blit(ms, this.guiLeft + 156, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
+		}
 		RenderSystem.disableBlend();
 	}
 
