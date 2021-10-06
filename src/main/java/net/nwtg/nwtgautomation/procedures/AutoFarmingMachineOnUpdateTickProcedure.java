@@ -12,12 +12,8 @@ import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraftforge.items.CapabilityItemHandler;
 
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Direction;
@@ -28,8 +24,6 @@ import net.minecraft.state.IntegerProperty;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.command.ICommandSource;
-import net.minecraft.command.CommandSource;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
@@ -221,7 +215,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 			for (int index0 = 0; index0 < (int) (9); index0++) {
 				for (int index1 = 0; index1 < (int) (9); index1++) {
 					for (int index2 = 0; index2 < (int) (9); index2++) {
-						if (((new Object() {
+						if ((((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -232,18 +226,25 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.WHEAT_SEEDS)) {
-							if (world instanceof ServerWorld) {
-								((World) world).getServer().getCommandManager().handleCommand(
-										new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-												new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-										(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format(posX))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posY))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posZ))) + ""
-												+ (" minecraft:wheat[age=7] run data modify block ~ ~ ~ ForgeData.HarvestCrop set value 1")));
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.WHEAT_SEEDS)
+								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.WHEAT)
+										&& ((new Object() {
+											public int get(BlockState _bs, String property) {
+												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+											}
+										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 7)))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 						}
-						if (((new Object() {
+						if ((((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -254,18 +255,25 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.BEETROOT_SEEDS)) {
-							if (world instanceof ServerWorld) {
-								((World) world).getServer().getCommandManager().handleCommand(
-										new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-												new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-										(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format(posX))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posY))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posZ))) + ""
-												+ (" minecraft:beetroots[age=3] run data modify block ~ ~ ~ ForgeData.HarvestCrop set value 1")));
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.BEETROOT_SEEDS)
+								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.BEETROOTS)
+										&& ((new Object() {
+											public int get(BlockState _bs, String property) {
+												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+											}
+										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 3)))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 						}
-						if (((new Object() {
+						if ((((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -276,18 +284,25 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.CARROT)) {
-							if (world instanceof ServerWorld) {
-								((World) world).getServer().getCommandManager().handleCommand(
-										new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-												new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-										(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format(posX))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posY))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posZ))) + ""
-												+ (" minecraft:carrots[age=7] run data modify block ~ ~ ~ ForgeData.HarvestCrop set value 1")));
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.CARROT)
+								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.CARROTS)
+										&& ((new Object() {
+											public int get(BlockState _bs, String property) {
+												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+											}
+										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 7)))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 						}
-						if (((new Object() {
+						if ((((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -298,18 +313,25 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.POTATO)) {
-							if (world instanceof ServerWorld) {
-								((World) world).getServer().getCommandManager().handleCommand(
-										new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-												new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-										(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format(posX))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posY))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posZ))) + ""
-												+ (" minecraft:potatoes[age=7] run data modify block ~ ~ ~ ForgeData.HarvestCrop set value 1")));
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.POTATO)
+								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.POTATOES)
+										&& ((new Object() {
+											public int get(BlockState _bs, String property) {
+												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+											}
+										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 7)))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 						}
-						if (((new Object() {
+						if ((((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -320,18 +342,25 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.SWEET_BERRIES)) {
-							if (world instanceof ServerWorld) {
-								((World) world).getServer().getCommandManager().handleCommand(
-										new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-												new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-										(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format(posX))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posY))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posZ))) + ""
-												+ (" minecraft:sweet_berry_bush[age=3] run data modify block ~ ~ ~ ForgeData.HarvestCrop set value 1")));
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SWEET_BERRIES)
+								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.SWEET_BERRY_BUSH)
+										&& ((new Object() {
+											public int get(BlockState _bs, String property) {
+												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+											}
+										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 3)))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 						}
-						if (((new Object() {
+						if ((((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -342,162 +371,22 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.NETHER_WART)) {
-							if (world instanceof ServerWorld) {
-								((World) world).getServer().getCommandManager().handleCommand(
-										new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-												new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-										(("execute if block ") + "" + ((new java.text.DecimalFormat("##").format(posX))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posY))) + "" + (" ") + ""
-												+ ((new java.text.DecimalFormat("##").format(posZ))) + ""
-												+ (" minecraft:nether_wart[age=3] run data modify block ~ ~ ~ ForgeData.HarvestCrop set value 1")));
-							}
-						}
-						if (((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
-								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Blocks.SUGAR_CANE.asItem())) {
-							if (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.SUGAR_CANE)) {
-								if (!world.isRemote()) {
-									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									TileEntity _tileEntity = world.getTileEntity(_bp);
-									BlockState _bs = world.getBlockState(_bp);
-									if (_tileEntity != null)
-										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-									if (world instanceof World)
-										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-								}
-							}
-						}
-						if (((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
-								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.PUMPKIN_SEEDS)) {
-							if (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.PUMPKIN)) {
-								if (!world.isRemote()) {
-									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									TileEntity _tileEntity = world.getTileEntity(_bp);
-									BlockState _bs = world.getBlockState(_bp);
-									if (_tileEntity != null)
-										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-									if (world instanceof World)
-										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-								}
-							}
-						}
-						if (((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
-								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.MELON_SEEDS)) {
-							if (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.MELON)) {
-								if (!world.isRemote()) {
-									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									TileEntity _tileEntity = world.getTileEntity(_bp);
-									BlockState _bs = world.getBlockState(_bp);
-									if (_tileEntity != null)
-										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-									if (world instanceof World)
-										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-								}
-							}
-						}
-						if (((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
-								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Blocks.CACTUS.asItem())) {
-							if (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.CACTUS)) {
-								if (!world.isRemote()) {
-									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									TileEntity _tileEntity = world.getTileEntity(_bp);
-									BlockState _bs = world.getBlockState(_bp);
-									if (_tileEntity != null)
-										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-									if (world instanceof World)
-										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-								}
-							}
-						}
-						if (((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
-								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Blocks.KELP.asItem())) {
-							if ((((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.KELP)
-									|| ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.KELP_PLANT))) {
-								if (!world.isRemote()) {
-									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									TileEntity _tileEntity = world.getTileEntity(_bp);
-									BlockState _bs = world.getBlockState(_bp);
-									if (_tileEntity != null)
-										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-									if (world instanceof World)
-										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-								}
-							}
-						}
-						if (((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
-								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Blocks.BAMBOO.asItem())) {
-							if ((((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.BAMBOO)
-									|| ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
-											.getBlock() == Blocks.BAMBOO_SAPLING))) {
-								if (!world.isRemote()) {
-									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									TileEntity _tileEntity = world.getTileEntity(_bp);
-									BlockState _bs = world.getBlockState(_bp);
-									if (_tileEntity != null)
-										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-									if (world instanceof World)
-										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-								}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.NETHER_WART)
+								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.NETHER_WART)
+										&& ((new Object() {
+											public int get(BlockState _bs, String property) {
+												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+											}
+										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 3)))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 						}
 						if ((((new Object() {
@@ -519,6 +408,162 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
 											}
 										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 2)))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+						}
+						if ((((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SUGAR_CANE)
+								&& ((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ))).getBlock() == Blocks.SUGAR_CANE))
+										&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
+												.getBlock() == Blocks.SUGAR_CANE)
+												&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+														.getBlock() == Blocks.SUGAR_CANE))))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+						}
+						if ((((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.CACTUS.asItem())
+								&& ((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ))).getBlock() == Blocks.CACTUS))
+										&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
+												.getBlock() == Blocks.CACTUS)
+												&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+														.getBlock() == Blocks.CACTUS))))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+						}
+						if ((((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.BAMBOO.asItem())
+								&& ((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ))).getBlock() == Blocks.BAMBOO))
+										&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
+												.getBlock() == Blocks.BAMBOO)
+												&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+														.getBlock() == Blocks.BAMBOO))))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+						}
+						if ((((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.KELP.asItem())
+								&& (((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ))).getBlock() == Blocks.KELP))
+										&& (!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ)))
+												.getBlock() == Blocks.KELP_PLANT)))
+										&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
+												.getBlock() == Blocks.KELP_PLANT)
+												&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+														.getBlock() == Blocks.KELP))))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+						}
+						if ((((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.PUMPKIN.asItem())
+								&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.PUMPKIN))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+						}
+						if ((((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.MELON_SLICE)
+								&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.MELON))) {
 							if (!world.isRemote()) {
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 								TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -780,7 +825,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.WHEAT_SEEDS)) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.WHEAT_SEEDS)) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);
@@ -801,7 +846,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.BEETROOT_SEEDS)) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.BEETROOT_SEEDS)) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);
@@ -822,7 +867,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.CARROT)) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.CARROT)) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);
@@ -843,7 +888,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.POTATO)) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.POTATO)) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);
@@ -864,7 +909,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.SWEET_BERRIES)) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SWEET_BERRIES)) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);
@@ -885,7 +930,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.NETHER_WART)) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.NETHER_WART)) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);
@@ -906,7 +951,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.SUGAR_CANE)) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SUGAR_CANE)) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);
@@ -927,7 +972,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.PUMPKIN_SEEDS)) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.PUMPKIN.asItem())) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);
@@ -948,7 +993,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Items.MELON_SEEDS)) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.MELON_SLICE)) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);
@@ -990,7 +1035,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Blocks.CACTUS.asItem())) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.CACTUS.asItem())) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);
@@ -1011,7 +1056,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Blocks.KELP.asItem())) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.KELP.asItem())) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);
@@ -1032,7 +1077,7 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == Blocks.BAMBOO.asItem())) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.BAMBOO.asItem())) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);

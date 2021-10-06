@@ -139,6 +139,123 @@
           "x": 276,
           "y": 73
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_farming_machine_progress_bar_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AutoFarmingMachineProgress9Condition"
+          },
+          "name": "auto_farming_machine_progress_bar_1.png",
+          "x": 207,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_farming_machine_progress_bar_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AutoFarmingMachineProgress8Condition"
+          },
+          "name": "auto_farming_machine_progress_bar_2.png",
+          "x": 207,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_farming_machine_progress_bar_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AutoFarmingMachineProgress7Condition"
+          },
+          "name": "auto_farming_machine_progress_bar_3.png",
+          "x": 207,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_farming_machine_progress_bar_4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AutoFarmingMachineProgress6Condition"
+          },
+          "name": "auto_farming_machine_progress_bar_4.png",
+          "x": 207,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_farming_machine_progress_bar_5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AutoFarmingMachineProgress5Condition"
+          },
+          "name": "auto_farming_machine_progress_bar_5.png",
+          "x": 207,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_farming_machine_progress_bar_6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AutoFarmingMachineProgress4Condition"
+          },
+          "name": "auto_farming_machine_progress_bar_6.png",
+          "x": 207,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_farming_machine_progress_bar_7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AutoFarmingMachineProgress3Condition"
+          },
+          "name": "auto_farming_machine_progress_bar_7.png",
+          "x": 207,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_farming_machine_progress_bar_8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AutoFarmingMachineProgress2Condition"
+          },
+          "name": "auto_farming_machine_progress_bar_8.png",
+          "x": 207,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_farming_machine_progress_bar_9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AutoFarmingMachineProgress1Condition"
+          },
+          "name": "auto_farming_machine_progress_bar_9.png",
+          "x": 207,
+          "y": 74
+        }
       }
     ],
     "gridSettings": {
