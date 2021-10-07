@@ -7991,7 +7991,7 @@
   "workspaceSettings": {
     "modid": "nwtg_automation",
     "modName": "NWTG Automation",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "A mod to make things automated one block at a time!",
     "author": "NorthWestTrees Gaming",
     "websiteURL": "https://northwesttrees-gaming.github.io/mods/nwtg-automation.html",
@@ -8005,7 +8005,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
-    "credits": "MCreator, Forge, Mojang",
+    "credits": "Mojang, Forge, MCreator, Shadowdragon",
     "modElementsPackage": "net.nwtg.nwtgautomation",
     "lockBaseModFiles": false
   },
