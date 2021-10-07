@@ -5,13 +5,13 @@
     "type": "Items",
     "items": [
       {
-        "value": "CUSTOM:AutoFarmingMachineOn"
+        "value": "Blocks.DISPENSER"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
-    "name": "nwtg_automation/items/auto_farming_machine_on",
-    "namespace": "forge"
+    "name": "minecraft/dispenser",
+    "namespace": "nwtg_automation"
   }
 }

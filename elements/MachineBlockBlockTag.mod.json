@@ -6,12 +6,12 @@
     "items": [],
     "blocks": [
       {
-        "value": "CUSTOM:AutoFarmingMachine"
+        "value": "CUSTOM:MachineBlock"
       }
     ],
     "functions": [],
     "entities": [],
-    "name": "nwtg_automation/blocks/auto_farming_machine_off",
-    "namespace": "forge"
+    "name": "machine_block",
+    "namespace": "nwtg_automation"
   }
 }

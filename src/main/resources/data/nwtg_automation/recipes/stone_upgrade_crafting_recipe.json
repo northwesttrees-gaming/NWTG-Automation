@@ -8,19 +8,19 @@
   ],
   "key": {
     "1": {
-      "tag": "forge:stone"
+      "tag": "nwtg_automation:minecraft/stone"
     },
     "3": {
-      "tag": "forge:stone"
+      "tag": "nwtg_automation:minecraft/stone"
     },
     "4": {
       "tag": "nwtg_automation:upgrades/wooden"
     },
     "5": {
-      "tag": "forge:stone"
+      "tag": "nwtg_automation:minecraft/stone"
     },
     "7": {
-      "tag": "forge:stone"
+      "tag": "nwtg_automation:minecraft/stone"
     }
   },
   "result": {

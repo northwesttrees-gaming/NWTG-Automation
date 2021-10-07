@@ -6,14 +6,14 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "nwtg_automation_machines",
+    "group": "nwtg_automation_auto_farming_machine",
     "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/dispenser"
+        "value": "TAG:nwtg_automation:minecraft/dispenser"
       },
       {
         "value": ""
@@ -22,7 +22,7 @@
         "value": ""
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/machine_block"
+        "value": "TAG:nwtg_automation:machine_block"
       },
       {
         "value": ""
@@ -31,7 +31,7 @@
         "value": ""
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/hoes"
+        "value": "TAG:forge:tools/hoes"
       },
       {
         "value": ""

@@ -5,13 +5,13 @@
     "type": "Items",
     "items": [
       {
-        "value": "CUSTOM:AutoFarmingMachine"
+        "value": "Items.REDSTONE"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
-    "name": "nwtg_automation/items/auto_farming_machine_off",
+    "name": "dusts/redstone",
     "namespace": "forge"
   }
 }

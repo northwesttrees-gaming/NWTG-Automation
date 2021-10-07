@@ -125,6 +125,7 @@ public class AutoFarmingMachineCarrotScriptProcedure {
 			} else {
 				seedsCount = (double) 3;
 			}
+			seedsCount = (double) (seedsCount + 2);
 			if ((((new Object() {
 				public ItemStack getItemStack(BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);

@@ -20,7 +20,7 @@
     "blocks": [],
     "functions": [],
     "entities": [],
-    "name": "stone",
-    "namespace": "forge"
+    "name": "minecraft/stone",
+    "namespace": "nwtg_automation"
   }
 }
