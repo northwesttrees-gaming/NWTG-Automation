@@ -1,0 +1,30 @@
+{
+  "group": "nwtg_automation_upgrades",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "tag": "forge:ingots/gold"
+    },
+    "3": {
+      "tag": "forge:ingots/gold"
+    },
+    "4": {
+      "tag": "nwtg_automation:upgrades/iron"
+    },
+    "5": {
+      "tag": "forge:ingots/gold"
+    },
+    "7": {
+      "tag": "forge:ingots/gold"
+    }
+  },
+  "result": {
+    "item": "nwtg_automation:golden_upgrade",
+    "count": 1
+  }
+}

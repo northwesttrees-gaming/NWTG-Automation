@@ -44,6 +44,6 @@ public class MachineProcessIdleConditionProcedure {
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "machineProcess"))).equals("idle"))) {
 			return (true);
 		}
-		return (true);
+		return (false);
 	}
 }

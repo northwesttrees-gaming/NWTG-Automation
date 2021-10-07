@@ -1,5 +1,5 @@
 {
-  "group": "nwtg_automation_machines",
+  "group": "nwtg_automation_auto_farming_machine",
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "0",
@@ -8,13 +8,13 @@
   ],
   "key": {
     "0": {
-      "tag": "forge:nwtg_automation/items/dispenser"
+      "tag": "nwtg_automation:minecraft/dispenser"
     },
     "1": {
-      "tag": "forge:nwtg_automation/items/machine_block"
+      "tag": "nwtg_automation:machine_block"
     },
     "2": {
-      "tag": "forge:nwtg_automation/items/hoes"
+      "tag": "forge:tools/hoes"
     }
   },
   "result": {

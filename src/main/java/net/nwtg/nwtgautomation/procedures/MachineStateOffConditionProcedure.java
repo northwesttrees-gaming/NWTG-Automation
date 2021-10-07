@@ -44,6 +44,6 @@ public class MachineStateOffConditionProcedure {
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "machineState"))).equals("off"))) {
 			return (true);
 		}
-		return (true);
+		return (false);
 	}
 }

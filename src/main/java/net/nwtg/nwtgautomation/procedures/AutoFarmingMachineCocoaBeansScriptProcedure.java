@@ -1,5 +1,10 @@
 package net.nwtg.nwtgautomation.procedures;
 
+import net.nwtg.nwtgautomation.item.StoneUpgradeItem;
+import net.nwtg.nwtgautomation.item.NetheriteUpgradeItem;
+import net.nwtg.nwtgautomation.item.IronUpgradeItem;
+import net.nwtg.nwtgautomation.item.GoldenUpgradeItem;
+import net.nwtg.nwtgautomation.item.DiamondUpgradeItem;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraftforge.items.IItemHandlerModifiable;
@@ -61,8 +66,6 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure {
 		double particlePosX = 0;
 		double particlePosZ = 0;
 		double seedsCount = 0;
-		seeds = new ItemStack(Items.COCOA_BEANS);
-		seedsCount = (double) 3;
 		posX = (double) (new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -101,87 +104,174 @@ public class AutoFarmingMachineCocoaBeansScriptProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.AIR.asItem()) || (((new Object() {
-			public int getAmount(IWorld world, BlockPos pos, int sltid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				TileEntity _ent = world.getTileEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).getCount());
-					});
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.COCOA_BEANS)
+				&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.COCOA) && ((new Object() {
+					public int get(BlockState _bs, String property) {
+						Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+						return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+					}
+				}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 2)))) {
+			seeds = new ItemStack(Items.COCOA_BEANS);
+			seedsCount = (double) 3;
+			if ((((new Object() {
+				public ItemStack getItemStack(BlockPos pos, int sltid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
+					}
+					return _retval.get();
 				}
-				return _retval.get();
-			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1))) <= (64 - seedsCount)) && ((new Object() {
-			public ItemStack getItemStack(BlockPos pos, int sltid) {
-				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-				TileEntity _ent = world.getTileEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == StoneUpgradeItem.block) || ((new Object() {
+				public ItemStack getItemStack(BlockPos pos, int sltid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
+					}
+					return _retval.get();
 				}
-				return _retval.get();
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == IronUpgradeItem.block))) {
+				seedsCount = (double) (seedsCount + 1);
+			} else if ((((new Object() {
+				public ItemStack getItemStack(BlockPos pos, int sltid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
+					}
+					return _retval.get();
+				}
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == GoldenUpgradeItem.block) || ((new Object() {
+				public ItemStack getItemStack(BlockPos pos, int sltid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
+					}
+					return _retval.get();
+				}
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == DiamondUpgradeItem.block))) {
+				seedsCount = (double) (seedsCount + 2);
+			} else if (((new Object() {
+				public ItemStack getItemStack(BlockPos pos, int sltid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
+					}
+					return _retval.get();
+				}
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == NetheriteUpgradeItem.block)) {
+				seedsCount = (double) (seedsCount + 3);
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == (seeds).getItem())))) {
-			{
-				int _value = (int) 0;
-				BlockPos _pos = new BlockPos((int) posX, (int) posY, (int) posZ);
-				BlockState _bs = world.getBlockState(_pos);
-				Property<?> _property = _bs.getBlock().getStateContainer().getProperty("age");
-				if (_property instanceof IntegerProperty && _property.getAllowedValues().contains(_value))
-					world.setBlockState(_pos, _bs.with((IntegerProperty) _property, _value), 3);
-			}
-			if (world instanceof ServerWorld) {
-				((World) world).getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						(((("particle minecraft:composter ") + "" + ((new java.text.DecimalFormat("##.##").format(particlePosX))) + "" + (" ") + ""
-								+ ((new java.text.DecimalFormat("##.##").format(particlePosY))) + "" + (" ") + ""
-								+ ((new java.text.DecimalFormat("##.##").format(particlePosZ)))))
-								+ ""
-								+ (((" ") + "" + ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
-										+ ((new java.text.DecimalFormat("##.##").format(0.25))) + "" + (" ") + ""
-										+ ((new java.text.DecimalFormat("##.##").format(0.25)))))
-								+ ""
-								+ (((" ") + "" + ((new java.text.DecimalFormat("##").format(1))) + "" + (" ") + ""
-										+ ((new java.text.DecimalFormat("##").format(10)))))
-								+ ""
-								+ (((" force @a[x=") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosX - 30)))) + "" + (",y=") + ""
-										+ ((new java.text.DecimalFormat("##.##").format((particlePosY - 30)))) + "" + (",z=") + ""
-										+ ((new java.text.DecimalFormat("##.##").format((particlePosZ - 30))))))
-								+ ""
-								+ (((",dx=") + "" + ((new java.text.DecimalFormat("##").format(61))) + "" + (",dy=") + ""
-										+ ((new java.text.DecimalFormat("##").format(61))) + "" + (",dz=") + ""
-										+ ((new java.text.DecimalFormat("##").format(61))) + "" + ("]")))));
-			}
-			{
-				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (_ent != null) {
-					final int _sltid = (int) (1);
-					final ItemStack _setstack = (seeds);
-					_setstack.setCount((int) ((new Object() {
-						public int getAmount(IWorld world, BlockPos pos, int sltid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							TileEntity _ent = world.getTileEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).getCount());
-								});
+			if ((((new Object() {
+				public ItemStack getItemStack(BlockPos pos, int sltid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
+					}
+					return _retval.get();
+				}
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.AIR.asItem()) || (((new Object() {
+				public int getAmount(IWorld world, BlockPos pos, int sltid) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).getCount());
+						});
+					}
+					return _retval.get();
+				}
+			}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1))) <= (64 - seedsCount)) && ((new Object() {
+				public ItemStack getItemStack(BlockPos pos, int sltid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
+					}
+					return _retval.get();
+				}
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == (seeds).getItem())))) {
+				{
+					int _value = (int) 0;
+					BlockPos _pos = new BlockPos((int) posX, (int) posY, (int) posZ);
+					BlockState _bs = world.getBlockState(_pos);
+					Property<?> _property = _bs.getBlock().getStateContainer().getProperty("age");
+					if (_property instanceof IntegerProperty && _property.getAllowedValues().contains(_value))
+						world.setBlockState(_pos, _bs.with((IntegerProperty) _property, _value), 3);
+				}
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							(((("particle nwtg_automation:farming_particle ") + ""
+									+ ((((((new java.text.DecimalFormat("##.##").format(particlePosX))) + "" + (" "))) + ""
+											+ ((((new java.text.DecimalFormat("##.##").format(particlePosY))) + "" + (" "))) + ""
+											+ ((((new java.text.DecimalFormat("##.##").format(particlePosZ))) + "" + (" ")))))
+									+ "" + ("0.33 0.33 0.33 ") + "" + ("0 8 ")))
+									+ ""
+									+ ((("force @a[") + "" + ("x=") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosX - 30)))) + ""
+											+ (",y=") + "" + ((new java.text.DecimalFormat("##.##").format((particlePosY - 30)))) + "" + (",z=") + ""
+											+ ((new java.text.DecimalFormat("##.##").format((particlePosZ - 30)))) + "" + (",dx=") + ""
+											+ ((new java.text.DecimalFormat("##").format(61))) + "" + (",dy=") + ""
+											+ ((new java.text.DecimalFormat("##").format(61))) + "" + (",dz=") + ""
+											+ ((new java.text.DecimalFormat("##").format(61))) + "" + ("]")))));
+				}
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (1);
+						final ItemStack _setstack = (seeds);
+						_setstack.setCount((int) ((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
+								AtomicInteger _retval = new AtomicInteger(0);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).getCount());
+									});
+								}
+								return _retval.get();
 							}
-							return _retval.get();
-						}
-					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1))) + seedsCount));
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable) {
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
-						}
-					});
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1))) + seedsCount));
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+				RunScript = (boolean) (true);
+			}
+			if ((RunScript == (true))) {
+				if (!world.isRemote()) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putBoolean("HarvestCrop", (false));
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 			}
-			RunScript = (boolean) (true);
-		}
-		if ((RunScript == (true))) {
+		} else {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);

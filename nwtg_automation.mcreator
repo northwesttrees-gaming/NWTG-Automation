@@ -14,7 +14,7 @@
     {
       "name": "NWTGAutomationTab",
       "type": "tab",
-      "sortid": 11,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -24,7 +24,7 @@
     {
       "name": "AutoFarmingMachineInventory",
       "type": "gui",
-      "sortid": 13,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -39,12 +39,12 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_farming_machine",
-      "path": "~/Blocks/Machines/AutoFarming"
+      "path": "~/Blocks/Machines/Auto_Farming"
     },
     {
       "name": "AutoFarmingMachineUpdateTick",
       "type": "procedure",
-      "sortid": 14,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -69,12 +69,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures"
     },
     {
       "name": "AutoFarmingMachineBlockAdded",
       "type": "procedure",
-      "sortid": 15,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -99,12 +99,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures"
     },
     {
       "name": "AutoFarmingMachineWheatScript",
       "type": "procedure",
-      "sortid": 16,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -129,12 +129,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Wheat"
     },
     {
       "name": "AutoFarmingMachineBeetrootScript",
       "type": "procedure",
-      "sortid": 17,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -159,12 +159,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Beetroot"
     },
     {
       "name": "AutoFarmingMachineCarrotScript",
       "type": "procedure",
-      "sortid": 18,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -189,12 +189,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Carrot"
     },
     {
       "name": "AutoFarmingMachinePotatoScript",
       "type": "procedure",
-      "sortid": 19,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -219,12 +219,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Potato"
     },
     {
       "name": "AutoFarmingMachineSweetBerryScript",
       "type": "procedure",
-      "sortid": 20,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -249,12 +249,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Sweet_Berry"
     },
     {
       "name": "AutoFarmingMachineNetherWartsScript",
       "type": "procedure",
-      "sortid": 21,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -279,12 +279,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Nether_Warts"
     },
     {
       "name": "RemoteItemTeleporterOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 22,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -328,7 +328,7 @@
     {
       "name": "RemoteItemTeleporterUpdateTick",
       "type": "procedure",
-      "sortid": 23,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -368,7 +368,7 @@
     {
       "name": "AutoCraftingMachineOn",
       "type": "block",
-      "sortid": 26,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -378,7 +378,7 @@
     {
       "name": "AutoCraftingMachineOnUpdateTick",
       "type": "procedure",
-      "sortid": 27,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -408,7 +408,7 @@
     {
       "name": "AutoCraftingMachineOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 28,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -446,7 +446,7 @@
     {
       "name": "AutoCraftingMachineOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 29,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -484,7 +484,7 @@
     {
       "name": "AutoCraftingMachineInventory",
       "type": "gui",
-      "sortid": 30,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -494,7 +494,7 @@
     {
       "name": "AutoCraftingMachineSortingScript",
       "type": "procedure",
-      "sortid": 31,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -524,7 +524,7 @@
     {
       "name": "AutoCraftingMachineBreadRecipe",
       "type": "procedure",
-      "sortid": 32,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -554,7 +554,7 @@
     {
       "name": "AutoCraftingMachineBlockIsPlacedBy",
       "type": "procedure",
-      "sortid": 33,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -588,17 +588,17 @@
     {
       "name": "AutoFarmingMachineOn",
       "type": "block",
-      "sortid": 34,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "auto_farming_machine_on",
-      "path": "~/Blocks/Machines/AutoFarming"
+      "path": "~/Blocks/Machines/Auto_Farming"
     },
     {
       "name": "AutoFarmingMachineOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 35,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -631,12 +631,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures"
     },
     {
       "name": "AutoFarmingMachineOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 36,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -669,12 +669,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures"
     },
     {
       "name": "AutoFarmingMachineSugarcaneScript",
       "type": "procedure",
-      "sortid": 37,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -699,12 +699,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Sugar_Cane"
     },
     {
       "name": "AutoFarmingMachinePumpkinScript",
       "type": "procedure",
-      "sortid": 38,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -729,12 +729,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Pumpkin"
     },
     {
       "name": "AutoFarmingMachineMelonScript",
       "type": "procedure",
-      "sortid": 39,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -759,12 +759,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Melon"
     },
     {
       "name": "AutoFarmingMachineCocoaBeansScript",
       "type": "procedure",
-      "sortid": 40,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -789,22 +789,22 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Cocoa"
     },
     {
       "name": "MachineWrench",
       "type": "item",
-      "sortid": 8,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "machine_wrench",
-      "path": "~/Items/Basic/MachineWrench"
+      "path": "~/Items/Tools/Machine_Wrench"
     },
     {
       "name": "BlocksMachineBlockTag",
       "type": "tag",
-      "sortid": 42,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -814,7 +814,7 @@
     {
       "name": "ItemsMachineBlockTag",
       "type": "tag",
-      "sortid": 43,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -824,7 +824,7 @@
     {
       "name": "ItemsMachineWrenchTag",
       "type": "tag",
-      "sortid": 44,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -834,7 +834,7 @@
     {
       "name": "AutoFarmingMachineBambooScript",
       "type": "procedure",
-      "sortid": 45,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -859,12 +859,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Bamboo"
     },
     {
       "name": "AutoFarmingMachineCactusScript",
       "type": "procedure",
-      "sortid": 46,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -889,12 +889,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Cactus"
     },
     {
       "name": "AutoFarmingMachineKelpScript",
       "type": "procedure",
-      "sortid": 47,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -919,7 +919,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures/Script"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Kelp"
     },
     {
       "name": "AutoItemCollectorMachine",
@@ -934,7 +934,7 @@
     {
       "name": "AutoItemCollectorMachineOn",
       "type": "block",
-      "sortid": 48,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -944,7 +944,7 @@
     {
       "name": "AutoItemCollectorMachineInventory",
       "type": "gui",
-      "sortid": 49,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -954,7 +954,7 @@
     {
       "name": "AutoItemCollectorMachineOnUpdateTick",
       "type": "procedure",
-      "sortid": 50,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -984,7 +984,7 @@
     {
       "name": "AutoItemCollectorMachineEggScript",
       "type": "procedure",
-      "sortid": 51,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1014,7 +1014,7 @@
     {
       "name": "AutoItemCollectorMachineOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 52,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1052,7 +1052,7 @@
     {
       "name": "AutoItemCollectorMachineOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 53,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1090,7 +1090,7 @@
     {
       "name": "AutoItemCollectorMachineBlockAdded",
       "type": "procedure",
-      "sortid": 54,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1120,7 +1120,7 @@
     {
       "name": "AutoCraftingMachineSugarRecipe",
       "type": "procedure",
-      "sortid": 55,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1150,7 +1150,7 @@
     {
       "name": "AutoCraftingMachinePumpkinPieRecipe",
       "type": "procedure",
-      "sortid": 56,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1587,7 +1587,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures"
     },
     {
       "name": "AutoCraftingMachineBlockAdded",
@@ -1745,7 +1745,7 @@
           }
         ]
       },
-      "path": "~/Blocks/Machines/AutoFarming/Procedures"
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures"
     },
     {
       "name": "AutoItemCollectorMachineUpdateTick",
@@ -2166,66 +2166,6 @@
       "ids": {},
       "registry_name": "nwtg_automation_blocks_auto_crafting_machine_off",
       "path": "~/Tags/Machines/AutoCrafting"
-    },
-    {
-      "name": "NWTGAutomationItemsAutoFarmingMachine",
-      "type": "tag",
-      "sortid": 99,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "nwtg_automation_items_auto_farming_machine",
-      "path": "~/Tags/Machines/AutoFarming"
-    },
-    {
-      "name": "NWTGAutomationItemsAutoFarmingMachineOn",
-      "type": "tag",
-      "sortid": 100,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "nwtg_automation_items_auto_farming_machine_on",
-      "path": "~/Tags/Machines/AutoFarming"
-    },
-    {
-      "name": "NWTGAutomationItemsAutoFarmingMachineOff",
-      "type": "tag",
-      "sortid": 101,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "nwtg_automation_items_auto_farming_machine_off",
-      "path": "~/Tags/Machines/AutoFarming"
-    },
-    {
-      "name": "NWTGAutomationBlocksAutoFarmingMachine",
-      "type": "tag",
-      "sortid": 102,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "nwtg_automation_blocks_auto_farming_machine",
-      "path": "~/Tags/Machines/AutoFarming"
-    },
-    {
-      "name": "NWTGAutomationBlocksAutoFarmingMachineOn",
-      "type": "tag",
-      "sortid": 103,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "nwtg_automation_blocks_auto_farming_machine_on",
-      "path": "~/Tags/Machines/AutoFarming"
-    },
-    {
-      "name": "NWTGAutomationBlocksAutoFarmingMachineOff",
-      "type": "tag",
-      "sortid": 104,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "nwtg_automation_blocks_auto_farming_machine_off",
-      "path": "~/Tags/Machines/AutoFarming"
     },
     {
       "name": "AutoCraftingMachineOakSlabsRecipe",
@@ -5570,7 +5510,7 @@
     {
       "name": "NWTAutomationItemsRedstone",
       "type": "tag",
-      "sortid": 241,
+      "sortid": 239,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5580,7 +5520,7 @@
     {
       "name": "NWTGAutomationItemsBreakerPanel",
       "type": "tag",
-      "sortid": 242,
+      "sortid": 240,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5590,7 +5530,7 @@
     {
       "name": "NWTGAutomationItemsBreakerPanelOn",
       "type": "tag",
-      "sortid": 243,
+      "sortid": 241,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5600,7 +5540,7 @@
     {
       "name": "NWTGAutomationItemsBreakerPanelOff",
       "type": "tag",
-      "sortid": 244,
+      "sortid": 242,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5610,7 +5550,7 @@
     {
       "name": "NWTGAutomationBlocksBreakerPanel",
       "type": "tag",
-      "sortid": 245,
+      "sortid": 243,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5620,7 +5560,7 @@
     {
       "name": "NWTGAutomationBlocksBreakerPanelOn",
       "type": "tag",
-      "sortid": 246,
+      "sortid": 244,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5630,7 +5570,7 @@
     {
       "name": "NWTGAutomationBlocksBreakerPanelOff",
       "type": "tag",
-      "sortid": 247,
+      "sortid": 245,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5640,7 +5580,7 @@
     {
       "name": "NWTGAutomationBlocksRemoteItemTeleporter",
       "type": "tag",
-      "sortid": 248,
+      "sortid": 246,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5650,7 +5590,7 @@
     {
       "name": "NWTGAutomationItemsRemoteItemTeleporter",
       "type": "tag",
-      "sortid": 249,
+      "sortid": 247,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5660,7 +5600,7 @@
     {
       "name": "NWTGAutomationBlocksAutoItemCollectorMachine",
       "type": "tag",
-      "sortid": 250,
+      "sortid": 248,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5670,7 +5610,7 @@
     {
       "name": "NWTGAutomationBlocksAutoItemCollectorMachineOn",
       "type": "tag",
-      "sortid": 251,
+      "sortid": 249,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5680,7 +5620,7 @@
     {
       "name": "NWTGAutomationBlocksAutoItemCollectorMachineOff",
       "type": "tag",
-      "sortid": 252,
+      "sortid": 250,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5690,7 +5630,7 @@
     {
       "name": "NWTGAutomationItemsAutoItemCollectorMachine",
       "type": "tag",
-      "sortid": 253,
+      "sortid": 251,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5700,7 +5640,7 @@
     {
       "name": "NWTGAutomationItemsAutoItemCollectorMachineOn",
       "type": "tag",
-      "sortid": 254,
+      "sortid": 252,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5710,7 +5650,7 @@
     {
       "name": "NWTGAutomationItemsAutoItemCollectorMachineOff",
       "type": "tag",
-      "sortid": 255,
+      "sortid": 253,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5720,7 +5660,7 @@
     {
       "name": "NWTGAutomationItemsIronIngot",
       "type": "tag",
-      "sortid": 256,
+      "sortid": 254,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5730,7 +5670,7 @@
     {
       "name": "NWTGAutomationItemsRedDye",
       "type": "tag",
-      "sortid": 257,
+      "sortid": 255,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5740,7 +5680,7 @@
     {
       "name": "NWTGAutomationItemsCompass",
       "type": "tag",
-      "sortid": 258,
+      "sortid": 256,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5750,7 +5690,7 @@
     {
       "name": "NWTGAutomationItemsCraftingTable",
       "type": "tag",
-      "sortid": 259,
+      "sortid": 257,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5760,7 +5700,7 @@
     {
       "name": "NWTGAutomationItemsObserver",
       "type": "tag",
-      "sortid": 260,
+      "sortid": 258,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5770,7 +5710,7 @@
     {
       "name": "NWTGAutomationItemsDispenser",
       "type": "tag",
-      "sortid": 261,
+      "sortid": 259,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5780,7 +5720,7 @@
     {
       "name": "NWTGAutomationItemsHoes",
       "type": "tag",
-      "sortid": 262,
+      "sortid": 260,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5790,7 +5730,7 @@
     {
       "name": "NWTGAutomationItemsHopper",
       "type": "tag",
-      "sortid": 263,
+      "sortid": 261,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5800,7 +5740,7 @@
     {
       "name": "GrassBlockSlabLower",
       "type": "block",
-      "sortid": 9,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5810,7 +5750,7 @@
     {
       "name": "GrassBlockSlabUpper",
       "type": "block",
-      "sortid": 10,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5820,7 +5760,7 @@
     {
       "name": "WhenOwnerBlockIsBroken",
       "type": "procedure",
-      "sortid": 264,
+      "sortid": 262,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5854,7 +5794,7 @@
     {
       "name": "NWTGAutomationBlocksOwnershipBlocks",
       "type": "tag",
-      "sortid": 265,
+      "sortid": 263,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5864,7 +5804,7 @@
     {
       "name": "BreakerPanelUpdateTick",
       "type": "procedure",
-      "sortid": 266,
+      "sortid": 264,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5904,7 +5844,7 @@
     {
       "name": "AutoTreeFarmMachineOn",
       "type": "block",
-      "sortid": 267,
+      "sortid": 265,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5914,7 +5854,7 @@
     {
       "name": "AutoTreeFarmMachineOnUpdateTick",
       "type": "procedure",
-      "sortid": 268,
+      "sortid": 266,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5944,7 +5884,7 @@
     {
       "name": "AutoTreeFarmMachineOnBlockIsPlacedBy",
       "type": "procedure",
-      "sortid": 269,
+      "sortid": 267,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5978,7 +5918,7 @@
     {
       "name": "AutoTreeFarmMachineUpdateTick",
       "type": "procedure",
-      "sortid": 270,
+      "sortid": 268,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6008,7 +5948,7 @@
     {
       "name": "AutoTreeFarmMachineBlockIsPlacedBy",
       "type": "procedure",
-      "sortid": 271,
+      "sortid": 269,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6042,7 +5982,7 @@
     {
       "name": "AutoTreeFarmMachineVersionUpdateScript",
       "type": "procedure",
-      "sortid": 272,
+      "sortid": 270,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6072,7 +6012,7 @@
     {
       "name": "AutoTreeFarmMachineOnMainScript",
       "type": "procedure",
-      "sortid": 273,
+      "sortid": 271,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6102,7 +6042,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmLogs",
       "type": "tag",
-      "sortid": 274,
+      "sortid": 272,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6112,7 +6052,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmLeaves",
       "type": "tag",
-      "sortid": 275,
+      "sortid": 273,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6122,7 +6062,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmSaplings",
       "type": "tag",
-      "sortid": 276,
+      "sortid": 274,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6132,7 +6072,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmLeaves",
       "type": "tag",
-      "sortid": 277,
+      "sortid": 275,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6142,7 +6082,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmLogs",
       "type": "tag",
-      "sortid": 278,
+      "sortid": 276,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6152,7 +6092,7 @@
     {
       "name": "AutoTreeFarmMachineInventory",
       "type": "gui",
-      "sortid": 279,
+      "sortid": 277,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6162,7 +6102,7 @@
     {
       "name": "AutoTreeFarmMachineOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 280,
+      "sortid": 278,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6200,7 +6140,7 @@
     {
       "name": "AutoTreeFarmMachineOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 281,
+      "sortid": 279,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6238,7 +6178,7 @@
     {
       "name": "AutoTreeFarmMachineToggleStateScript",
       "type": "procedure",
-      "sortid": 282,
+      "sortid": 280,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6268,7 +6208,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmSoil",
       "type": "tag",
-      "sortid": 283,
+      "sortid": 281,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6278,7 +6218,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmMachine",
       "type": "tag",
-      "sortid": 284,
+      "sortid": 282,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6288,7 +6228,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmMachineOn",
       "type": "tag",
-      "sortid": 285,
+      "sortid": 283,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6298,7 +6238,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmMachineOff",
       "type": "tag",
-      "sortid": 286,
+      "sortid": 284,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6308,7 +6248,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmMachine",
       "type": "tag",
-      "sortid": 287,
+      "sortid": 285,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6318,7 +6258,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmMachineOn",
       "type": "tag",
-      "sortid": 288,
+      "sortid": 286,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6328,7 +6268,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmMachineOff",
       "type": "tag",
-      "sortid": 289,
+      "sortid": 287,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6338,7 +6278,7 @@
     {
       "name": "NWTGAutomationBlocksGrassBlockSlabs",
       "type": "tag",
-      "sortid": 290,
+      "sortid": 288,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6348,7 +6288,7 @@
     {
       "name": "NWTGAutomationBlocksGrassBlockSlabsUpper",
       "type": "tag",
-      "sortid": 291,
+      "sortid": 289,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6358,7 +6298,7 @@
     {
       "name": "NWTGAutomationBlocksGrassBlockSlabsLower",
       "type": "tag",
-      "sortid": 292,
+      "sortid": 290,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6368,7 +6308,7 @@
     {
       "name": "NWTGAutomationItemsGrassBlockSlabs",
       "type": "tag",
-      "sortid": 293,
+      "sortid": 291,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6378,7 +6318,7 @@
     {
       "name": "NWTGAutomationItemsGrassBlockSlabsUpper",
       "type": "tag",
-      "sortid": 294,
+      "sortid": 292,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6388,7 +6328,7 @@
     {
       "name": "NWTGAutomationItemsGrassBlockSlabsLower",
       "type": "tag",
-      "sortid": 295,
+      "sortid": 293,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6398,7 +6338,7 @@
     {
       "name": "AutoCraftingMachineSaplingRecipes",
       "type": "procedure",
-      "sortid": 296,
+      "sortid": 294,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6428,7 +6368,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmSurfaceLeaves",
       "type": "tag",
-      "sortid": 297,
+      "sortid": 295,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6438,7 +6378,7 @@
     {
       "name": "NWTGAutomationItemsAxes",
       "type": "tag",
-      "sortid": 301,
+      "sortid": 296,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6448,7 +6388,7 @@
     {
       "name": "BreakerPanelCraftingRecipe",
       "type": "recipe",
-      "sortid": 304,
+      "sortid": 297,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6458,7 +6398,7 @@
     {
       "name": "RemoteItemTeleporterCraftingRecipe",
       "type": "recipe",
-      "sortid": 305,
+      "sortid": 298,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6468,7 +6408,7 @@
     {
       "name": "AutoFarmingMachineCraftingRecipe",
       "type": "recipe",
-      "sortid": 306,
+      "sortid": 299,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6478,7 +6418,7 @@
     {
       "name": "AutoCraftingMachineCraftingRecipe",
       "type": "recipe",
-      "sortid": 308,
+      "sortid": 300,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6488,7 +6428,7 @@
     {
       "name": "AutoItemCollectorMachineCraftingRecipe",
       "type": "recipe",
-      "sortid": 310,
+      "sortid": 301,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6498,7 +6438,7 @@
     {
       "name": "AutoTreeFarmMachineCraftingRecipe",
       "type": "recipe",
-      "sortid": 312,
+      "sortid": 302,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6508,7 +6448,7 @@
     {
       "name": "MachineBlockCraftingRecipe",
       "type": "recipe",
-      "sortid": 313,
+      "sortid": 303,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6518,7 +6458,7 @@
     {
       "name": "LowerGrassBlockSlabCraftingRecipe1",
       "type": "recipe",
-      "sortid": 315,
+      "sortid": 304,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6528,7 +6468,7 @@
     {
       "name": "LowerGrassBlockSlabCraftingRecipe2",
       "type": "recipe",
-      "sortid": 317,
+      "sortid": 305,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6538,7 +6478,7 @@
     {
       "name": "UpperGrassBlockSlabCraftingRecipe1",
       "type": "recipe",
-      "sortid": 319,
+      "sortid": 306,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6548,7 +6488,7 @@
     {
       "name": "MachineWrenchCraftingRecipe",
       "type": "recipe",
-      "sortid": 321,
+      "sortid": 307,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6558,7 +6498,7 @@
     {
       "name": "NWTGAutomationItemsRedstone",
       "type": "tag",
-      "sortid": 322,
+      "sortid": 308,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6568,7 +6508,7 @@
     {
       "name": "NWTGAutomationItemsLever",
       "type": "tag",
-      "sortid": 323,
+      "sortid": 309,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6578,67 +6518,67 @@
     {
       "name": "MachinesAutoFarmingBlockTag",
       "type": "tag",
-      "sortid": 324,
+      "sortid": 310,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "machines_auto_farming_block_tag",
-      "path": "~/NewTags/NWTG_Automation/Machines/block/Auto_Farming"
+      "path": "~/NewTags/NWTG_Automation/Mod/Machines/block/Auto_Farming"
     },
     {
       "name": "MachinesAutoFarmingItemTag",
       "type": "tag",
-      "sortid": 325,
+      "sortid": 311,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "machines_auto_farming_item_tag",
-      "path": "~/NewTags/NWTG_Automation/Machines/item/Auto_Farming"
+      "path": "~/NewTags/NWTG_Automation/Mod/Machines/item/Auto_Farming"
     },
     {
       "name": "MachinesAutoFarmingOffBlockTag",
       "type": "tag",
-      "sortid": 326,
+      "sortid": 312,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "machines_auto_farming_off_block_tag",
-      "path": "~/NewTags/NWTG_Automation/Machines/block/Auto_Farming"
+      "path": "~/NewTags/NWTG_Automation/Mod/Machines/block/Auto_Farming"
     },
     {
       "name": "MachinesAutoFarmingOnBlockTag",
       "type": "tag",
-      "sortid": 327,
+      "sortid": 313,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "machines_auto_farming_on_block_tag",
-      "path": "~/NewTags/NWTG_Automation/Machines/block/Auto_Farming"
+      "path": "~/NewTags/NWTG_Automation/Mod/Machines/block/Auto_Farming"
     },
     {
       "name": "MachinesAutoFarmingOffItemTag",
       "type": "tag",
-      "sortid": 328,
+      "sortid": 314,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "machines_auto_farming_off_item_tag",
-      "path": "~/NewTags/NWTG_Automation/Machines/item/Auto_Farming"
+      "path": "~/NewTags/NWTG_Automation/Mod/Machines/item/Auto_Farming"
     },
     {
       "name": "MachinesAutoFarmingOnItemTag",
       "type": "tag",
-      "sortid": 329,
+      "sortid": 315,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "machines_auto_farming_on_item_tag",
-      "path": "~/NewTags/NWTG_Automation/Machines/item/Auto_Farming"
+      "path": "~/NewTags/NWTG_Automation/Mod/Machines/item/Auto_Farming"
     },
     {
       "name": "MachineStateOnCondition",
       "type": "procedure",
-      "sortid": 330,
+      "sortid": 316,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6669,7 +6609,7 @@
     {
       "name": "MachineStateOffCondition",
       "type": "procedure",
-      "sortid": 331,
+      "sortid": 317,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6700,7 +6640,7 @@
     {
       "name": "MachineProcessIdleCondition",
       "type": "procedure",
-      "sortid": 332,
+      "sortid": 318,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6731,7 +6671,7 @@
     {
       "name": "MachineProcessWorkingCondition",
       "type": "procedure",
-      "sortid": 333,
+      "sortid": 319,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6762,7 +6702,7 @@
     {
       "name": "MachineProcessNoneCondition",
       "type": "procedure",
-      "sortid": 334,
+      "sortid": 320,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6789,6 +6729,593 @@
         ]
       },
       "path": "~/GUIs/Machines/Conditions"
+    },
+    {
+      "name": "FarmingParticle",
+      "type": "particle",
+      "sortid": 321,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "farming_particle",
+      "path": "~/Particles"
+    },
+    {
+      "name": "WoodenUpgrade",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_upgrade",
+      "path": "~/Items/Basic/Upgrades"
+    },
+    {
+      "name": "StoneUpgrade",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stone_upgrade",
+      "path": "~/Items/Basic/Upgrades"
+    },
+    {
+      "name": "IronUpgrade",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_upgrade",
+      "path": "~/Items/Basic/Upgrades"
+    },
+    {
+      "name": "GoldenUpgrade",
+      "type": "item",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "golden_upgrade",
+      "path": "~/Items/Basic/Upgrades"
+    },
+    {
+      "name": "DiamondUpgrade",
+      "type": "item",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_upgrade",
+      "path": "~/Items/Basic/Upgrades"
+    },
+    {
+      "name": "NetheriteUpgrade",
+      "type": "item",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "netherite_upgrade",
+      "path": "~/Items/Basic/Upgrades"
+    },
+    {
+      "name": "WoodenUpgradeCraftingRecipe",
+      "type": "recipe",
+      "sortid": 322,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_upgrade_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Items/Upgrades"
+    },
+    {
+      "name": "StoneUpgradeCraftingRecipe",
+      "type": "recipe",
+      "sortid": 323,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stone_upgrade_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Items/Upgrades"
+    },
+    {
+      "name": "IronUpgradeCraftingRecipe",
+      "type": "recipe",
+      "sortid": 324,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_upgrade_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Items/Upgrades"
+    },
+    {
+      "name": "GoldenUpgradeCraftingRecipe",
+      "type": "recipe",
+      "sortid": 325,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "golden_upgrade_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Items/Upgrades"
+    },
+    {
+      "name": "DiamondUpgradeCraftingRecipe",
+      "type": "recipe",
+      "sortid": 326,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_upgrade_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Items/Upgrades"
+    },
+    {
+      "name": "NetheriteUpgradeCraftingRecipe",
+      "type": "recipe",
+      "sortid": 327,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "netherite_upgrade_crafting_recipe",
+      "path": "~/Recipes/Crafting_Table/Items/Upgrades"
+    },
+    {
+      "name": "UpgradesWoodenItemTag",
+      "type": "tag",
+      "sortid": 328,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "upgrades_wooden_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Mod/Upgrades"
+    },
+    {
+      "name": "UpgradesStoneItemTag",
+      "type": "tag",
+      "sortid": 329,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "upgrades_stone_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Mod/Upgrades"
+    },
+    {
+      "name": "UpgradesIronItemTag",
+      "type": "tag",
+      "sortid": 330,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "upgrades_iron_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Mod/Upgrades"
+    },
+    {
+      "name": "UpgradesGoldenItemTag",
+      "type": "tag",
+      "sortid": 331,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "upgrades_golden_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Mod/Upgrades"
+    },
+    {
+      "name": "UpgradesDiamondItemTag",
+      "type": "tag",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "upgrades_diamond_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Mod/Upgrades"
+    },
+    {
+      "name": "UpgradesNetheriteItemTag",
+      "type": "tag",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "upgrades_netherite_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Mod/Upgrades"
+    },
+    {
+      "name": "IngotsIronItemTag",
+      "type": "tag",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ingots_iron_item_tag",
+      "path": "~/NewTags/Forge/Ingots"
+    },
+    {
+      "name": "IngotsGoldItemTag",
+      "type": "tag",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ingots_gold_item_tag",
+      "path": "~/NewTags/Forge/Ingots"
+    },
+    {
+      "name": "IngotsNetheriteItemTag",
+      "type": "tag",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ingots_netherite_item_tag",
+      "path": "~/NewTags/Forge/Ingots"
+    },
+    {
+      "name": "GemsDiamondItemTag",
+      "type": "tag",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gems_diamond_item_tag",
+      "path": "~/NewTags/Forge/Gems"
+    },
+    {
+      "name": "AutoFarmingMachineProgress1Condition",
+      "type": "procedure",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_progress_1_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Progress_Bar"
+    },
+    {
+      "name": "AutoFarmingMachineProgress2Condition",
+      "type": "procedure",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_progress_2_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Progress_Bar"
+    },
+    {
+      "name": "AutoFarmingMachineProgress3Condition",
+      "type": "procedure",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_progress_3_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Progress_Bar"
+    },
+    {
+      "name": "AutoFarmingMachineProgress4Condition",
+      "type": "procedure",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_progress_4_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Progress_Bar"
+    },
+    {
+      "name": "AutoFarmingMachineProgress5Condition",
+      "type": "procedure",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_progress_5_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Progress_Bar"
+    },
+    {
+      "name": "AutoFarmingMachineProgress6Condition",
+      "type": "procedure",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_progress_6_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Progress_Bar"
+    },
+    {
+      "name": "AutoFarmingMachineProgress7Condition",
+      "type": "procedure",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_progress_7_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Progress_Bar"
+    },
+    {
+      "name": "AutoFarmingMachineProgress8Condition",
+      "type": "procedure",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_progress_8_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Progress_Bar"
+    },
+    {
+      "name": "AutoFarmingMachineProgress9Condition",
+      "type": "procedure",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_progress_9_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Progress_Bar"
+    },
+    {
+      "name": "MachineBlockItemTag",
+      "type": "tag",
+      "sortid": 349,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_block_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Mod/Machine_Block"
+    },
+    {
+      "name": "MachineBlockBlockTag",
+      "type": "tag",
+      "sortid": 351,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_block_block_tag",
+      "path": "~/NewTags/NWTG_Automation/Mod/Machine_Block"
+    },
+    {
+      "name": "MinecraftStoneItemTag",
+      "type": "tag",
+      "sortid": 353,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "minecraft_stone_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Minecraft/Stone"
+    },
+    {
+      "name": "MinecraftDispenserItemTag",
+      "type": "tag",
+      "sortid": 354,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "minecraft_dispenser_item_tag",
+      "path": "~/NewTags/NWTG_Automation/Minecraft/Dispenser"
+    },
+    {
+      "name": "DustsRedstoneItemTag",
+      "type": "tag",
+      "sortid": 355,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dusts_redstone_item_tag",
+      "path": "~/NewTags/Forge/Dusts"
+    },
+    {
+      "name": "ToolsHoesItemTag",
+      "type": "tag",
+      "sortid": 356,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tools_hoes_item_tag",
+      "path": "~/NewTags/Forge/Tools"
+    },
+    {
+      "name": "UnlockUpgradeRecipes",
+      "type": "procedure",
+      "sortid": 357,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "unlock_upgrade_recipes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Recipes/Unlocking"
     }
   ],
   "variable_elements": [
@@ -6835,19 +7362,25 @@
       "block.nwtg_automation.grass_block_slab_upper": "Upper Grass Block Slab",
       "item.nwtg_automation.machine_wrench": "Machine Wrench",
       "block.nwtg_automation.machine_block": "Machine Block",
+      "item.nwtg_automation.stone_upgrade": "Stone Upgrade",
+      "item.nwtg_automation.diamond_upgrade": "Diamond Upgrade",
       "block.nwtg_automation.auto_farming_machine": "Auto Farming Machine",
       "block.nwtg_automation.auto_item_collector_machine": "Auto Item Collector Machine",
       "block.nwtg_automation.auto_item_collector_machine_on": "Auto Item Collector Machine",
       "block.nwtg_automation.auto_tree_farm_machine_on": "Auto Tree Farm Machine On",
+      "item.nwtg_automation.netherite_upgrade": "Netherite Upgrade",
       "block.nwtg_automation.remote_item_teleporter": "Remote Item Teleporter",
+      "item.nwtg_automation.iron_upgrade": "Iron Upgrade",
       "block.nwtg_automation.auto_crafting_machine": "Auto Crafting Machine",
       "block.nwtg_automation.auto_crafting_machine_on": "Auto Crafting Machine",
+      "item.nwtg_automation.golden_upgrade": "Golden Upgrade",
       "block.nwtg_automation.auto_farming_machine_on": "Auto Farming Machine On",
       "block.nwtg_automation.breaker_panel": "Breaker Panel",
       "itemGroup.tabnwtg_automation_tab": "NWTG Automation",
       "block.nwtg_automation.grass_block_slab_lower": "Lower Grass Block Slab",
       "block.nwtg_automation.breaker_panel_on": "Breaker Panel On",
-      "block.nwtg_automation.auto_tree_farm_machine": "Auto Tree Farm Machine"
+      "block.nwtg_automation.auto_tree_farm_machine": "Auto Tree Farm Machine",
+      "item.nwtg_automation.wooden_upgrade": "Wooden Upgrade"
     }
   },
   "foldersRoot": {
@@ -6859,20 +7392,6 @@
           {
             "name": "Machines",
             "children": [
-              {
-                "name": "AutoFarming",
-                "children": [
-                  {
-                    "name": "Procedures",
-                    "children": [
-                      {
-                        "name": "Script",
-                        "children": []
-                      }
-                    ]
-                  }
-                ]
-              },
               {
                 "name": "AutoCrafting",
                 "children": [
@@ -6993,6 +7512,82 @@
                     ]
                   }
                 ]
+              },
+              {
+                "name": "Auto_Farming",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": [
+                      {
+                        "name": "Script",
+                        "children": [
+                          {
+                            "name": "Crops",
+                            "children": [
+                              {
+                                "name": "Wheat",
+                                "children": []
+                              },
+                              {
+                                "name": "Cocoa",
+                                "children": []
+                              },
+                              {
+                                "name": "Beetroot",
+                                "children": []
+                              },
+                              {
+                                "name": "Carrot",
+                                "children": []
+                              },
+                              {
+                                "name": "Potato",
+                                "children": []
+                              },
+                              {
+                                "name": "Sweet_Berry",
+                                "children": []
+                              },
+                              {
+                                "name": "Nether_Warts",
+                                "children": []
+                              },
+                              {
+                                "name": "Sugar_Cane",
+                                "children": []
+                              },
+                              {
+                                "name": "Pumpkin",
+                                "children": []
+                              },
+                              {
+                                "name": "Melon",
+                                "children": []
+                              },
+                              {
+                                "name": "Bamboo",
+                                "children": []
+                              },
+                              {
+                                "name": "Cactus",
+                                "children": []
+                              },
+                              {
+                                "name": "Kelp",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Progress_Bar",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -7041,7 +7636,16 @@
             "name": "Basic",
             "children": [
               {
-                "name": "MachineWrench",
+                "name": "Upgrades",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Tools",
+            "children": [
+              {
+                "name": "Machine_Wrench",
                 "children": []
               }
             ]
@@ -7110,6 +7714,10 @@
                 "children": [
                   {
                     "name": "MachineWrench",
+                    "children": []
+                  },
+                  {
+                    "name": "Upgrades",
                     "children": []
                   }
                 ]
@@ -7211,10 +7819,6 @@
                 ]
               },
               {
-                "name": "AutoFarming",
-                "children": []
-              },
-              {
                 "name": "AutoTreeFarm",
                 "children": [
                   {
@@ -7305,51 +7909,103 @@
             "name": "NWTG_Automation",
             "children": [
               {
-                "name": "Machines",
+                "name": "Minecraft",
                 "children": [
                   {
-                    "name": "block",
-                    "children": [
-                      {
-                        "name": "Auto_Farming",
-                        "children": []
-                      }
-                    ]
+                    "name": "Dispenser",
+                    "children": []
                   },
                   {
-                    "name": "item",
+                    "name": "Stone",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Mod",
+                "children": [
+                  {
+                    "name": "Upgrades",
+                    "children": []
+                  },
+                  {
+                    "name": "Machine_Block",
+                    "children": []
+                  },
+                  {
+                    "name": "Machines",
                     "children": [
                       {
-                        "name": "Auto_Farming",
-                        "children": []
+                        "name": "item",
+                        "children": [
+                          {
+                            "name": "Auto_Farming",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "block",
+                        "children": [
+                          {
+                            "name": "Auto_Farming",
+                            "children": []
+                          }
+                        ]
                       }
                     ]
                   }
                 ]
               }
             ]
+          },
+          {
+            "name": "Forge",
+            "children": [
+              {
+                "name": "Ingots",
+                "children": []
+              },
+              {
+                "name": "Gems",
+                "children": []
+              },
+              {
+                "name": "Dusts",
+                "children": []
+              },
+              {
+                "name": "Tools",
+                "children": []
+              }
+            ]
           }
         ]
+      },
+      {
+        "name": "Particles",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "nwtg_automation",
     "modName": "NWTG Automation",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "description": "A mod to make things automated one block at a time!",
     "author": "NorthWestTrees Gaming",
-    "websiteURL": "https://github.com/northwesttrees-gaming/NWTG-Automation",
+    "websiteURL": "https://northwesttrees-gaming.github.io/mods/nwtg-automation.html",
     "license": "NWTG Public License 1.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "updateURL": "https://raw.githubusercontent.com/northwesttrees-gaming/northwesttrees-gaming.github.io/main/mods/nwtg-automation/updates/mod-updates.json",
     "modPicture": "logo",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
-    "credits": "MCreator, Forge, Mojang",
+    "credits": "Mojang, Forge, MCreator, Shadowdragon",
     "modElementsPackage": "net.nwtg.nwtgautomation",
     "lockBaseModFiles": false
   },

@@ -6,35 +6,35 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "nwtg_automation_blocks",
+    "group": "nwtg_automation_machine_block",
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+        "value": "TAG:forge:ingots/iron"
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+        "value": "TAG:forge:ingots/iron"
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+        "value": "TAG:forge:ingots/iron"
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+        "value": "TAG:forge:ingots/iron"
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/redstone"
+        "value": "TAG:forge:dusts/redstone"
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+        "value": "TAG:forge:ingots/iron"
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+        "value": "TAG:forge:ingots/iron"
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+        "value": "TAG:forge:ingots/iron"
       },
       {
-        "value": "TAG:forge:nwtg_automation/items/iron_ingot"
+        "value": "TAG:forge:ingots/iron"
       }
     ],
     "recipeReturnStack": {

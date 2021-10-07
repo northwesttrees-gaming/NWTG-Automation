@@ -6,6 +6,15 @@ import net.nwtg.nwtgautomation.procedures.MachineStateOffConditionProcedure;
 import net.nwtg.nwtgautomation.procedures.MachineProcessWorkingConditionProcedure;
 import net.nwtg.nwtgautomation.procedures.MachineProcessNoneConditionProcedure;
 import net.nwtg.nwtgautomation.procedures.MachineProcessIdleConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineProgress9ConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineProgress8ConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineProgress7ConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineProgress6ConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineProgress5ConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineProgress4ConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineProgress3ConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineProgress2ConditionProcedure;
+import net.nwtg.nwtgautomation.procedures.AutoFarmingMachineProgress1ConditionProcedure;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -76,6 +85,51 @@ public class AutoFarmingMachineInventoryGuiWindow extends ContainerScreen<AutoFa
 		if (MachineProcessIdleConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("nwtg_automation:textures/yellow_light.png"));
 			this.blit(ms, this.guiLeft + 156, this.guiTop + 26, 0, 0, 5, 5, 5, 5);
+		}
+		if (AutoFarmingMachineProgress9ConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager()
+					.bindTexture(new ResourceLocation("nwtg_automation:textures/auto_farming_machine_progress_bar_1.png"));
+			this.blit(ms, this.guiLeft + 81, this.guiTop + 37, 0, 0, 15, 16, 15, 16);
+		}
+		if (AutoFarmingMachineProgress8ConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager()
+					.bindTexture(new ResourceLocation("nwtg_automation:textures/auto_farming_machine_progress_bar_2.png"));
+			this.blit(ms, this.guiLeft + 81, this.guiTop + 37, 0, 0, 15, 16, 15, 16);
+		}
+		if (AutoFarmingMachineProgress7ConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager()
+					.bindTexture(new ResourceLocation("nwtg_automation:textures/auto_farming_machine_progress_bar_3.png"));
+			this.blit(ms, this.guiLeft + 81, this.guiTop + 37, 0, 0, 15, 16, 15, 16);
+		}
+		if (AutoFarmingMachineProgress6ConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager()
+					.bindTexture(new ResourceLocation("nwtg_automation:textures/auto_farming_machine_progress_bar_4.png"));
+			this.blit(ms, this.guiLeft + 81, this.guiTop + 37, 0, 0, 15, 16, 15, 16);
+		}
+		if (AutoFarmingMachineProgress5ConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager()
+					.bindTexture(new ResourceLocation("nwtg_automation:textures/auto_farming_machine_progress_bar_5.png"));
+			this.blit(ms, this.guiLeft + 81, this.guiTop + 37, 0, 0, 15, 16, 15, 16);
+		}
+		if (AutoFarmingMachineProgress4ConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager()
+					.bindTexture(new ResourceLocation("nwtg_automation:textures/auto_farming_machine_progress_bar_6.png"));
+			this.blit(ms, this.guiLeft + 81, this.guiTop + 37, 0, 0, 15, 16, 15, 16);
+		}
+		if (AutoFarmingMachineProgress3ConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager()
+					.bindTexture(new ResourceLocation("nwtg_automation:textures/auto_farming_machine_progress_bar_7.png"));
+			this.blit(ms, this.guiLeft + 81, this.guiTop + 37, 0, 0, 15, 16, 15, 16);
+		}
+		if (AutoFarmingMachineProgress2ConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager()
+					.bindTexture(new ResourceLocation("nwtg_automation:textures/auto_farming_machine_progress_bar_8.png"));
+			this.blit(ms, this.guiLeft + 81, this.guiTop + 37, 0, 0, 15, 16, 15, 16);
+		}
+		if (AutoFarmingMachineProgress1ConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+			Minecraft.getInstance().getTextureManager()
+					.bindTexture(new ResourceLocation("nwtg_automation:textures/auto_farming_machine_progress_bar_9.png"));
+			this.blit(ms, this.guiLeft + 81, this.guiTop + 37, 0, 0, 15, 16, 15, 16);
 		}
 		RenderSystem.disableBlend();
 	}

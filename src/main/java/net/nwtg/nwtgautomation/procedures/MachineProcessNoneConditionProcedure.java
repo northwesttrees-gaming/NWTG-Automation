@@ -44,6 +44,6 @@ public class MachineProcessNoneConditionProcedure {
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "machineProcess"))).equals("none"))) {
 			return (true);
 		}
-		return (true);
+		return (false);
 	}
 }
