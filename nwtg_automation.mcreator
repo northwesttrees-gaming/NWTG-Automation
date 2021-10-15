@@ -7316,6 +7316,186 @@
         ]
       },
       "path": "~/Recipes/Unlocking"
+    },
+    {
+      "name": "AutoFarmingMachineCustomCropsScript",
+      "type": "procedure",
+      "sortid": 358,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_custom_crops_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Custom"
+    },
+    {
+      "name": "AutoFarmingMachineVineScript",
+      "type": "procedure",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_vine_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Vines"
+    },
+    {
+      "name": "AutoFarmingMachineTwistingVinesScript",
+      "type": "procedure",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_twisting_vines_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Twisting"
+    },
+    {
+      "name": "AutoFarmingMachineWeepingVinesScript",
+      "type": "procedure",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_weeping_vines_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Weeping"
+    },
+    {
+      "name": "AutoFarmingMachineBrownMushroomScript",
+      "type": "procedure",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_brown_mushroom_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Mushrooms/Brown"
+    },
+    {
+      "name": "AutoFarmingMachineRedMushroomScript",
+      "type": "procedure",
+      "sortid": 363,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_red_mushroom_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Mushrooms/Red"
     }
   ],
   "variable_elements": [
@@ -7576,6 +7756,40 @@
                               {
                                 "name": "Kelp",
                                 "children": []
+                              },
+                              {
+                                "name": "Custom",
+                                "children": []
+                              },
+                              {
+                                "name": "Mushrooms",
+                                "children": [
+                                  {
+                                    "name": "Brown",
+                                    "children": []
+                                  },
+                                  {
+                                    "name": "Red",
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Vines",
+                                "children": [
+                                  {
+                                    "name": "Vines",
+                                    "children": []
+                                  },
+                                  {
+                                    "name": "Twisting",
+                                    "children": []
+                                  },
+                                  {
+                                    "name": "Weeping",
+                                    "children": []
+                                  }
+                                ]
                               }
                             ]
                           },
@@ -7991,7 +8205,7 @@
   "workspaceSettings": {
     "modid": "nwtg_automation",
     "modName": "NWTG Automation",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "description": "A mod to make things automated one block at a time!",
     "author": "NorthWestTrees Gaming",
     "websiteURL": "https://northwesttrees-gaming.github.io/mods/nwtg-automation.html",

@@ -4,7 +4,7 @@ license="NWTG Public License 1.0"
 
 [[mods]]
 modId="nwtg_automation"
-version="0.3.0"
+version="0.4.0"
 displayName="NWTG Automation"
 credits="Mojang, Forge, MCreator, Shadowdragon"
 displayURL="https://northwesttrees-gaming.github.io/mods/nwtg-automation.html"

@@ -16,7 +16,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Direction;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.state.Property;
@@ -28,6 +27,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -57,12 +57,14 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		Direction facing = Direction.NORTH;
 		double posX = 0;
 		double posY = 0;
 		double posZ = 0;
 		double age = 0;
 		double waitTime = 0;
+		String blockGroup = "";
+		String seedGroup = "";
+		String cropGroup = "";
 		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -216,111 +218,194 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 				for (int index1 = 0; index1 < (int) (9); index1++) {
 					for (int index2 = 0; index2 < (int) (9); index2++) {
 						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
-								}
-								return _retval.get();
+							public boolean getValue(IWorld world, BlockPos pos, String tag) {
+								TileEntity tileEntity = world.getTileEntity(pos);
+								if (tileEntity != null)
+									return tileEntity.getTileData().getBoolean(tag);
+								return false;
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.WHEAT_SEEDS)
-								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.WHEAT)
-										&& ((new Object() {
-											public int get(BlockState _bs, String property) {
-												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
-												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+						}.getValue(world, new BlockPos((int) posX, (int) posY, (int) posZ), "autoFarmingUseCustomScript")) == (true))
+								&& ((((((((new Object() {
+									public ItemStack getItemStack(BlockPos pos, int sltid) {
+										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+										TileEntity _ent = world.getTileEntity(pos);
+										if (_ent != null) {
+											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+												_retval.set(capability.getStackInSlot(sltid).copy());
+											});
+										}
+										return _retval.get();
+									}
+								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getOrCreateTag()
+										.getString("autoFarmingGroupType"))).equals("both")) || ((((new Object() {
+											public ItemStack getItemStack(BlockPos pos, int sltid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												TileEntity _ent = world.getTileEntity(pos);
+												if (_ent != null) {
+													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+														_retval.set(capability.getStackInSlot(sltid).copy());
+													});
+												}
+												return _retval.get();
 											}
-										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 7)))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
-								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.BEETROOT_SEEDS)
-								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.BEETROOTS)
-										&& ((new Object() {
-											public int get(BlockState _bs, String property) {
-												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
-												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getOrCreateTag()
+												.getString("autoFarmingGroupType"))).equals("crop")))
+										&& ((((new Object() {
+											public ItemStack getItemStack(BlockPos pos, int sltid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												TileEntity _ent = world.getTileEntity(pos);
+												if (_ent != null) {
+													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+														_retval.set(capability.getStackInSlot(sltid).copy());
+													});
+												}
+												return _retval.get();
 											}
-										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 3)))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
-								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.CARROT)
-								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.CARROTS)
-										&& ((new Object() {
-											public int get(BlockState _bs, String property) {
-												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
-												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getOrCreateTag()
+												.getBoolean("autoFarmingUseCustomScript")) == (true)) && (((new Object() {
+													public String getValue(IWorld world, BlockPos pos, String tag) {
+														TileEntity tileEntity = world.getTileEntity(pos);
+														if (tileEntity != null)
+															return tileEntity.getTileData().getString(tag);
+														return "";
+													}
+												}.getValue(world, new BlockPos((int) posX, (int) posY, (int) posZ), "autoFarmingGroupName")))
+														.equals(((new Object() {
+															public ItemStack getItemStack(BlockPos pos, int sltid) {
+																AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+																TileEntity _ent = world.getTileEntity(pos);
+																if (_ent != null) {
+																	_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																			.ifPresent(capability -> {
+																				_retval.set(capability.getStackInSlot(sltid).copy());
+																			});
+																}
+																return _retval.get();
+															}
+														}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getOrCreateTag()
+																.getString("autoFarmingGroupName"))))))
+										&& ((((((new Object() {
+											public ItemStack getItemStack(BlockPos pos, int sltid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												TileEntity _ent = world.getTileEntity(pos);
+												if (_ent != null) {
+													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+														_retval.set(capability.getStackInSlot(sltid).copy());
+													});
+												}
+												return _retval.get();
 											}
-										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 7)))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
-								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.POTATO)
-								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.POTATOES)
-										&& ((new Object() {
-											public int get(BlockState _bs, String property) {
-												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
-												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+												.getString("autoFarmingGroupType"))).equals("both")) || ((((new Object() {
+													public ItemStack getItemStack(BlockPos pos, int sltid) {
+														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+														TileEntity _ent = world.getTileEntity(pos);
+														if (_ent != null) {
+															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																	.ifPresent(capability -> {
+																		_retval.set(capability.getStackInSlot(sltid).copy());
+																	});
+														}
+														return _retval.get();
+													}
+												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+														.getString("autoFarmingGroupType"))).equals("seed")))
+												&& ((((new Object() {
+													public ItemStack getItemStack(BlockPos pos, int sltid) {
+														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+														TileEntity _ent = world.getTileEntity(pos);
+														if (_ent != null) {
+															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																	.ifPresent(capability -> {
+																		_retval.set(capability.getStackInSlot(sltid).copy());
+																	});
+														}
+														return _retval.get();
+													}
+												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+														.getBoolean("autoFarmingUseCustomScript")) == (true)) && (((new Object() {
+															public String getValue(IWorld world, BlockPos pos, String tag) {
+																TileEntity tileEntity = world.getTileEntity(pos);
+																if (tileEntity != null)
+																	return tileEntity.getTileData().getString(tag);
+																return "";
+															}
+														}.getValue(world, new BlockPos((int) posX, (int) posY, (int) posZ), "autoFarmingGroupName")))
+																.equals(((new Object() {
+																	public ItemStack getItemStack(BlockPos pos, int sltid) {
+																		AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+																		TileEntity _ent = world.getTileEntity(pos);
+																		if (_ent != null) {
+																			_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																					.ifPresent(capability -> {
+																						_retval.set(capability.getStackInSlot(sltid).copy());
+																					});
+																		}
+																		return _retval.get();
+																	}
+																}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+																		.getString("autoFarmingGroupName")))))))
+										|| ((((((new Object() {
+											public ItemStack getItemStack(BlockPos pos, int sltid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												TileEntity _ent = world.getTileEntity(pos);
+												if (_ent != null) {
+													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+														_retval.set(capability.getStackInSlot(sltid).copy());
+													});
+												}
+												return _retval.get();
 											}
-										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 7)))) {
+										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+												.getString("autoFarmingGroupType"))).equals("both")) || ((((new Object() {
+													public ItemStack getItemStack(BlockPos pos, int sltid) {
+														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+														TileEntity _ent = world.getTileEntity(pos);
+														if (_ent != null) {
+															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																	.ifPresent(capability -> {
+																		_retval.set(capability.getStackInSlot(sltid).copy());
+																	});
+														}
+														return _retval.get();
+													}
+												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+														.getString("autoFarmingGroupType"))).equals("seed")))
+												&& ((((new Object() {
+													public ItemStack getItemStack(BlockPos pos, int sltid) {
+														AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+														TileEntity _ent = world.getTileEntity(pos);
+														if (_ent != null) {
+															_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																	.ifPresent(capability -> {
+																		_retval.set(capability.getStackInSlot(sltid).copy());
+																	});
+														}
+														return _retval.get();
+													}
+												}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+														.getBoolean("autoFarmingUseCustomScript")) == (true)) && (((new Object() {
+															public String getValue(IWorld world, BlockPos pos, String tag) {
+																TileEntity tileEntity = world.getTileEntity(pos);
+																if (tileEntity != null)
+																	return tileEntity.getTileData().getString(tag);
+																return "";
+															}
+														}.getValue(world, new BlockPos((int) posX, (int) posY, (int) posZ), "autoFarmingGroupName")))
+																.equals(((new Object() {
+																	public ItemStack getItemStack(BlockPos pos, int sltid) {
+																		AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+																		TileEntity _ent = world.getTileEntity(pos);
+																		if (_ent != null) {
+																			_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																					.ifPresent(capability -> {
+																						_retval.set(capability.getStackInSlot(sltid).copy());
+																					});
+																		}
+																		return _retval.get();
+																	}
+																}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+																		.getString("autoFarmingGroupName"))))))))) {
 							if (!world.isRemote()) {
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 								TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -330,248 +415,488 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 								if (world instanceof World)
 									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
+						} else {
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
 								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SWEET_BERRIES)
-								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.SWEET_BERRY_BUSH)
-										&& ((new Object() {
-											public int get(BlockState _bs, String property) {
-												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
-												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
-											}
-										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 3)))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.WHEAT_SEEDS)
+									&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.WHEAT)
+											&& ((new Object() {
+												public int get(BlockState _bs, String property) {
+													Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+													return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+												}
+											}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 7)))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.NETHER_WART)
-								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.NETHER_WART)
-										&& ((new Object() {
-											public int get(BlockState _bs, String property) {
-												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
-												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
-											}
-										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 3)))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
 								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.COCOA_BEANS)
-								&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.COCOA)
-										&& ((new Object() {
-											public int get(BlockState _bs, String property) {
-												Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
-												return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
-											}
-										}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 2)))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.BEETROOT_SEEDS)
+									&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.BEETROOTS)
+											&& ((new Object() {
+												public int get(BlockState _bs, String property) {
+													Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+													return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+												}
+											}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 3)))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SUGAR_CANE)
-								&& ((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ))).getBlock() == Blocks.SUGAR_CANE))
-										&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
-												.getBlock() == Blocks.SUGAR_CANE)
-												&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
-														.getBlock() == Blocks.SUGAR_CANE))))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
 								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.CACTUS.asItem())
-								&& ((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ))).getBlock() == Blocks.CACTUS))
-										&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
-												.getBlock() == Blocks.CACTUS)
-												&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
-														.getBlock() == Blocks.CACTUS))))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.CARROT)
+									&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.CARROTS)
+											&& ((new Object() {
+												public int get(BlockState _bs, String property) {
+													Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+													return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+												}
+											}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 7)))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.BAMBOO.asItem())
-								&& ((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ))).getBlock() == Blocks.BAMBOO))
-										&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
-												.getBlock() == Blocks.BAMBOO)
-												&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
-														.getBlock() == Blocks.BAMBOO))))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
 								}
-								return _retval.get();
-							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.KELP.asItem())
-								&& (((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ))).getBlock() == Blocks.KELP))
-										&& (!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ)))
-												.getBlock() == Blocks.KELP_PLANT)))
-										&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
-												.getBlock() == Blocks.KELP_PLANT)
-												&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
-														.getBlock() == Blocks.KELP))))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.POTATO)
+									&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.POTATOES)
+											&& ((new Object() {
+												public int get(BlockState _bs, String property) {
+													Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+													return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+												}
+											}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 7)))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.PUMPKIN.asItem())
-								&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.PUMPKIN))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-							}
-						}
-						if ((((new Object() {
-							public ItemStack getItemStack(BlockPos pos, int sltid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).copy());
-									});
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
 								}
-								return _retval.get();
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SWEET_BERRIES)
+									&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+											.getBlock() == Blocks.SWEET_BERRY_BUSH) && ((new Object() {
+												public int get(BlockState _bs, String property) {
+													Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+													return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+												}
+											}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 3)))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.MELON_SLICE)
-								&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.MELON))) {
-							if (!world.isRemote()) {
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.NETHER_WART)
+									&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.NETHER_WART)
+											&& ((new Object() {
+												public int get(BlockState _bs, String property) {
+													Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+													return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+												}
+											}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 3)))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.COCOA_BEANS)
+									&& (((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.COCOA)
+											&& ((new Object() {
+												public int get(BlockState _bs, String property) {
+													Property<?> _prop = _bs.getBlock().getStateContainer().getProperty(property);
+													return _prop instanceof IntegerProperty ? _bs.get((IntegerProperty) _prop) : -1;
+												}
+											}.get((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))), "age")) == 2)))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SUGAR_CANE)
+									&& ((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ)))
+											.getBlock() == Blocks.SUGAR_CANE))
+											&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
+													.getBlock() == Blocks.SUGAR_CANE)
+													&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+															.getBlock() == Blocks.SUGAR_CANE))))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.CACTUS.asItem())
+									&& ((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ))).getBlock() == Blocks.CACTUS))
+											&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
+													.getBlock() == Blocks.CACTUS)
+													&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+															.getBlock() == Blocks.CACTUS))))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.BAMBOO.asItem())
+									&& ((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ))).getBlock() == Blocks.BAMBOO))
+											&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
+													.getBlock() == Blocks.BAMBOO)
+													&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+															.getBlock() == Blocks.BAMBOO))))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.KELP.asItem())
+									&& (((!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ))).getBlock() == Blocks.KELP))
+											&& (!((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ)))
+													.getBlock() == Blocks.KELP_PLANT)))
+											&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
+													.getBlock() == Blocks.KELP_PLANT)
+													&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+															.getBlock() == Blocks.KELP))))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.PUMPKIN.asItem())
+									&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.PUMPKIN))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.MELON_SLICE)
+									&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.MELON))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.VINE.asItem())
+									&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.VINE))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.WEEPING_VINES.asItem())
+									&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY - 1), (int) posZ)))
+											.getBlock() == Blocks.WEEPING_VINES)
+											&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+													.getBlock() == Blocks.WEEPING_VINES_PLANT)))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.TWISTING_VINES.asItem())
+									&& (((world.getBlockState(new BlockPos((int) posX, (int) (posY + 1), (int) posZ)))
+											.getBlock() == Blocks.TWISTING_VINES)
+											&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+													.getBlock() == Blocks.TWISTING_VINES_PLANT)))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.BROWN_MUSHROOM.asItem())
+									&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ)))
+											.getBlock() == Blocks.BROWN_MUSHROOM))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.RED_MUSHROOM.asItem())
+									&& ((world.getBlockState(new BlockPos((int) posX, (int) posY, (int) posZ))).getBlock() == Blocks.RED_MUSHROOM))) {
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("HarvestCrop", (true));
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
 							}
 						}
 						if (((new Object() {
@@ -814,277 +1139,710 @@ public class AutoFarmingMachineOnUpdateTickProcedure {
 					return -1;
 				}
 			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "HarvestTimer")) == 0)) {
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				if (((((new Object() {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
+								_retval.set(capability.getStackInSlot(sltid).getCount());
 							});
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.WHEAT_SEEDS)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachineWheatScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) != 0) && ((new Object() {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
+								_retval.set(capability.getStackInSlot(sltid).getCount());
 							});
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.BEETROOT_SEEDS)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachineBeetrootScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1))) != 0)) || ((new Object() {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
+								_retval.set(capability.getStackInSlot(sltid).getCount());
 							});
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.CARROT)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachineCarrotScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1))) != 0))) {
+					if ((((new Object() {
+						public boolean getValue(IWorld world, BlockPos pos, String tag) {
+							TileEntity tileEntity = world.getTileEntity(pos);
+							if (tileEntity != null)
+								return tileEntity.getTileData().getBoolean(tag);
+							return false;
 						}
-						return _retval.get();
-					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.POTATO)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachinePotatoScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
+					}.getValue(world, new BlockPos((int) (new Object() {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
+							TileEntity tileEntity = world.getTileEntity(pos);
+							if (tileEntity != null)
+								return tileEntity.getTileData().getDouble(tag);
+							return -1;
 						}
-						return _retval.get();
-					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SWEET_BERRIES)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachineSweetBerryScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
+					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosX")), (int) (new Object() {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
+							TileEntity tileEntity = world.getTileEntity(pos);
+							if (tileEntity != null)
+								return tileEntity.getTileData().getDouble(tag);
+							return -1;
 						}
-						return _retval.get();
-					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.NETHER_WART)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachineNetherWartsScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
+					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosY")), (int) (new Object() {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
+							TileEntity tileEntity = world.getTileEntity(pos);
+							if (tileEntity != null)
+								return tileEntity.getTileData().getDouble(tag);
+							return -1;
 						}
-						return _retval.get();
-					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SUGAR_CANE)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachineSugarcaneScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
+					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosZ"))), "autoFarmingUseCustomScript")) == (true))
+							&& ((((((((new Object() {
+								public ItemStack getItemStack(BlockPos pos, int sltid) {
+									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).copy());
+										});
+									}
+									return _retval.get();
+								}
+							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getOrCreateTag().getString("autoFarmingGroupType")))
+									.equals("both")) || ((((new Object() {
+										public ItemStack getItemStack(BlockPos pos, int sltid) {
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											TileEntity _ent = world.getTileEntity(pos);
+											if (_ent != null) {
+												_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+													_retval.set(capability.getStackInSlot(sltid).copy());
+												});
+											}
+											return _retval.get();
+										}
+									}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getOrCreateTag()
+											.getString("autoFarmingGroupType"))).equals("crop")))
+									&& ((((new Object() {
+										public ItemStack getItemStack(BlockPos pos, int sltid) {
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											TileEntity _ent = world.getTileEntity(pos);
+											if (_ent != null) {
+												_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+													_retval.set(capability.getStackInSlot(sltid).copy());
+												});
+											}
+											return _retval.get();
+										}
+									}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getOrCreateTag()
+											.getBoolean("autoFarmingUseCustomScript")) == (true)) && (((new Object() {
+												public String getValue(IWorld world, BlockPos pos, String tag) {
+													TileEntity tileEntity = world.getTileEntity(pos);
+													if (tileEntity != null)
+														return tileEntity.getTileData().getString(tag);
+													return "";
+												}
+											}.getValue(world, new BlockPos((int) (new Object() {
+												public double getValue(IWorld world, BlockPos pos, String tag) {
+													TileEntity tileEntity = world.getTileEntity(pos);
+													if (tileEntity != null)
+														return tileEntity.getTileData().getDouble(tag);
+													return -1;
+												}
+											}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosX")), (int) (new Object() {
+												public double getValue(IWorld world, BlockPos pos, String tag) {
+													TileEntity tileEntity = world.getTileEntity(pos);
+													if (tileEntity != null)
+														return tileEntity.getTileData().getDouble(tag);
+													return -1;
+												}
+											}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosY")), (int) (new Object() {
+												public double getValue(IWorld world, BlockPos pos, String tag) {
+													TileEntity tileEntity = world.getTileEntity(pos);
+													if (tileEntity != null)
+														return tileEntity.getTileData().getDouble(tag);
+													return -1;
+												}
+											}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosZ"))), "autoFarmingGroupName")))
+													.equals(((new Object() {
+														public ItemStack getItemStack(BlockPos pos, int sltid) {
+															AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+															TileEntity _ent = world.getTileEntity(pos);
+															if (_ent != null) {
+																_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																		.ifPresent(capability -> {
+																			_retval.set(capability.getStackInSlot(sltid).copy());
+																		});
+															}
+															return _retval.get();
+														}
+													}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getOrCreateTag()
+															.getString("autoFarmingGroupName"))))))
+									&& ((((((new Object() {
+										public ItemStack getItemStack(BlockPos pos, int sltid) {
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											TileEntity _ent = world.getTileEntity(pos);
+											if (_ent != null) {
+												_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+													_retval.set(capability.getStackInSlot(sltid).copy());
+												});
+											}
+											return _retval.get();
+										}
+									}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+											.getString("autoFarmingGroupType"))).equals("both")) || ((((new Object() {
+												public ItemStack getItemStack(BlockPos pos, int sltid) {
+													AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+													TileEntity _ent = world.getTileEntity(pos);
+													if (_ent != null) {
+														_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																.ifPresent(capability -> {
+																	_retval.set(capability.getStackInSlot(sltid).copy());
+																});
+													}
+													return _retval.get();
+												}
+											}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+													.getString("autoFarmingGroupType"))).equals("seed")))
+											&& ((((new Object() {
+												public ItemStack getItemStack(BlockPos pos, int sltid) {
+													AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+													TileEntity _ent = world.getTileEntity(pos);
+													if (_ent != null) {
+														_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																.ifPresent(capability -> {
+																	_retval.set(capability.getStackInSlot(sltid).copy());
+																});
+													}
+													return _retval.get();
+												}
+											}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+													.getBoolean("autoFarmingUseCustomScript")) == (true)) && (((new Object() {
+														public String getValue(IWorld world, BlockPos pos, String tag) {
+															TileEntity tileEntity = world.getTileEntity(pos);
+															if (tileEntity != null)
+																return tileEntity.getTileData().getString(tag);
+															return "";
+														}
+													}.getValue(world, new BlockPos((int) (new Object() {
+														public double getValue(IWorld world, BlockPos pos, String tag) {
+															TileEntity tileEntity = world.getTileEntity(pos);
+															if (tileEntity != null)
+																return tileEntity.getTileData().getDouble(tag);
+															return -1;
+														}
+													}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosX")), (int) (new Object() {
+														public double getValue(IWorld world, BlockPos pos, String tag) {
+															TileEntity tileEntity = world.getTileEntity(pos);
+															if (tileEntity != null)
+																return tileEntity.getTileData().getDouble(tag);
+															return -1;
+														}
+													}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosY")), (int) (new Object() {
+														public double getValue(IWorld world, BlockPos pos, String tag) {
+															TileEntity tileEntity = world.getTileEntity(pos);
+															if (tileEntity != null)
+																return tileEntity.getTileData().getDouble(tag);
+															return -1;
+														}
+													}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosZ"))),
+															"autoFarmingGroupName"))).equals(((new Object() {
+																public ItemStack getItemStack(BlockPos pos, int sltid) {
+																	AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+																	TileEntity _ent = world.getTileEntity(pos);
+																	if (_ent != null) {
+																		_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																				.ifPresent(capability -> {
+																					_retval.set(capability.getStackInSlot(sltid).copy());
+																				});
+																	}
+																	return _retval.get();
+																}
+															}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+																	.getString("autoFarmingGroupName")))))))
+									|| ((((((new Object() {
+										public ItemStack getItemStack(BlockPos pos, int sltid) {
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											TileEntity _ent = world.getTileEntity(pos);
+											if (_ent != null) {
+												_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+													_retval.set(capability.getStackInSlot(sltid).copy());
+												});
+											}
+											return _retval.get();
+										}
+									}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+											.getString("autoFarmingGroupType"))).equals("both")) || ((((new Object() {
+												public ItemStack getItemStack(BlockPos pos, int sltid) {
+													AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+													TileEntity _ent = world.getTileEntity(pos);
+													if (_ent != null) {
+														_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																.ifPresent(capability -> {
+																	_retval.set(capability.getStackInSlot(sltid).copy());
+																});
+													}
+													return _retval.get();
+												}
+											}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+													.getString("autoFarmingGroupType"))).equals("seed")))
+											&& ((((new Object() {
+												public ItemStack getItemStack(BlockPos pos, int sltid) {
+													AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+													TileEntity _ent = world.getTileEntity(pos);
+													if (_ent != null) {
+														_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																.ifPresent(capability -> {
+																	_retval.set(capability.getStackInSlot(sltid).copy());
+																});
+													}
+													return _retval.get();
+												}
+											}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+													.getBoolean("autoFarmingUseCustomScript")) == (true)) && (((new Object() {
+														public String getValue(IWorld world, BlockPos pos, String tag) {
+															TileEntity tileEntity = world.getTileEntity(pos);
+															if (tileEntity != null)
+																return tileEntity.getTileData().getString(tag);
+															return "";
+														}
+													}.getValue(world, new BlockPos((int) (new Object() {
+														public double getValue(IWorld world, BlockPos pos, String tag) {
+															TileEntity tileEntity = world.getTileEntity(pos);
+															if (tileEntity != null)
+																return tileEntity.getTileData().getDouble(tag);
+															return -1;
+														}
+													}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosX")), (int) (new Object() {
+														public double getValue(IWorld world, BlockPos pos, String tag) {
+															TileEntity tileEntity = world.getTileEntity(pos);
+															if (tileEntity != null)
+																return tileEntity.getTileData().getDouble(tag);
+															return -1;
+														}
+													}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosY")), (int) (new Object() {
+														public double getValue(IWorld world, BlockPos pos, String tag) {
+															TileEntity tileEntity = world.getTileEntity(pos);
+															if (tileEntity != null)
+																return tileEntity.getTileData().getDouble(tag);
+															return -1;
+														}
+													}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "CropPosZ"))),
+															"autoFarmingGroupName"))).equals(((new Object() {
+																public ItemStack getItemStack(BlockPos pos, int sltid) {
+																	AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+																	TileEntity _ent = world.getTileEntity(pos);
+																	if (_ent != null) {
+																		_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																				.ifPresent(capability -> {
+																					_retval.set(capability.getStackInSlot(sltid).copy());
+																				});
+																	}
+																	return _retval.get();
+																}
+															}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getOrCreateTag()
+																	.getString("autoFarmingGroupName"))))))))) {
+						{
+							Map<String, Object> $_dependencies = new HashMap<>();
+							$_dependencies.put("world", world);
+							$_dependencies.put("x", x);
+							$_dependencies.put("y", y);
+							$_dependencies.put("z", z);
+							AutoFarmingMachineCustomCropsScriptProcedure.executeProcedure($_dependencies);
 						}
-						return _retval.get();
-					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.PUMPKIN.asItem())) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachinePumpkinScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
+					} else {
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.WHEAT_SEEDS)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineWheatScriptProcedure.executeProcedure($_dependencies);
+							}
 						}
-						return _retval.get();
-					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.MELON_SLICE)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachineMelonScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.BEETROOT_SEEDS)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineBeetrootScriptProcedure.executeProcedure($_dependencies);
+							}
 						}
-						return _retval.get();
-					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.COCOA_BEANS)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachineCocoaBeansScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.CARROT)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineCarrotScriptProcedure.executeProcedure($_dependencies);
+							}
 						}
-						return _retval.get();
-					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.CACTUS.asItem())) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachineCactusScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.POTATO)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachinePotatoScriptProcedure.executeProcedure($_dependencies);
+							}
 						}
-						return _retval.get();
-					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.KELP.asItem())) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachineKelpScriptProcedure.executeProcedure($_dependencies);
-					}
-				}
-				if (((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SWEET_BERRIES)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineSweetBerryScriptProcedure.executeProcedure($_dependencies);
+							}
 						}
-						return _retval.get();
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.NETHER_WART)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineNetherWartsScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.SUGAR_CANE)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineSugarcaneScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.PUMPKIN.asItem())) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachinePumpkinScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.MELON_SLICE)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineMelonScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Items.COCOA_BEANS)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineCocoaBeansScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.CACTUS.asItem())) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineCactusScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.KELP.asItem())) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineKelpScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.BAMBOO.asItem())) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineBambooScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.BROWN_MUSHROOM.asItem())) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineBrownMushroomScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.RED_MUSHROOM.asItem())) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineRedMushroomScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.VINE.asItem())) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineVineScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.WEEPING_VINES.asItem())) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineWeepingVinesScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
+						if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.TWISTING_VINES.asItem())) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								AutoFarmingMachineTwistingVinesScriptProcedure.executeProcedure($_dependencies);
+							}
+						}
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == Blocks.BAMBOO.asItem())) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						AutoFarmingMachineBambooScriptProcedure.executeProcedure($_dependencies);
+				} else {
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putBoolean("HarvestCrop", (false));
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
 				}
 			} else {
