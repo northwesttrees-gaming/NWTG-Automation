@@ -7316,6 +7316,652 @@
         ]
       },
       "path": "~/Recipes/Unlocking"
+    },
+    {
+      "name": "AutoFarmingMachineCustomCropsScript",
+      "type": "procedure",
+      "sortid": 358,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_custom_crops_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Custom"
+    },
+    {
+      "name": "AutoFarmingMachineVineScript",
+      "type": "procedure",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_vine_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Vines"
+    },
+    {
+      "name": "AutoFarmingMachineTwistingVinesScript",
+      "type": "procedure",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_twisting_vines_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Twisting"
+    },
+    {
+      "name": "AutoFarmingMachineWeepingVinesScript",
+      "type": "procedure",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_weeping_vines_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Weeping"
+    },
+    {
+      "name": "AutoFarmingMachineBrownMushroomScript",
+      "type": "procedure",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_brown_mushroom_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Mushrooms/Brown"
+    },
+    {
+      "name": "AutoFarmingMachineRedMushroomScript",
+      "type": "procedure",
+      "sortid": 363,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_red_mushroom_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Mushrooms/Red"
+    },
+    {
+      "name": "SolarPanel",
+      "type": "block",
+      "sortid": 364,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel",
+      "path": "~/Blocks/Devices/Solar_Panel"
+    },
+    {
+      "name": "SolarPanelOn",
+      "type": "block",
+      "sortid": 365,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel_on",
+      "path": "~/Blocks/Devices/Solar_Panel"
+    },
+    {
+      "name": "SolarPanelUpdateTick",
+      "type": "procedure",
+      "sortid": 387,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Update_Tick"
+    },
+    {
+      "name": "SolarPanelUpdateTickOffScript",
+      "type": "procedure",
+      "sortid": 388,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel_update_tick_off_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Update_Tick"
+    },
+    {
+      "name": "SolarPanelUpdateTickOnScript",
+      "type": "procedure",
+      "sortid": 389,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel_update_tick_on_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Update_Tick"
+    },
+    {
+      "name": "SolarPanelUpdateTickEnergyScript",
+      "type": "procedure",
+      "sortid": 390,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel_update_tick_energy_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Update_Tick"
+    },
+    {
+      "name": "SolarPanelScreen",
+      "type": "gui",
+      "sortid": 391,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel_screen",
+      "path": "~/GUIs/Devices/Solar_Panel"
+    },
+    {
+      "name": "SolarPanelSceenGreenLightCondition",
+      "type": "procedure",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel_sceen_green_light_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Devices/Solar_Panel/Procedures"
+    },
+    {
+      "name": "SolarPanelOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 396,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Right_Click"
+    },
+    {
+      "name": "SolarPanelScreenRedLightCondition",
+      "type": "procedure",
+      "sortid": 398,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel_screen_red_light_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Devices/Solar_Panel/Procedures"
+    },
+    {
+      "name": "Battery",
+      "type": "block",
+      "sortid": 399,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "battery",
+      "path": "~/Blocks/Devices/Battery"
+    },
+    {
+      "name": "BatteryOn",
+      "type": "block",
+      "sortid": 400,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "battery_on",
+      "path": "~/Blocks/Devices/Battery"
+    },
+    {
+      "name": "BatteryOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 401,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "battery_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/Battery/Procedures"
+    },
+    {
+      "name": "BatteryBlockAdded",
+      "type": "procedure",
+      "sortid": 402,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "battery_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/Battery/Procedures"
+    },
+    {
+      "name": "BatteryUpdateTick",
+      "type": "procedure",
+      "sortid": 403,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "battery_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/Battery/Procedures"
+    },
+    {
+      "name": "SolarPanelBlockAdded",
+      "type": "procedure",
+      "sortid": 404,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Block_Added"
+    },
+    {
+      "name": "BatteryScreen",
+      "type": "gui",
+      "sortid": 405,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "battery_screen",
+      "path": "~/GUIs/Devices/Battery"
+    },
+    {
+      "name": "BatteryScreenRedLightCondition",
+      "type": "procedure",
+      "sortid": 406,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "battery_screen_red_light_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Devices/Battery/Procedures"
+    },
+    {
+      "name": "BatteryScreenGreenLightCondition",
+      "type": "procedure",
+      "sortid": 407,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "battery_screen_green_light_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUIs/Devices/Battery/Procedures"
     }
   ],
   "variable_elements": [
@@ -7359,28 +8005,32 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.nwtg_automation.grass_block_slab_upper": "Upper Grass Block Slab",
       "item.nwtg_automation.machine_wrench": "Machine Wrench",
       "block.nwtg_automation.machine_block": "Machine Block",
       "item.nwtg_automation.stone_upgrade": "Stone Upgrade",
-      "item.nwtg_automation.diamond_upgrade": "Diamond Upgrade",
-      "block.nwtg_automation.auto_farming_machine": "Auto Farming Machine",
-      "block.nwtg_automation.auto_item_collector_machine": "Auto Item Collector Machine",
       "block.nwtg_automation.auto_item_collector_machine_on": "Auto Item Collector Machine",
-      "block.nwtg_automation.auto_tree_farm_machine_on": "Auto Tree Farm Machine On",
-      "item.nwtg_automation.netherite_upgrade": "Netherite Upgrade",
-      "block.nwtg_automation.remote_item_teleporter": "Remote Item Teleporter",
+      "block.nwtg_automation.auto_farming_machine": "Auto Farming Machine",
       "item.nwtg_automation.iron_upgrade": "Iron Upgrade",
+      "block.nwtg_automation.solar_panel_on": "Solar Panel",
       "block.nwtg_automation.auto_crafting_machine": "Auto Crafting Machine",
       "block.nwtg_automation.auto_crafting_machine_on": "Auto Crafting Machine",
       "item.nwtg_automation.golden_upgrade": "Golden Upgrade",
       "block.nwtg_automation.auto_farming_machine_on": "Auto Farming Machine On",
       "block.nwtg_automation.breaker_panel": "Breaker Panel",
-      "itemGroup.tabnwtg_automation_tab": "NWTG Automation",
       "block.nwtg_automation.grass_block_slab_lower": "Lower Grass Block Slab",
       "block.nwtg_automation.breaker_panel_on": "Breaker Panel On",
-      "block.nwtg_automation.auto_tree_farm_machine": "Auto Tree Farm Machine",
-      "item.nwtg_automation.wooden_upgrade": "Wooden Upgrade"
+      "block.nwtg_automation.battery_on": "Battery",
+      "item.nwtg_automation.wooden_upgrade": "Wooden Upgrade",
+      "block.nwtg_automation.grass_block_slab_upper": "Upper Grass Block Slab",
+      "item.nwtg_automation.diamond_upgrade": "Diamond Upgrade",
+      "block.nwtg_automation.auto_item_collector_machine": "Auto Item Collector Machine",
+      "block.nwtg_automation.auto_tree_farm_machine_on": "Auto Tree Farm Machine On",
+      "block.nwtg_automation.solar_panel": "Solar Panel",
+      "item.nwtg_automation.netherite_upgrade": "Netherite Upgrade",
+      "block.nwtg_automation.remote_item_teleporter": "Remote Item Teleporter",
+      "block.nwtg_automation.battery": "Battery",
+      "itemGroup.tabnwtg_automation_tab": "NWTG Automation",
+      "block.nwtg_automation.auto_tree_farm_machine": "Auto Tree Farm Machine"
     }
   },
   "foldersRoot": {
@@ -7576,6 +8226,40 @@
                               {
                                 "name": "Kelp",
                                 "children": []
+                              },
+                              {
+                                "name": "Custom",
+                                "children": []
+                              },
+                              {
+                                "name": "Mushrooms",
+                                "children": [
+                                  {
+                                    "name": "Brown",
+                                    "children": []
+                                  },
+                                  {
+                                    "name": "Red",
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Vines",
+                                "children": [
+                                  {
+                                    "name": "Vines",
+                                    "children": []
+                                  },
+                                  {
+                                    "name": "Twisting",
+                                    "children": []
+                                  },
+                                  {
+                                    "name": "Weeping",
+                                    "children": []
+                                  }
+                                ]
                               }
                             ]
                           },
@@ -7618,6 +8302,37 @@
               },
               {
                 "name": "BreakerPanel",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Solar_Panel",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": [
+                      {
+                        "name": "Update_Tick",
+                        "children": []
+                      },
+                      {
+                        "name": "Right_Click",
+                        "children": []
+                      },
+                      {
+                        "name": "Block_Added",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Battery",
                 "children": [
                   {
                     "name": "Procedures",
@@ -7874,6 +8589,24 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "Solar_Panel",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Battery",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  }
+                ]
               }
             ]
           },
@@ -7991,7 +8724,7 @@
   "workspaceSettings": {
     "modid": "nwtg_automation",
     "modName": "NWTG Automation",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "description": "A mod to make things automated one block at a time!",
     "author": "NorthWestTrees Gaming",
     "websiteURL": "https://northwesttrees-gaming.github.io/mods/nwtg-automation.html",
