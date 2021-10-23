@@ -34,7 +34,7 @@ public class PasswordScreenGui extends NwtgAutomationModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public PasswordScreenGui(NwtgAutomationModElements instance) {
-		super(instance, 68);
+		super(instance, 79);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

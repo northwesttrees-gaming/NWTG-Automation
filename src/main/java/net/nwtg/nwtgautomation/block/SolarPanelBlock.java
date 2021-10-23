@@ -3,6 +3,7 @@ package net.nwtg.nwtgautomation.block;
 
 import net.nwtg.nwtgautomation.procedures.SolarPanelUpdateTickProcedure;
 import net.nwtg.nwtgautomation.procedures.SolarPanelOnBlockRightClickedProcedure;
+import net.nwtg.nwtgautomation.procedures.SolarPanelClientDisplayRandomTickProcedure;
 import net.nwtg.nwtgautomation.procedures.SolarPanelBlockAddedProcedure;
 import net.nwtg.nwtgautomation.itemgroup.NWTGAutomationTabItemGroup;
 import net.nwtg.nwtgautomation.gui.SolarPanelScreenGui;
@@ -18,6 +19,8 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
@@ -48,6 +51,7 @@ import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.Minecraft;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
@@ -73,7 +77,7 @@ public class SolarPanelBlock extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:solar_panel")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public SolarPanelBlock(NwtgAutomationModElements instance) {
-		super(instance, 364);
+		super(instance, 7);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -152,6 +156,24 @@ public class SolarPanelBlock extends NwtgAutomationModElements.ModElement {
 				SolarPanelUpdateTickProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1);
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		@Override
+		public void animateTick(BlockState blockstate, World world, BlockPos pos, Random random) {
+			super.animateTick(blockstate, world, pos, random);
+			PlayerEntity entity = Minecraft.getInstance().player;
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				SolarPanelClientDisplayRandomTickProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override

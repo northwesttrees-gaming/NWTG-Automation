@@ -40,7 +40,7 @@ public class AutoItemCollectorMachineInventoryGui extends NwtgAutomationModEleme
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public AutoItemCollectorMachineInventoryGui(NwtgAutomationModElements instance) {
-		super(instance, 51);
+		super(instance, 62);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

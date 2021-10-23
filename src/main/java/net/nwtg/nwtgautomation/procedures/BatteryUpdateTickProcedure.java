@@ -1,6 +1,6 @@
 package net.nwtg.nwtgautomation.procedures;
 
-import net.nwtg.nwtgautomation.block.BatteryOnBlock;
+import net.nwtg.nwtgautomation.block.PowerHubBlock;
 import net.nwtg.nwtgautomation.NwtgAutomationMod;
 
 import net.minecraft.world.World;
@@ -72,7 +72,7 @@ public class BatteryUpdateTickProcedure {
 					return -1;
 				}
 			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "PowerHubZ"));
-			if ((((world.getBlockState(new BlockPos((int) powerHubX, (int) powerHubY, (int) powerHubZ))).getBlock() == BatteryOnBlock.block)
+			if ((((world.getBlockState(new BlockPos((int) powerHubX, (int) powerHubY, (int) powerHubZ))).getBlock() == PowerHubBlock.block)
 					&& (((new Object() {
 						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);

@@ -76,7 +76,7 @@ public class BatteryOnBlock extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:battery_on")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BatteryOnBlock(NwtgAutomationModElements instance) {
-		super(instance, 400);
+		super(instance, 368);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

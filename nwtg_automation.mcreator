@@ -4,7 +4,7 @@
     {
       "name": "MachineBlock",
       "type": "block",
-      "sortid": 7,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -14,7 +14,7 @@
     {
       "name": "NWTGAutomationTab",
       "type": "tab",
-      "sortid": 17,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -24,7 +24,7 @@
     {
       "name": "AutoFarmingMachineInventory",
       "type": "gui",
-      "sortid": 18,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -44,7 +44,7 @@
     {
       "name": "AutoFarmingMachineUpdateTick",
       "type": "procedure",
-      "sortid": 19,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -74,7 +74,7 @@
     {
       "name": "AutoFarmingMachineBlockAdded",
       "type": "procedure",
-      "sortid": 20,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -104,7 +104,7 @@
     {
       "name": "AutoFarmingMachineWheatScript",
       "type": "procedure",
-      "sortid": 21,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -134,7 +134,7 @@
     {
       "name": "AutoFarmingMachineBeetrootScript",
       "type": "procedure",
-      "sortid": 22,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -164,7 +164,7 @@
     {
       "name": "AutoFarmingMachineCarrotScript",
       "type": "procedure",
-      "sortid": 23,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -194,7 +194,7 @@
     {
       "name": "AutoFarmingMachinePotatoScript",
       "type": "procedure",
-      "sortid": 24,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -224,7 +224,7 @@
     {
       "name": "AutoFarmingMachineSweetBerryScript",
       "type": "procedure",
-      "sortid": 25,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -254,7 +254,7 @@
     {
       "name": "AutoFarmingMachineNetherWartsScript",
       "type": "procedure",
-      "sortid": 26,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -284,7 +284,7 @@
     {
       "name": "RemoteItemTeleporterOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 27,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -328,7 +328,7 @@
     {
       "name": "RemoteItemTeleporterUpdateTick",
       "type": "procedure",
-      "sortid": 28,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -368,7 +368,7 @@
     {
       "name": "AutoCraftingMachineOn",
       "type": "block",
-      "sortid": 29,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -378,7 +378,7 @@
     {
       "name": "AutoCraftingMachineOnUpdateTick",
       "type": "procedure",
-      "sortid": 30,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -408,7 +408,7 @@
     {
       "name": "AutoCraftingMachineOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 31,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -446,7 +446,7 @@
     {
       "name": "AutoCraftingMachineOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 32,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -484,7 +484,7 @@
     {
       "name": "AutoCraftingMachineInventory",
       "type": "gui",
-      "sortid": 33,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -494,7 +494,7 @@
     {
       "name": "AutoCraftingMachineSortingScript",
       "type": "procedure",
-      "sortid": 34,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -524,7 +524,7 @@
     {
       "name": "AutoCraftingMachineBreadRecipe",
       "type": "procedure",
-      "sortid": 35,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -554,7 +554,7 @@
     {
       "name": "AutoCraftingMachineBlockIsPlacedBy",
       "type": "procedure",
-      "sortid": 36,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -588,7 +588,7 @@
     {
       "name": "AutoFarmingMachineOn",
       "type": "block",
-      "sortid": 37,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -598,7 +598,7 @@
     {
       "name": "AutoFarmingMachineOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 38,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -636,7 +636,7 @@
     {
       "name": "AutoFarmingMachineOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 39,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -674,7 +674,7 @@
     {
       "name": "AutoFarmingMachineSugarcaneScript",
       "type": "procedure",
-      "sortid": 40,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -704,7 +704,7 @@
     {
       "name": "AutoFarmingMachinePumpkinScript",
       "type": "procedure",
-      "sortid": 41,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -734,7 +734,7 @@
     {
       "name": "AutoFarmingMachineMelonScript",
       "type": "procedure",
-      "sortid": 42,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -764,7 +764,7 @@
     {
       "name": "AutoFarmingMachineCocoaBeansScript",
       "type": "procedure",
-      "sortid": 43,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -794,7 +794,7 @@
     {
       "name": "MachineWrench",
       "type": "item",
-      "sortid": 10,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -804,7 +804,7 @@
     {
       "name": "BlocksMachineBlockTag",
       "type": "tag",
-      "sortid": 44,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -814,7 +814,7 @@
     {
       "name": "ItemsMachineBlockTag",
       "type": "tag",
-      "sortid": 45,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -824,7 +824,7 @@
     {
       "name": "ItemsMachineWrenchTag",
       "type": "tag",
-      "sortid": 46,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -834,7 +834,7 @@
     {
       "name": "AutoFarmingMachineBambooScript",
       "type": "procedure",
-      "sortid": 47,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -864,7 +864,7 @@
     {
       "name": "AutoFarmingMachineCactusScript",
       "type": "procedure",
-      "sortid": 48,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -894,7 +894,7 @@
     {
       "name": "AutoFarmingMachineKelpScript",
       "type": "procedure",
-      "sortid": 49,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -934,7 +934,7 @@
     {
       "name": "AutoItemCollectorMachineOn",
       "type": "block",
-      "sortid": 50,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -944,7 +944,7 @@
     {
       "name": "AutoItemCollectorMachineInventory",
       "type": "gui",
-      "sortid": 51,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -954,7 +954,7 @@
     {
       "name": "AutoItemCollectorMachineOnUpdateTick",
       "type": "procedure",
-      "sortid": 52,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -984,7 +984,7 @@
     {
       "name": "AutoItemCollectorMachineEggScript",
       "type": "procedure",
-      "sortid": 53,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1014,7 +1014,7 @@
     {
       "name": "AutoItemCollectorMachineOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 54,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1052,7 +1052,7 @@
     {
       "name": "AutoItemCollectorMachineOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 55,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1090,7 +1090,7 @@
     {
       "name": "AutoItemCollectorMachineBlockAdded",
       "type": "procedure",
-      "sortid": 56,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1120,7 +1120,7 @@
     {
       "name": "AutoCraftingMachineSugarRecipe",
       "type": "procedure",
-      "sortid": 57,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1150,7 +1150,7 @@
     {
       "name": "AutoCraftingMachinePumpkinPieRecipe",
       "type": "procedure",
-      "sortid": 58,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1180,7 +1180,7 @@
     {
       "name": "AutoCraftingMachineSortingScriptNorth",
       "type": "procedure",
-      "sortid": 59,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1210,7 +1210,7 @@
     {
       "name": "AutoCraftingMachineSortingScriptEast",
       "type": "procedure",
-      "sortid": 60,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1240,7 +1240,7 @@
     {
       "name": "AutoCraftingMachineSortingScriptSouth",
       "type": "procedure",
-      "sortid": 61,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1270,7 +1270,7 @@
     {
       "name": "AutoCraftingMachineSortingScriptWest",
       "type": "procedure",
-      "sortid": 62,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1300,7 +1300,7 @@
     {
       "name": "UnlockMachineBlockRecipe",
       "type": "procedure",
-      "sortid": 63,
+      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1318,7 +1318,7 @@
     {
       "name": "UnlockMachineRecipes",
       "type": "procedure",
-      "sortid": 64,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1336,7 +1336,7 @@
     {
       "name": "UnlockRemoteItemTeleporterRecipe",
       "type": "procedure",
-      "sortid": 65,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1354,7 +1354,7 @@
     {
       "name": "UnlockMachineWrenchRecipe",
       "type": "procedure",
-      "sortid": 66,
+      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1382,7 +1382,7 @@
     {
       "name": "BreakerPanelOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 67,
+      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1420,7 +1420,7 @@
     {
       "name": "PasswordScreen",
       "type": "gui",
-      "sortid": 68,
+      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1430,7 +1430,7 @@
     {
       "name": "PasswordScreenButtonPressed",
       "type": "procedure",
-      "sortid": 69,
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1456,7 +1456,7 @@
     {
       "name": "BreakerPanelScreen",
       "type": "gui",
-      "sortid": 70,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1466,7 +1466,7 @@
     {
       "name": "BreakerPanelScreenSetButton",
       "type": "procedure",
-      "sortid": 71,
+      "sortid": 82,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1488,7 +1488,7 @@
     {
       "name": "BreakerPanelScreenToggleButton",
       "type": "procedure",
-      "sortid": 72,
+      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1510,7 +1510,7 @@
     {
       "name": "BreakerPanelOn",
       "type": "block",
-      "sortid": 73,
+      "sortid": 84,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1520,7 +1520,7 @@
     {
       "name": "BreakerPanelOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 74,
+      "sortid": 85,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1558,7 +1558,7 @@
     {
       "name": "AutoFarmingMachineBlockIsPlacedBy",
       "type": "procedure",
-      "sortid": 75,
+      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1592,7 +1592,7 @@
     {
       "name": "AutoCraftingMachineBlockAdded",
       "type": "procedure",
-      "sortid": 76,
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1622,7 +1622,7 @@
     {
       "name": "AutoItemCollectorMachineBlockIsPlacedBy",
       "type": "procedure",
-      "sortid": 77,
+      "sortid": 88,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1656,7 +1656,7 @@
     {
       "name": "BreakerPanelBlockIsPlacedBy",
       "type": "procedure",
-      "sortid": 78,
+      "sortid": 89,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1690,7 +1690,7 @@
     {
       "name": "AutoCraftingMachineUpdateTick",
       "type": "procedure",
-      "sortid": 79,
+      "sortid": 90,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1720,7 +1720,7 @@
     {
       "name": "AutoFarmingMachineOnUpdateTick",
       "type": "procedure",
-      "sortid": 80,
+      "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1750,7 +1750,7 @@
     {
       "name": "AutoItemCollectorMachineUpdateTick",
       "type": "procedure",
-      "sortid": 81,
+      "sortid": 92,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1780,7 +1780,7 @@
     {
       "name": "AutoCraftingMachineFoodRecipes",
       "type": "procedure",
-      "sortid": 82,
+      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1810,7 +1810,7 @@
     {
       "name": "AutoCraftingMachinePlankRecipes",
       "type": "procedure",
-      "sortid": 83,
+      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1840,7 +1840,7 @@
     {
       "name": "AutoCraftingMachineOakPlankRecipe",
       "type": "procedure",
-      "sortid": 84,
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1870,7 +1870,7 @@
     {
       "name": "AutoCraftingMachineSprucePlankRecipe",
       "type": "procedure",
-      "sortid": 85,
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1900,7 +1900,7 @@
     {
       "name": "AutoCraftingMachineBirchPlankRecipe",
       "type": "procedure",
-      "sortid": 86,
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1930,7 +1930,7 @@
     {
       "name": "AutoCraftingMachineJunglePlankRecipe",
       "type": "procedure",
-      "sortid": 87,
+      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1960,7 +1960,7 @@
     {
       "name": "AutoCraftingMachineAcaciaPlankRecipe",
       "type": "procedure",
-      "sortid": 88,
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1990,7 +1990,7 @@
     {
       "name": "AutoCraftingMachineDarkOakPlankRecipe",
       "type": "procedure",
-      "sortid": 89,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2020,7 +2020,7 @@
     {
       "name": "AutoCraftingMachineWarpedPlankRecipe",
       "type": "procedure",
-      "sortid": 90,
+      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2050,7 +2050,7 @@
     {
       "name": "AutoCraftingMachineCrimsonPlankRecipe",
       "type": "procedure",
-      "sortid": 91,
+      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2080,7 +2080,7 @@
     {
       "name": "AutoCraftingMachineRecipeIndex",
       "type": "procedure",
-      "sortid": 92,
+      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2110,7 +2110,7 @@
     {
       "name": "NWTGAutomationItemsAutoCraftingMachine",
       "type": "tag",
-      "sortid": 93,
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2120,7 +2120,7 @@
     {
       "name": "NWTGAutomationItemsAutoCraftingMachineOn",
       "type": "tag",
-      "sortid": 94,
+      "sortid": 105,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2130,7 +2130,7 @@
     {
       "name": "NWTGAutomationItemsAutoCraftingMachineOff",
       "type": "tag",
-      "sortid": 95,
+      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2140,7 +2140,7 @@
     {
       "name": "NWTGAutomationBlocksAutoCraftingMachine",
       "type": "tag",
-      "sortid": 96,
+      "sortid": 107,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2150,7 +2150,7 @@
     {
       "name": "NWTGAutomationBlocksAutoCraftingMachineOn",
       "type": "tag",
-      "sortid": 97,
+      "sortid": 108,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2160,7 +2160,7 @@
     {
       "name": "NWTGAutomationBlocksAutoCraftingMachineOff",
       "type": "tag",
-      "sortid": 98,
+      "sortid": 109,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2170,7 +2170,7 @@
     {
       "name": "AutoCraftingMachineOakSlabsRecipe",
       "type": "procedure",
-      "sortid": 105,
+      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2200,7 +2200,7 @@
     {
       "name": "AutoCraftingMachineSpruceSlabRecipe",
       "type": "procedure",
-      "sortid": 106,
+      "sortid": 111,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2230,7 +2230,7 @@
     {
       "name": "AutoCraftingMachineBirchSlabRecipe",
       "type": "procedure",
-      "sortid": 107,
+      "sortid": 112,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2260,7 +2260,7 @@
     {
       "name": "AutoCraftingMachineJungleSlabRecipe",
       "type": "procedure",
-      "sortid": 108,
+      "sortid": 113,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2290,7 +2290,7 @@
     {
       "name": "AutoCraftingMachineAcaciaSlabRecipe",
       "type": "procedure",
-      "sortid": 109,
+      "sortid": 114,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2320,7 +2320,7 @@
     {
       "name": "AutoCraftingMachineDarkOakSlabRecipe",
       "type": "procedure",
-      "sortid": 110,
+      "sortid": 115,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2350,7 +2350,7 @@
     {
       "name": "AutoCraftingMachineWarpedSlabRecipe",
       "type": "procedure",
-      "sortid": 111,
+      "sortid": 116,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2380,7 +2380,7 @@
     {
       "name": "AutoCraftingMachineCrimsonSlabRecipe",
       "type": "procedure",
-      "sortid": 112,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2410,7 +2410,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingOakLogs",
       "type": "tag",
-      "sortid": 113,
+      "sortid": 118,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2420,7 +2420,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingSpruceLogs",
       "type": "tag",
-      "sortid": 114,
+      "sortid": 119,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2430,7 +2430,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingBirchLogs",
       "type": "tag",
-      "sortid": 115,
+      "sortid": 120,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2440,7 +2440,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingJungleLogs",
       "type": "tag",
-      "sortid": 116,
+      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2450,7 +2450,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingAcaciaLogs",
       "type": "tag",
-      "sortid": 117,
+      "sortid": 122,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2460,7 +2460,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingDarkOakLogs",
       "type": "tag",
-      "sortid": 118,
+      "sortid": 123,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2470,7 +2470,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingWarpedLogs",
       "type": "tag",
-      "sortid": 119,
+      "sortid": 124,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2480,7 +2480,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingCrimsonLogs",
       "type": "tag",
-      "sortid": 120,
+      "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2490,7 +2490,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingWheat",
       "type": "tag",
-      "sortid": 121,
+      "sortid": 126,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2500,7 +2500,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingSugarcane",
       "type": "tag",
-      "sortid": 122,
+      "sortid": 127,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2510,7 +2510,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingPumpkin",
       "type": "tag",
-      "sortid": 123,
+      "sortid": 128,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2520,7 +2520,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingEgg",
       "type": "tag",
-      "sortid": 124,
+      "sortid": 129,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2530,7 +2530,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingSugar",
       "type": "tag",
-      "sortid": 125,
+      "sortid": 130,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2540,7 +2540,7 @@
     {
       "name": "AutoCraftingMachineWoodSlabRecipes",
       "type": "procedure",
-      "sortid": 126,
+      "sortid": 131,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2570,7 +2570,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingOakPlank",
       "type": "tag",
-      "sortid": 127,
+      "sortid": 132,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2580,7 +2580,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingSprucePlank",
       "type": "tag",
-      "sortid": 128,
+      "sortid": 133,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2590,7 +2590,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingBirchPlank",
       "type": "tag",
-      "sortid": 129,
+      "sortid": 134,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2600,7 +2600,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingJunglePlank",
       "type": "tag",
-      "sortid": 130,
+      "sortid": 135,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2610,7 +2610,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingAcaciaPlank",
       "type": "tag",
-      "sortid": 131,
+      "sortid": 136,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2620,7 +2620,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingDarkOakPlank",
       "type": "tag",
-      "sortid": 132,
+      "sortid": 137,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2630,7 +2630,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingWarpedPlank",
       "type": "tag",
-      "sortid": 133,
+      "sortid": 138,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2640,7 +2640,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingCrimsonPlank",
       "type": "tag",
-      "sortid": 134,
+      "sortid": 139,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2650,7 +2650,7 @@
     {
       "name": "AutoCraftingMachineOakButtonRecipe",
       "type": "procedure",
-      "sortid": 135,
+      "sortid": 140,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2680,7 +2680,7 @@
     {
       "name": "AutoCraftingMachineSpruceButtonRecipe",
       "type": "procedure",
-      "sortid": 136,
+      "sortid": 141,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2710,7 +2710,7 @@
     {
       "name": "AutoCraftingMachineBirchButtonRecipe",
       "type": "procedure",
-      "sortid": 137,
+      "sortid": 142,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2740,7 +2740,7 @@
     {
       "name": "AutoCraftingMachineJungleButtonRecipe",
       "type": "procedure",
-      "sortid": 138,
+      "sortid": 143,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2770,7 +2770,7 @@
     {
       "name": "AutoCraftingMachineAcaciaButtonRecipe",
       "type": "procedure",
-      "sortid": 139,
+      "sortid": 144,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2800,7 +2800,7 @@
     {
       "name": "AutoCraftingMachineDarkOakButtonRecipe",
       "type": "procedure",
-      "sortid": 140,
+      "sortid": 145,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2830,7 +2830,7 @@
     {
       "name": "AutoCraftingMachineWarpedButtonRecipe",
       "type": "procedure",
-      "sortid": 141,
+      "sortid": 146,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2860,7 +2860,7 @@
     {
       "name": "AutoCraftingMachineCrimsonButtonRecipe",
       "type": "procedure",
-      "sortid": 142,
+      "sortid": 147,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2890,7 +2890,7 @@
     {
       "name": "AutoCraftingMachineWoodButtonRecipes",
       "type": "procedure",
-      "sortid": 143,
+      "sortid": 148,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2920,7 +2920,7 @@
     {
       "name": "AutoCraftingMachineOakStairsRecipe",
       "type": "procedure",
-      "sortid": 144,
+      "sortid": 149,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2950,7 +2950,7 @@
     {
       "name": "AutoCraftingMachineSpruceStairsRecipe",
       "type": "procedure",
-      "sortid": 145,
+      "sortid": 150,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2980,7 +2980,7 @@
     {
       "name": "AutoCraftingMachineBirchStairsRecipe",
       "type": "procedure",
-      "sortid": 146,
+      "sortid": 151,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3010,7 +3010,7 @@
     {
       "name": "AutoCraftingMachineJungleStairsRecipe",
       "type": "procedure",
-      "sortid": 147,
+      "sortid": 152,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3040,7 +3040,7 @@
     {
       "name": "AutoCraftingMachineAcaciaStairsRecipe",
       "type": "procedure",
-      "sortid": 148,
+      "sortid": 153,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3070,7 +3070,7 @@
     {
       "name": "AutoCraftingMachineDarkOakStairsRecipe",
       "type": "procedure",
-      "sortid": 149,
+      "sortid": 154,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3100,7 +3100,7 @@
     {
       "name": "AutoCraftingMachineWarpedStairsRecipe",
       "type": "procedure",
-      "sortid": 150,
+      "sortid": 155,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3130,7 +3130,7 @@
     {
       "name": "AutoCraftingMachineCrimsonStairsRecipe",
       "type": "procedure",
-      "sortid": 151,
+      "sortid": 156,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3160,7 +3160,7 @@
     {
       "name": "AutoCraftingMachineWoodStairsRecipes",
       "type": "procedure",
-      "sortid": 152,
+      "sortid": 157,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3190,7 +3190,7 @@
     {
       "name": "AutoCraftingMachineOakTrapdoorRecipe",
       "type": "procedure",
-      "sortid": 153,
+      "sortid": 158,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3220,7 +3220,7 @@
     {
       "name": "AutoCraftingMachineSpruceTrapdoorRecipe",
       "type": "procedure",
-      "sortid": 154,
+      "sortid": 159,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3250,7 +3250,7 @@
     {
       "name": "AutoCraftingMachineBirchTrapdoorRecipe",
       "type": "procedure",
-      "sortid": 155,
+      "sortid": 160,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3280,7 +3280,7 @@
     {
       "name": "AutoCraftingMachineJungleTrapdoorRecipe",
       "type": "procedure",
-      "sortid": 156,
+      "sortid": 161,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3310,7 +3310,7 @@
     {
       "name": "AutoCraftingMachineAcaciaTrapdoorRecipe",
       "type": "procedure",
-      "sortid": 157,
+      "sortid": 162,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3340,7 +3340,7 @@
     {
       "name": "AutoCraftingMachineDarkOakTrapdoorRecipe",
       "type": "procedure",
-      "sortid": 158,
+      "sortid": 163,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3370,7 +3370,7 @@
     {
       "name": "AutoCraftingMachineWarpedTrapdoorRecipe",
       "type": "procedure",
-      "sortid": 159,
+      "sortid": 164,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3400,7 +3400,7 @@
     {
       "name": "AutoCraftingMachineCrimsonTrapdoorRecipe",
       "type": "procedure",
-      "sortid": 160,
+      "sortid": 165,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3430,7 +3430,7 @@
     {
       "name": "AutoCraftingMachineWoodTrapdoorRecipes",
       "type": "procedure",
-      "sortid": 161,
+      "sortid": 166,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3460,7 +3460,7 @@
     {
       "name": "AutoCraftingMachineOakDoorRecipe",
       "type": "procedure",
-      "sortid": 162,
+      "sortid": 167,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3490,7 +3490,7 @@
     {
       "name": "AutoCraftingMachineSpruceDoorRecipe",
       "type": "procedure",
-      "sortid": 163,
+      "sortid": 168,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3520,7 +3520,7 @@
     {
       "name": "AutoCraftingMachineBirchDoorRecipe",
       "type": "procedure",
-      "sortid": 164,
+      "sortid": 169,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3550,7 +3550,7 @@
     {
       "name": "AutoCraftingMachineJungleDoorRecipe",
       "type": "procedure",
-      "sortid": 165,
+      "sortid": 170,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3580,7 +3580,7 @@
     {
       "name": "AutoCraftingMachineAcaciaDoorRecipe",
       "type": "procedure",
-      "sortid": 166,
+      "sortid": 171,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3610,7 +3610,7 @@
     {
       "name": "AutoCraftingMachineDarkOakDoorRecipe",
       "type": "procedure",
-      "sortid": 167,
+      "sortid": 172,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3640,7 +3640,7 @@
     {
       "name": "AutoCraftingMachineWarpedDoorRecipe",
       "type": "procedure",
-      "sortid": 168,
+      "sortid": 173,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3670,7 +3670,7 @@
     {
       "name": "AutoCraftingMachineCrimsonDoorRecipe",
       "type": "procedure",
-      "sortid": 169,
+      "sortid": 174,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3700,7 +3700,7 @@
     {
       "name": "AutoCraftingMachineWoodDoorRecipes",
       "type": "procedure",
-      "sortid": 170,
+      "sortid": 175,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3730,7 +3730,7 @@
     {
       "name": "AutoCraftingMachineOakBoatRecipe",
       "type": "procedure",
-      "sortid": 171,
+      "sortid": 176,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3760,7 +3760,7 @@
     {
       "name": "AutoCraftingMachineSpruceBoatRecipe",
       "type": "procedure",
-      "sortid": 172,
+      "sortid": 177,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3790,7 +3790,7 @@
     {
       "name": "AutoCraftingMachineBirchBoatRecipe",
       "type": "procedure",
-      "sortid": 173,
+      "sortid": 178,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3820,7 +3820,7 @@
     {
       "name": "AutoCraftingMachineJungleBoatRecipe",
       "type": "procedure",
-      "sortid": 174,
+      "sortid": 179,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3850,7 +3850,7 @@
     {
       "name": "AutoCraftingMachineAcaciaBoatRecipe",
       "type": "procedure",
-      "sortid": 175,
+      "sortid": 180,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3880,7 +3880,7 @@
     {
       "name": "AutoCraftingMachineDarkOakBoatRecipe",
       "type": "procedure",
-      "sortid": 176,
+      "sortid": 181,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3910,7 +3910,7 @@
     {
       "name": "AutoCraftingMachineWoodBoatRecipes",
       "type": "procedure",
-      "sortid": 177,
+      "sortid": 182,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3940,7 +3940,7 @@
     {
       "name": "AutoCraftingMachineStickRecipe",
       "type": "procedure",
-      "sortid": 178,
+      "sortid": 183,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3970,7 +3970,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingWoodPlanks",
       "type": "tag",
-      "sortid": 179,
+      "sortid": 184,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3980,7 +3980,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingBamboo",
       "type": "tag",
-      "sortid": 180,
+      "sortid": 185,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3990,7 +3990,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingStick",
       "type": "tag",
-      "sortid": 181,
+      "sortid": 186,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4000,7 +4000,7 @@
     {
       "name": "AutoCraftingMachineBambooStickRecipe",
       "type": "procedure",
-      "sortid": 182,
+      "sortid": 187,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4030,7 +4030,7 @@
     {
       "name": "AutoCraftingMachineStickRecipes",
       "type": "procedure",
-      "sortid": 183,
+      "sortid": 188,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4060,7 +4060,7 @@
     {
       "name": "AutoCraftingMachineOakPressurePlateRecipe",
       "type": "procedure",
-      "sortid": 184,
+      "sortid": 189,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4090,7 +4090,7 @@
     {
       "name": "AutoCraftingMachineSprucePressurePlateRecipe",
       "type": "procedure",
-      "sortid": 185,
+      "sortid": 190,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4120,7 +4120,7 @@
     {
       "name": "AutoCraftingMachineBirchPressurePlateRecipe",
       "type": "procedure",
-      "sortid": 186,
+      "sortid": 191,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4150,7 +4150,7 @@
     {
       "name": "AutoCraftingMachineJunglePressurePlateRecipe",
       "type": "procedure",
-      "sortid": 187,
+      "sortid": 192,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4180,7 +4180,7 @@
     {
       "name": "AutoCraftingMachineAcaciaPressurePlateRecipe",
       "type": "procedure",
-      "sortid": 188,
+      "sortid": 193,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4210,7 +4210,7 @@
     {
       "name": "AutoCraftingMachineDarkOakPressurePlateRecipe",
       "type": "procedure",
-      "sortid": 189,
+      "sortid": 194,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4240,7 +4240,7 @@
     {
       "name": "AutoCraftingMachineWarpedPressurePlateRecipe",
       "type": "procedure",
-      "sortid": 190,
+      "sortid": 195,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4270,7 +4270,7 @@
     {
       "name": "AutoCraftingMachineCrimsonPressurePlateRecipe",
       "type": "procedure",
-      "sortid": 191,
+      "sortid": 196,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4300,7 +4300,7 @@
     {
       "name": "AutoCraftingMachineWoodPressurePlateRecipes",
       "type": "procedure",
-      "sortid": 192,
+      "sortid": 197,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4330,7 +4330,7 @@
     {
       "name": "AutoCraftingMachineOakFenceRecipe",
       "type": "procedure",
-      "sortid": 193,
+      "sortid": 198,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4360,7 +4360,7 @@
     {
       "name": "AutoCraftingMachineSpruceFenceRecipe",
       "type": "procedure",
-      "sortid": 194,
+      "sortid": 199,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4390,7 +4390,7 @@
     {
       "name": "AutoCraftingMachineBirchFenceRecipe",
       "type": "procedure",
-      "sortid": 195,
+      "sortid": 200,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4420,7 +4420,7 @@
     {
       "name": "AutoCraftingMachineJungleFenceRecipe",
       "type": "procedure",
-      "sortid": 196,
+      "sortid": 201,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4450,7 +4450,7 @@
     {
       "name": "AutoCraftingMachineAcaciaFenceRecipe",
       "type": "procedure",
-      "sortid": 197,
+      "sortid": 202,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4480,7 +4480,7 @@
     {
       "name": "AutoCraftingMachineDarkOakFenceRecipe",
       "type": "procedure",
-      "sortid": 198,
+      "sortid": 203,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4510,7 +4510,7 @@
     {
       "name": "AutoCraftingMachineWarpedFenceRecipe",
       "type": "procedure",
-      "sortid": 199,
+      "sortid": 204,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4540,7 +4540,7 @@
     {
       "name": "AutoCraftingMachineCrimsonFenceRecipe",
       "type": "procedure",
-      "sortid": 200,
+      "sortid": 205,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4570,7 +4570,7 @@
     {
       "name": "AutoCraftingMachineWoodFenceRecipes",
       "type": "procedure",
-      "sortid": 201,
+      "sortid": 206,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4600,7 +4600,7 @@
     {
       "name": "AutoCraftingMachineWoodRecipes",
       "type": "procedure",
-      "sortid": 202,
+      "sortid": 207,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4630,7 +4630,7 @@
     {
       "name": "AutoCraftingMachineOakFenceGateRecipe",
       "type": "procedure",
-      "sortid": 203,
+      "sortid": 208,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4660,7 +4660,7 @@
     {
       "name": "AutoCraftingMachineSpruceFenceGateRecipe",
       "type": "procedure",
-      "sortid": 204,
+      "sortid": 209,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4690,7 +4690,7 @@
     {
       "name": "AutoCraftingMachineBirchFenceGateRecipe",
       "type": "procedure",
-      "sortid": 205,
+      "sortid": 210,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4720,7 +4720,7 @@
     {
       "name": "AutoCraftingMachineJungleFenceGateRecipe",
       "type": "procedure",
-      "sortid": 206,
+      "sortid": 211,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4750,7 +4750,7 @@
     {
       "name": "AutoCraftingMachineAcaciaFenceGateRecipe",
       "type": "procedure",
-      "sortid": 207,
+      "sortid": 212,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4780,7 +4780,7 @@
     {
       "name": "AutoCraftingMachineDarkOakFenceGateRecipe",
       "type": "procedure",
-      "sortid": 208,
+      "sortid": 213,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4810,7 +4810,7 @@
     {
       "name": "AutoCraftingMachineWarpedFenceGateRecipe",
       "type": "procedure",
-      "sortid": 209,
+      "sortid": 214,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4840,7 +4840,7 @@
     {
       "name": "AutoCraftingMachineCrimsonFenceGateRecipe",
       "type": "procedure",
-      "sortid": 210,
+      "sortid": 215,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4870,7 +4870,7 @@
     {
       "name": "AutoCraftingMachineWoodFenceGateRecipes",
       "type": "procedure",
-      "sortid": 211,
+      "sortid": 216,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4900,7 +4900,7 @@
     {
       "name": "AutoCraftingMachineOakSignRecipe",
       "type": "procedure",
-      "sortid": 212,
+      "sortid": 217,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4930,7 +4930,7 @@
     {
       "name": "AutoCraftingMachineSpruceSignRecipe",
       "type": "procedure",
-      "sortid": 213,
+      "sortid": 218,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4960,7 +4960,7 @@
     {
       "name": "AutoCraftingMachineBirchSignRecipe",
       "type": "procedure",
-      "sortid": 214,
+      "sortid": 219,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4990,7 +4990,7 @@
     {
       "name": "AutoCraftingMachineJungleSignRecipe",
       "type": "procedure",
-      "sortid": 215,
+      "sortid": 220,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5020,7 +5020,7 @@
     {
       "name": "AutoCraftingMachineAcaciaSignRecipe",
       "type": "procedure",
-      "sortid": 216,
+      "sortid": 221,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5050,7 +5050,7 @@
     {
       "name": "AutoCraftingMachineDarkOakSignRecipe",
       "type": "procedure",
-      "sortid": 217,
+      "sortid": 222,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5080,7 +5080,7 @@
     {
       "name": "AutoCraftingMachineWarpedSignRecipe",
       "type": "procedure",
-      "sortid": 218,
+      "sortid": 223,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5110,7 +5110,7 @@
     {
       "name": "AutoCraftingMachineCrimsonSignRecipe",
       "type": "procedure",
-      "sortid": 219,
+      "sortid": 224,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5140,7 +5140,7 @@
     {
       "name": "AutoCraftingMachineWoodSignRecipes",
       "type": "procedure",
-      "sortid": 220,
+      "sortid": 225,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5170,7 +5170,7 @@
     {
       "name": "AutoCraftingMachineOakSaplingRecipe",
       "type": "procedure",
-      "sortid": 221,
+      "sortid": 226,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5200,7 +5200,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingOakLeaf",
       "type": "tag",
-      "sortid": 222,
+      "sortid": 227,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5210,7 +5210,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingSpruceLeaf",
       "type": "tag",
-      "sortid": 223,
+      "sortid": 228,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5220,7 +5220,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingBirchLeaf",
       "type": "tag",
-      "sortid": 224,
+      "sortid": 229,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5230,7 +5230,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingJungleLeaf",
       "type": "tag",
-      "sortid": 225,
+      "sortid": 230,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5240,7 +5240,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingAcaciaLeaf",
       "type": "tag",
-      "sortid": 226,
+      "sortid": 231,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5250,7 +5250,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingDarkOakLeaf",
       "type": "tag",
-      "sortid": 227,
+      "sortid": 232,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5260,7 +5260,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingNetherWartBlock",
       "type": "tag",
-      "sortid": 228,
+      "sortid": 233,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5270,7 +5270,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingWarpedWartBlock",
       "type": "tag",
-      "sortid": 229,
+      "sortid": 234,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5280,7 +5280,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingLeaves",
       "type": "tag",
-      "sortid": 230,
+      "sortid": 235,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5290,7 +5290,7 @@
     {
       "name": "NWTGAutomationRecipesAutoCraftingWartBlocks",
       "type": "tag",
-      "sortid": 231,
+      "sortid": 236,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5300,7 +5300,7 @@
     {
       "name": "AutoCraftingMachineSpruceSaplingRecipe",
       "type": "procedure",
-      "sortid": 232,
+      "sortid": 237,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5330,7 +5330,7 @@
     {
       "name": "AutoCraftingMachineBirchSaplingRecipe",
       "type": "procedure",
-      "sortid": 233,
+      "sortid": 238,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5360,7 +5360,7 @@
     {
       "name": "AutoCraftingMachineJungleSaplingRecipe",
       "type": "procedure",
-      "sortid": 234,
+      "sortid": 239,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5390,7 +5390,7 @@
     {
       "name": "AutoCraftingMachineAcaciaSaplingRecipe",
       "type": "procedure",
-      "sortid": 235,
+      "sortid": 240,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5420,7 +5420,7 @@
     {
       "name": "AutoCraftingMachineDarkOakSaplingRecipe",
       "type": "procedure",
-      "sortid": 236,
+      "sortid": 241,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5450,7 +5450,7 @@
     {
       "name": "AutoCraftingMachineWarpedFungusRecipe",
       "type": "procedure",
-      "sortid": 237,
+      "sortid": 242,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5480,7 +5480,7 @@
     {
       "name": "AutoCraftingMachineCrimsonFungusRecipe",
       "type": "procedure",
-      "sortid": 238,
+      "sortid": 243,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5510,7 +5510,7 @@
     {
       "name": "NWTAutomationItemsRedstone",
       "type": "tag",
-      "sortid": 239,
+      "sortid": 244,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5520,7 +5520,7 @@
     {
       "name": "NWTGAutomationItemsBreakerPanel",
       "type": "tag",
-      "sortid": 240,
+      "sortid": 245,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5530,7 +5530,7 @@
     {
       "name": "NWTGAutomationItemsBreakerPanelOn",
       "type": "tag",
-      "sortid": 241,
+      "sortid": 246,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5540,7 +5540,7 @@
     {
       "name": "NWTGAutomationItemsBreakerPanelOff",
       "type": "tag",
-      "sortid": 242,
+      "sortid": 247,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5550,7 +5550,7 @@
     {
       "name": "NWTGAutomationBlocksBreakerPanel",
       "type": "tag",
-      "sortid": 243,
+      "sortid": 248,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5560,7 +5560,7 @@
     {
       "name": "NWTGAutomationBlocksBreakerPanelOn",
       "type": "tag",
-      "sortid": 244,
+      "sortid": 249,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5570,7 +5570,7 @@
     {
       "name": "NWTGAutomationBlocksBreakerPanelOff",
       "type": "tag",
-      "sortid": 245,
+      "sortid": 250,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5580,7 +5580,7 @@
     {
       "name": "NWTGAutomationBlocksRemoteItemTeleporter",
       "type": "tag",
-      "sortid": 246,
+      "sortid": 251,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5590,7 +5590,7 @@
     {
       "name": "NWTGAutomationItemsRemoteItemTeleporter",
       "type": "tag",
-      "sortid": 247,
+      "sortid": 252,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5600,7 +5600,7 @@
     {
       "name": "NWTGAutomationBlocksAutoItemCollectorMachine",
       "type": "tag",
-      "sortid": 248,
+      "sortid": 253,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5610,7 +5610,7 @@
     {
       "name": "NWTGAutomationBlocksAutoItemCollectorMachineOn",
       "type": "tag",
-      "sortid": 249,
+      "sortid": 254,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5620,7 +5620,7 @@
     {
       "name": "NWTGAutomationBlocksAutoItemCollectorMachineOff",
       "type": "tag",
-      "sortid": 250,
+      "sortid": 255,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5630,7 +5630,7 @@
     {
       "name": "NWTGAutomationItemsAutoItemCollectorMachine",
       "type": "tag",
-      "sortid": 251,
+      "sortid": 256,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5640,7 +5640,7 @@
     {
       "name": "NWTGAutomationItemsAutoItemCollectorMachineOn",
       "type": "tag",
-      "sortid": 252,
+      "sortid": 257,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5650,7 +5650,7 @@
     {
       "name": "NWTGAutomationItemsAutoItemCollectorMachineOff",
       "type": "tag",
-      "sortid": 253,
+      "sortid": 258,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5660,7 +5660,7 @@
     {
       "name": "NWTGAutomationItemsIronIngot",
       "type": "tag",
-      "sortid": 254,
+      "sortid": 259,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5670,7 +5670,7 @@
     {
       "name": "NWTGAutomationItemsRedDye",
       "type": "tag",
-      "sortid": 255,
+      "sortid": 260,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5680,7 +5680,7 @@
     {
       "name": "NWTGAutomationItemsCompass",
       "type": "tag",
-      "sortid": 256,
+      "sortid": 261,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5690,7 +5690,7 @@
     {
       "name": "NWTGAutomationItemsCraftingTable",
       "type": "tag",
-      "sortid": 257,
+      "sortid": 262,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5700,7 +5700,7 @@
     {
       "name": "NWTGAutomationItemsObserver",
       "type": "tag",
-      "sortid": 258,
+      "sortid": 263,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5710,7 +5710,7 @@
     {
       "name": "NWTGAutomationItemsDispenser",
       "type": "tag",
-      "sortid": 259,
+      "sortid": 264,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5720,7 +5720,7 @@
     {
       "name": "NWTGAutomationItemsHoes",
       "type": "tag",
-      "sortid": 260,
+      "sortid": 265,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5730,7 +5730,7 @@
     {
       "name": "NWTGAutomationItemsHopper",
       "type": "tag",
-      "sortid": 261,
+      "sortid": 266,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5740,7 +5740,7 @@
     {
       "name": "GrassBlockSlabLower",
       "type": "block",
-      "sortid": 8,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5750,7 +5750,7 @@
     {
       "name": "GrassBlockSlabUpper",
       "type": "block",
-      "sortid": 9,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5760,7 +5760,7 @@
     {
       "name": "WhenOwnerBlockIsBroken",
       "type": "procedure",
-      "sortid": 262,
+      "sortid": 267,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5794,7 +5794,7 @@
     {
       "name": "NWTGAutomationBlocksOwnershipBlocks",
       "type": "tag",
-      "sortid": 263,
+      "sortid": 268,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5804,7 +5804,7 @@
     {
       "name": "BreakerPanelUpdateTick",
       "type": "procedure",
-      "sortid": 264,
+      "sortid": 269,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5844,7 +5844,7 @@
     {
       "name": "AutoTreeFarmMachineOn",
       "type": "block",
-      "sortid": 265,
+      "sortid": 270,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5854,7 +5854,7 @@
     {
       "name": "AutoTreeFarmMachineOnUpdateTick",
       "type": "procedure",
-      "sortid": 266,
+      "sortid": 271,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5884,7 +5884,7 @@
     {
       "name": "AutoTreeFarmMachineOnBlockIsPlacedBy",
       "type": "procedure",
-      "sortid": 267,
+      "sortid": 272,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5918,7 +5918,7 @@
     {
       "name": "AutoTreeFarmMachineUpdateTick",
       "type": "procedure",
-      "sortid": 268,
+      "sortid": 273,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5948,7 +5948,7 @@
     {
       "name": "AutoTreeFarmMachineBlockIsPlacedBy",
       "type": "procedure",
-      "sortid": 269,
+      "sortid": 274,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5982,7 +5982,7 @@
     {
       "name": "AutoTreeFarmMachineVersionUpdateScript",
       "type": "procedure",
-      "sortid": 270,
+      "sortid": 275,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6012,7 +6012,7 @@
     {
       "name": "AutoTreeFarmMachineOnMainScript",
       "type": "procedure",
-      "sortid": 271,
+      "sortid": 276,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6042,7 +6042,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmLogs",
       "type": "tag",
-      "sortid": 272,
+      "sortid": 277,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6052,7 +6052,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmLeaves",
       "type": "tag",
-      "sortid": 273,
+      "sortid": 278,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6062,7 +6062,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmSaplings",
       "type": "tag",
-      "sortid": 274,
+      "sortid": 279,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6072,7 +6072,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmLeaves",
       "type": "tag",
-      "sortid": 275,
+      "sortid": 280,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6082,7 +6082,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmLogs",
       "type": "tag",
-      "sortid": 276,
+      "sortid": 281,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6092,7 +6092,7 @@
     {
       "name": "AutoTreeFarmMachineInventory",
       "type": "gui",
-      "sortid": 277,
+      "sortid": 282,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6102,7 +6102,7 @@
     {
       "name": "AutoTreeFarmMachineOnOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 278,
+      "sortid": 283,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6140,7 +6140,7 @@
     {
       "name": "AutoTreeFarmMachineOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 279,
+      "sortid": 284,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6178,7 +6178,7 @@
     {
       "name": "AutoTreeFarmMachineToggleStateScript",
       "type": "procedure",
-      "sortid": 280,
+      "sortid": 285,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6208,7 +6208,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmSoil",
       "type": "tag",
-      "sortid": 281,
+      "sortid": 286,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6218,7 +6218,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmMachine",
       "type": "tag",
-      "sortid": 282,
+      "sortid": 287,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6228,7 +6228,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmMachineOn",
       "type": "tag",
-      "sortid": 283,
+      "sortid": 288,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6238,7 +6238,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmMachineOff",
       "type": "tag",
-      "sortid": 284,
+      "sortid": 289,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6248,7 +6248,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmMachine",
       "type": "tag",
-      "sortid": 285,
+      "sortid": 290,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6258,7 +6258,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmMachineOn",
       "type": "tag",
-      "sortid": 286,
+      "sortid": 291,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6268,7 +6268,7 @@
     {
       "name": "NWTGAutomationItemsAutoTreeFarmMachineOff",
       "type": "tag",
-      "sortid": 287,
+      "sortid": 292,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6278,7 +6278,7 @@
     {
       "name": "NWTGAutomationBlocksGrassBlockSlabs",
       "type": "tag",
-      "sortid": 288,
+      "sortid": 293,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6288,7 +6288,7 @@
     {
       "name": "NWTGAutomationBlocksGrassBlockSlabsUpper",
       "type": "tag",
-      "sortid": 289,
+      "sortid": 294,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6298,7 +6298,7 @@
     {
       "name": "NWTGAutomationBlocksGrassBlockSlabsLower",
       "type": "tag",
-      "sortid": 290,
+      "sortid": 295,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6308,7 +6308,7 @@
     {
       "name": "NWTGAutomationItemsGrassBlockSlabs",
       "type": "tag",
-      "sortid": 291,
+      "sortid": 296,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6318,7 +6318,7 @@
     {
       "name": "NWTGAutomationItemsGrassBlockSlabsUpper",
       "type": "tag",
-      "sortid": 292,
+      "sortid": 297,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6328,7 +6328,7 @@
     {
       "name": "NWTGAutomationItemsGrassBlockSlabsLower",
       "type": "tag",
-      "sortid": 293,
+      "sortid": 298,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6338,7 +6338,7 @@
     {
       "name": "AutoCraftingMachineSaplingRecipes",
       "type": "procedure",
-      "sortid": 294,
+      "sortid": 299,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6368,7 +6368,7 @@
     {
       "name": "NWTGAutomationBlocksAutoTreeFarmSurfaceLeaves",
       "type": "tag",
-      "sortid": 295,
+      "sortid": 300,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6378,7 +6378,7 @@
     {
       "name": "NWTGAutomationItemsAxes",
       "type": "tag",
-      "sortid": 296,
+      "sortid": 301,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6388,7 +6388,7 @@
     {
       "name": "BreakerPanelCraftingRecipe",
       "type": "recipe",
-      "sortid": 297,
+      "sortid": 302,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6398,7 +6398,7 @@
     {
       "name": "RemoteItemTeleporterCraftingRecipe",
       "type": "recipe",
-      "sortid": 298,
+      "sortid": 303,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6408,7 +6408,7 @@
     {
       "name": "AutoFarmingMachineCraftingRecipe",
       "type": "recipe",
-      "sortid": 299,
+      "sortid": 304,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6418,7 +6418,7 @@
     {
       "name": "AutoCraftingMachineCraftingRecipe",
       "type": "recipe",
-      "sortid": 300,
+      "sortid": 305,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6428,7 +6428,7 @@
     {
       "name": "AutoItemCollectorMachineCraftingRecipe",
       "type": "recipe",
-      "sortid": 301,
+      "sortid": 306,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6438,7 +6438,7 @@
     {
       "name": "AutoTreeFarmMachineCraftingRecipe",
       "type": "recipe",
-      "sortid": 302,
+      "sortid": 307,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6448,7 +6448,7 @@
     {
       "name": "MachineBlockCraftingRecipe",
       "type": "recipe",
-      "sortid": 303,
+      "sortid": 308,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6458,7 +6458,7 @@
     {
       "name": "LowerGrassBlockSlabCraftingRecipe1",
       "type": "recipe",
-      "sortid": 304,
+      "sortid": 309,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6468,7 +6468,7 @@
     {
       "name": "LowerGrassBlockSlabCraftingRecipe2",
       "type": "recipe",
-      "sortid": 305,
+      "sortid": 310,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6478,7 +6478,7 @@
     {
       "name": "UpperGrassBlockSlabCraftingRecipe1",
       "type": "recipe",
-      "sortid": 306,
+      "sortid": 311,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6488,7 +6488,7 @@
     {
       "name": "MachineWrenchCraftingRecipe",
       "type": "recipe",
-      "sortid": 307,
+      "sortid": 312,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6498,7 +6498,7 @@
     {
       "name": "NWTGAutomationItemsRedstone",
       "type": "tag",
-      "sortid": 308,
+      "sortid": 313,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6508,7 +6508,7 @@
     {
       "name": "NWTGAutomationItemsLever",
       "type": "tag",
-      "sortid": 309,
+      "sortid": 314,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6518,7 +6518,7 @@
     {
       "name": "MachinesAutoFarmingBlockTag",
       "type": "tag",
-      "sortid": 310,
+      "sortid": 315,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6528,7 +6528,7 @@
     {
       "name": "MachinesAutoFarmingItemTag",
       "type": "tag",
-      "sortid": 311,
+      "sortid": 316,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6538,7 +6538,7 @@
     {
       "name": "MachinesAutoFarmingOffBlockTag",
       "type": "tag",
-      "sortid": 312,
+      "sortid": 317,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6548,7 +6548,7 @@
     {
       "name": "MachinesAutoFarmingOnBlockTag",
       "type": "tag",
-      "sortid": 313,
+      "sortid": 318,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6558,7 +6558,7 @@
     {
       "name": "MachinesAutoFarmingOffItemTag",
       "type": "tag",
-      "sortid": 314,
+      "sortid": 319,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6568,7 +6568,7 @@
     {
       "name": "MachinesAutoFarmingOnItemTag",
       "type": "tag",
-      "sortid": 315,
+      "sortid": 320,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6578,7 +6578,7 @@
     {
       "name": "MachineStateOnCondition",
       "type": "procedure",
-      "sortid": 316,
+      "sortid": 321,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6609,7 +6609,7 @@
     {
       "name": "MachineStateOffCondition",
       "type": "procedure",
-      "sortid": 317,
+      "sortid": 322,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6640,7 +6640,7 @@
     {
       "name": "MachineProcessIdleCondition",
       "type": "procedure",
-      "sortid": 318,
+      "sortid": 323,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6671,7 +6671,7 @@
     {
       "name": "MachineProcessWorkingCondition",
       "type": "procedure",
-      "sortid": 319,
+      "sortid": 324,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6702,7 +6702,7 @@
     {
       "name": "MachineProcessNoneCondition",
       "type": "procedure",
-      "sortid": 320,
+      "sortid": 325,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6733,7 +6733,7 @@
     {
       "name": "FarmingParticle",
       "type": "particle",
-      "sortid": 321,
+      "sortid": 326,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6743,7 +6743,7 @@
     {
       "name": "WoodenUpgrade",
       "type": "item",
-      "sortid": 11,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6753,7 +6753,7 @@
     {
       "name": "StoneUpgrade",
       "type": "item",
-      "sortid": 12,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6763,7 +6763,7 @@
     {
       "name": "IronUpgrade",
       "type": "item",
-      "sortid": 13,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6773,7 +6773,7 @@
     {
       "name": "GoldenUpgrade",
       "type": "item",
-      "sortid": 14,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6783,7 +6783,7 @@
     {
       "name": "DiamondUpgrade",
       "type": "item",
-      "sortid": 15,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6793,7 +6793,7 @@
     {
       "name": "NetheriteUpgrade",
       "type": "item",
-      "sortid": 16,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6803,7 +6803,7 @@
     {
       "name": "WoodenUpgradeCraftingRecipe",
       "type": "recipe",
-      "sortid": 322,
+      "sortid": 327,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6813,7 +6813,7 @@
     {
       "name": "StoneUpgradeCraftingRecipe",
       "type": "recipe",
-      "sortid": 323,
+      "sortid": 328,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6823,7 +6823,7 @@
     {
       "name": "IronUpgradeCraftingRecipe",
       "type": "recipe",
-      "sortid": 324,
+      "sortid": 329,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6833,7 +6833,7 @@
     {
       "name": "GoldenUpgradeCraftingRecipe",
       "type": "recipe",
-      "sortid": 325,
+      "sortid": 330,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6843,7 +6843,7 @@
     {
       "name": "DiamondUpgradeCraftingRecipe",
       "type": "recipe",
-      "sortid": 326,
+      "sortid": 331,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6853,7 +6853,7 @@
     {
       "name": "NetheriteUpgradeCraftingRecipe",
       "type": "recipe",
-      "sortid": 327,
+      "sortid": 332,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6863,7 +6863,7 @@
     {
       "name": "UpgradesWoodenItemTag",
       "type": "tag",
-      "sortid": 328,
+      "sortid": 333,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6873,7 +6873,7 @@
     {
       "name": "UpgradesStoneItemTag",
       "type": "tag",
-      "sortid": 329,
+      "sortid": 334,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6883,7 +6883,7 @@
     {
       "name": "UpgradesIronItemTag",
       "type": "tag",
-      "sortid": 330,
+      "sortid": 335,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6893,7 +6893,7 @@
     {
       "name": "UpgradesGoldenItemTag",
       "type": "tag",
-      "sortid": 331,
+      "sortid": 336,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6903,7 +6903,7 @@
     {
       "name": "UpgradesDiamondItemTag",
       "type": "tag",
-      "sortid": 332,
+      "sortid": 337,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6913,7 +6913,7 @@
     {
       "name": "UpgradesNetheriteItemTag",
       "type": "tag",
-      "sortid": 333,
+      "sortid": 338,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6923,7 +6923,7 @@
     {
       "name": "IngotsIronItemTag",
       "type": "tag",
-      "sortid": 335,
+      "sortid": 339,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6933,7 +6933,7 @@
     {
       "name": "IngotsGoldItemTag",
       "type": "tag",
-      "sortid": 336,
+      "sortid": 340,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6943,7 +6943,7 @@
     {
       "name": "IngotsNetheriteItemTag",
       "type": "tag",
-      "sortid": 337,
+      "sortid": 341,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6953,7 +6953,7 @@
     {
       "name": "GemsDiamondItemTag",
       "type": "tag",
-      "sortid": 338,
+      "sortid": 342,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6963,7 +6963,7 @@
     {
       "name": "AutoFarmingMachineProgress1Condition",
       "type": "procedure",
-      "sortid": 339,
+      "sortid": 343,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -6994,7 +6994,7 @@
     {
       "name": "AutoFarmingMachineProgress2Condition",
       "type": "procedure",
-      "sortid": 340,
+      "sortid": 344,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7025,7 +7025,7 @@
     {
       "name": "AutoFarmingMachineProgress3Condition",
       "type": "procedure",
-      "sortid": 341,
+      "sortid": 345,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7056,7 +7056,7 @@
     {
       "name": "AutoFarmingMachineProgress4Condition",
       "type": "procedure",
-      "sortid": 342,
+      "sortid": 346,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7087,7 +7087,7 @@
     {
       "name": "AutoFarmingMachineProgress5Condition",
       "type": "procedure",
-      "sortid": 343,
+      "sortid": 347,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7118,7 +7118,7 @@
     {
       "name": "AutoFarmingMachineProgress6Condition",
       "type": "procedure",
-      "sortid": 344,
+      "sortid": 348,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7149,7 +7149,7 @@
     {
       "name": "AutoFarmingMachineProgress7Condition",
       "type": "procedure",
-      "sortid": 345,
+      "sortid": 349,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7180,7 +7180,7 @@
     {
       "name": "AutoFarmingMachineProgress8Condition",
       "type": "procedure",
-      "sortid": 346,
+      "sortid": 350,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7211,7 +7211,7 @@
     {
       "name": "AutoFarmingMachineProgress9Condition",
       "type": "procedure",
-      "sortid": 347,
+      "sortid": 351,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7242,7 +7242,7 @@
     {
       "name": "MachineBlockItemTag",
       "type": "tag",
-      "sortid": 349,
+      "sortid": 352,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7252,7 +7252,7 @@
     {
       "name": "MachineBlockBlockTag",
       "type": "tag",
-      "sortid": 351,
+      "sortid": 353,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7262,7 +7262,7 @@
     {
       "name": "MinecraftStoneItemTag",
       "type": "tag",
-      "sortid": 353,
+      "sortid": 354,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7272,7 +7272,7 @@
     {
       "name": "MinecraftDispenserItemTag",
       "type": "tag",
-      "sortid": 354,
+      "sortid": 355,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7282,7 +7282,7 @@
     {
       "name": "DustsRedstoneItemTag",
       "type": "tag",
-      "sortid": 355,
+      "sortid": 356,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7292,7 +7292,7 @@
     {
       "name": "ToolsHoesItemTag",
       "type": "tag",
-      "sortid": 356,
+      "sortid": 357,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7302,7 +7302,7 @@
     {
       "name": "UnlockUpgradeRecipes",
       "type": "procedure",
-      "sortid": 357,
+      "sortid": 358,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7318,209 +7318,29 @@
       "path": "~/Recipes/Unlocking"
     },
     {
-      "name": "AutoFarmingMachineCustomCropsScript",
-      "type": "procedure",
-      "sortid": 358,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "auto_farming_machine_custom_crops_script",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Custom"
-    },
-    {
-      "name": "AutoFarmingMachineVineScript",
-      "type": "procedure",
-      "sortid": 359,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "auto_farming_machine_vine_script",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Vines"
-    },
-    {
-      "name": "AutoFarmingMachineTwistingVinesScript",
-      "type": "procedure",
-      "sortid": 360,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "auto_farming_machine_twisting_vines_script",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Twisting"
-    },
-    {
-      "name": "AutoFarmingMachineWeepingVinesScript",
-      "type": "procedure",
-      "sortid": 361,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "auto_farming_machine_weeping_vines_script",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Weeping"
-    },
-    {
-      "name": "AutoFarmingMachineBrownMushroomScript",
-      "type": "procedure",
-      "sortid": 362,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "auto_farming_machine_brown_mushroom_script",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Mushrooms/Brown"
-    },
-    {
-      "name": "AutoFarmingMachineRedMushroomScript",
-      "type": "procedure",
-      "sortid": 363,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "auto_farming_machine_red_mushroom_script",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Mushrooms/Red"
-    },
-    {
       "name": "SolarPanel",
       "type": "block",
-      "sortid": 364,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "solar_panel",
-      "path": "~/Blocks/Devices/Solar_Panel"
+      "path": "~/Blocks/Energy/Solar_Panel"
     },
     {
       "name": "SolarPanelOn",
       "type": "block",
-      "sortid": 365,
+      "sortid": 359,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "solar_panel_on",
-      "path": "~/Blocks/Devices/Solar_Panel"
+      "path": "~/Blocks/Energy/Solar_Panel"
     },
     {
       "name": "SolarPanelUpdateTick",
       "type": "procedure",
-      "sortid": 387,
+      "sortid": 360,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7545,12 +7365,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Update_Tick"
+      "path": "~/Blocks/Energy/Solar_Panel/Procedures/Update_Tick"
     },
     {
       "name": "SolarPanelUpdateTickOffScript",
       "type": "procedure",
-      "sortid": 388,
+      "sortid": 361,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7575,12 +7395,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Update_Tick"
+      "path": "~/Blocks/Energy/Solar_Panel/Procedures/Update_Tick"
     },
     {
       "name": "SolarPanelUpdateTickOnScript",
       "type": "procedure",
-      "sortid": 389,
+      "sortid": 362,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7605,12 +7425,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Update_Tick"
+      "path": "~/Blocks/Energy/Solar_Panel/Procedures/Update_Tick"
     },
     {
       "name": "SolarPanelUpdateTickEnergyScript",
       "type": "procedure",
-      "sortid": 390,
+      "sortid": 363,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7635,12 +7455,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Update_Tick"
+      "path": "~/Blocks/Energy/Solar_Panel/Procedures/Update_Tick"
     },
     {
       "name": "SolarPanelScreen",
       "type": "gui",
-      "sortid": 391,
+      "sortid": 364,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7650,7 +7470,7 @@
     {
       "name": "SolarPanelSceenGreenLightCondition",
       "type": "procedure",
-      "sortid": 392,
+      "sortid": 365,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7681,7 +7501,7 @@
     {
       "name": "SolarPanelOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 396,
+      "sortid": 366,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7710,12 +7530,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Right_Click"
+      "path": "~/Blocks/Energy/Solar_Panel/Procedures/Right_Click"
     },
     {
       "name": "SolarPanelScreenRedLightCondition",
       "type": "procedure",
-      "sortid": 398,
+      "sortid": 367,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7746,27 +7566,27 @@
     {
       "name": "Battery",
       "type": "block",
-      "sortid": 399,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "battery",
-      "path": "~/Blocks/Devices/Battery"
+      "path": "~/Blocks/Energy/Battery"
     },
     {
       "name": "BatteryOn",
       "type": "block",
-      "sortid": 400,
+      "sortid": 368,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "battery_on",
-      "path": "~/Blocks/Devices/Battery"
+      "path": "~/Blocks/Energy/Battery"
     },
     {
       "name": "BatteryOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 401,
+      "sortid": 369,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7799,12 +7619,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Devices/Battery/Procedures"
+      "path": "~/Blocks/Energy/Battery/Procedures"
     },
     {
       "name": "BatteryBlockAdded",
       "type": "procedure",
-      "sortid": 402,
+      "sortid": 370,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7829,12 +7649,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Devices/Battery/Procedures"
+      "path": "~/Blocks/Energy/Battery/Procedures"
     },
     {
       "name": "BatteryUpdateTick",
       "type": "procedure",
-      "sortid": 403,
+      "sortid": 371,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7859,12 +7679,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Devices/Battery/Procedures"
+      "path": "~/Blocks/Energy/Battery/Procedures"
     },
     {
       "name": "SolarPanelBlockAdded",
       "type": "procedure",
-      "sortid": 404,
+      "sortid": 372,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7889,12 +7709,12 @@
           }
         ]
       },
-      "path": "~/Blocks/Devices/Solar_Panel/Procedures/Block_Added"
+      "path": "~/Blocks/Energy/Solar_Panel/Procedures/Block_Added"
     },
     {
       "name": "BatteryScreen",
       "type": "gui",
-      "sortid": 405,
+      "sortid": 373,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7904,7 +7724,7 @@
     {
       "name": "BatteryScreenRedLightCondition",
       "type": "procedure",
-      "sortid": 406,
+      "sortid": 374,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7935,7 +7755,7 @@
     {
       "name": "BatteryScreenGreenLightCondition",
       "type": "procedure",
-      "sortid": 407,
+      "sortid": 375,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -7962,6 +7782,1242 @@
         ]
       },
       "path": "~/GUIs/Devices/Battery/Procedures"
+    },
+    {
+      "name": "Sparks",
+      "type": "particle",
+      "sortid": 376,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sparks",
+      "path": "~/Particles"
+    },
+    {
+      "name": "SolarPanelClientDisplayRandomTick",
+      "type": "procedure",
+      "sortid": 377,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solar_panel_client_display_random_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Energy/Solar_Panel/Procedures"
+    },
+    {
+      "name": "OakLamp",
+      "type": "block",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oak_lamp",
+      "path": "~/Blocks/Blocks/Lamps/Oak_Lamp"
+    },
+    {
+      "name": "OakLampOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 378,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oak_lamp_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Oak_Lamp"
+    },
+    {
+      "name": "OakLampUpdateTick",
+      "type": "procedure",
+      "sortid": 379,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oak_lamp_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Oak_Lamp"
+    },
+    {
+      "name": "OakLampBlockAdded",
+      "type": "procedure",
+      "sortid": 380,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oak_lamp_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Oak_Lamp"
+    },
+    {
+      "name": "OakLampOn",
+      "type": "block",
+      "sortid": 381,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oak_lamp_on",
+      "path": "~/Blocks/Blocks/Lamps/Oak_Lamp"
+    },
+    {
+      "name": "SpruceLampBlockRightClicked",
+      "type": "procedure",
+      "sortid": 382,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spruce_lamp_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Spruce_Lamp"
+    },
+    {
+      "name": "SpruceLampUpdateTick",
+      "type": "procedure",
+      "sortid": 383,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spruce_lamp_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Spruce_Lamp"
+    },
+    {
+      "name": "SpruceLampBlockAdded",
+      "type": "procedure",
+      "sortid": 384,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spruce_lamp_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Spruce_Lamp"
+    },
+    {
+      "name": "BirchLampOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 385,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "birch_lamp_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Birch_Lamp"
+    },
+    {
+      "name": "BirchLampUpdateTick",
+      "type": "procedure",
+      "sortid": 386,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "birch_lamp_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Birch_Lamp"
+    },
+    {
+      "name": "BirchLampBlockAdded",
+      "type": "procedure",
+      "sortid": 387,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "birch_lamp_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Birch_Lamp"
+    },
+    {
+      "name": "JungleLampOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 388,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jungle_lamp_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/JungleLamp"
+    },
+    {
+      "name": "JungleLampUpdateTick",
+      "type": "procedure",
+      "sortid": 389,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jungle_lamp_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/JungleLamp"
+    },
+    {
+      "name": "JungleLampBlockAdded",
+      "type": "procedure",
+      "sortid": 390,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jungle_lamp_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/JungleLamp"
+    },
+    {
+      "name": "JungleLamp",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jungle_lamp",
+      "path": "~/Blocks/Blocks/Lamps/JungleLamp"
+    },
+    {
+      "name": "JungleLampOn",
+      "type": "block",
+      "sortid": 391,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jungle_lamp_on",
+      "path": "~/Blocks/Blocks/Lamps/JungleLamp"
+    },
+    {
+      "name": "AcaciaLampOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "acacia_lamp_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Acacia_Lamp"
+    },
+    {
+      "name": "AcaciaLampUpdateTick",
+      "type": "procedure",
+      "sortid": 393,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "acacia_lamp_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Acacia_Lamp"
+    },
+    {
+      "name": "AcaciaLampBlockAdded",
+      "type": "procedure",
+      "sortid": 394,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "acacia_lamp_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Acacia_Lamp"
+    },
+    {
+      "name": "AcaciaLamp",
+      "type": "block",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "acacia_lamp",
+      "path": "~/Blocks/Blocks/Lamps/Acacia_Lamp"
+    },
+    {
+      "name": "AcaciaLampOn",
+      "type": "block",
+      "sortid": 395,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "acacia_lamp_on",
+      "path": "~/Blocks/Blocks/Lamps/Acacia_Lamp"
+    },
+    {
+      "name": "DarkOakLampOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 396,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dark_oak_lamp_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Dark_Oak_Lamp"
+    },
+    {
+      "name": "DarkOakLampUpdateTick",
+      "type": "procedure",
+      "sortid": 397,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dark_oak_lamp_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Dark_Oak_Lamp"
+    },
+    {
+      "name": "DarkOakLampBlockAdded",
+      "type": "procedure",
+      "sortid": 398,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dark_oak_lamp_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Dark_Oak_Lamp"
+    },
+    {
+      "name": "DarkOakLamp",
+      "type": "block",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dark_oak_lamp",
+      "path": "~/Blocks/Blocks/Lamps/Dark_Oak_Lamp"
+    },
+    {
+      "name": "DarkOakLampOn",
+      "type": "block",
+      "sortid": 399,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dark_oak_lamp_on",
+      "path": "~/Blocks/Blocks/Lamps/Dark_Oak_Lamp"
+    },
+    {
+      "name": "CrimsonLampOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 400,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crimson_lamp_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Crimson_Lamp"
+    },
+    {
+      "name": "CrimsonLampUpdateTick",
+      "type": "procedure",
+      "sortid": 401,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crimson_lamp_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Crimson_Lamp"
+    },
+    {
+      "name": "CrimsonLampBlockAdded",
+      "type": "procedure",
+      "sortid": 402,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crimson_lamp_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Crimson_Lamp"
+    },
+    {
+      "name": "CrimsonLamp",
+      "type": "block",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crimson_lamp",
+      "path": "~/Blocks/Blocks/Lamps/Crimson_Lamp"
+    },
+    {
+      "name": "CrimsonLampOn",
+      "type": "block",
+      "sortid": 403,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crimson_lamp_on",
+      "path": "~/Blocks/Blocks/Lamps/Crimson_Lamp"
+    },
+    {
+      "name": "WarpedLampOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 404,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "warped_lamp_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Warped_Lamp"
+    },
+    {
+      "name": "WarpedLampUpdateTick",
+      "type": "procedure",
+      "sortid": 405,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "warped_lamp_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Warped_Lamp"
+    },
+    {
+      "name": "WarpedLampBlockAdded",
+      "type": "procedure",
+      "sortid": 406,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "warped_lamp_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Blocks/Lamps/Warped_Lamp"
+    },
+    {
+      "name": "WarpedLamp",
+      "type": "block",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "warped_lamp",
+      "path": "~/Blocks/Blocks/Lamps/Warped_Lamp"
+    },
+    {
+      "name": "WarpedLampOn",
+      "type": "block",
+      "sortid": 407,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "warped_lamp_on",
+      "path": "~/Blocks/Blocks/Lamps/Warped_Lamp"
+    },
+    {
+      "name": "BirchLamp",
+      "type": "block",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "birch_lamp",
+      "path": "~/Blocks/Blocks/Lamps/Birch_Lamp"
+    },
+    {
+      "name": "BirchLampOn",
+      "type": "block",
+      "sortid": 408,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "birch_lamp_on",
+      "path": "~/Blocks/Blocks/Lamps/Birch_Lamp"
+    },
+    {
+      "name": "SpruceLamp",
+      "type": "block",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spruce_lamp",
+      "path": "~/Blocks/Blocks/Lamps/Spruce_Lamp"
+    },
+    {
+      "name": "SpruceLampOn",
+      "type": "block",
+      "sortid": 409,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spruce_lamp_on",
+      "path": "~/Blocks/Blocks/Lamps/Spruce_Lamp"
+    },
+    {
+      "name": "PowerHubBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 410,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "power_hub_block_is_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Energy/Power_Hub/Procedures"
+    },
+    {
+      "name": "PowerHub",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "power_hub",
+      "path": "~/Blocks/Energy/Power_Hub"
+    },
+    {
+      "name": "PowerHubOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 411,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "power_hub_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Energy/Power_Hub/Procedures"
+    },
+    {
+      "name": "PowerHubUpdateTick",
+      "type": "procedure",
+      "sortid": 412,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "power_hub_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Energy/Power_Hub/Procedures"
+    },
+    {
+      "name": "AutoFarmingMachineCustomScript",
+      "type": "procedure",
+      "sortid": 413,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_custom_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Custom"
+    },
+    {
+      "name": "AutoFarmingMachineRedMushroomScript",
+      "type": "procedure",
+      "sortid": 414,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_red_mushroom_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Mushrooms/Red"
+    },
+    {
+      "name": "AutoFarmingMachineBrownMushroomScript",
+      "type": "procedure",
+      "sortid": 415,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_brown_mushroom_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Mushrooms/Brown"
+    },
+    {
+      "name": "AutoFarmingMachineVineScript",
+      "type": "procedure",
+      "sortid": 416,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_vine_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Vines"
+    },
+    {
+      "name": "AutoFarmingMachineTwistingVineScript",
+      "type": "procedure",
+      "sortid": 417,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_twisting_vine_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Twisting"
+    },
+    {
+      "name": "AutoFarmingMachineWeepingVineScript",
+      "type": "procedure",
+      "sortid": 418,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_farming_machine_weeping_vine_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Machines/Auto_Farming/Procedures/Script/Crops/Vines/Weeping"
     }
   ],
   "variable_elements": [
@@ -8005,23 +9061,35 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.nwtg_automation.birch_lamp": "Birch Lamp",
       "item.nwtg_automation.machine_wrench": "Machine Wrench",
       "block.nwtg_automation.machine_block": "Machine Block",
       "item.nwtg_automation.stone_upgrade": "Stone Upgrade",
+      "block.nwtg_automation.birch_lamp_on": "Birch Lamp",
+      "block.nwtg_automation.oak_lamp_on": "Oak Lamp",
+      "block.nwtg_automation.dark_oak_lamp": "Dark Oak Lamp",
       "block.nwtg_automation.auto_item_collector_machine_on": "Auto Item Collector Machine",
       "block.nwtg_automation.auto_farming_machine": "Auto Farming Machine",
+      "block.nwtg_automation.jungle_lamp": "Jungle Lamp",
+      "block.nwtg_automation.jungle_lamp_on": "Jungle Lamp",
+      "block.nwtg_automation.spruce_lamp": "Spruce Lamp",
+      "block.nwtg_automation.power_hub": "Power Hub",
       "item.nwtg_automation.iron_upgrade": "Iron Upgrade",
       "block.nwtg_automation.solar_panel_on": "Solar Panel",
       "block.nwtg_automation.auto_crafting_machine": "Auto Crafting Machine",
       "block.nwtg_automation.auto_crafting_machine_on": "Auto Crafting Machine",
+      "block.nwtg_automation.acacia_lamp": "Acacia Lamp",
       "item.nwtg_automation.golden_upgrade": "Golden Upgrade",
       "block.nwtg_automation.auto_farming_machine_on": "Auto Farming Machine On",
       "block.nwtg_automation.breaker_panel": "Breaker Panel",
+      "block.nwtg_automation.spruce_lamp_on": "Spruce Lamp",
       "block.nwtg_automation.grass_block_slab_lower": "Lower Grass Block Slab",
       "block.nwtg_automation.breaker_panel_on": "Breaker Panel On",
       "block.nwtg_automation.battery_on": "Battery",
       "item.nwtg_automation.wooden_upgrade": "Wooden Upgrade",
       "block.nwtg_automation.grass_block_slab_upper": "Upper Grass Block Slab",
+      "block.nwtg_automation.crimson_lamp": "Crimson Lamp",
+      "block.nwtg_automation.warped_lamp_on": "Warped Lamp",
       "item.nwtg_automation.diamond_upgrade": "Diamond Upgrade",
       "block.nwtg_automation.auto_item_collector_machine": "Auto Item Collector Machine",
       "block.nwtg_automation.auto_tree_farm_machine_on": "Auto Tree Farm Machine On",
@@ -8029,8 +9097,13 @@
       "item.nwtg_automation.netherite_upgrade": "Netherite Upgrade",
       "block.nwtg_automation.remote_item_teleporter": "Remote Item Teleporter",
       "block.nwtg_automation.battery": "Battery",
+      "block.nwtg_automation.acacia_lamp_on": "Acacia Lamp",
+      "block.nwtg_automation.oak_lamp": "Oak Lamp",
+      "block.nwtg_automation.dark_oak_lamp_on": "Dark Oak Lamp",
+      "block.nwtg_automation.crimson_lamp_on": "Crimson Lamp",
       "itemGroup.tabnwtg_automation_tab": "NWTG Automation",
-      "block.nwtg_automation.auto_tree_farm_machine": "Auto Tree Farm Machine"
+      "block.nwtg_automation.auto_tree_farm_machine": "Auto Tree Farm Machine",
+      "block.nwtg_automation.warped_lamp": "Warped Lamp"
     }
   },
   "foldersRoot": {
@@ -8285,6 +9358,43 @@
               {
                 "name": "GrassBlockSlabs",
                 "children": []
+              },
+              {
+                "name": "Lamps",
+                "children": [
+                  {
+                    "name": "Oak_Lamp",
+                    "children": []
+                  },
+                  {
+                    "name": "Spruce_Lamp",
+                    "children": []
+                  },
+                  {
+                    "name": "Birch_Lamp",
+                    "children": []
+                  },
+                  {
+                    "name": "JungleLamp",
+                    "children": []
+                  },
+                  {
+                    "name": "Acacia_Lamp",
+                    "children": []
+                  },
+                  {
+                    "name": "Dark_Oak_Lamp",
+                    "children": []
+                  },
+                  {
+                    "name": "Crimson_Lamp",
+                    "children": []
+                  },
+                  {
+                    "name": "Warped_Lamp",
+                    "children": []
+                  }
+                ]
               }
             ]
           },
@@ -8302,6 +9412,29 @@
               },
               {
                 "name": "BreakerPanel",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Energy",
+            "children": [
+              {
+                "name": "Power_Hub",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Battery",
                 "children": [
                   {
                     "name": "Procedures",
@@ -8328,15 +9461,6 @@
                         "children": []
                       }
                     ]
-                  }
-                ]
-              },
-              {
-                "name": "Battery",
-                "children": [
-                  {
-                    "name": "Procedures",
-                    "children": []
                   }
                 ]
               }

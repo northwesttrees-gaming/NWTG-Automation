@@ -28,7 +28,7 @@ public class MachineBlockBlock extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:machine_block")
 	public static final Block block = null;
 	public MachineBlockBlock(NwtgAutomationModElements instance) {
-		super(instance, 7);
+		super(instance, 10);
 	}
 
 	@Override

@@ -16,7 +16,7 @@ public class NetheriteUpgradeItem extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:netherite_upgrade")
 	public static final Item block = null;
 	public NetheriteUpgradeItem(NwtgAutomationModElements instance) {
-		super(instance, 16);
+		super(instance, 27);
 	}
 
 	@Override

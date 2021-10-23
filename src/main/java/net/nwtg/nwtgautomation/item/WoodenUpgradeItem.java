@@ -16,7 +16,7 @@ public class WoodenUpgradeItem extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:wooden_upgrade")
 	public static final Item block = null;
 	public WoodenUpgradeItem(NwtgAutomationModElements instance) {
-		super(instance, 11);
+		super(instance, 22);
 	}
 
 	@Override

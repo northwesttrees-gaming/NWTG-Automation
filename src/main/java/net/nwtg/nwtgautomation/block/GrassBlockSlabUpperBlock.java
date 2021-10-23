@@ -51,7 +51,7 @@ public class GrassBlockSlabUpperBlock extends NwtgAutomationModElements.ModEleme
 	@ObjectHolder("nwtg_automation:grass_block_slab_upper")
 	public static final Block block = null;
 	public GrassBlockSlabUpperBlock(NwtgAutomationModElements instance) {
-		super(instance, 9);
+		super(instance, 20);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BlockColorRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ItemColorRegisterHandler());
 	}

@@ -16,7 +16,7 @@ public class DiamondUpgradeItem extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:diamond_upgrade")
 	public static final Item block = null;
 	public DiamondUpgradeItem(NwtgAutomationModElements instance) {
-		super(instance, 15);
+		super(instance, 26);
 	}
 
 	@Override

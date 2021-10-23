@@ -51,6 +51,9 @@ public class SolarPanelUpdateTickEnergyScriptProcedure {
 		double batteryPosX = 0;
 		double batteryPosY = 0;
 		double batteryPosZ = 0;
+		double particleX = 0;
+		double particleY = 0;
+		double particleZ = 0;
 		if (((new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);

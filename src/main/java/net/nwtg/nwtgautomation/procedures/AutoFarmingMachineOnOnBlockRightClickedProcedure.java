@@ -98,6 +98,15 @@ public class AutoFarmingMachineOnOnBlockRightClickedProcedure {
 						if (world instanceof World)
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putBoolean("ConnectedToPowerHub", (false));
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
 				} else {
 					{
 						Entity _ent = entity;
@@ -132,47 +141,94 @@ public class AutoFarmingMachineOnOnBlockRightClickedProcedure {
 						.getItem() == MachineWrenchItem.block)) {
 					if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
 							.getBoolean("HasSavedPosition")) == (true))) {
-						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							TileEntity _tileEntity = world.getTileEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_tileEntity != null)
-								_tileEntity.getTileData().putBoolean("ConnectedToBreaker", (true));
-							if (world instanceof World)
-								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-						}
-						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							TileEntity _tileEntity = world.getTileEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_tileEntity != null)
-								_tileEntity.getTileData().putDouble("BreakerPosX",
-										(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-												.getOrCreateTag().getDouble("SavedPosX")));
-							if (world instanceof World)
-								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-						}
-						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							TileEntity _tileEntity = world.getTileEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_tileEntity != null)
-								_tileEntity.getTileData().putDouble("BreakerPosY",
-										(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-												.getOrCreateTag().getDouble("SavedPosY")));
-							if (world instanceof World)
-								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-						}
-						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							TileEntity _tileEntity = world.getTileEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_tileEntity != null)
-								_tileEntity.getTileData().putDouble("BreakerPosZ",
-										(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-												.getOrCreateTag().getDouble("SavedPosZ")));
-							if (world instanceof World)
-								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+						if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+								.getString("SavedDevice"))).equals("Breaker Panel"))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("ConnectedToBreaker", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("BreakerPosX",
+											(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+													.getOrCreateTag().getDouble("SavedPosX")));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("BreakerPosY",
+											(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+													.getOrCreateTag().getDouble("SavedPosY")));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("BreakerPosZ",
+											(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+													.getOrCreateTag().getDouble("SavedPosZ")));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+						} else if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getOrCreateTag().getString("SavedDevice"))).equals("Power Hub"))) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putBoolean("ConnectedToPowerHub", (true));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("PowerHubPosX",
+											(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+													.getOrCreateTag().getDouble("SavedPosX")));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("PowerHubPosY",
+											(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+													.getOrCreateTag().getDouble("SavedPosY")));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("PowerHubPosZ",
+											(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+													.getOrCreateTag().getDouble("SavedPosZ")));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
 						}
 						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
 								.putBoolean("HasSavedPosition", (false));

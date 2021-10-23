@@ -16,7 +16,7 @@ public class MachineWrenchItem extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:machine_wrench")
 	public static final Item block = null;
 	public MachineWrenchItem(NwtgAutomationModElements instance) {
-		super(instance, 10);
+		super(instance, 21);
 	}
 
 	@Override

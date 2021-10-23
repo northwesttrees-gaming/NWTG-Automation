@@ -134,6 +134,9 @@
     "onTickUpdate": {
       "name": "SolarPanelUpdateTick"
     },
+    "onRandomUpdateEvent": {
+      "name": "SolarPanelClientDisplayRandomTick"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

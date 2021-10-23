@@ -1,0 +1,10 @@
+{
+  "parent": "nwtg_automation:custom/power_hub",
+  "textures": {
+    "all": "nwtg_automation:blocks/power_hub_base",
+    "particle": "nwtg_automation:blocks/power_hub_base",
+    "left": "nwtg_automation:blocks/power_hub_left_door",
+    "right": "nwtg_automation:blocks/power_hub_right_door",
+    "base": "nwtg_automation:blocks/power_hub_base"
+  }
+}

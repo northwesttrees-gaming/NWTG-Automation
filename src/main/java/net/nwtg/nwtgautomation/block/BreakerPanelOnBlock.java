@@ -75,7 +75,7 @@ public class BreakerPanelOnBlock extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:breaker_panel_on")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BreakerPanelOnBlock(NwtgAutomationModElements instance) {
-		super(instance, 73);
+		super(instance, 84);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
