@@ -19,19 +19,8 @@ For more information on what was added check the official website for the mod un
 - [CHANGELOGS](https://northwesttrees-gaming.github.io/mods/nwtg-automation/changelogs.html)
 
 ### PLANNED FEATURES
-- Auto Killing Machines
-- Auto Breeding Machines
-- Auto Mining Machines
-- Auto Building Machines (If Possible)
-- Auto Crafting Machines (More Recipes)
-- Auto Smelting Machines
-- Auto Brewing Machines
-- Auto Enchanting Machines
-- Auto Grinding Machines
-- Auto Fishing Machines
-- Auto Forestry Machines
-- Auto Bee Keeping Machines
-- And Any Latter Plans!
+For a list of planned features see this page here.
+- [PROJECTS](https://github.com/northwesttrees-gaming/NWTG-Automation/projects/2)
 
 ### MAIN FEATURES
 - [Auto Crafting Machine](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Crafting-Machine)
