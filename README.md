@@ -13,9 +13,10 @@ Auto Crafting is a long term project that will take time to add recipes for this
 - [MCREATOR PAGE](https://mcreator.net/modification/76920/nwtg-automation)
 - [YOUTUBE PLAYLIST](https://www.youtube.com/watch?v=2eLalSnOnHo&list=PL5k7swYOU_yRoly-cK7T7JaSgWH054kxd&ab_channel=NorthWestTreesGaming)
 - [MOD WEBSITE](https://northwesttrees-gaming.github.io/minecraft-mods/nwtg-automation/nwtg-automation.html)
+
 ## CHANGELOG
-For more information on each build see the builds wiki page for an index of builds and thier changes.
-- [BUILDS](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Builds)
+For more information on what was added check the official website for the mod under the changelog page listed below.
+- [CHANGELOGS](https://northwesttrees-gaming.github.io/mods/nwtg-automation/changelogs.html)
 
 ### PLANNED FEATURES
 - Auto Killing Machines
