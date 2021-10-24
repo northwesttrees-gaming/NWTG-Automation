@@ -22,12 +22,6 @@ For more information on what was added check the official website for the mod un
 For a list of planned features see this page here.
 - [PROJECTS](https://github.com/northwesttrees-gaming/NWTG-Automation/projects/2)
 
-### MAIN FEATURES
-- [Auto Crafting Machine](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Crafting-Machine)
-- [Auto Farming Machine](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Farming-Machine)
-- [Auto Item Collector Machine](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Auto-Item-Collector-Machine)
-- [Remote Item Teleporter](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/Remote-Item-Teleporter-Machine)
-
 ## LICENCE
 NWTG Public License 1.0
 
