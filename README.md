@@ -9,12 +9,21 @@ The Minecraft modification is designed to make things more automated using advan
 ### AUTO CRAFTING / AUTO CRAFTING REQUESTS
 Auto Crafting is a long term project that will take time to add recipes for this reason if you have a specific recipe in Vanilla Minecraft you want to be added in a future update we advise you to open a request on our GitHub repository under Issues > Custom Crafting Request. This will let us know there is a higher demand for a specific recipe.
 
-## OFFICIAL MOD SITES
-- [MCREATOR PAGE](https://mcreator.net/modification/76920/nwtg-automation)
-- [YOUTUBE PLAYLIST](https://www.youtube.com/watch?v=2eLalSnOnHo&list=PL5k7swYOU_yRoly-cK7T7JaSgWH054kxd&ab_channel=NorthWestTreesGaming)
-- [MOD WEBSITE](https://northwesttrees-gaming.github.io/minecraft-mods/nwtg-automation/nwtg-automation.html)
+## OFFICIAL SITES
+- [MCreator](https://mcreator.net/modification/76920/nwtg-automation)
+- [Website](https://northwesttrees-gaming.github.io/mods/nwtg-automation.html)
+- [YouTube](https://youtube.com/playlist?list=PL5k7swYOU_yRoly-cK7T7JaSgWH054kxd)
+
+## OFFICIAL WEBSITE
 - [CHANGELOGS](https://northwesttrees-gaming.github.io/mods/nwtg-automation/changelogs.html)
-- [PLANNED FEATURES](https://github.com/northwesttrees-gaming/NWTG-Automation/projects/2)
+- [DOWNLOADS](https://northwesttrees-gaming.github.io/mods/nwtg-automation/downloads.html)
+- [GALLERY](https://northwesttrees-gaming.github.io/mods/nwtg-automation/gallery.html)
+- [PLANNED FSATURES](https://github.com/northwesttrees-gaming/NWTG-Automation/projects/2)
+- [UPCOMING](https://northwesttrees-gaming.github.io/mods/nwtg-automation/upcoming.html)
+- [WIKI](https://northwesttrees-gaming.github.io/mods/nwtg-automation/wiki.html)
+
+## OTHER
+- [LICENSE](https://github.com/northwesttrees-gaming/NWTG-Automation/wiki/License)
 
 ## LICENCE
 NWTG Public License 1.0
