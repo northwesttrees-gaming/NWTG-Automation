@@ -42,7 +42,7 @@ public class SolarPanelUpdateTickOnScriptProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		double randomNumber = 0;
-		if (((((((world.getWorldInfo().getDayTime()) % 24000) >= 0) && (((world.getWorldInfo().getDayTime()) % 24000) < 12542))
+		if (((((((world.getWorldInfo().getDayTime()) % 24000) >= 0) && (((world.getWorldInfo().getDayTime()) % 24000) < 12610))
 				|| ((((world.getWorldInfo().getDayTime()) % 24000) >= 23460) && (((world.getWorldInfo().getDayTime()) % 24000) < 24000)))
 				&& (world.canBlockSeeSky(new BlockPos((int) x, (int) (y + 1), (int) z))))) {
 			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SolarPanelBlock.block)) {

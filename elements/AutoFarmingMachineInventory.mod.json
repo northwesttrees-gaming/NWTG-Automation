@@ -95,7 +95,7 @@
           },
           "name": "Auto Farming Machine",
           "x": 132,
-          "y": 61
+          "y": 62
         }
       },
       {
@@ -255,6 +255,19 @@
           "name": "auto_farming_machine_progress_bar_9.png",
           "x": 207,
           "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Energy: <BNBT:integer:Energy>",
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "name": "Energy: <BNBT:integer:Energy>",
+          "x": 132,
+          "y": 91
         }
       }
     ],

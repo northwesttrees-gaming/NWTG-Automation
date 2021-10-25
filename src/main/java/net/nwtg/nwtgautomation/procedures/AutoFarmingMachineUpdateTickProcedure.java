@@ -114,40 +114,23 @@ public class AutoFarmingMachineUpdateTickProcedure {
 				return -1;
 			}
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "PowerHubPosZ"))), "Energy")) > 0))) {
-			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) (new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "PowerHubPosX")), (int) (new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "PowerHubPosY")), (int) (new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "PowerHubPosZ")));
-				TileEntity _tileEntity = world.getTileEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_tileEntity != null)
-					_tileEntity.getTileData().putDouble("Energy", ((new Object() {
-						public double getValue(IWorld world, BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos((int) (new Object() {
+			if (((new Object() {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Energy")) < (new Object() {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "MaxEnergy")))) {
+				if (!world.isRemote()) {
+					BlockPos _bp = new BlockPos((int) (new Object() {
 						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);
 							if (tileEntity != null)
@@ -168,25 +151,58 @@ public class AutoFarmingMachineUpdateTickProcedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "PowerHubPosZ"))), "Energy")) - 1));
-				if (world instanceof World)
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-			}
-			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				TileEntity _tileEntity = world.getTileEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_tileEntity != null)
-					_tileEntity.getTileData().putDouble("Energy", ((new Object() {
-						public double getValue(IWorld world, BlockPos pos, String tag) {
-							TileEntity tileEntity = world.getTileEntity(pos);
-							if (tileEntity != null)
-								return tileEntity.getTileData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Energy")) + 1));
-				if (world instanceof World)
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "PowerHubPosZ")));
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putDouble("Energy", ((new Object() {
+							public double getValue(IWorld world, BlockPos pos, String tag) {
+								TileEntity tileEntity = world.getTileEntity(pos);
+								if (tileEntity != null)
+									return tileEntity.getTileData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, new BlockPos((int) (new Object() {
+							public double getValue(IWorld world, BlockPos pos, String tag) {
+								TileEntity tileEntity = world.getTileEntity(pos);
+								if (tileEntity != null)
+									return tileEntity.getTileData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "PowerHubPosX")), (int) (new Object() {
+							public double getValue(IWorld world, BlockPos pos, String tag) {
+								TileEntity tileEntity = world.getTileEntity(pos);
+								if (tileEntity != null)
+									return tileEntity.getTileData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "PowerHubPosY")), (int) (new Object() {
+							public double getValue(IWorld world, BlockPos pos, String tag) {
+								TileEntity tileEntity = world.getTileEntity(pos);
+								if (tileEntity != null)
+									return tileEntity.getTileData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "PowerHubPosZ"))), "Energy")) - 1));
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				if (!world.isRemote()) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putDouble("Energy", ((new Object() {
+							public double getValue(IWorld world, BlockPos pos, String tag) {
+								TileEntity tileEntity = world.getTileEntity(pos);
+								if (tileEntity != null)
+									return tileEntity.getTileData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Energy")) + 1));
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
 			}
 		}
 		if (((new Object() {
