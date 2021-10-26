@@ -16,7 +16,7 @@ public class GoldenUpgradeItem extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:golden_upgrade")
 	public static final Item block = null;
 	public GoldenUpgradeItem(NwtgAutomationModElements instance) {
-		super(instance, 14);
+		super(instance, 25);
 	}
 
 	@Override

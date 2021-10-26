@@ -35,7 +35,7 @@ public class BreakerPanelScreenGui extends NwtgAutomationModElements.ModElement 
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public BreakerPanelScreenGui(NwtgAutomationModElements instance) {
-		super(instance, 70);
+		super(instance, 81);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

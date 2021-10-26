@@ -1,0 +1,108 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": -33,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "solar_panel_gui.png",
+          "use1Xscale": false,
+          "name": "solar_panel_gui.png",
+          "x": 125,
+          "y": 70
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "upgrade_box_gui.png",
+          "use1Xscale": false,
+          "name": "upgrade_box_gui.png",
+          "x": 307,
+          "y": 98
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 314,
+          "y": 105
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red_light.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BatteryScreenRedLightCondition"
+          },
+          "name": "red_light.png",
+          "x": 291,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "green_light.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BatteryScreenGreenLightCondition"
+          },
+          "name": "green_light.png",
+          "x": 291,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Battery",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Battery",
+          "x": 133,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "AE: <BNBT:integer:Energy>",
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "name": "AE: <BNBT:integer:Energy>",
+          "x": 205,
+          "y": 76
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

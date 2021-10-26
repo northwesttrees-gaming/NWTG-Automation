@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "nwtg_automation:blocks/spruce_lamp_on",
+    "up": "nwtg_automation:blocks/spruce_lamp_on",
+    "north": "nwtg_automation:blocks/spruce_lamp_on",
+    "east": "nwtg_automation:blocks/spruce_lamp_on",
+    "south": "nwtg_automation:blocks/spruce_lamp_on",
+    "west": "nwtg_automation:blocks/spruce_lamp_on",
+    "particle": "nwtg_automation:blocks/spruce_lamp_on"
+  }
+}

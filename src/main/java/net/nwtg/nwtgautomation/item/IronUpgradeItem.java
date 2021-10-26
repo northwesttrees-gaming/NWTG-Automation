@@ -16,7 +16,7 @@ public class IronUpgradeItem extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:iron_upgrade")
 	public static final Item block = null;
 	public IronUpgradeItem(NwtgAutomationModElements instance) {
-		super(instance, 13);
+		super(instance, 24);
 	}
 
 	@Override

@@ -174,6 +174,8 @@ public class BreakerPanelOnBlockRightClickedProcedure {
 							&& ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
 									.getBoolean("HasSavedPosition")) == (false)))) {
 						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+								.putString("SavedDevice", "Breaker Panel");
+						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
 								.putDouble("SavedPosX", x);
 						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
 								.putDouble("SavedPosY", y);
@@ -357,6 +359,8 @@ public class BreakerPanelOnBlockRightClickedProcedure {
 							.getItem() == MachineWrenchItem.block)
 							&& ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
 									.getBoolean("HasSavedPosition")) == (false)))) {
+						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+								.putString("SavedDevice", "Breaker Panel");
 						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
 								.putDouble("SavedPosX", x);
 						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()

@@ -21,7 +21,9 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
@@ -150,7 +152,15 @@ public class AutoFarmingMachineInventoryGuiWindow extends ContainerScreen<AutoFa
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Auto Farming Machine", 6, 24, -1);
+		this.font.drawString(ms, "Auto Farming Machine", 6, 25, -1);
+		this.font.drawString(ms, "Energy: " + ((int) new Object() {
+			public double getValue(BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return 0;
+			}
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Energy")) + "", 6, 54, -16711681);
 	}
 
 	@Override

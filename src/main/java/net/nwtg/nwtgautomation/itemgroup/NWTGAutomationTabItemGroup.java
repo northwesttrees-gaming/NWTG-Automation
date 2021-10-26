@@ -13,7 +13,7 @@ import net.minecraft.item.ItemGroup;
 @NwtgAutomationModElements.ModElement.Tag
 public class NWTGAutomationTabItemGroup extends NwtgAutomationModElements.ModElement {
 	public NWTGAutomationTabItemGroup(NwtgAutomationModElements instance) {
-		super(instance, 17);
+		super(instance, 28);
 	}
 
 	@Override

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "nwtg_automation:blocks/jungle_lamp_off",
+    "up": "nwtg_automation:blocks/jungle_lamp_off",
+    "north": "nwtg_automation:blocks/jungle_lamp_off",
+    "east": "nwtg_automation:blocks/jungle_lamp_off",
+    "south": "nwtg_automation:blocks/jungle_lamp_off",
+    "west": "nwtg_automation:blocks/jungle_lamp_off",
+    "particle": "nwtg_automation:blocks/jungle_lamp_off"
+  }
+}

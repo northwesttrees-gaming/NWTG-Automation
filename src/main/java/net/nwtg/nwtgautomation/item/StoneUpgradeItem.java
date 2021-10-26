@@ -16,7 +16,7 @@ public class StoneUpgradeItem extends NwtgAutomationModElements.ModElement {
 	@ObjectHolder("nwtg_automation:stone_upgrade")
 	public static final Item block = null;
 	public StoneUpgradeItem(NwtgAutomationModElements instance) {
-		super(instance, 12);
+		super(instance, 23);
 	}
 
 	@Override

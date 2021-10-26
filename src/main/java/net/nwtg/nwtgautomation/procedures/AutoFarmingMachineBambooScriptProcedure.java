@@ -206,6 +206,31 @@ public class AutoFarmingMachineBambooScriptProcedure {
 					return _retval.get();
 				}
 			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == (seeds).getItem())))) {
+				if (((new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Energy")) >= 25)) {
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("Energy", ((new Object() {
+								public double getValue(IWorld world, BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Energy")) - 25));
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+				}
 				world.setBlockState(new BlockPos((int) posX, (int) posY, (int) posZ), Blocks.AIR.getDefaultState(), 3);
 				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(

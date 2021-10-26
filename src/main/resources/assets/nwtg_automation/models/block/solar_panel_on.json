@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "nwtg_automation:blocks/solar_panel_bottom",
+    "up": "nwtg_automation:blocks/solar_panel_top_powered",
+    "north": "nwtg_automation:blocks/solar_panel_side_on",
+    "east": "nwtg_automation:blocks/solar_panel_side_on",
+    "south": "nwtg_automation:blocks/solar_panel_side_on",
+    "west": "nwtg_automation:blocks/solar_panel_side_on",
+    "particle": "nwtg_automation:blocks/solar_panel_bottom"
+  }
+}

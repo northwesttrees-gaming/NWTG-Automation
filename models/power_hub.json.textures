@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "left": "power_hub_left_door",
+        "right": "power_hub_right_door",
+        "base": "power_hub_base"
+      },
+      "name": "default"
+    }
+  }
+}
